@@ -1,6 +1,1 @@
-# GRUPO 1 GIVE ONE #
-
-![Texto alternativo](public/images/LogoGO.jpeg)
-_______________________
-
-
+# ![Texto alternativo](public/images/LogoGO.jpeg) GRUPO 1 GIVE ONE
