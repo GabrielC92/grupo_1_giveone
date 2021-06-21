@@ -1,1 +1,3 @@
-# ![Texto alternativo](public/images/LogoGO.jpeg) GRUPO 1 GIVE ONE
+GRUPO 1 GIVE ONE
+# ![Texto alternativo](public/images/giveOneTNC2.png)
+
