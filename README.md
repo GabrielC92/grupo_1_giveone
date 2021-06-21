@@ -1,7 +1,7 @@
 # GIVE ONE
 # ![Texto alternativo](public/images/giveOneTNC2.png)
 
-## **Comisiòn 9**
+## **Comisión 9**
 
 ---
 ## **Grupo 1**
@@ -9,12 +9,12 @@ ___
 
 
 
-## **Temàtica**
-Somos Give One una empresa argentina dedicada a la venta de vajillas, cristalería y cubiertos para todo el paísh de manera rápida, segura y eficaz a través de la venta online.
+## **Temática**
+Somos Give One una empresa argentina dedicada a la venta de vajillas, cristalería y cubiertos para todo el país de manera rápida, segura y eficaz a través de la venta online.
 Contamos con una amplia gama de productos para satisfacer la demanda de nuestros clientes.
-Vendemos al por mayor y menor ,para casas de hogar, hoteles, restaurantes y empresas.Brindamos asesoramiento personalizado a nuestros clientes mediante un Staff de venta y adminitración, proporcionando las mejores soluciones a sus compras.
+Vendemos al por mayor y menor ,para casas de hogar, hoteles, restaurantes y empresas. Brindamos asesoramiento personalizado a nuestros clientes mediante un Staff de venta y adminitración, proporcionando las mejores soluciones a sus compras.
 
-Buscamos que nuestro clientes reconozca siempre nuestros objetivos de trabajo:
+Buscamos que nuestros clientes reconozcan siempre nuestros objetivos de trabajo:
 
 Calidad de atención, originalidad y calidad de producto, entrega inmediata y stock permanente.
 
