@@ -27,9 +27,16 @@ Ante cualquier dudas, nos podes escribir a give@One.com.ar
 ___
 
 - Cintia Serrano
+
 ___
 
 - Lucas Avalos
 ___
 - Carolina Vega
 
+
+### **Referencias**
+- [Volf](https://www.googleadservices.com/)
+
+- [Beck&Martin](https://www.beck-and-martin.com.ar/)
+- [Vinoteca Bari](https://bari.com.ar/cristaleria/)
