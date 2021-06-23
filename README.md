@@ -24,19 +24,26 @@ Ante cualquier dudas, nos podes escribir a give@One.com.ar
  
 ### **Integrantes:**
 - Gabriel Calla
+   29 años
 ___
 
 - Cintia Serrano
-
+   30 años
 ___
 
 - Lucas Avalos
 ___
 - Carolina Vega
+  24 años
 
 
 ### **Referencias**
 - [Volf](https://www.googleadservices.com/)
 
 - [Beck&Martin](https://www.beck-and-martin.com.ar/)
-- [Vinoteca Bari](https://bari.com.ar/cristaleria/)
+
+- [Potiers Home](https://www.googleadservices.com/)
+
+- [San Carlos Cristaleria](http://www.san-carlos.com.ar/)
+
+- [Mercado Libre](https://www.mercadolibre.com.ar/)
