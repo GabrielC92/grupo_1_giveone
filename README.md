@@ -23,17 +23,21 @@ Calidad de atención, originalidad y calidad de producto, entrega inmediata y st
 Ante cualquier dudas, nos podes escribir a give@One.com.ar
  
 ### **Integrantes:**
-- Gabriel Calla
+- Gabriel Calla.
+  
    29 años
 ___
 
-- Cintia Serrano
+- Cintia Serrano.
+  
    30 años
 ___
 
-- Lucas Avalos
+- Lucas Avalos.
+
 ___
-- Carolina Vega
+- Carolina Vega.
+  
   24 años
 
 
