@@ -35,6 +35,8 @@ ___
 
 - Lucas Avalos.
 
+  25 años
+
 ___
 - Carolina Vega.
   
