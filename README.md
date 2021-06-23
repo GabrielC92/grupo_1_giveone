@@ -21,35 +21,38 @@ Calidad de atención, originalidad y calidad de producto, entrega inmediata y st
  
 
 Ante cualquier dudas, nos podes escribir a give@One.com.ar
- 
+
+
 ### **Integrantes:**
-- Gabriel Calla.
+- Gabriel Calla, 29 años.
   
-   29 años
+   Gerente de Publicidad.
 ___
 
-- Cintia Serrano.
+- Cintia Serrano, 30 años.
   
-   30 años
+   Ejecutiva de Ventas.
 ___
 
-- Lucas Avalos.
+- Lucas Avalos, 25 años.
 
-  25 años
+  Gerente de Desarrollo.
 
 ___
-- Carolina Vega.
+- Carolina Vega, 24 años.
   
-  24 años
+  Jefa de diseño.
 
 
 ### **Referencias**
-- [Volf](https://www.googleadservices.com/)
+- [Volf](https://www.volf.com.ar)
 
 - [Beck&Martin](https://www.beck-and-martin.com.ar/)
 
-- [Potiers Home](https://www.googleadservices.com/)
+- [Potiers Home](https://www.potiershome.com.ar)
 
 - [San Carlos Cristaleria](http://www.san-carlos.com.ar/)
 
 - [Mercado Libre](https://www.mercadolibre.com.ar/)
+
+Elegimos estás páginas web por el diseño de la interfaz de sus páginas. Volf cuenta con una estética agradable para el comprador. Beck&Martin y Portiers Home disponen de una buena presentación y catálogo de sus productos. San Carlos Cristaleria cuenta con detalles en el producto específicos. Mercado Libre cuenta con una buena estructura de carrito de compras.
