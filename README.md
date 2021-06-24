@@ -56,3 +56,32 @@ ___
 - [Mercado Libre](https://www.mercadolibre.com.ar/)
 
 Elegimos estás páginas web por el diseño de la interfaz de sus páginas. Volf cuenta con una estética agradable para el comprador. Beck&Martin y Portiers Home disponen de una buena presentación y catálogo de sus productos. San Carlos Cristaleria cuenta con detalles en el producto específicos. Mercado Libre cuenta con una buena estructura de carrito de compras.
+
+### **Tipografías:**
+
+- Merriweather
+
+- Roboto
+
+- Abril Fatface
+
+- Fira Sans
+
+
+### **Colores:**
+
+- /#1F1D1D
+
+- /#F5F5F5
+
+- /#F0130A
+
+- /#86B475
+
+- /#FFFFFF
+
+- /#F95F62
+
+- /#FFC82C
+
+- /#66C1F2
