@@ -59,29 +59,19 @@ Elegimos estás páginas web por el diseño de la interfaz de sus páginas. Volf
 
 ### **Tipografías:**
 
-- Merriweather
-
 - Roboto
 
 - Abril Fatface
 
-- Fira Sans
+- PT Sans Narrow
 
 
 ### **Colores:**
 
-- /#1F1D1D
+- /#B8977E
 
 - /#F5F5F5
 
-- /#F0130A
-
-- /#86B475
-
 - /#FFFFFF
 
-- /#F95F62
-
-- /#FFC82C
-
-- /#66C1F2
+- /#FFFFFF
