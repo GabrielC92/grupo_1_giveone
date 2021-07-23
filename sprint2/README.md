@@ -59,7 +59,10 @@ Elegimos estás páginas web por el diseño de la interfaz de sus páginas. Volf
 
 ### **Tipografías:**
 
-- Roboto
+- Roboto  
+![Texto alternativo](public/images/fuente-roboto.jpg)
+- Kanit    
+![Texto alternativo](public/images/fuente-kanit.jpg)
 
 - Abril Fatface
 
@@ -75,3 +78,7 @@ Elegimos estás páginas web por el diseño de la interfaz de sus páginas. Volf
 - /#FFFFFF
 
 - /#FFFFFF
+
+### **Links de trabajo**
+* [GITHUB](https://github.com/GabrielC92/grupo_1_giveone.git)
+* [TRELLO](https://trello.com/b/WIncPfZi/proyecto-give-one-grupo-1-c9)
