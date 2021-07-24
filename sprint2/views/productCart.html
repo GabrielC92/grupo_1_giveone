@@ -5,49 +5,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Carrito</title>
 </head>
 
 <body class="carrito">
 
+    <main>
+
     <nav class="navegador">
-        <p>Carrito (2)</p>
-        <p>Formas de Pago</p>
+        <p class="opcion1">Carrito (2)</p>
+        <p class="opcion2">Formas de Pago</p>
     </nav>
 
     <section>
 
-        <article>
-
+        <article class="articulo1">
         
         <img src="/images/PLATOS.jpg" width="80px" height="80px" alt="">
         <p class="descripcion"> Plato Playo Asodimo 27CM - X Unidad</p>
         <div>
-            <p>$299</p>
-        </div>
-        <div>
             <form action="">
                 <button class="menos" >-</button><input class="cantidad" type="text" placeholder="1"><button class="mas">+</button>
             </form>
         </div>
         <div>
-            <p>Eliminar</p>
+            <p>$299</p>
+        </div>
+        
+        <div>
+            <form action="">
+            <button>Eliminar</button>
+        </form>
+            
         </div>
     </article>
 
-    <article>
+    <article class="articulo2">
         <img src="/images/TAZAS.jpg" width="80px" height="80px" alt="">
         <p>Tazas de Cafe Mug 313Ml</p>
-        <div>
-            <p>$150</p>
-        </div>
         <div>
             <form action="">
                 <button class="menos" >-</button><input class="cantidad" type="text" placeholder="1"><button class="mas">+</button>
             </form>
         </div>
         <div>
-            <p>Eliminar</p>
+            <p>$150</p>
+        </div>
+        
+        <div>
+            <form action="">
+        <button>Eliminar</button>
+        </form>
+            
         </div>
     </article>
     </section>
@@ -65,6 +75,7 @@
         
 
     </section>
+</main>
 
 </body>
 
