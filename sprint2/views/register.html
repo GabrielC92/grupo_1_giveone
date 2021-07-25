@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrarse</title>
+    <title>Give One | Crear cuenta</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body>
-    <main>
+<body class="register">
+    <main class="registro">
         <section>
-            <h3>Registrate</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, debitis. Numquam ad eos explicabo quaerat, beatae ea ipsum blanditiis animi consequatur. Eius praesentium accusantium explicabo, impedit dolorum velit quas totam.</p>
+            <h2>Registrate</h2>
+            <p>Crea tu cuenta y accede a beneficios exclusivos. Nuestras promociones y descuentos te están esperando.</p>
         </section>
         <form action="" method="GET">
-            <input type="text" name="name" placeholder="Nombre">
-            <input type="text" name="lastName" placeholder="Apellido">
-            <input type="email" name="email" placeholder="E-mail">
-            <input type="password" name="password" placeholder="Elige una contraseña">
-            <input type="password" name="password" placeholder="Confirmar contraseña">
+            <input type="text" name="name" placeholder="Nombre" required>
+            <input type="text" name="lastName" placeholder="Apellido" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="password" name="password" placeholder="Elige una contraseña" required>
+            <input type="password" name="password" placeholder="Confirmar contraseña" required>
             <div>
-                <input type="radio" name="aceptar" id="aceptar">
+                <input class="radio" type="radio" name="aceptar" id="aceptar">
                 <label for="aceptar">Acepto los términos y condiciones</label>
             </div>
             <button type="submit">Crear cuenta</button>

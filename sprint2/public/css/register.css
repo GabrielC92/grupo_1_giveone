@@ -1,0 +1,42 @@
+.register{}
+.registro{
+    display: flex;
+    flex-direction: column;
+    background-color: #d1d1d1;
+    align-items: center;
+}
+.registro section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+}
+.registro section h2{
+    margin: 15px 0;
+}
+.registro section p{
+    margin-bottom: 15px;
+}
+.registro form{
+    width: 85%;
+    line-height: 35px;
+    text-align: center;
+}
+.registro form input{
+    padding: 5px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 7px;
+}
+.registro form div{}
+.registro form div .radio{
+    width: 5%;
+}
+.registro form div label{}
+.registro form button{
+    width: 40%;
+    padding: 5px 0;
+    margin-bottom: 20px;
+    border: 1px solid #b2b2b2;
+    border-radius: 15px;
+}
