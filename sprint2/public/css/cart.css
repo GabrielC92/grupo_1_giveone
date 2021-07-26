@@ -26,19 +26,47 @@
     
     
 }
-.carrito main section .articulo1{
-    padding-bottom: 80px;
+
+.carrito .img-detail{
+    padding-left: 20px;
+    display: flex;
+    
+}
+
+.carrito .cantidad{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.carrito .precio{
+    padding-left: 350px;
+}
+
+.carrito .cantidad form{
+    display: flex;
+    position: absolute;
+    left: 120px;
+}
+.carrito  .articulo1{
+    border-bottom: solid 4px #939999;
+    display: flex;
+    flex-direction: column;
+
     border-bottom: solid 4px #939999;
 }
 
-.carrito main section .articulo1 form{
-    display: flex;
-    border: none;
-    position: relative;
-    bottom: -138px;
-    left: -360px;
-    background-color: white;
+
+
+.carrito .boton-delet{
+    border-top: solid 1px #b1b6bd;
     
+}
+.carrito .boton-delet button{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    padding-left: 20px;
 }
 
 .carrito main section .articulo1 input{
@@ -53,6 +81,11 @@
     position: relative;
     top: 140px;
     right: 360px;
+}
+
+
+.carrito .descripcion{
+    margin-left: 20px;
 }
 
 
