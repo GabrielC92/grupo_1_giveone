@@ -1,9 +1,218 @@
+footer{
+    display: none;
+}
 
 .pago{
-    font-family: 'Open Sans';
+ display: flex;
+flex-direction: column;
+}
+.pago{
+    background-color: #F5F5F5;
 }
 
-.contenedor{
+.pago .navegador{
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom:solid 1px #b1b6bd; 
+    margin-bottom: 10px;
+    font-family: 'kanit';
+    font-size: 14px;
+   
+   
+
+}
+.pago .navegador p{
+    color: black;
+}
+.pago .navegador .car:hover{
+    transform: scale(1.06);
+}
+
+.pago .navegador .formas{
+    border-bottom:solid rgb(130, 139, 153);
+    width: 150px;
+}
+
+
+.pago .contenedor{
     margin: auto;
+    width: 70%; 
+    height: 100px;
+    padding: 30px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    cursor: pointer;
+    font-family: 'kanit';
+   background-color: white;
+   font-weight: lighter;
+   border-radius: 10px;
+   ;
+    
+	
+}
+.pago .contenedor span{
+    font-size: 12px;
+     
+}
+
+
+.pago .contenedor:hover{
+	background-color:rgb(202, 210, 217,0.7);
+    transition: 0.8s;
+    color: white;   
+    
+}
+
+.pago .contenedor:hover{
+    border: solid 1px;
+}
+
+
+.pago .contenedor input{
+    position: relative;
+    left: -25px;
+}
+
+.pago .contenedor i{
+    position: relative;
+    left: -12px;
+}
+
+.pago .forma-pago{
+    text-align: center;
+padding-top: 20px;
+font-family: 'kanit';
+font-size: 16px;
+}
+
+.pago .op1, .op2, .op3{
+    font-family: 'kanit';
+    font-size: 14px;
+}
+
+
+.pago .op1{
+    display: flex;
+    justify-content: space-around;
+    
 
 }
+
+
+.pago .op2{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: -11px;
+}
+.pago .precio2{
+    position: relative;
+    left: 20px;
+
+}
+    
+.pago .op3{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: 20px;
+    margin-top: 15px;
+
+}
+.pago .precio3{
+    position: relative;
+    left: -43px;
+}
+
+.pago .contenido2{
+    background-color: white;
+}
+
+
+.pago .resumen .compra{
+    text-align: center;
+    font-family: 'kanit';
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+
+
+.pago .resumen{
+    margin-left: 67px;
+    margin-right: 67px;
+    border-bottom:solid 1px #b1b6bd; 
+}
+
+.pago .boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.pago .boton button{
+    
+width: 150px;
+height: 45px;
+border: solid 1px white;
+background: black;
+font-family: 'kanit';
+}
+
+
+.pago .boton button:hover{
+    background-color:rgb(202, 210, 217,0.7);
+    transition: 0.8s;
+    color: white;   
+}
+
+
+@media (min-width: 769px){
+    footer{
+        display: inline-block;
+    }
+
+    .pago .cont1-cont2{
+        max-width: calc(1120px + 10%);
+        margin: 0 auto;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-bottom: 2rem;
+    }
+
+    .pago .contenido1{
+        float: left;
+        width: 60%;
+        padding-top: 1em;
+    }
+
+    .pago .contenido2{
+        float: right;
+        width: 40%;
+        padding-top: 1em;
+        position: relative;
+        top: 12px;
+        background: white;
+        height: 400px;
+    }
+
+    .pago .navegador{
+        border: none;
+    }
+
+
+    .pago .op1 ,.op2{
+        padding-top: 20px;
+        font-size: 16px;
+    }
+
+    .pago .resumen {
+        
+    }
+}
+
+
+

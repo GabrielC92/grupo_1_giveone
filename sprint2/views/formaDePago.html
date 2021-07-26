@@ -1,57 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Formas de Pago</title>
 </head>
+
 <body class="pago">
-    <nav class="navegador">
-        <p>Carrito (2)</p>
-        <p>Formas de Pago</p>
-    </nav>
-    <section>
-        <div class="contenedor">
-            <form action="">
-                <div class="select" id="select">
-                    <div class="contenido-select">
-                        <p class="titulo">Nueva Tarjeta de Crédito</p>
+    <main>
+       
+        <div class="con1-cont2">
+        <div class="contenido1">
+        <section>
+            <nav class="navegador">
+                <a href="/cart"><p class="car">Carrito (3)</p></a>
+                <p class="formas">Formas de Pago</p>
+            </nav>
+            <div class="con1-cont2">
+            <div class="contenedor">
+                <input type="radio" name="medio" value="Débito">
+                <i class="fas fa-credit-card"></i>
+                <span>Tarjeta de crèdito
+                </span>
+            </div>
 
-                    </div>
-                    <i class="fas fa-angle-down"></i>
-                </div>
-            </form>
+            <div class="contenedor">
+                <input type="radio" name="medio" value="Débito">
+                <i class="fas fa-credit-card"></i>
+                <span>Tarjeta de débito</span>
+                
+            </div>
+            <p class="forma-pago">Con otras Formas de Pago</p>
+            <div class="contenedor">
+                <input class="" type="radio" name="medio" value="Efectivo">
+                <i class="fas fa-money-bill"></i>
+                <span>Efectivo en los puntos de pago</span>
+            </div>
+        </section>
     </div>
-    <div class="opciones">
-        <input type="radio" name="medio" value="Débito">
-            <i class="fas fa-credit-card"></i>
-            <span>Tarjeta de débito</span>
-    </div>
-    <div class="opciones">
-        <p>Con otras Formas de Pago</p>
-        <input type="radio" name="medio" value="Efectivo">
-            <i class="fas fa-money-bill"></i>
-            <span>Efectivo en los puntos de pago</span>
-    </div>
-    </section>
+        <div class="contenido2">
+        <section class="resumen">
+            
+            <p class="compra">Resume de compra</p>
+            
+            <div class="op1" >
+                <p>Producto(3)</p>
+                <p>$600</p>
+            </div>
+            <div class="op2">
+                <p>Envio</p>
+                <p class="precio2">$100</p>
+            </div>
+            
+        </section>
 
-    <section class="resumen">
-        <p>Resume de compra</p>
-        <p>Producto(3)</p>
-        <p>$600</p>
-        <p>Envio</p>
-        <p>$100</p>
-    </section>
-
-    <section>
-        <p>Pagás</p>
-        <p>$700</p>
-    </section>
-        <div>
-            <button><a href="/">Finalizar Compra</a></button>
+        <section>
+            <div class="op3">
+            <p>Pagás</p>
+            <p class="precio3">$700</p>
+            </div>
+        </section>
+       
+        <div class="boton">
+            <button><a href="/">Confirmar Compra</a></button>
         </div>
+
+    </div>
+    <div>
+
+    </main>
+    <footer>
+
+        <section class="listas">
+          
+        <div class="contenedor-navegacion">
+            <a href="" class="texto-principal">NAVEGACIÓN</a> 
+            <p> Quiènes Somos</p>
+            <p>Como comprar</p>
+            <p>Formas de Pago</p>
+            <p>Medios de Envío</p>
+
+          </div>
+            <div class="contenedor-venta">
+                <a href=""  class="texto-principal">VENTA ONLINE</a>
+                <p class="whatsapp"><i class="fab fa-whatsapp"></i> Teléfono venta online: 011 xx-xxxxx</p>
+                <p >Mail: ventasonlinegive@One.com.ar</p>
+                <p>Horario de atención: </p>
+                <p>Lunes a Viernes de 9 a 17:00hs</p>
+            </div>
+
+
+            <div class="contenedor-subs">
+               
+                <form action="" method="GET">
+                    <label class="title" for="suscripcion">NEWLETTER</label>
+                    <p class="subscrib">Suscribite a nuestro Newletter.</p><br>
+                
+                    <input type="text" name="suscripcion" placeholder="Direccion de email" required><br>
+                
+                <button>SUSCRIBIRME</button>
+            
+                </form>
+            </div>
+            <div class="contenedor-redes">
+                
+                <a class="texto-principal"  href="">SEGUÍNOS</a>
+                <div class="instagram">
+                <i class="fab fa-instagram"></i>
+                </div>
+             <div class="facebook"> 
+                <i class="fab fa-facebook-f"></i>
+                </div>
+            
+            </div>
+        </section>
+            
+        <div class="copyright">
+            <h4>Copyright@ GIVE ONE S.L.R todos los derechos reservados.</h4>
+        </div>
+    </footer>
 </body>
+
 </html>

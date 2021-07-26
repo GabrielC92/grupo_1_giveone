@@ -13,3 +13,5 @@ app.get('/login', (req,res) => res.sendFile(path.join(__dirname,'views','login.h
 app.get('/registro', (req,res) => res.sendFile(path.join(__dirname,'views','register.html')));
 
 app.listen(port, () => console.log(`Server running in http://localhost:${port}`));
+
+
