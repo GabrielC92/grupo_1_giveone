@@ -1,17 +1,20 @@
  .carrito  .navegador{
-     display: flex;
-     justify-content: space-around;
-     margin-bottom: 20px;
-     border-bottom: solid 2px #e6e8e8;
-     font-size: 15px;
-     font-family: 'Kanit';
-     color: black
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: solid 1px #b1b6bd;
+    margin-bottom: 10px;
+    font-family: 'kanit';
+    font-size: 14px;
+    }
+    .carrito .navegador p{
+        color: black;
+
     }
  
 
  .carrito .navegador .opcion1{
     border-bottom: solid 2px #939999;
-    width: 190px;
+    width: 100px;
     
    
     
@@ -24,12 +27,17 @@
     
 }
 .carrito main section .articulo1{
-padding-bottom: 80px;
-border-bottom: solid 4px #939999;
+    padding-bottom: 80px;
+    border-bottom: solid 4px #939999;
 }
 
 .carrito main section .articulo1 form{
     display: flex;
+    border: none;
+    position: relative;
+    bottom: -138px;
+    left: -360px;
+    background-color: white;
     
 }
 
@@ -38,10 +46,8 @@ border-bottom: solid 4px #939999;
     width: 10px;
 }
 
-.carrito main section .articulo1 button{
-    border: none;
-    background-color:black;
-}
+
+
 
 .carrito main section article .delet{
     position: relative;

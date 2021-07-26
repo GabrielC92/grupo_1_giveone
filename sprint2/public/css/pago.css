@@ -83,7 +83,8 @@ flex-direction: column;
     text-align: center;
 padding-top: 20px;
 font-family: 'kanit';
-font-size: 16px;
+font-size: 14px;
+font-weight: bold;
 }
 
 .pago .op1, .op2, .op3{
@@ -116,13 +117,18 @@ font-size: 16px;
     display: flex;
     justify-content: space-around;
     position: relative;
-    left: 20px;
+    left: 23px;
     margin-top: 15px;
 
 }
+.pago .pagas
+  {
+      font-weight: bold;
+  }
+
 .pago .precio3{
     position: relative;
-    left: -43px;
+    left: -46px;
 }
 
 .pago .contenido2{
@@ -136,6 +142,7 @@ font-size: 16px;
     font-size: 16px;
     padding-top: 20px;
     padding-bottom: 20px;
+    font-weight: bold;
     
 }
 
@@ -170,7 +177,7 @@ font-family: 'kanit';
 }
 
 
-@media (min-width: 769px){
+@media (min-width: 768px){
     footer{
         display: inline-block;
     }
@@ -208,6 +215,18 @@ font-family: 'kanit';
         padding-top: 20px;
         font-size: 16px;
     }
+
+    .pago .con1-cont2{
+        height: 400px;
+    }
+  .pago .op3{
+    margin-top: 30px;
+    font-size: 16px;
+  }
+  
+  .pago .boton{
+    padding-top: 40px;
+  }
 
    
 }
