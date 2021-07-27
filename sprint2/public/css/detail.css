@@ -2,6 +2,9 @@
     background-color: rgb(233, 233, 224);
     padding: 20px;
 }
+.detail .detalle{
+    margin-bottom: 20px;
+}
 .detail .detalle .container .product .name-favorit{
     margin-bottom: 15px;
     display: grid;
