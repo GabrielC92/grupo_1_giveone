@@ -1,4 +1,3 @@
-.register{}
 .registro{
     display: flex;
     flex-direction: column;
@@ -19,24 +18,48 @@
 }
 .registro form{
     width: 85%;
-    line-height: 35px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 .registro form input{
     padding: 5px;
-    margin: 10px 0;
+    margin: 10px 0 0;
     width: 100%;
     border-radius: 7px;
 }
-.registro form div{}
+/* Datos invalidos */
+.registro form input:invalid{
+    background-color: #ffdddd;
+}
+.registro form input:valid{
+    background-color: #ddffdd;
+}
+.registro form input:required{
+    border: 2px solid #008011;
+}
+.registro form input:required:invalid{
+    border-color: #C00000;
+}
+.registro form span{
+    margin: 0 0 10px;
+    color: #c60e09;
+    display: none;
+}
+.registro form input:invalid ~ span{
+    display: block;
+}
+/* Fin datos invalidos */
+.registro form div{
+    text-align: center;
+}
 .registro form div .radio{
     width: 5%;
 }
-.registro form div label{}
 .registro form button{
     width: 40%;
     padding: 5px 0;
-    margin-bottom: 20px;
+    margin: 20px 0;
     border: 1px solid #b2b2b2;
     border-radius: 15px;
+    align-self: center;
 }
