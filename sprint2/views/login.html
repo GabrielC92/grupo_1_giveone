@@ -4,23 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Give One | Login</title>
     <script src="https://kit.fontawesome.com/5043351b26.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="shortcut icon" href="/images/giveOneTNC2.ico" type="image/x-icon">
 </head>
 <body>
-    <main>
+    <main class="registro">
         <section>
-            <h3>Inicia sesión</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, debitis. Numquam ad eos explicabo quaerat, beatae ea ipsum blanditiis animi consequatur. Eius praesentium accusantium explicabo, impedit dolorum velit quas totam.</p>
+            <h2>Inicia sesión</h2>
+            <p>Entra a tu cuenta y disfruta de las promociones. Si aun no tienes una cuenta, en pocos pasos podrás registrarte</p>
         </section>
         <form action="/" method="GET">
             <input type="email" name="email" placeholder="E-mail">
-            <span>Este campo es obligatorio</span>
             <input type="password" name="password" placeholder="Contraseña">
-            <span>Este campo es obligatorio</span>
-            <a href="#">Olvide mi contraseña</a>
-            <button type="submit">Entrar a mi cuenta</button>
+            <span>El usuario y/o la contraseña no son correctos</span>
+            <a class="password" href="#">Olvide mi contraseña</a>
+            <div class="buttons">
+                <button type="button"><a class="registrar-btn" href="/registro">Registrate</a></button>
+                <button type="submit">Entrar a mi cuenta</button>
+            </div>
         </form>
     </main>
     <footer>

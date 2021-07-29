@@ -1,0 +1,12 @@
+.registro form a.password{
+    color: #000;
+}
+.registro form a.password:hover{
+    color: #0000ff;
+}
+.registro form button a.registrar-btn{
+    transition: color .8s;
+}
+.registro form button a.registrar-btn:hover{
+    color: #000;
+}

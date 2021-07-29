@@ -3,52 +3,38 @@
     flex-direction: column;
     background-color: #d1d1d1;
     align-items: center;
+    padding: 15px;
 }
 .registro section{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 85%;
+    max-width: 550px;
 }
 .registro section h2{
     margin: 15px 0;
 }
 .registro section p{
     margin-bottom: 15px;
+    text-align: center;
 }
 .registro form{
     width: 85%;
+    max-width: 550px;
     display: flex;
     flex-direction: column;
 }
 .registro form input{
-    padding: 5px;
+    padding: 7px;
     margin: 10px 0 0;
     width: 100%;
     border-radius: 7px;
 }
-/* Datos invalidos */
-.registro form input:invalid{
-    background-color: #ffdddd;
-}
-.registro form input:valid{
-    background-color: #ddffdd;
-}
-.registro form input:required{
-    border: 2px solid #008011;
-}
-.registro form input:required:invalid{
-    border-color: #C00000;
-}
 .registro form span{
     margin: 0 0 10px;
     color: #c60e09;
-    display: none;
 }
-.registro form input:invalid ~ span{
-    display: block;
-}
-/* Fin datos invalidos */
 .registro form div{
     text-align: center;
 }
@@ -56,10 +42,32 @@
     width: 5%;
 }
 .registro form button{
-    width: 40%;
+    width: 145px;
     padding: 5px 0;
     margin: 20px 0;
     border: 1px solid #b2b2b2;
     border-radius: 15px;
     align-self: center;
+    background-color: rgb(46, 45, 45);
+    color: #fff;
+    transition: all .8s;
+}
+.registro form button:hover{
+    background-color: #24cf5f;
+    color: #000;
+}
+.registro form button:active{
+    transform: scale(1.15);
+}
+
+/* media queries */
+@media (min-width: 769px) {
+    .registro{
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .registro section{
+        margin: 0 10px;
+    }
 }
