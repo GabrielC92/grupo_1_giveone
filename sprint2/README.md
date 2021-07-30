@@ -70,11 +70,11 @@ Elegimos estás páginas web por el diseño de la interfaz de sus páginas. Volf
 
 ### **Colores:**
 
-- Verde: #24cf5f 
+- Verde: #24cf5f                          
 ![Texto alternativo](public/images/color-verde.jpg)
-- Gris: #f0f0f0
+- Gris: #f0f0f0                             
 ![Texto alternativo](public/images/color-gris.jpg)
-- Marrón: #c9b391
+- Marrón: #c9b391                             
 ![Texto alternativo](public/images/color-marron.jpg)
 
 ### **Links de trabajo**
