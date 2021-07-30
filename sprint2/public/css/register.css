@@ -4,6 +4,10 @@
     background-color: #d1d1d1;
     align-items: center;
     padding: 15px;
+    background-image: url('/images/cristaleria.jpg');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .registro section{
     display: flex;
@@ -33,6 +37,7 @@
     margin: 10px 0 0;
     width: 100%;
     border-radius: 7px;
+    border: outset sandybrown;
 }
 .registro form span{
     margin: 0 0 10px;
@@ -48,15 +53,15 @@
     width: 145px;
     padding: 5px 0;
     margin: 20px 0;
-    border: 1px solid #b2b2b2;
+    border: outset sandybrown;
     border-radius: 15px;
     align-self: center;
-    background-color: rgb(46, 45, 45);
+    background-color: #c9b391;
     color: #fff;
     transition: all .8s;
 }
 .registro form button:hover{
-    background-color: #c9b391;
+    background-color: rgb(46, 45, 45);
 }
 .registro form button:active{
     transform: scale(1.15);

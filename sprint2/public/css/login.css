@@ -1,3 +1,11 @@
+.registro form .check{
+    display: flex;
+    align-items: baseline;
+    margin: 10px 0;
+}
+.registro form .sesion{
+    width: 25px;
+}
 .registro form a.password{
     color: #000;
     text-align: center;
