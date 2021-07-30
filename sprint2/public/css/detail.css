@@ -83,6 +83,8 @@
 }
 .detail .detalle .container .product .descripcion .favoritos-boton button{
     padding: 2px 15px;
+    background-color: #c9b391;
+    border:outset sandybrown;
 }
 .detail .detalle .container .product .parrafo .detalles h3{
     margin-bottom: 5px;
@@ -121,11 +123,18 @@
 }
 
 @media (min-width: 769px){
+    .detail{
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%
+    }
     .detail .detalle .container .product .name-favorit .name{
         font-size: 1.9rem;
     }
     .detail .detalle .container .product .name-favorit a i{
         font-size: 2.2rem;
+        padding-right: 25%;
     }
     .detail .detalle .container .product .photo-description .descripcion{        
         padding: 5% 5% 10% 5%;
