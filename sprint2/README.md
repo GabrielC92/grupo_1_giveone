@@ -12,7 +12,7 @@ ___
 ## **Temática**
 Somos Give One una empresa argentina dedicada a la venta de vajillas, cristalería y cubiertos para todo el país de manera rápida, segura y eficaz a través de la venta online.
 Contamos con una amplia gama de productos para satisfacer la demanda de nuestros clientes.
-Vendemos al por mayor y menor ,para casas de hogar, hoteles, restaurantes y empresas. Brindamos asesoramiento personalizado a nuestros clientes mediante un Staff de venta y adminitración, proporcionando las mejores soluciones a sus compras.
+Vendemos al por mayor y menor ,para casas de hogar, hoteles, restaurantes y empresas. Brindamos asesoramiento personalizado a nuestros clientes mediante un Staff de venta y administración, proporcionando las mejores soluciones a sus compras.
 
 Buscamos que nuestros clientes reconozcan siempre nuestros objetivos de trabajo:
 
@@ -64,20 +64,18 @@ Elegimos estás páginas web por el diseño de la interfaz de sus páginas. Volf
 - Kanit    
 ![Texto alternativo](public/images/fuente-kanit.jpg)
 
-- Abril Fatface
-
-- PT Sans Narrow
+- Open Sans    
+![Texto alternativo](public/images/fuente-open-sans.jpg)
 
 
 ### **Colores:**
 
-- /#B8977E
-
-- /#F5F5F5
-
-- /#FFFFFF
-
-- /#FFFFFF
+- Verde: #24cf5f 
+![Texto alternativo](public/images/color-verde.jpg)
+- Gris: #f0f0f0
+![Texto alternativo](public/images/color-gris.jpg)
+- Marrón: #c9b391
+![Texto alternativo](public/images/color-marron.jpg)
 
 ### **Links de trabajo**
 * [GITHUB](https://github.com/GabrielC92/grupo_1_giveone.git)
