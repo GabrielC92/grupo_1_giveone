@@ -3,6 +3,7 @@
 *  **Aprender SASS:** Considerar si usarlo o no para el proyecto en este sprint o para los sprints futuros.
 *  **Nuevo grupo Daily + Repo de whatsapp:** únicamente para Dailys y avisos de pusheos en el repositorio del proyecto.
 * **Definir tiempos:** para armar horarios de zoom.
+* **Vista nueva:** Carrito de compra en views/compra.html
 
 ### **Hacer más**
 * **Zoom 3 veces por semana:** Dos obligatorias y una tercera opcional o con posibilidad de cambiar el día u horario.
