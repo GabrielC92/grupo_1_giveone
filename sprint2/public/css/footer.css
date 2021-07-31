@@ -1,43 +1,46 @@
-*{
-  
-    margin: 0;
-    padding: 0px;
-    box-sizing: border-box;
-  
-}
-
 footer{
     background-color:#1F1D1D;
     width: 100%;
 }
 
 
-a{
+ footer a{
     text-decoration: none;
     color: white;
 }
 
 footer .listas{
-    padding-top: 20px;
+    padding-top: 30px;
     color: white;
     text-align: center;
+}
+
+
+
+
+
+footer .dias{
+    position: relative;
+    left: -10px;
 }
 
 footer .listas .contenedor-navegacion a , .contenedor-redes a , .contenedor-venta a{
     
     position: relative;
     bottom: 10px;
+   
 }
 
 
 
 footer .contenedor-subs form{
-    
-     padding-top: 20px;
+    margin-top: 3px;
+    padding-top: 12px;
 }
 
 footer .contenedor-venta , .contenedor-redes {
     padding-top: 20px;
+    
 }
 
 
@@ -90,7 +93,7 @@ footer .contenedor-subs{
 
 footer .contenedor-subs label{
     font-family: 'Kanit';
-    font-size: 16px;
+    font-size: 20px;
     position: relative;
     top: -5px;
     
@@ -109,7 +112,10 @@ footer .contenedor-subs button{
     height: 30px;
     font-size: 10px;
     font-family: 'Kanit';
-    font-weight: bold;
+    background-color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
  
 
 }
@@ -133,45 +139,93 @@ footer  .copyright{
         color: white;
         text-align: center;
         font-style: italic;
-        font-family: 'Roboto';
-        
+        font-family: 'Roboto';       
+}
+
+@media (max-width: 426px){
+
+footer .contenedor-navegacion, .contenedor-subs{
+    display: none;
+    
+}
+
+footer .horario {
+    position: relative;
+    left: -43px;
+}
+
+footer .contenedor-subs label{
+    font-size: 20px;
+}
+
+footer .contenedor-venta a{
+    font-size: 18px;
+
+}
+
 }
 
 
 
+@media (min-width: 426px){
 
-
-@media (min-width: 768px){
-   
-   
-    footer .listas{
-       
-    display: flex;
-   text-align: justify;
-    justify-content: space-around;
-   
+    footer .listas {
+        padding-top: 30px;
+        color: white;
+        text-align: center;
+        
     }
 
-    footer .contenedor-subs label {
-        font-family: 'Kanit';
+    footer .listas  p{
+        font-family: sans-serif;
+        padding-bottom: 13px;
         font-size: 16px;
-        position: relative;
-        top: 5px;
-        left: 100px;
     }
-
-    footer .contenedor-subs .subscrib{
-        padding-left: 60px;
-    }
+    
+}
 
 
-    footer .contenedor-subs button{
-    position: relative;
-    left: 75px;
-    }
 
+    
+    @media (min-width: 768px){
+       
+       footer .contenedor-subs{
+           display: contents;
+       }
+    
+        footer .listas{   
+        display: flex;
+       text-align: justify;
+        justify-content: space-around;
+       
+        }
+    
+        footer .contenedor-subs label {
+            font-family: 'Kanit';
+            font-size: 16px;
+            left: 100px;
+        }
+    
+footer .contenedor-subs .subscrib{
+            padding-left: 60px;
+ }
+    
+    
+footer .contenedor-subs button{
+position: relative;
+        left: 75px;
+        }
 
-    footer .contenedor-navegacion{
-        margin-top: 20px;
-    }
+    
+ footer .contenedor-navegacion{
+     margin-top: 20px;
+     }
+
+        footer .listas  p{
+            font-family: sans-serif;
+            padding-bottom: 13px;
+            font-size: 12px;
+            position: relative;
+            left: -5px;
+        }
 }

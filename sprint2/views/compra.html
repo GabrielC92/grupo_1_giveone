@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="https://kit.fontawesome.com/a0699563c0.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet"> 
+	<title>Document</title>
+</head>
+<body class="compra">
+	<main>
+	<ul id="progressbar">
+		<li class="cart"><a href="/cart">Carrito(3)</a></li>
+		<li class="pagos"><a href="/formasDePago">Metodo de Pago</a></li>
+		<li class="finalizar"><a href="/">Finalizar</a></li>
+	  </ul>
+	<div class="contenedor">
+		
+		<div class="contenido-padding">
+		 
+		  <div class="contenido-general">
+			<h2>Sus datos de pago</h2>
+	
+			<form>
+			  <ul class="form-list">
+				<li class="opciones">
+				  <label>Nombre y Apellido</label>
+				  <input type="text" name=""  />
+				</li>
+				<li class="opciones">
+				  <label>Número de Tarjeta</label>
+				  <div class="input-card">
+					<input type="text" name="cc_number" />
+					<i class="fas fa-credit-card"></i>
+				  </div>
+				</li>
+				<li class="datos-card">
+				  <div>
+					<label>FECHA DE EXPIRACIÓN</label>
+					<div class="input-datos">
+					  <input type="text" name="cc_month" placeholder="MM"  />
+					  <input type="text" name="cc_year" placeholder="AA"  />
+					</div>
+				  </div>
+				  <div>		
+					<label>
+					  CVC
+					</label>
+					<input type="text" name="cvc" placeholder="123" />
+				  </div>
+				</li>
+				<li class="guardar-card">
+				  <label>
+					<input type="checkbox" name="save_cc" checked="checked">
+					Guardar mi tarjeta para futuras compras
+				  </label>
+				</li>
+				<div class="boton">
+					<span id="span1"></span>
+					<span id="span2"></span>
+					<span id="span3"></span>
+					<span id="span4"></span>	
+				 <button><a href="/"></a>PAGAR AHORA</a></button>
+				</a>
+			</div>
+			  </ul>
+			</form>
+			
+		  </div> <!-- END: .contenido-general -->
+		</div> <!-- END: .contenido-padding -->
+	  </div> <!-- END: .contenedor -->
+	  </main>
+  
+	  <footer>
+
+        <section class="listas">
+           
+          
+        <div class="contenedor-navegacion">
+            <a href="" class="texto-principal">NAVEGACIÓN</a> 
+            <p> Quiènes Somos</p>
+            <p>Como comprar</p>
+            <p>Formas de Pago</p>
+            <p>Medios de Envío</p>
+
+          </div>
+            <div class="contenedor-venta">
+                <a href=""  class="texto-principal">VENTA ONLINE</a>
+                <p class="whatsapp"><i class="fab fa-whatsapp"></i> Teléfono venta online: 011 xx-xxxxx</p>
+                <p >Mail: ventasonlinegive@One.com.ar</p>
+                <p class="horario">Horario de atención: </p>
+                <p class="dias">Lunes a Viernes de 9 a 17:00hs</p>
+            </div>
+            
+
+            <div class="contenedor-subs">
+               
+                <form action="" method="GET">
+                    <label class="title" for="suscripcion">NEWLETTER</label>
+                    <p class="subscrib">Suscribite a nuestro Newletter.</p><br>
+                
+                    <input type="text" name="suscripcion" placeholder="Direccion de email" required><br>
+                
+                <button>SUSCRIBIRME</button>
+            
+                </form>
+            </div>
+            <div class="contenedor-redes">
+                
+                <a class="texto-principal"  href="">SEGUÍNOS</a>
+                <div class="instagram">
+                <i class="fab fa-instagram"></i>
+                </div>
+             <div class="facebook"> 
+                <i class="fab fa-facebook-f"></i>
+                </div>
+            
+            </div>
+        
+        </section>
+            
+        <div class="copyright">
+            <h4>Copyright@ GIVE ONE S.R.L todos los derechos reservados.</h4>
+        </div>
+    </footer>
+
+</body>
+</html>

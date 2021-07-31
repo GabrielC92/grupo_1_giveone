@@ -2,12 +2,16 @@ footer{
     display: none;
 }
 
+.pago a{
+    text-decoration: none;
+}
+.pago  #progressbar .cart a, .finalizar a{
+    color: black;
+}
+
 .pago{
  display: flex;
 flex-direction: column;
-}
-.pago{
-    background-color: #F5F5F5;
 }
 
 .pago .navegador{
@@ -20,7 +24,6 @@ flex-direction: column;
     font-weight:bold;
    
    
-
 }
 .pago .navegador p{
     color: black;
@@ -30,7 +33,7 @@ flex-direction: column;
 }
 
 .pago .navegador .formas{
-    border-bottom:solid rgb(130, 139, 153);
+    border-bottom:solid 2px rgb(130, 139, 153);
     
 }
 
@@ -39,7 +42,6 @@ flex-direction: column;
     margin: auto;
     width: 70%; 
     height: 100px;
-    padding: 30px 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -48,6 +50,7 @@ flex-direction: column;
    background-color: white;
    font-weight: lighter;
    border-radius: 10px;
+   margin-top: 5px
 }
 
 
@@ -132,6 +135,8 @@ font-weight: bold;
 .pago .contenido2{
     background-color: white;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+    height: 200px;
+    margin-top: 6px;
     
 }
 
@@ -160,25 +165,76 @@ font-weight: bold;
     padding-top: 10px;
 }
 
+.pago .boton a{
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
 
 .pago .boton button{
     color: #ffffff;
-    background-color: #24cf5f;
+    background-color: #c9b391;
     padding: 12px 25px;
     font-size: 15px;
     letter-spacing: 1px;
    font-family: 'Open sans';
     border: 0;
     border-radius: 2px;
-    outline: 0;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
     transition: all .2s; }
 
  .pago .boton button:hover, button:active, button:focus {
     -ms-transform: scale(1.1);
-        transform: scale(1.1); 
+    transform: scale(1.1); 
       
 }
+
+
+
+.pago #progressbar {
+    text-align: center;
+    counter-reset: step;
+}
+
+.pago #progressbar li {
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    margin-bottom: 10px;
+}
+.pago #progressbar .pago a{
+    color:#c9b391;
+    
+}
+
+.pago #progressbar li:before{
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px; /*Linea en medio de los numeros*/
+    display: block;
+    font-size: 10px;
+    color: white;
+    background-color: #1F1D1D;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
+
+}
+
+.pago #progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1; /*pone los numero sobre la linea*/
+}
+
 
 
 
@@ -206,7 +262,6 @@ font-weight: bold;
         width: 40%;
         padding-top: 1em;
         position: relative;
-        top: 12px;
         background: white;
         height: 400px;
     }

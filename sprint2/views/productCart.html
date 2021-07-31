@@ -6,80 +6,158 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Carrito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">   
+<title>Carrito</title>
 </head>
 
 <body class="carrito">
 
     <main>
 
-    <nav class="navegador">
-        <p class="opcion1">Carrito (2)</p>
-        <a href="/formasDePago"><p>Formas de Pago</p></a>
-        <p>Finalizar Compra</p>
-    </nav>
+        <ul id="progressbar">
+            <li class="cart"><a href="/cart">Carrito(3)</a></li>
+            <li class="pagos"><a href="/formasDePago">Metodo de Pago</a></li>
+            <li class="finalizar"><a href="/">Finalizar</a></li>
+          </ul>
 
-    <section>
+        <section>
 
-        <article class="articulo1">
-        <div class="img-detail">
-        <img src="/images/PLATOS.jpg" width="80px" height="80px" alt="">
-        <p class="descripcion"> Plato Playo Asodimo 27CM - X Unidad</p>
-    </div>
-        <div class="cantidad">
-            <form action="">
-                <button class="menos" >-</button><input class="cantidad" type="text" placeholder="1"><button class="mas">+</button>
-            </form>
-            <p class="precio">$299</p>
-        </div>
-        
-        
-        <div class="boton-delet">
-            <form action="">
-            <button>Eliminar</button>
-        </form>
+            <article class="articulo1">
+                <div class="img-cantidad">
+                    <div class="img-detail">
+                        <img src="/images/SETT.jpg" width="80px" height="80px" alt="">
+                        <p class="descripcion"> SETT Asodimo Cristal </p>
+
+                    </div>
+                    <div class="cantidad">
+                        <form action="">
+                            <button class="menos">-</button><input class="cantidad" type="text" placeholder="1"><button
+                                class="mas">+</button>
+                        </form>
+                        <p class="precio">$299</p>
+                    </div>
+                    <div class="boton-delet">
+                        <form action="">
+                            <button>Eliminar</button>
+                        </form>
+    
+                    </div>
+                </div> <!-- END: img-cantidad --> 
+            </article>
+
+            <article class="articulo1">
+                <div class="img-cantidad">
+                <div class="img-detail">
+                    <img src="/images/BOWL.jpg" width="80px" height="80px" alt="">
+                    <p class="descripcion">Bowl Mug 400Ml</p>
+                </div>
+                <div class="cantidad">
+                    <form action="">
+                        <button class="menos">-</button><input class="cantidad" type="text" placeholder="1"><button
+                            class="mas">+</button>
+                    </form>
+                    <p class="precio">$150</p>
+                </div>
+                <div class="boton-delet">
+                    <form action="">
+                        <button>Eliminar</button>
+                    </form>
+
+                </div>
+            </div> <!-- END: img-cantidad --> 
+            </article>
+            <article class="cupon">
+                <p class="titulo">CUPÓN DE DESCUENTO <i class="fas fa-tags"></i></p>
+                <p>Ingresa tu cupon y obtené un descuento extra en tu compra.</p>
+                <input type="text" placeholder="Ingresa tu cupón">
+            </article>
+
+
+        </section>
+
+        <section class="envio">
             
+            <p class="envio-cp">Envío a C.P:1234,Buenos Aires</p>
+            <p>$600</p>
+        </section>
+        <section class="total">
+            <div class="total-envio">
+            <p>Total con Envío</p>
+            <div class="precio">
+            <p class="precio3">$700</p>
         </div>
-    </article>
+            </div>
+            <div class="boton1">
+                <button><a href="/formasDePago">CONTINUAR</a></button>
+            </div>
+          
 
-    <article class="articulo2">
-        <div class="img-detail2">
-        <img src="/images/TAZAS.jpg" width="80px" height="80px" alt="">
-        <p>Tazas de Cafe Mug 313Ml</p>
-        </div>
-        <div>
-            <form action="">
-                <button class="menos" >-</button><input class="cantidad" type="text" placeholder="1"><button class="mas">+</button>
-            </form>
-        </div>
-        <div>
-            <p>$150</p>
-        </div>
-        
-        <div>
-            <form action="">
-        <button>Eliminar</button>
-        </form>
+        </section>
+    </main>
+
+    <footer>
+
+        <section class="listas">
+           
+          
+        <div class="contenedor-navegacion">
+            <a href="" class="texto-principal">NAVEGACIÓN</a> 
+            <p> Quiènes Somos</p>
+            <p>Como comprar</p>
+            <p>Formas de Pago</p>
+            <p>Medios de Envío</p>
+
+          </div>
+            <div class="contenedor-venta">
+                <a href=""  class="texto-principal">VENTA ONLINE</a>
+                <p class="whatsapp"><i class="fab fa-whatsapp"></i> Teléfono venta online: 011 xx-xxxxx</p>
+                <p >Mail: ventasonlinegive@One.com.ar</p>
+                <p class="horario">Horario de atención: </p>
+                <p class="dias">Lunes a Viernes de 9 a 17:00hs</p>
+            </div>
             
-        </div>
-    </article>
-    </section>
 
-    <section class="envio">
-        <p>Envío a C.P:1234,Buenos Aires</p>
-        <p>$600</p>
-    </section>
-    <section class="total">
-        <p>Total con Envío</p>
-        <p>$700</p>
-        <div>
-            <button><a href="/formasDePago">Continuar</a></button>
-        </div>
+            <div class="contenedor-subs">
+               
+                <form action="" method="GET">
+                    <label class="title" for="suscripcion">NEWLETTER</label>
+                    <p class="subscrib">Suscribite a nuestro Newletter.</p><br>
+                
+                    <input type="text" name="suscripcion" placeholder="Direccion de email" required><br>
+                
+                <button>SUSCRIBIRME</button>
+            
+                </form>
+            </div>
+            <div class="contenedor-redes">
+                
+                <a class="texto-principal"  href="">SEGUÍNOS</a>
+                <div class="instagram">
+                <i class="fab fa-instagram"></i>
+                </div>
+             <div class="facebook"> 
+                <i class="fab fa-facebook-f"></i>
+                </div>
+            
+            </div>
         
+        </section>
+            
+        <div class="copyright">
+            <h4>Copyright@ GIVE ONE S.R.L todos los derechos reservados.</h4>
+        </div>
+    </footer>
 
-    </section>
-</main>
+    
 
 </body>
+
 
 </html>

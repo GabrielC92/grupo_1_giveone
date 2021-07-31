@@ -10,76 +10,79 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">   
     <title>Formas de Pago</title>
 </head>
 
 <body class="pago">
     <main>
-       
+
         <div class="con1-cont2">
-        <div class="contenido1">
-        <section>
-            <nav class="navegador">
-                <a href="/cart"><p class="car">Carrito (3)</p></a>
-                <p class="formas">Formas de Pago</p>
-                <p>Finalizar Compra</p>
-            </nav>
-            <div class="con1-cont2">
-            <div class="contenedor">
-                <input type="radio" name="medio" value="Débito">
-                <i class="fas fa-credit-card"></i>
-                <span>Tarjeta de crèdito
-                </span>
-            </div>
+            <div class="contenido1">
+                <section>
+                    <ul id="progressbar">
+                        <li class="cart"><a href="/cart">Carrito(3)</a></li>
+                        <li class="pago"><a href="/formasDePago">Metodo de Pago</a></li>
+                        <li class="finalizar"><a href="/compra">Finalizar</a></li>
+                    </ul>
+                    <div class="con1-cont2">
+                        <div class="contenedor">
+                            <input type="radio" name="medio" value="Débito">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Tarjeta de crèdito
+                            </span>
+                        </div>
 
-            <div class="contenedor">
-                <input type="radio" name="medio" value="Débito">
-                <i class="fas fa-credit-card"></i>
-                <span>Tarjeta de débito</span>
-                
-            </div>
-            <p class="forma-pago">Con otras Formas de Pago</p>
-            <div class="contenedor">
-                <input class="" type="radio" name="medio" value="Efectivo">
-                <i class="fas fa-money-bill"></i>
-                <span>Efectivo en puntos de Pago</span>
-            </div>
-        </section>
-    </div>
-        <div class="contenido2">
-        <section class="resumen">
-            
-            <p class="compra">Resumen de compra</p>
-            
-            <div class="op1" >
-                <p>Producto(3)</p>
-                <p>$600</p>
-            </div>
-            <div class="op2">
-                <p>Envio</p>
-                <p class="precio2">$100</p>
-            </div>
-            
-        </section>
+                        <div class="contenedor">
+                            <input type="radio" name="medio" value="Débito">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Tarjeta de débito</span>
 
-        <section>
-            <div class="op3">
-            <p class="pagas">Pagás</p>
-            <p class="precio3">$700</p>
-            </div>
-        </section>
-       
-        <div class="boton">
-            <button><a href="/">Continuar</a></button>
-        </div>
+                        </div>
+                        <p class="forma-pago">Con otras Formas de Pago</p>
+                        <div class="contenedor">
+                            <input class="" type="radio" name="medio" value="Efectivo">
+                            <i class="fas fa-money-bill"></i>
+                            <span>Efectivo en puntos de Pago</span>
+                        </div>
+                </section>
+            </div> <!-- END: .contenido1 -->
 
-    </div>
-    <div>
+            <div class="contenido2">
+                <section class="resumen">
 
+                    <p class="compra">Resumen de compra</p>
+
+                    <div class="op1">
+                        <p>Producto(3)</p>
+                        <p>$600</p>
+                    </div>
+                    <div class="op2">
+                        <p>Envio</p>
+                        <p class="precio2">$100</p>
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="op3">
+                        <p class="pagas">Pagás</p>
+                        <p class="precio3">$700</p>
+                    </div>
+                </section>
+
+                <div class="boton">
+                    <button><a href="/compra">CONTINUAR</a></button>
+                </div>
+
+            </div> <!-- END: .contenid2 -->
     </main>
+
     <footer>
 
         <section class="listas">
+           
           
         <div class="contenedor-navegacion">
             <a href="" class="texto-principal">NAVEGACIÓN</a> 
@@ -93,10 +96,10 @@
                 <a href=""  class="texto-principal">VENTA ONLINE</a>
                 <p class="whatsapp"><i class="fab fa-whatsapp"></i> Teléfono venta online: 011 xx-xxxxx</p>
                 <p >Mail: ventasonlinegive@One.com.ar</p>
-                <p>Horario de atención: </p>
-                <p>Lunes a Viernes de 9 a 17:00hs</p>
+                <p class="horario">Horario de atención: </p>
+                <p class="dias">Lunes a Viernes de 9 a 17:00hs</p>
             </div>
-
+            
 
             <div class="contenedor-subs">
                
@@ -121,12 +124,14 @@
                 </div>
             
             </div>
+        
         </section>
             
         <div class="copyright">
-            <h4>Copyright@ GIVE ONE S.L.R todos los derechos reservados.</h4>
+            <h4>Copyright@ GIVE ONE S.R.L todos los derechos reservados.</h4>
         </div>
     </footer>
+
 </body>
 
 </html>
