@@ -5,119 +5,109 @@
 .detail .detalle{
     margin-bottom: 20px;
 }
-.detail .detalle .container .product .name-favorit{
+.detail .detalle .product .name-favorit{
     margin-bottom: 10px;
     display: grid;
     grid-template-columns: 80% 20%;
     text-align: center;
     padding: 5px;
 }
-.detail .detalle .container .product .name-favorit .name{
+.detail .detalle .product .name-favorit .name{
     display: inline-block;
     font-size: 1.4rem;
     text-align: left;
     text-transform: uppercase;
 }
 
-.detail .detalle .container .product .name-favorit a i{
+.detail .detalle .product .name-favorit a i{
     color: gray;
     font-size: 1.7rem;
 }
-.detail .detalle .container .product .photo img{
+.detail .detalle .product .photo img{
     padding: 10%;
     width: 100%;
     margin-bottom: 15px;
 }
-.detail .detalle .container .product .descripcion .codigo-producto{
+.detail .detalle .product .descripcion .codigo-producto{
     color: grey;
     font-size: 1rem;
     text-transform: uppercase;
 }
-.detail .detalle .container .product .descripcion .precio{
+.detail .detalle .product .descripcion .precio{
     font-size: 1.2rem;
     padding: 5px;
 }
-.detail .detalle .container .product .descripcion .precio .price{
+.detail .detalle .product .descripcion .precio .price{
     text-decoration: line-through;
     color: grey;
 }
-.detail .detalle .container .product .descripcion .precio .descuento{
+.detail .detalle .product .descripcion .precio .descuento{
     border: 1px solid rgb(170, 169, 169);
     border-radius: 5px;
     padding: 2px 4px;
 }
-.detail .detalle .container .product .descripcion .precio .img-desc{
+.detail .detalle .product .descripcion .precio .img-desc{
     color: red;
 }
-.detail .detalle .container .product .descripcion .cuotas-tarjeta{
+.detail .detalle .product .descripcion .cuotas-tarjeta{
     text-transform: uppercase;
 }
-.detail .detalle .container .product .descripcion .cuotas-tarjeta i{
+.detail .detalle .product .descripcion .cuotas-tarjeta i, .detail .detalle .product .descripcion .cuotas-tarjeta span{
     font-size: 1.3rem;
     padding: 10px 0;
 }
-.detail .detalle .container .product .descripcion .cuotas-tarjeta span{
-    font-size: 1.3rem;
-    padding: 10px 0;
-}
-.detail .detalle .container .product .descripcion .cantidad-productos{
+.detail .detalle .product .descripcion .cantidad-productos{
     margin: 15px 0;
 }
-.detail .detalle .container .product .descripcion .cantidad-productos span{
+.detail .detalle .product .descripcion .cantidad-productos span{
     padding: 0 5px 0 5px;
     text-transform: capitalize;
     font-size: 0.9rem;
 }
-.detail .detalle .container .product .descripcion .cantidad-productos .cant{
+.detail .detalle .product .descripcion .cantidad-productos .cant{
     background-color: ivory;
     border-radius: 10px;
 }
-.detail .detalle .container .product .descripcion .cantidad-productos input{
+.detail .detalle .product .descripcion .cantidad-productos input{
     background-color: rgba(201, 201, 201, 0.856);
     width: 10%;
     text-align: center;
 }
-.detail .detalle .container .product .descripcion .favoritos-boton{
+.detail .detalle .product .descripcion .favoritos-boton{
     text-align: center;
     font-size: 1.rem;
 }
-.detail .detalle .container .product .descripcion .favoritos-boton button{
+.detail .detalle .product .descripcion .favoritos-boton button{
     padding: 2px 15px;
     background-color: #c9b391;
     border:outset sandybrown;
 }
-.detail .detalle .container .product .parrafo .detalles h3{
+.detail .detalle .product .parrafo .detalles h3{
     margin-bottom: 5px;
     text-transform: uppercase;
     margin-top: 15px;
 }
-.detail .detalle .container .product .parrafo .detalles p{
+.detail .detalle .product .parrafo .detalles p{
     text-transform: capitalize;
     margin-bottom: 15px;
 }
 
-@media (max-width: 426px){
-    footer{
-        display: none
-    }
-}
-
 @media (min-width: 426px) {
-    .detail .detalle .container .product .photo img{
+    .detail .detalle .product .photo img{
         padding: 5%;
     }
-    .detail .detalle .container .product .photo-description{
+    .detail .detalle .product .photo-description{
         display: flex;
     }
-    .detail .detalle .container .product .photo-description .photo{
+    .detail .detalle .product .photo-description .photo{
         width: 50%;
     }
-    .detail .detalle .container .product .photo-description .descripcion{        
+    .detail .detalle .product .photo-description .descripcion{        
         padding: 0 5%;
         margin-bottom: 0;
         width: 50%;
     }
-        .detail .detalle .container .product .descripcion .favoritos-boton button{
+        .detail .detalle .product .descripcion .favoritos-boton button{
         margin-top: 15px;
     }
 }
@@ -129,38 +119,38 @@
         margin-right: auto;
         width: 100%
     }
-    .detail .detalle .container .product .name-favorit .name{
+    .detail .detalle .product .name-favorit .name{
         font-size: 1.9rem;
     }
-    .detail .detalle .container .product .name-favorit a i{
+    .detail .detalle .product .name-favorit a i{
         font-size: 2.2rem;
         padding-right: 25%;
     }
-    .detail .detalle .container .product .photo-description .descripcion{        
+    .detail .detalle .product .photo-description .descripcion{        
         padding: 5% 5% 10% 5%;
     }
-    .detail .detalle .container .product .descripcion .codigo-producto{
+    .detail .detalle .product .descripcion .codigo-producto{
         font-size: 1.2rem;
     }
-    .detail .detalle .container .product .descripcion .precio{
+    .detail .detalle .product .descripcion .precio{
         font-size: 1.4rem;
     }
-    .detail .detalle .container .product .descripcion .cuotas-tarjeta i{
+    .detail .detalle .product .descripcion .cuotas-tarjeta i{
         font-size: 1.5rem;
     }
-    .detail .detalle .container .product .descripcion .cuotas-tarjeta span{
+    .detail .detalle .product .descripcion .cuotas-tarjeta span{
         font-size: 1.5rem;
     }
-    .detail .detalle .container .product .descripcion .cantidad-productos span{
+    .detail .detalle .product .descripcion .cantidad-productos span{
         font-size: 1.1rem;
     }
-    .detail .detalle .container .product .descripcion .favoritos-boton{
+    .detail .detalle .product .descripcion .favoritos-boton{
         font-size: 1.2rem;
     }
-    .detail .detalle .container .product .parrafo .detalles h3{
+    .detail .detalle .product .parrafo .detalles h3{
         font-size: 1.5rem;
     }
-    .detail .detalle .container .product .parrafo .detalles p{
+    .detail .detalle .product .parrafo .detalles p{
         font-size: 1.2rem;
     }
 }
