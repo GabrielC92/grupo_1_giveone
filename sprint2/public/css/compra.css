@@ -141,6 +141,8 @@ body {
 
 /*Boton!!!!!!!*/
 
+	
+
 	.compra .boton button{
 		background: transparent;
 		border: none;
@@ -161,10 +163,6 @@ body {
 		transition:  0.2s; 
 	}
 
-	.compra .boton a button:hover{
-		color: white;
-		transition: 2s;
-	}
 		.compra .boton:hover{
 			background-color: #c9b391;
 			box-shadow: 0 0 10px #c9b391, 0 0 30px #c9b391 , 0 0 50px #c9b391;
