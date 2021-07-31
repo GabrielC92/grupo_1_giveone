@@ -16,16 +16,6 @@ max-width: 769px; margin-left:auto ; margin-right: auto;
 }
 
 
-
-.home{
-    background-color: #939393;
-   
-    
-}
-
-
-
-
 .logotipo{ 
  border: 1px outset  tan;
  border-radius: 10px;
@@ -39,15 +29,13 @@ max-width: 769px; margin-left:auto ; margin-right: auto;
 
 .cont-header{ 
 background-color: #c9b391;
-  display: flex;
+  display:flex;
   flex-direction: row-reverse;  
-  justify-content:flex-end;
 }
 
 
 div.logueo{
   color: black;
-  display: flex;
    margin-left: auto;
    padding: 20px;
    justify-content:space-evenly;
@@ -96,8 +84,8 @@ border: double rgb(164, 165, 93);
   display: none;
 }
 
-main {
-  background-color:  #676767;
+.cont-main{
+  background-color:  #cacaca;
 } 
 
 .cont-main div span img{
