@@ -1,0 +1,19 @@
+.registro .log .check{
+    display: flex;
+    align-items: baseline;
+    margin: 10px 0;
+}
+.registro .log .sesion{
+    width: 25px;
+}
+.registro .log a.password{
+    color: #000;
+    text-align: center;
+}
+.registro .log a.password:hover{
+    color: #24cf5f;
+}
+.registro .log .buttons{
+    display: flex;
+    justify-content: space-evenly;
+}

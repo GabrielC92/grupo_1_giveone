@@ -12,6 +12,8 @@ app.get('/formasDePago', (req,res) => res.sendFile(path.join(__dirname,'views','
 app.get('/compra', (req,res) => res.sendFile(path.join(__dirname,'views','compra.html')));
 app.get('/login', (req,res) => res.sendFile(path.join(__dirname,'views','login.html')));
 app.get('/registro', (req,res) => res.sendFile(path.join(__dirname,'views','register.html')));
+app.get('/forgot', (req,res) => res.sendFile(path.join(__dirname,'views','forgot.html')));
+app.get('/forgot2', (req,res) => res.sendFile(path.join(__dirname,'views','forgot2.html')));
 
 app.listen(port, () => console.log(`Server running in http://localhost:${port}`));
 

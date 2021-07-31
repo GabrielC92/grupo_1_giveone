@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give One | Login</title>
+    <script src="https://kit.fontawesome.com/5043351b26.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="shortcut icon" href="/images/giveOneTNC2.ico" type="image/x-icon">
+</head>
+<body>
+    <main class="registro">
+        <section class="titular">
+            <h2 class="titulo">Inicia sesión</h2>
+            <p class="parrafo">y disfruta de las promociones. Si aun no tienes una cuenta, en pocos pasos podrás registrarte</p>
+            <div class="box-img"><img class="coffee" src="/images/coffee.png" alt="coffee"></div>
+        </section>
+        <form class="log" action="/" method="GET">
+            <input class="input-g" type="email" name="email" placeholder="E-mail">
+            <input class="input-g" type="password" name="password" placeholder="Contraseña">
+            <span class="red-msg">El usuario y/o la contraseña no son correctos</span>
+            <label class="check" for="rec">
+                <input class="sesion" type="checkbox" name="sesion" id="rec">
+                Recordar el inicio de mi cuenta
+            </label>
+            <a class="password" href="/forgot">Olvide mi contraseña</a>
+            <div class="buttons">
+                <button class="btn-g" type="button"><a class="registrar-btn" href="/registro">Registrate</a></button>
+                <button class="btn-g" type="submit">Entrar a mi cuenta</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <section class="listas">
+            <div class="contenedor-navegacion">
+                <a href="" class="texto-principal">NAVEGACIÓN</a>
+                <p> Quiènes Somos</p>
+                <p>Como comprar</p>
+                <p>Formas de Pago</p>
+                <p>Medios de Envío</p>
+            </div>
+
+            <div class="contenedor-venta">
+                <a href="" class="texto-principal">VENTA ONLINE</a>
+                <p class="whatsapp"><i class="fab fa-whatsapp"></i> Teléfono venta online: 011 xx-xxxxx</p>
+                <p>Mail: ventasonlinegive@One.com.ar</p>
+                <p class="horario">Horario de atención: </p>
+                <p class="dias">Lunes a Viernes de 9 a 17:00hs</p>
+            </div>
+
+            <div class="contenedor-subs">
+                <form action="" method="GET">
+                    <label class="title" for="suscripcion">NEWLETTER</label>
+                    <p class="subscrib">Suscribite a nuestro Newletter.</p><br>
+                    <input type="text" name="suscripcion" placeholder="Direccion de email" required><br>
+                    <button>SUSCRIBIRME</button>
+                </form>
+            </div>
+
+            <div class="contenedor-redes">
+                <a class="texto-principal" href="">SEGUÍNOS</a>
+                <div class="instagram">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+            </div>
+        </section>
+        <div class="copyright">
+            <h4>Copyright@ GIVE ONE S.R.L todos los derechos reservados.</h4>
+        </div>
+    </footer>
+</body>
+</html>
