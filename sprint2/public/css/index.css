@@ -1,5 +1,5 @@
 
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 320px) {
   .home{
 max-width: 768px; margin-left:auto ; margin-right: auto;
   }
@@ -16,20 +16,7 @@ max-width: 769px; margin-left:auto ; margin-right: auto;
 }
 
 
-
-.home{
-    background-color: rgb(151, 149, 145);
-   
-    
-}
-
-
-body{
-  margin: 0%;
-}
-
-
-header img{ 
+.logotipo{ 
  border: 1px outset  tan;
  border-radius: 10px;
   margin-top: 5px;
@@ -40,35 +27,28 @@ header img{
 }
 
 
-header{ 
-background-color: tan;
-  display: flex;
+.cont-header{ 
+background-color: #c9b391;
+  display:flex;
   flex-direction: row-reverse;  
-  justify-content:flex-end;
 }
 
 
 div.logueo{
   color: black;
-  display: flex;
    margin-left: auto;
    padding: 20px;
-   justify-content: space-between;
+   justify-content:space-evenly;
 }
+
 .home .logueo a{
   color: black;
-}
-
-
-
-
-header div a{
   margin-left: 20px;
- justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 
-section div article{
+section.product div article{
  display: flex;
  flex-direction: column;
  width: 260px;
@@ -80,9 +60,8 @@ section.product{
 }
 
 
-
-div article{
-background-color: tan;
+.product div article{
+background-color: #c9b391;
 border: 2px outset tan;
 border-radius: 30px;
  margin: 30px;
@@ -96,42 +75,48 @@ border-radius: 30px;
 a.vermas{
   color: black;
   text-decoration: none;
-background-color: #c9b391;
+background-color: #a3a1a1;
 border-radius: 20px;
 border: double rgb(164, 165, 93);
 }
 
-main {
-  background-color: rgb(190, 190, 190);
+.ver-inp{
+  display: none;
+}
+
+.cont-main{
+  background-color:  #cacaca;
 } 
 
-main div span img{
+.cont-main div span img{
   width: 100%;
   border:solid tan;
 }
-main article img{
+.cont-main article img{
   width: 100px;
   margin: 2px;
   margin-top: 30px;
 }
+
 article.cajaimg{
 height: 100%;
 }
-main span img{
+
+.cont-main span img{
   width: 100%;
 }
 
 /*burguer*/
 
 
-   ul{
+   .cont-u{
     display: none;
      list-style: none;
 }
-  input:checked  ~ ul{
+  .cont-inp:checked  ~  ul {
     display:block;
   }
-  input {
+  .cont-inp {
     display: none;
   }
   label.hamburguesa {
@@ -148,7 +133,7 @@ main span img{
     margin-top: 10px;
     margin-left: 5px;
   }
-  li {
+  .cont-u li {
     display: block;
     background: rgb(112, 112, 112);
     margin: 0;
@@ -157,14 +142,16 @@ main span img{
     border-bottom: 1px solid grey;
    
   }
-  h3{
+  .ofertax{
     border: 3px outset gray;
     text-transform:capitalize;
     text-align: center;
     background-color: whitesmoke;
-    margin-top: 20px;
+    margin-top: 20px; 
     margin-left: 70px;
     margin-right: 70px;
     padding: 20px;
   
   }
+
+ 
