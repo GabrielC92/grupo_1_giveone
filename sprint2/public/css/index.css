@@ -49,11 +49,16 @@ background-color: tan;
 
 
 div.logueo{
+  color: black;
   display: flex;
    margin-left: auto;
    padding: 20px;
    justify-content: space-between;
 }
+.home .logueo a{
+  color: black;
+}
+
 
 
 
