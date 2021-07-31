@@ -1,0 +1,157 @@
+
+@media screen and (min-width: 320px) {
+  .home{
+max-width: 768px; margin-left:auto ; margin-right: auto;
+  }
+}
+@media screen and (min-width: 768px){
+.home{
+max-width: 769px; margin-left:auto ; margin-right: auto;
+  }
+}
+@media screen and(min-width: 769px){
+  .home{
+    max-width: 1024px; margin-left:auto ; margin-right: auto;
+  }
+}
+
+
+.logotipo{ 
+ border: 1px outset  tan;
+ border-radius: 10px;
+  margin-top: 5px;
+    height: 50px;
+    margin-left: 15px;
+  margin-right: 50px;
+ 
+}
+
+
+.cont-header{ 
+background-color: #c9b391;
+  display:flex;
+  flex-direction: row-reverse;  
+}
+
+
+div.logueo{
+  color: black;
+   margin-left: auto;
+   padding: 20px;
+   justify-content:space-evenly;
+}
+
+.home .logueo a{
+  color: black;
+  margin-left: 20px;
+  justify-content: flex-end;
+}
+
+
+section.product div article{
+ display: flex;
+ flex-direction: column;
+ width: 260px;
+}
+section.product{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+}
+
+
+.product div article{
+background-color: #c9b391;
+border: 2px outset tan;
+border-radius: 30px;
+ margin: 30px;
+ align-items: center;
+
+}
+
+
+
+
+a.vermas{
+  color: black;
+  text-decoration: none;
+background-color: #a3a1a1;
+border-radius: 20px;
+border: double rgb(164, 165, 93);
+}
+
+.ver-inp{
+  display: none;
+}
+
+.cont-main{
+  background-color:  #cacaca;
+} 
+
+.cont-main div span img{
+  width: 100%;
+  border:solid tan;
+}
+.cont-main article img{
+  width: 100px;
+  margin: 2px;
+  margin-top: 30px;
+}
+
+article.cajaimg{
+height: 100%;
+}
+
+.cont-main span img{
+  width: 100%;
+}
+
+/*burguer*/
+
+
+   .cont-u{
+    display: none;
+     list-style: none;
+}
+  .cont-inp:checked  ~  ul {
+    display:block;
+  }
+  .cont-inp {
+    display: none;
+  }
+  label.hamburguesa {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+  .cont-u li {
+    display: block;
+    background: rgb(112, 112, 112);
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    border-bottom: 1px solid grey;
+   
+  }
+  .ofertax{
+    border: 3px outset gray;
+    text-transform:capitalize;
+    text-align: center;
+    background-color: whitesmoke;
+    margin-top: 20px; 
+    margin-left: 70px;
+    margin-right: 70px;
+    padding: 20px;
+  
+  }
+
+ 
