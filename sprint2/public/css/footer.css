@@ -1,18 +1,10 @@
-*{
-  
-    margin: 0;
-    padding: 0px;
-    box-sizing: border-box;
-  
-}
-
 footer{
     background-color:#1F1D1D;
     width: 100%;
 }
 
 
-a{
+ footer a{
     text-decoration: none;
     color: white;
 }
@@ -120,7 +112,6 @@ footer .contenedor-subs button{
     height: 30px;
     font-size: 10px;
     font-family: 'Kanit';
-    font-weight: bold;
     background-color: white;
     border: none;
     border-radius: 3px;
@@ -170,11 +161,6 @@ footer .contenedor-subs label{
 footer .contenedor-venta a{
     font-size: 18px;
 
-}
-
-footer .listas .contenedor-navegacion a , .contenedor-redes a , .contenedor-venta a{
-    
-    font-weight: bold;
 }
 
 }
