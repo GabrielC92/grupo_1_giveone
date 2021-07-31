@@ -11,27 +11,27 @@
 </head>
 <body class="register">
     <main class="registro">
-        <section>
-            <h2>Registrate</h2>
-            <p>Ingresa tus datos y accede a beneficios exclusivos. Nuestras promociones y descuentos te están esperando.</p>
-            <div><img src="/images/coffee.png" alt="coffee"></div>
+        <section class="titular">
+            <h2 class="titulo">Registrate</h2>
+            <p class="parrafo">Ingresa tus datos y accede a beneficios exclusivos. Nuestras promociones y descuentos te están esperando.</p>
+            <div class="box-img"><img class="coffee" src="/images/coffee.png" alt="coffee"></div>
         </section>
-        <form action="/" method="GET">
-            <input type="text" name="name" placeholder="Nombre" required>
-            <span>Este campo es obligatorio</span>
-            <input type="text" name="lastName" placeholder="Apellido" required>
-            <span>Este campo es obligatorio</span>
-            <input type="email" name="email" placeholder="E-mail" required>
-            <span>Este campo es obligatorio</span>
-            <input type="password" name="password" placeholder="Elige una contraseña" required>
-            <span>Este campo es obligatorio</span>
-            <input type="password" name="password" placeholder="Confirmar contraseña" required>
-            <span>Este campo es obligatorio</span>
-            <div>
+        <form class="log" action="/" method="GET">
+            <input class="input-g" type="text" name="name" placeholder="Nombre" required>
+            <span class="red-msg">Este campo es obligatorio</span>
+            <input class="input-g" type="text" name="lastName" placeholder="Apellido" required>
+            <span class="red-msg">Este campo es obligatorio</span>
+            <input class="input-g" type="email" name="email" placeholder="E-mail" required>
+            <span class="red-msg">Este campo es obligatorio</span>
+            <input class="input-g" type="password" name="password" placeholder="Elige una contraseña" required>
+            <span class="red-msg">Este campo es obligatorio</span>
+            <input class="input-g" type="password" name="password" placeholder="Confirmar contraseña" required>
+            <span class="red-msg">Este campo es obligatorio</span>
+            <div class="r-btn">
                 <input class="radio" type="radio" name="aceptar" id="aceptar">
                 <label for="aceptar">Acepto los términos y condiciones</label>
             </div>
-            <button type="submit">Crear cuenta</button>
+            <button class="btn-g" type="submit">Crear cuenta</button>
         </form>
     </main>
     <footer>

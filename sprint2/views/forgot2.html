@@ -5,22 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Give One | Restablecer contraseña</title>
+    <script src="https://kit.fontawesome.com/5043351b26.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="shortcut icon" href="/images/giveOneTNC2.ico" type="image/x-icon">
 </head>
 <body>
     <main class="registro">
-        <section>
-            <h2>Recupera tu cuenta</h2>
-            <p>Establece una nueva contraseña e inicia sesión nuevamente</p>
-            <div><img src="/images/coffee.png" alt="coffee"></div>
+        <section class="titular">
+            <h2 class="titulo">Recupera tu cuenta</h2>
+            <p class="parrafo">Establece una nueva contraseña e inicia sesión nuevamente</p>
+            <div class="box-img"><img class="coffee" src="/images/coffee.png" alt="coffee"></div>
         </section>
-        <form class="fgt-psw" action="/" method="GET">
-            <input type="password" name="code" placeholder="Elegí una nueva contraseña" required>
-            <span>Este campo es obligatorio</span>
-            <input type="password" name="passw" placeholder="Confirma la nueva contraseña" required>
-            <span>Este campo es obligatorio</span>
-            <button type="submit">Aceptar</button>
+        <form class="log" action="/" method="GET">
+            <input class="input-g" type="password" name="code" placeholder="Elegí una nueva contraseña" required>
+            <span class="red-msg">Este campo es obligatorio</span>
+            <input class="input-g" type="password" name="passw" placeholder="Confirma la nueva contraseña" required>
+            <span class="red-msg">Este campo es obligatorio</span>
+            <button class="btn-g" type="submit">Aceptar</button>
         </form>
     </main>
     <footer>

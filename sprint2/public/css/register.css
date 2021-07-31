@@ -9,47 +9,47 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
-.registro section{
+.registro .titular{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 85%;
     max-width: 550px;
 }
-.registro section h2{
+.registro .titular .titulo{
     margin: 15px 0;
 }
-.registro section p{
+.registro .titular .parrafo{
     margin-bottom: 15px;
     text-align: center;
 }
-.registro section div{
+.registro .titular .box-img{
     display: none;
 }
-.registro form{
+.registro .log{
     width: 85%;
     max-width: 550px;
     display: flex;
     flex-direction: column;
 }
-.registro form input{
+.registro .log .input-g{
     padding: 7px;
     margin: 10px 0 0;
     width: 100%;
     border-radius: 7px;
     border: outset sandybrown;
 }
-.registro form span{
+.registro .log .red-msg{
     margin: 0 0 10px;
     color: #c60e09;
 }
-.registro form div{
+.registro .log .r-btn{
     text-align: center;
 }
-.registro form div .radio{
+.registro .log .r-btn .radio{
     width: 5%;
 }
-.registro form button{
+.registro .log .btn-g{
     width: 145px;
     padding: 5px 0;
     margin: 20px 0;
@@ -60,10 +60,10 @@
     color: #fff;
     transition: all .8s;
 }
-.registro form button:hover{
+.registro .log .btn-g:hover{
     background-color: rgb(46, 45, 45);
 }
-.registro form button:active{
+.registro .log .btn-g:active{
     transform: scale(1.15);
 }
 
@@ -74,13 +74,13 @@
         align-items: flex-start;
         justify-content: center;
     }
-    .registro section{
+    .registro .titular{
         margin: 0 10px;
     }
-    .registro section div{
+    .registro .titular .box-img{
         display: block;
     }
-    .registro section div img{
+    .registro .titular .box-img .coffee{
         width: 400px;
     }
 }
