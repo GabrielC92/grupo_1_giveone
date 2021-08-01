@@ -1,23 +1,13 @@
 
-@media screen and (min-width: 320px) {
-  .home{
-max-width: 768px; margin-left:auto ; margin-right: auto;
-  }
-}
-@media screen and (min-width: 768px){
-.home{
-max-width: 769px; margin-left:auto ; margin-right: auto;
-  }
-}
-@media screen and(min-width: 769px){
-  .home{
-    max-width: 1024px; margin-left:auto ; margin-right: auto;
-  }
-}
 
+/*header1*/
+ @media (min-width: 10px) and (max-width: 768px){
+ 
+  .cont-header2{
+    display: none;
+  }
 
 .logotipo{ 
- border: 1px outset  tan;
  border-radius: 10px;
   margin-top: 5px;
     height: 50px;
@@ -26,27 +16,107 @@ max-width: 769px; margin-left:auto ; margin-right: auto;
  
 }
 
-
 .cont-header{ 
-background-color: #c9b391;
+background-color: white;
   display:flex;
   flex-direction: row-reverse;  
 }
 
 
 div.logueo{
+
   color: black;
    margin-left: auto;
-   padding: 20px;
+  margin-block: auto;
+  
+   padding: 10px;
    justify-content:space-evenly;
 }
 
-.home .logueo a{
+.header1 .logueo a{
   color: black;
   margin-left: 20px;
   justify-content: flex-end;
 }
 
+
+/*burguer*/
+
+.cont-u{
+  display: none;
+   list-style: none;
+}
+.cont-inp:checked  ~  ul {
+  display:block;
+}
+.cont-inp {
+  display: none;
+}
+label.hamburguesa {
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1.5px solid black;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.cont-u li {
+  display: block;
+  background: rgb(112, 112, 112);
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  border-bottom: 1px solid grey;
+ 
+}
+
+/*fin header1*/
+/*fin burguer*/
+}
+
+.ofertax{
+ 
+  background-color: whitesmoke;
+  margin-top: 20px; 
+  padding: 20px;
+
+}
+
+
+.cont-main .main-header2 {
+  width: 100%;
+}
+
+.cont-main h3{
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+main{
+  background-color: #f0f0f0;
+}
+
+.cont-main .imagenes-4 img{
+  width: 20%;
+  margin: 10px;
+}
+
+.cont-main .imagenes-4{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/*finmain*/
+
+/*productos*/
 
 section.product div article{
  display: flex;
@@ -70,8 +140,6 @@ border-radius: 30px;
 }
 
 
-
-
 a.vermas{
   color: black;
   text-decoration: none;
@@ -84,14 +152,6 @@ border: double rgb(164, 165, 93);
   display: none;
 }
 
-.cont-main{
-  background-color:  #cacaca;
-} 
-
-.cont-main div span img{
-  width: 100%;
-  border:solid tan;
-}
 .cont-main article img{
   width: 100px;
   margin: 2px;
@@ -106,52 +166,96 @@ height: 100%;
   width: 100%;
 }
 
-/*burguer*/
+
+/*media*/
 
 
-   .cont-u{
-    display: none;
-     list-style: none;
-}
-  .cont-inp:checked  ~  ul {
-    display:block;
-  }
-  .cont-inp {
-    display: none;
-  }
-  label.hamburguesa {
-    box-sizing: border-box;
-    display: inline-block;
-    border: 1.5px solid black;
-    border-radius: 5px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    font-weight: bold;
-    text-align: center;
-    user-select: none;
-    margin-top: 10px;
-    margin-left: 5px;
-  }
-  .cont-u li {
-    display: block;
-    background: rgb(112, 112, 112);
-    margin: 0;
-    padding: 10px;
-    list-style: none;
-    border-bottom: 1px solid grey;
-   
-  }
-  .ofertax{
-    border: 3px outset gray;
-    text-transform:capitalize;
-    text-align: center;
-    background-color: whitesmoke;
-    margin-top: 20px; 
-    margin-left: 70px;
-    margin-right: 70px;
-    padding: 20px;
-  
-  }
-
+@media (min-width: 769px){
  
+  .cont-header{
+    display: none;
+  }
+
+  .cont-header2{
+    background-color: white;
+    height: 130px;
+    
+  }
+  
+  .cont-header2 .iconos i{
+    margin-right: 20px;
+    font-size:18px;
+    padding-top: 10px;
+  }
+  
+  .cont-header2 .texto{
+    margin-right: 32px;
+    font-size: 11px;
+    color: #969FAA;
+  }
+  
+  .cont-header2 .texto i{
+    color: black;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .cont-header2 .iconos-navegador{
+    width: 70%;
+  }
+  
+  .cont-header2 .iconos-buscador{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #969FAA;
+    align-items: center
+  }
+  
+  .cont-header2 .logo{
+    width:30%;
+    padding-top: 30px;
+    padding-left: 42px;
+  }
+  
+  .cont-header2 .categorias{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+  }
+  
+  
+  .cont-header2 .categoria i{
+    color: #5A6978;
+    padding-left: 10px;
+    font-size: 15px;
+  }
+  
+  .cont-header2 .envio{
+    margin-top: 28px;
+    text-align: center;
+    background-color: #F5F5F5;
+    padding-top: 8px;
+    padding-bottom:  8px; ;
+    top: -40px;
+    color: #5A6978;
+    font-size: 10px;
+  }
+  
+  .cont-header2 .contenedor-padre{
+    display: flex;
+    
+  }
+  
+  .cont-header2 .navegador{
+    display: flex;
+  justify-content: space-between;
+  font-family: 'Roboto';
+  font-weight: bolder;
+  font-size: 13px;
+  margin-right: 80px;
+  padding-top: 15px;
+  }
+
+}
