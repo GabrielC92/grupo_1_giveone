@@ -37,6 +37,7 @@ font-size: 9px;
 width: 33.33%;
 float: left;
 position: relative;
+margin-top: 50px;
 }
 
 .carrito #progressbar li:before {
@@ -76,7 +77,7 @@ content: none;
       
 }
 
-.carrito img{
+.carrito .img-detail img{
     box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
      width: 100px;
     height: 100px;

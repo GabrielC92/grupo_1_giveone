@@ -251,10 +251,12 @@ body {
 
 .compra #progressbar  .finalizar a{
     color:#c9b391;
+	text-decoration: none;
     
 }
-.compra #progressbar  .cart a , .finalizar{
+.compra #progressbar  .cart a , .pagos a{
 	color: black;
+	text-decoration: none;
 }
 
 		
@@ -265,6 +267,7 @@ body {
 	width: 33.33%;
 	float: left;
 	position: relative;
+	margin-top: 35px;
 	
 }
 

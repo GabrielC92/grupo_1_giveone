@@ -12,28 +12,6 @@
 flex-direction: column;
 }
 
-.pago .navegador{
-    display: flex;
-    justify-content: space-evenly;
-    border-bottom:solid 1px #b1b6bd; 
-    margin-bottom: 10px;
-    font-family: 'Open sans';
-    font-size: 14px;
-    font-weight:bold;
-   
-   
-}
-.pago .navegador p{
-    color: black;
-}
-.pago .navegador .car:hover{
-    transform: scale(1.06);
-}
-
-.pago .navegador .formas{
-    border-bottom:solid 2px rgb(130, 139, 153);
-    
-}
 
 
 .pago .contenedor{
@@ -253,6 +231,7 @@ font-weight: bold;
         float: left;
         width: 60%;
         padding-top: 1em;
+        margin-top: 16px;
     }
 
     .pago .contenido2{
@@ -262,6 +241,8 @@ font-weight: bold;
         position: relative;
         background: white;
         height: 400px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     .pago .navegador{

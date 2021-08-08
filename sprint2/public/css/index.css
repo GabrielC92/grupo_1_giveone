@@ -95,7 +95,8 @@ label.hamburguesa {
 
 .cont-main h3{
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   font-weight: bold;
 }
 
@@ -164,6 +165,7 @@ height: 100%;
 
 .cont-main span img{
   width: 100%;
+  margin-top: 60px;
 }
 
 
@@ -237,7 +239,7 @@ height: 100%;
     text-align: center;
     background-color: #F5F5F5;
     padding-top: 8px;
-    padding-bottom:  8px; ;
+    padding-bottom:  8px; 
     top: -40px;
     color: #5A6978;
     font-size: 10px;
@@ -255,7 +257,7 @@ height: 100%;
   font-weight: bolder;
   font-size: 13px;
   margin-right: 80px;
-  padding-top: 15px;
+  padding-top: 30px;
   }
 
 }
