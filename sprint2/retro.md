@@ -19,3 +19,8 @@
 ### RESUMEN SPRINT 1
 En general tuvimos una buena comunicación, pudimos organizarnos como equipo y ser colaborativos entre nosotros. Tuvimos un buen manejo con Trello y GitHub. Se terminó con tiempo sobrante y éste se utilizó para mejorar la estética del Home para el sprint 2.
 
+********************************************************************
+
+
+
+
