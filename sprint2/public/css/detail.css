@@ -1,7 +1,11 @@
 .detail{
-    background-color: #f0f0f0;
-    padding: 20px;
-    font-family: 'Kanit', sans-serif;
+    background-color: white;
+    font-family: 'Roboto';
+    font-weight: normal;
+}
+
+.detail main{
+    background-color: white;
 }
 .detail .detalle{
     margin-bottom: 20px;
@@ -67,14 +71,25 @@
     font-size: 0.9rem;
 }
 .detail .detalle .product .descripcion .cantidad-productos .cant{
-    background-color: ivory;
-    border-radius: 10px;
+    background-color: white;
+    border: solid 1px black;
 }
-.detail .detalle .product .descripcion .cantidad-productos input{
-    background-color: rgba(201, 201, 201, 0.856);
-    width: 10%;
+.detail .detalle .product .descripcion .cantidad-productos .cant1{
+    background: white;
+    padding-left: 7px;
     text-align: center;
+    border: solid 1px black;
+    padding-right: 7px;
 }
+
+.detail .detalle .product .descripcion .cantidad-productos input{
+    background-color: white;
+    border: none;
+    text-align: center;
+    width: 20px;
+
+}
+
 .detail .detalle .product .descripcion .favoritos-boton{
     font-size: 1.rem;
 }
@@ -131,12 +146,14 @@
         width: 100%
     }
     .detail .detalle .product .name-favorit .name{
-        font-size: 1.9rem;
         padding-left: 5%;
+        padding-top: 15px;
+        font-weight: bold;
     }
     .detail .detalle .product .name-favorit a i{
         font-size: 2.2rem;
         padding-right: 25%;
+        margin-top: 10px;
     }
     .detail .detalle .product .photo-description .photo img{
         max-height: 75%;
@@ -157,7 +174,7 @@
         font-size: 1.5rem;
     }
     .detail .detalle .product .descripcion .cuotas-tarjeta span{
-        font-size: 1.5rem;
+        font-size: 12px;
     }
     .detail .detalle .product .descripcion .cantidad-productos span{
         font-size: 1.1rem;
