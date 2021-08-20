@@ -151,6 +151,7 @@ body {
 		cursor: pointer;
 		font-size: 10px;
 		color: #939393;
+		outline: none;
 	}
 	.compra .boton {
 		position: relative;

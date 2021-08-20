@@ -90,7 +90,9 @@ label.hamburguesa {
 .ofertax{
  
   font-family: 'Roboto';
-  margin-top: 180px; 
+  margin-top: 180px;
+  text-align: center;
+  font-weight: bold; 
  
 
 }
@@ -131,7 +133,7 @@ main{
 section.product div article{
  display: flex;
  flex-direction: column;
- width: 260px;
+ width: 240px;
  height: 400px;
  justify-content: space-around;
 }
@@ -148,6 +150,12 @@ background-color: white;
  align-items: center;
 }
 
+.product div article:hover{
+  box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.3);
+  transition: 1s;
+  
+}
+
 
 a.vermas{
   color: black;
@@ -160,6 +168,12 @@ a.vermas{
   justify-content: center;
   font-family: 'Roboto';
   font-weight: bold;
+}
+
+a.vermas:hover{
+  background-color: #1F1D1D;
+        color: white;
+        transition: 1s;
 }
 
 .ver-inp{
@@ -178,8 +192,51 @@ height: 100%;
 
 .cont-main span img{
   width: 100%;
-  margin-top: 60px;
+ 
 }
+
+
+/*favoritos*/
+
+.fav{
+  position: relative;
+  bottom: 210px;
+  left: 95px;
+  z-index: 1;
+}
+
+/* Envios y nuevos*/
+.of2{
+  position: relative;
+  top: -200px;
+  left: -80px;
+  background-color: #85CFA6;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.of4{
+  position: relative;
+    top: -195px;
+    left: -85px;
+    background-color: #E6898B;
+    color: white;
+    font-weight: bold;
+    width: 70px;
+    text-align: center;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    font-size: 12px;
+    padding: 5px;
+ 
+}
+ 
+
 
 
 /*media*/
@@ -296,7 +353,7 @@ height: 100%;
 
 }
 
-.boton{
+.botonn{
     
  background: none;
 border: transparent;
@@ -310,7 +367,7 @@ text-decoration: none;
     width: 130px;
     height: 18px;
     background: white;
-    border-radius: 5px;
+    border-radius: 2px;
     border: solid 1px #D2D4D6;
 }
 

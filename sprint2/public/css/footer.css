@@ -45,7 +45,7 @@ footer .contenedor-venta , .contenedor-redes {
 
 
 footer .listas a {
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Roboto';
     padding-bottom: 50px;
      
 
@@ -92,7 +92,7 @@ footer .contenedor-subs{
 }
 
 footer .contenedor-subs label{
-    font-family: 'Kanit';
+    font-family: 'Roboto';
     font-size: 20px;
     position: relative;
     top: -5px;
@@ -102,21 +102,26 @@ footer .contenedor-subs label{
 
 footer .contenedor-subs p{
     padding-top: 10px;
-    font-family: 'Kanit';
+    font-family: 'Roboto';
 
 }
 
 
 footer .contenedor-subs button{
     width: 150px;
-    height: 30px;
+    height: 38px;
     font-size: 10px;
-    font-family: 'Kanit';
+    font-family: 'Roboto';
     background-color: white;
     border: none;
     border-radius: 3px;
     cursor: pointer;
- 
+    outline: none;
+
+}
+
+footer .contenedor-subs button i{
+    font-size: 25px;
 
 }
 
@@ -126,6 +131,8 @@ footer .contenedor-subs input{
     height: 40px;
     margin-bottom: 15px;
    font-size: 13px;
+   background: #1F1D1D;
+    border: solid 2px white
  
 }
     
@@ -201,7 +208,7 @@ footer .contenedor-venta a{
         }
     
         footer .contenedor-subs label {
-            font-family: 'Kanit';
+            font-family: 'Roboto';
             font-size: 16px;
             left: 100px;
         }
@@ -211,9 +218,12 @@ footer .contenedor-subs .subscrib{
  }
     
     
-footer .contenedor-subs button{
-position: relative;
-        left: 75px;
+    footer .contenedor-subs button{
+    position: relative;
+    left: 250px;
+    top: -54px;
+    width: 50px;
+    background: white;
         }
 
     
