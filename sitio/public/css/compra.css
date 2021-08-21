@@ -1,0 +1,303 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #1a1a1a;
+	background-color: #f0f0f0; 
+}
+  
+.compra h2{
+	margin: 0;
+	font-weight: 600; 
+	margin-bottom: 30px;
+}
+  
+  
+  .compra input {
+	width: 100%;
+	min-height: 30px;
+	padding-left: 5px;
+	padding-right: 5px;
+	letter-spacing: .5px;
+	border: 0;
+	border-bottom: 2px solid #f0f0f0; 
+}
+
+
+.compra input:focus {
+	outline: none;
+	border-color: #c9b391; 
+  }
+ 
+	
+
+  
+  .compra .form-list {
+	padding-left: 0;
+	list-style: none; 
+}
+
+.compra .opciones {
+	margin-bottom: 25px; 
+}
+.compra .opciones label {
+	position: relative;
+	display: block;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 11px;
+	letter-spacing: .5px;
+	color: #939393; 
+}
+	
+.compra .datos-card {
+		
+	display: flex;
+	-ms-flex-pack: justify;
+	justify-content: space-between; 
+	color: #676767;
+	font-size: 11px;
+}
+	
+.compra .datos-card > :first-child {
+	-ms-flex: 2;
+		flex: 2;
+	padding-right: 20px; 
+  }
+.compra .datos-card > :nth-child(2n) {	  
+	flex: 1; 
+	font-size: 11px;
+			  
+}
+
+	.compra .input-datos {
+	  display: flex;
+		  justify-content: space-between; 
+		}
+
+	  .compra .input-datos > * {
+		width: calc(50% - 10px - 10px);
+	 }
+
+
+	.compra .guardar-card {
+	  margin-top: 30px;
+	  margin-bottom: 30px;
+	  font-size: 12px; 
+	}
+	 .compra .guardar-card label {
+		font-weight: 400;
+		text-transform: none;
+		color: #676767; 
+	}
+
+
+	 .compra .guardar-card input {
+		width: auto;
+		margin-right: 5px; 
+	}
+  
+  .compra	.input-card {
+	position: relative;
+	padding-top: 6px; 
+}
+	
+
+	
+
+	.compra .input-card i{
+			position: relative;
+    top: -26px;
+    font-size: 20px;
+    color: gray;
+		}
+  
+  
+  .compra .contenedor {
+
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 100%;
+	padding-top: 20px;
+	
+  }
+	.compra .contenido-padding {
+	  display: flex;
+	  max-width: 675px;
+	  min-height: 400px;
+	  margin-bottom: 125px;
+	  background-color: #ffffff;
+	  border-radius: 5px;
+	  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1); 
+	}
+
+	  
+	
+	.compra .contenido-general {
+	  padding: 50px 50px; 
+	}
+
+
+/*Boton!!!!!!!*/
+
+	
+
+	.compra .boton button{
+		background: transparent;
+		border: none;
+		font-weight: bolder;
+		letter-spacing: 2px;
+		cursor: pointer;
+		font-size: 10px;
+		color: #939393;
+		outline: none;
+	}
+	.compra .boton {
+		position: relative;
+		display: inline-block;
+		text-decoration: none;
+		padding: 15px 30px;
+		font-size: 12px;
+		border-radius: 2px;
+		overflow: hidden;
+		transition:  0.2s; 
+		outline: none;
+	}
+
+		.compra .boton:hover{
+			background-color: #c9b391;
+			box-shadow: 0 0 10px #c9b391, 0 0 30px #c9b391 , 0 0 50px #c9b391;
+			transition-delay: 1s;
+			color: white;
+		}
+
+		.compra .boton span{
+			position: absolute;
+			display: block;
+		}
+		.compra .boton #span1{
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 2px;
+			background: linear-gradient(90deg,transparent,#c9b391);
+
+		}
+
+		.compra .boton:hover #span1{
+			left: 100%;
+			transition: 1s;
+
+		}
+
+		.compra .boton #span3{
+			bottom: 0;
+			right: -100%;
+			width: 100%;
+			height: 2px;
+			background: linear-gradient(270deg,transparent,#c9b391);
+
+		}
+
+		.compra .boton:hover #span3{
+			right: 100%;
+			transition: 1s;
+			transition-delay: 0.5s;
+
+		}
+
+		.compra .boton #span2{
+			top: -100%;
+			right: 0;
+			width: 2px;
+			height: 100%;
+			background: linear-gradient(180deg,transparent,#c9b391);
+
+		}
+
+		.compra .boton:hover #span2{
+			top: 100%;
+			transition: 1s;
+			transition-delay: 0.25s;
+
+		}
+		.compra .boton #span4{
+			bottom: -100%;
+			left: 0;
+			width: 2px;
+			height: 100%;
+			background: linear-gradient(180deg,transparent,#c9b391);
+
+		}
+
+		.compra .boton:hover #span4{
+			bottom: 100%;
+			transition: 1s;
+			transition-delay: 0.5s;
+
+		}
+
+
+
+/*progressbar*/
+		
+.compra #progressbar {
+			
+			overflow: hidden;
+			counter-reset: step;
+			padding: 0;
+    		text-align: center;
+			
+}
+
+.compra #progressbar  .finalizar a{
+    color:#c9b391;
+	text-decoration: none;
+    
+}
+.compra #progressbar  .cart a , .pagos a{
+	color: black;
+	text-decoration: none;
+}
+
+		
+.compra #progressbar li {
+	list-style-type: none;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+	margin-top: 35px;
+	
+}
+
+.compra #progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: white;
+	background: #1F1D1D;;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar conectores*/
+.compra #progressbar li:after {
+	content: '';
+	width: 180%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; 
+}
+.pago #progressbar li:first-child:after {
+	content: none; 
+}
+		
+		
