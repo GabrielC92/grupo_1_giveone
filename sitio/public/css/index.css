@@ -148,12 +148,7 @@ section.product{
 background-color: white;
  margin: 30px;
  align-items: center;
-}
-
-.product div article:hover{
-  box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.3);
-  transition: 1s;
-  
+ box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
 }
 
 
