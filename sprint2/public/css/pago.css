@@ -1,0 +1,274 @@
+
+
+.pago a{
+    text-decoration: none;
+}
+.pago  #progressbar .cart a, .finalizar a{
+    color: black;
+}
+
+.pago{
+ display: flex;
+flex-direction: column;
+}
+
+
+
+.pago .contenedor{
+    margin: auto;
+    width: 70%; 
+    height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    cursor: pointer;
+    font-family: 'kanit';
+   background-color: white;
+   font-weight: lighter;
+   border-radius: 10px;
+   margin-top: 5px
+}
+
+
+.pago .contenedor span{
+    font-size: 12px;
+     
+}
+
+
+.pago .contenedor:hover{
+	box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.8s;
+       
+    
+}
+
+
+
+.pago .contenedor input{
+    position: relative;
+    left: -25px;
+}
+
+.pago .contenedor i{
+    position: relative;
+    left: -12px;
+}
+
+.pago .forma-pago{
+    text-align: center;
+padding-top: 20px;
+font-family: 'Open sans';
+font-size: 14px;
+font-weight: bold;
+}
+
+.pago .op1, .op2, .op3{
+    font-family: 'Open sans';
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+.pago .op1{
+    display: flex;
+    justify-content: space-around;
+    
+
+}
+
+
+.pago .op2{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: -11px;
+}
+.pago .precio2{
+    position: relative;
+    left: 20px;
+
+}
+    
+.pago .op3{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: 23px;
+    margin-top: 15px;
+
+}
+.pago .pagas
+  {
+      font-weight: bold;
+  }
+
+.pago .precio3{
+    position: relative;
+    left: -46px;
+}
+
+.pago .contenido2{
+    background-color: white;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+    height: 200px;
+    margin-top: 6px;
+    
+}
+
+
+.pago .resumen .compra{
+    text-align: center;
+    font-family: 'Open sans';
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    
+}
+
+
+.pago .resumen{
+    margin-left: 67px;
+    margin-right: 67px;
+    border-bottom:solid 1px #b1b6bd; 
+}
+
+.pago .boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.pago .boton a{
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.pago .boton button{
+    color: #ffffff;
+    background-color: #c9b391;
+    padding: 12px 25px;
+    font-size: 15px;
+    letter-spacing: 1px;
+   font-family: 'Open sans';
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+    transition: all .2s; }
+
+ .pago .boton button:hover, button:active, button:focus {
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); 
+      
+}
+
+
+
+.pago #progressbar {
+    text-align: center;
+    counter-reset: step;
+}
+
+.pago #progressbar li {
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    margin-bottom: 10px;
+}
+.pago #progressbar .pago a{
+    color:#c9b391;
+    
+}
+
+.pago #progressbar li:before{
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px; /*Linea en medio de los numeros*/
+    display: block;
+    font-size: 10px;
+    color: white;
+    background-color: #1F1D1D;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
+
+}
+
+.pago #progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1; /*pone los numero sobre la linea*/
+}
+
+
+
+
+@media (min-width: 768px){
+    footer{
+        display: inline-block;
+    }
+
+    .pago .cont1-cont2{
+        max-width: calc(1120px + 10%);
+        margin: 0 auto;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-bottom: 2rem;
+    }
+
+    .pago .contenido1{
+        float: left;
+        width: 60%;
+        padding-top: 1em;
+        margin-top: 16px;
+    }
+
+    .pago .contenido2{
+        float: right;
+        width: 40%;
+        padding-top: 1em;
+        position: relative;
+        background: white;
+        height: 400px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .pago .navegador{
+        border: none;
+    }
+
+
+    .pago .op1 ,.op2{
+        padding-top: 20px;
+        font-size: 16px;
+    }
+
+    .pago .con1-cont2{
+        height: 400px;
+    }
+  .pago .op3{
+    margin-top: 30px;
+    font-size: 16px;
+  }
+  
+  .pago .boton{
+    padding-top: 40px;
+  }
+
+   
+}
+
+
+

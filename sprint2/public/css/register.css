@@ -1,0 +1,86 @@
+.registro{
+    display: flex;
+    flex-direction: column;
+    background-color: #d1d1d1;
+    align-items: center;
+    padding: 15px;
+    background-image: url('/images/cristaleria.jpg');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.registro .titular{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    max-width: 550px;
+}
+.registro .titular .titulo{
+    margin: 15px 0;
+}
+.registro .titular .parrafo{
+    margin-bottom: 15px;
+    text-align: center;
+}
+.registro .titular .box-img{
+    display: none;
+}
+.registro .log{
+    width: 85%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+}
+.registro .log .input-g{
+    padding: 7px;
+    margin: 10px 0 0;
+    width: 100%;
+    border-radius: 7px;
+    border: outset sandybrown;
+}
+.registro .log .red-msg{
+    margin: 0 0 10px;
+    color: #c60e09;
+}
+.registro .log .r-btn{
+    text-align: center;
+}
+.registro .log .r-btn .radio{
+    width: 5%;
+}
+.registro .log .btn-g{
+    width: 145px;
+    padding: 5px 0;
+    margin: 20px 0;
+    border: outset sandybrown;
+    border-radius: 15px;
+    align-self: center;
+    background-color: #c9b391;
+    color: #fff;
+    transition: all .8s;
+}
+.registro .log .btn-g:hover{
+    background-color: rgb(46, 45, 45);
+}
+.registro .log .btn-g:active{
+    transform: scale(1.15);
+}
+
+/* media queries */
+@media (min-width: 769px) {
+    .registro{
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .registro .titular{
+        margin: 0 10px;
+    }
+    .registro .titular .box-img{
+        display: block;
+    }
+    .registro .titular .box-img .coffee{
+        width: 400px;
+    }
+}
