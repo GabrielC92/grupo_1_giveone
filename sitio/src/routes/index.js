@@ -18,17 +18,5 @@ router.get('/formasDePago', function(req, res) {
 router.get('/compra', function(req, res) {
   res.render('compra');
 });
-router.get('/login', function(req, res) {
-  res.render('login');
-});
-router.get('/registro', function(req, res) {
-  res.render('register');
-});
-router.get('/forgot', function(req, res) {
-  res.render('forgot');
-});
-router.get('/forgot2', function(req, res) {
-  res.render('forgot2');
-});
 
 module.exports = router;

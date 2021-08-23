@@ -6,7 +6,7 @@
 
 
         <div class="logueo">
-            <a href="/login"><i class="fas fa-user"></i></a>
+            <a href="/users/login"><i class="fas fa-user"></i></a>
             <a href=""><i class="far fa-heart"></i></a>
             <a href="/cart"><i class="fas fa-shopping-bag"></i></a>
         </div>
@@ -36,17 +36,22 @@
             <div class="iconos-navegador">
 
                 <div class="iconos-buscador">
-                    <a href="/registro">
+                    <a href="/users/registro">
                         <p class="texto"><i class="fas fa-sign-in-alt"></i>Registrarme</p>
                     </a>
-                    <a href="/login">
+                    <a href="/users/login">
                         <p class="texto"><i class="fas fa-user-alt"></i>Mi cuenta</p>
                     </a>
                     <div class="iconos">
-                        <i class="fas fa-search"></i>
-                        <i class="far fa-heart"></i>
+                        <div class="buscador-ip">
+                            <input class="buscar" type="text" >
+                            <button class="botonn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <i class="far fa-heart"></i>
                         <a class="cora" href="/cart"><i class="fas fa-shopping-bag"></i></a>
                     </div>
+                </div>
                 </div>
                 <div class="navegador">
                     <p class="categoria">CUBIERTOS</p>
@@ -71,14 +76,14 @@
             <p class="parrafo">lorem ipsum</p>
             <div class="box-img"><img class="coffee" src="/images/mug_coffee_PNG97438.png" alt="coffee"></div>
         </section>
-        <form class="log" action="/" method="POST">
-            <input class="input-g" type="text" name="name" placeholder="Nombre" value="">
+        <form class="log" action="/admin/edit/<%= product.id %>?_method=PUT" method="POST">
+            <input class="input-g" type="text" name="name" placeholder="Nombre" value="<%= product.name %>">
             
-            <textarea class="input-g" name="description" placeholder="Descripción" cols="30" rows="10" value=""></textarea>
+            <textarea class="input-g" name="description" placeholder="Descripción" cols="30" rows="10" value="<%= product.description %>"></textarea>
             
-            <input class="input-g" type="number" name="price" placeholder="Precio" value="">
+            <input class="input-g" type="number" name="price" placeholder="Precio" value="<%= product.price %>">
             
-            <input class="input-g" type="text" name="category" placeholder="categoría" value="">
+            <input class="input-g" type="text" name="category" placeholder="categoría" value="<%= product.category %>">
             
             <input class="input-g" type="file" name="image" accept="image/*" value="">
             

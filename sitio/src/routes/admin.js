@@ -2,7 +2,7 @@ let express = require('express');
 let router = express.Router();
 const path = require('path');
 const multer = require('multer');
-let {create,store,edit,update,destroy} = require('../controllers/adminController');
+let {data,create,store,edit,update,destroy} = require('../controllers/adminController');
 
 // Configuración Multer
 const storage = multer.diskStorage({
@@ -17,6 +17,7 @@ const storage = multer.diskStorage({
 const uploadFile = multer({storage});
 
 // Rutas del administrador
+router.get('/productos', data);
 router.get('/create', create);
 router.post('/create', uploadFile.single('image'), store);
 

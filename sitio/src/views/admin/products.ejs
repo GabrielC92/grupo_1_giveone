@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
-    <%- include('partials/head') %>
-<body>
-    
+<html lang="en">
+<%- include('../partials/head') %>
+<body class="detail">
     <header class="cont-header">
 
 
@@ -71,45 +70,74 @@
 
     </header>
 
-    <main class="registro">
-        <section class="titular">
-            <h2 class="titulo">Ingresá tu email</h2>
-            <p class="parrafo">y recibirás un link para restablecer tu contraseña.</p>
-            <div class="box-img"><img class="coffee" src="/images/mug_coffee_PNG97438.png" alt="coffee"></div>
+    <main class="cont-main">
+
+        <p class="ofertax">Lista de productos</p>
+        <section class="product">
+
+            <% products.forEach(product => { %>
+                <div class="contenedor-pro">
+                    <article class="uno">
+    
+                        <img src="/images/<%= product.image %>" alt="<%= product.name %>">
+                        <div class="fav1">
+                            <i class="far fa-heart"></i>
+                            </div>
+                        <div class="data-product">
+                            <h4><%= product.name %></h4>
+                            <p>$<%= product.price %></p>
+                            <br>
+                            <div class="buttons">
+                                <a href="/admin/edit/<%= product.id %>" class="registrar-btn">
+                                    <button class="btn-g" type="button">Editar</button>
+                                </a>
+                                <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST" class="registrar-btn">
+                                    <button class="btn-g" type="submit">Eliminar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            <% }) %>
+
         </section>
-        <form class="log" action="/users/forgot2" method="GET">
-            <input class="input-g" type="email" name="email" placeholder="E-mail" required>
-            <button class="btn-g" type="submit">Enviar email</button>
-        </form>
+
     </main>
+
     <footer>
+
         <section class="listas">
+
             <div class="contenedor-navegacion">
                 <a href="" class="texto-principal">NAVEGACIÓN</a>
                 <p> Quiènes Somos</p>
                 <p>Como comprar</p>
                 <p>Formas de Pago</p>
                 <p>Medios de Envío</p>
-            </div>
 
+            </div>
             <div class="contenedor-venta">
                 <a href="" class="texto-principal">VENTA ONLINE</a>
                 <p class="whatsapp"><i class="fab fa-whatsapp"></i> Teléfono venta online: 011 xx-xxxxx</p>
                 <p>Mail: ventasonlinegive@One.com.ar</p>
-                <p class="horario">Horario de atención: </p>
-                <p class="dias">Lunes a Viernes de 9 a 17:00hs</p>
+                <p>Horario de atención: </p>
+                <p>Lunes a Viernes de 9 a 17:00hs</p>
             </div>
 
             <div class="contenedor-subs">
+
                 <form action="" method="GET">
                     <label class="title" for="suscripcion">NEWLETTER</label>
                     <p class="subscrib">Suscribite a nuestro Newletter.</p><br>
-                    <input type="email" name="email" placeholder="Direccion de email" required><br>
+
+                    <input type="email" name="suscripcion" placeholder="Direccion de email" required><br>
+
                     <button><i class="fas fa-angle-right"></i></button>
+
                 </form>
             </div>
-
             <div class="contenedor-redes">
+
                 <a class="texto-principal" href="">SEGUÍNOS</a>
                 <div class="instagram">
                     <i class="fab fa-instagram"></i>
@@ -117,10 +145,12 @@
                 <div class="facebook">
                     <i class="fab fa-facebook-f"></i>
                 </div>
+
             </div>
         </section>
+
         <div class="copyright">
-            <h4>Copyright@ GIVE ONE S.R.L todos los derechos reservados.</h4>
+            <h4>Copyright@ GIVE ONE S.L.R todos los derechos reservados.</h4>
         </div>
     </footer>
 </body>

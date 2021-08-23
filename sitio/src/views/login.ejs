@@ -6,7 +6,7 @@
 
 
         <div class="logueo">
-            <a href="/login"><i class="fas fa-user"></i></a>
+            <a href="/users/login"><i class="fas fa-user"></i></a>
             <a href=""><i class="far fa-heart"></i></a>
             <a href="/cart"><i class="fas fa-shopping-bag"></i></a>
         </div>
@@ -36,17 +36,22 @@
             <div class="iconos-navegador">
 
                 <div class="iconos-buscador">
-                    <a href="/registro">
+                    <a href="/users/registro">
                         <p class="texto"><i class="fas fa-sign-in-alt"></i>Registrarme</p>
                     </a>
-                    <a href="/login">
+                    <a href="/users/login">
                         <p class="texto"><i class="fas fa-user-alt"></i>Mi cuenta</p>
                     </a>
                     <div class="iconos">
-                        <i class="fas fa-search"></i>
-                        <i class="far fa-heart"></i>
+                        <div class="buscador-ip">
+                            <input class="buscar" type="text" >
+                            <button class="botonn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <i class="far fa-heart"></i>
                         <a class="cora" href="/cart"><i class="fas fa-shopping-bag"></i></a>
                     </div>
+                </div>
                 </div>
                 <div class="navegador">
                     <p class="categoria">CUBIERTOS</p>
@@ -79,9 +84,9 @@
                 <input class="sesion" type="checkbox" name="sesion" id="rec">
                 Recordar el inicio de mi cuenta
             </label>
-            <a class="password" href="/forgot">Olvide mi contraseña</a>
+            <a class="password" href="/users/forgot">Olvide mi contraseña</a>
             <div class="buttons">
-                <a class="registrar-btn" href="/registro"><button class="btn-g" type="button">Registrate</button></a>
+                <a class="registrar-btn" href="/users/registro"><button class="btn-g" type="button">Registrate</button></a>
                 <button class="btn-g" type="submit">Entrar a mi cuenta</button>
             </div>
         </form>
