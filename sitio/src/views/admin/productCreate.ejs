@@ -1,12 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+<%- include('../partials/head') %>
+<body class="register">
+    <header class="cont-header">
+
+
+        <div class="logueo">
+            <a href="/login"><i class="fas fa-user"></i></a>
+            <a href=""><i class="far fa-heart"></i></a>
+            <a href="/cart"><i class="fas fa-shopping-bag"></i></a>
+        </div>
+
+        <a href="/"><img src="/images/giveOneTNC2.png" alt="" srcset="" class="logotipo"></a>
+        <nav class="hamburguesa">
+            <input type="checkbox" id="menu" class="cont-inp">
+            <label for="menu" class="hamburguesa"> ☰ </label>
+            <ul class="cont-u">
+                <li><a>Cubiertos</a></li>
+                <li><a>Vajilla</a></li>
+                <li><a>Cristaleria</a></li>
+                <li><a>Cafe y Te</a></li>
+                <li><a>Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <header class="cont-header2">
+
+        <div class="contenedor-padre">
+            <div class="logo">
+                <a href="/"><img src="/images/giveOneTNC.png" width="150px" alt=""></a>
+            </div>
+            <div class="iconos-navegador">
+
+                <div class="iconos-buscador">
+                    <a href="/registro">
+                        <p class="texto"><i class="fas fa-sign-in-alt"></i>Registrarme</p>
+                    </a>
+                    <a href="/login">
+                        <p class="texto"><i class="fas fa-user-alt"></i>Mi cuenta</p>
+                    </a>
+                    <div class="iconos">
+                        <i class="fas fa-search"></i>
+                        <i class="far fa-heart"></i>
+                        <a class="cora" href="/cart"><i class="fas fa-shopping-bag"></i></a>
+                    </div>
+                </div>
+                <div class="navegador">
+                    <p class="categoria">CUBIERTOS</p>
+                    <P class="categoria">VAJILLA</P>
+                    <p class="categoria">CRISTALERÍA</p>
+                    <p class="categoria">CAFÉ Y TÉ</p>
+                    <p class="categoria">CONTACTO<i class="far fa-question-circle"></i></p>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="envio">
+            <p>ENVÍO GRATIS EN COMPRAS MAYORES A $5.000</p>
+        </div>
+
+    </header>
+
+    <main class="registro">
+        <section class="titular">
+            <h2 class="titulo">Carga de nuevo producto</h2>
+            <p class="parrafo">lorem ipsum</p>
+            <div class="box-img"><img class="coffee" src="/images/mug_coffee_PNG97438.png" alt="coffee"></div>
+        </section>
+        <form class="log" action="/" method="POST" enctype="multipart/form-data">
+            <input class="input-g" type="text" name="name" placeholder="Nombre" required>
+            
+            <textarea class="input-g" name="description" placeholder="Descripción" cols="30" rows="10" required></textarea>
+            
+            <input class="input-g" type="number" name="price" placeholder="Precio" required>
+            
+            <input class="input-g" type="text" name="category" placeholder="categoría" required>
+            
+            <input class="input-g" type="file" name="image" accept="image/*" required>
+            
+            <div class="r-btn">
+                <button class="btn-g" type="submit">Agregar producto</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <section class="listas">
+            <div class="contenedor-navegacion">
+                <a href="" class="texto-principal">NAVEGACIÓN</a>
+                <p> Quiènes Somos</p>
+                <p>Como comprar</p>
+                <p>Formas de Pago</p>
+                <p>Medios de Envío</p>
+            </div>
+
+            <div class="contenedor-venta">
+                <a href="" class="texto-principal">VENTA ONLINE</a>
+                <p class="whatsapp"><i class="fab fa-whatsapp"></i> Teléfono venta online: 011 xx-xxxxx</p>
+                <p>Mail: ventasonlinegive@One.com.ar</p>
+                <p class="horario">Horario de atención: </p>
+                <p class="dias">Lunes a Viernes de 9 a 17:00hs</p>
+            </div>
+
+            <div class="contenedor-subs">
+                <form action="" method="GET">
+                    <label class="title" for="suscripcion">NEWLETTER</label>
+                    <p class="subscrib">Suscribite a nuestro Newletter.</p><br>
+                    <input type="email" name="email" placeholder="Direccion de email" required><br>
+                    <button><i class="fas fa-angle-right"></i></button>
+                </form>
+            </div>
+
+            <div class="contenedor-redes">
+                <a class="texto-principal" href="">SEGUÍNOS</a>
+                <div class="instagram">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+            </div>
+        </section>
+        <div class="copyright">
+            <h4>Copyright@ GIVE ONE S.R.L todos los derechos reservados.</h4>
+        </div>
+    </footer>
 </body>
 </html>
