@@ -79,7 +79,7 @@
         <form class="log" action="/admin/edit/<%= product.id %>?_method=PUT" method="POST">
             <input class="input-g" type="text" name="name" placeholder="Nombre" value="<%= product.name %>">
             
-            <textarea class="input-g" name="description" placeholder="Descripción" cols="30" rows="10" value="<%= product.description %>"></textarea>
+            <textarea class="input-g" name="description" placeholder="Descripción" cols="20" rows="5"><%= product.description %></textarea>
             
             <input class="input-g" type="number" name="price" placeholder="Precio" value="<%= product.price %>">
             

@@ -63,7 +63,7 @@
 .registro .log .btn-g:hover{
     background-color: rgb(46, 45, 45);
 }
-.registro .log .btn-g:active{
+.registro .log .btn-g:active, .btn-g:active{
     transform: scale(1.15);
 }
 
