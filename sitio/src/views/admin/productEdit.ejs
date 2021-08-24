@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('../partials/head') %>
+<%- include('../partials/head',{title: product.name + " | Give One"}) %>
 <body class="register">
     <%- include('../partials/header') %>
 
     <main class="registro">
         <section class="titular">
             <h2 class="titulo">Actualización del producto</h2>
-            <p class="parrafo">lorem ipsum</p>
+            <p class="parrafo"><%= product.name %></p>
             <div class="box-img"><img class="coffee" src="/images/mug_coffee_PNG97438.png" alt="coffee"></div>
         </section>
         <form class="log" action="/admin/edit/<%= product.id %>?_method=PUT" method="POST">

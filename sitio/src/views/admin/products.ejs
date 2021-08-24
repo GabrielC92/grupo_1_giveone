@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %>
+<%- include('../partials/head',{title: "Productos | Give One"}) %>
 <body class="detail">
     <%- include('../partials/header') %>
 
@@ -11,12 +11,13 @@
 
             <% products.forEach(product => { %>
                 <div>
-                    <article class="cuatro">
-    
+                    <% if (product.id == 2) { %>
+                        <article class="dos">
+                    <% } else { %>
+                        <article class="cuatro">
+                    <% } %>
                         <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
-                        <div class="fav1">
-                            <i class="far fa-heart"></i>
-                            </div>
+                        
                         <div class="data-product">
                             <h4><%= product.name %></h4>
                             <p>$<%= product.price %></p>

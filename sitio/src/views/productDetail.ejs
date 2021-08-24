@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('partials/head') %>
+<%- include('partials/head',{title: product.name + " | Give One"}) %>
 <body class="detail">
     <%- include('partials/header') %>
 
     <main class="detalle">
             <div class="product">
                 <div class="name-favorit">
-                    <h3 class="name">Nombre del Producto</h3>
+                    <h3 class="name"><%= product.name %></h3>
                     <a href=""><i class="far fa-heart"></i></a>
                 </div>
                 <div class="photo-description">
                     <section class="photo">
-                        <img src="/images/products/cooking_pan_PNG8407.png" alt="">
+                        <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
                     </section>
                     <section class="descripcion">
                         <div class="codigo-producto">
                             <span>EJ1234</span>
                         </div>
                         <div class="precio">
-                            <span class="price">$3.000</span>
+                            <span class="price">$<%= product.price %></span>
+                            <!-- parte estática de 2° sprint id = 4 -->
                             <span class="descuento">$1.500</span>
                             <span class="img-desc">50% </span>
+                            <!-- END parte estática de 2° sprint -->
                         </div>
                         <div class="cuotas-tarjeta">
                             <section class="cuotas">
@@ -45,7 +47,7 @@
                 <div class="parrafo">
                     <div class="detalles">
                         <h3>descripcion</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus amet tempora fugit eos aspernatur cum, doloremque nesciunt vitae hic autem quisquam et id quis neque!</p>
+                        <p><%= product.description %></p>
                     </div>
                 </div>
                 </section>

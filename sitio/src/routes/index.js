@@ -1,22 +1,13 @@
 var express = require('express');
 var router = express.Router();
+let {home,detalle,carrito,pago,compra} = require('../controllers/indexController');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index');
-});
+router.get('/', home);
 
-router.get('/producto', function(req, res) {
-  res.render('productDetail');
-});
-router.get('/cart', function(req, res) {
-  res.render('productCart');
-});
-router.get('/formasDePago', function(req, res) {
-  res.render('formaDePago');
-});
-router.get('/compra', function(req, res) {
-  res.render('compra');
-});
+router.get('/producto/:id', detalle);
+router.get('/cart', carrito);
+router.get('/formasDePago', pago);
+router.get('/compra', compra);
 
 module.exports = router;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head') %>
+<%- include('partials/head',{title: "Give One"}) %>
 
 <body class="header1">
 
@@ -89,110 +89,34 @@
         <p class="ofertax">PRODUCTOS MÁS VENDIDOS</p>
         <section class="product">
 
-            <div class="contenedor-pro">
-                <article class="uno">
-
-                    <img src="/images/products/cuchillos.jpg" alt="">
-                    <div class="fav1">
-                        <i class="far fa-heart"></i>
+            <% products.forEach(product => { %>
+                <div>
+                    <% if (product.id == 2) { %>
+                        <article class="dos">
+                    <% } else { %>
+                        <article class="cuatro">
+                    <% } %>
+                        <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
+                        <% if (product.category == "Nuevo") { %>
+                            <p class="of4">Nuevo</p>
+                        <% } else if (product.category == "Envío Gratis") { %>
+                            <p class="of2">Envío Gratis</p>
+                        <% } else { %>
+                         <br>
+                        <% } %>
+                        <div class="fav4">
+                            <i class="far fa-heart"></i>
+                            </div>
+                        <div class="data-product">
+                            <h4><%= product.name %></h4>
+                            <p>$<%= product.price %></p>
+                            <br>
+                            <a href="/producto/<%= product.id %>" class="vermas"> <input type="buttom" name="Vermas" id="VerMas"
+                                    class="ver-inp">VER MÁS</a>
                         </div>
-                    <div class="data-product">
-                        <h4>Nombre del producto</h4>
-                        <p>$1.500</p>
-                        <br>
-                        <a href="/producto" class="vermas"> <input type="buttom" name="Vermas" id="VerMas"
-                                class="ver-inp">VER MÁS</a>
-                    </div>
-                </article>
-            </div>
-
-            <div>
-
-                <article class="dos">
-                    <img src="/images/products/wineglass_PNG2892.png" alt="">
-                    <p class="of2">Envío Gratis</p>
-                    <div class="fav2">
-                        <i class="far fa-heart"></i>
-                        </div>
-                    <div class="data-product">
-                        <h4>Nombre del producto</h4>
-                        <p>$900</p>
-                        <br>
-                        <a href="/producto" class="vermas"> <input type="buttom" name="Vermas" id="VerMas"
-                                class="ver-inp">VER MÁS</a>
-                    </div>
-                </article>
-            </div>
-
-            <div>
-
-                <article class="tres">
-                    <img src="/images/products/PRODUCTO4.jpg" alt="">
-                    <div class="fav3">
-                        <i class="far fa-heart"></i>
-                        </div>
-                    <div class="data-product">
-                        <h4>Nombre del producto</h4>
-                        <p>$2.500</p>
-                        <br>
-                        <a href="/producto" class="vermas"> <input type="buttom" name="Vermas" id="VerMas"
-                                class="ver-inp">VER MÁS</a>
-                    </div>
-                </article>
-
-            </div>
-
-            <div>
-
-                <article class="cuatro">
-                    <img src="/images/products/cooking_pan_PNG8407.png" alt="">
-                    <p class="of4">Nuevo</p>
-                    <div class="fav4">
-                        <i class="far fa-heart"></i>
-                        </div>
-                    <div class="data-product">
-                        <h4>Nombre del producto</h4>
-                        <p>$3.000</p>
-                        <br>
-                        <a href="/producto" class="vermas"> <input type="buttom" name="Vermas" id="VerMas"
-                                class="ver-inp">VER MÁS</a>
-                    </div>
-                </article>
-            </div>
-
-            <div>
-
-                <article class="cinco">
-                    <img src="/images/products/vasos.jpg" alt="">
-                    <div class="fav5">
-                        <i class="far fa-heart"></i>
-                        </div>
-                    <div class="data-product">
-                        <h4>Nombre del producto</h4>
-                        <p>$600</p>
-                        <br>
-                        <a href="/producto" class="vermas"> <input type="buttom" name="Vermas" id="VerMas"
-                                class="ver-inp">VER MÁS</a>
-                    </div>
-                </article>
-            </div>
-
-            <div>
-
-                <article class="seis">
-                    <img src="/images/products/taza avocado.jpg" alt="">
-                    <div class="fav6">
-                        <i class="far fa-heart"></i>
-                        </div>
-                    <div class="data-product">
-                        <h4>Nombre del producto</h4>
-                        <p>$500</p>
-                        <br>
-                        <a href="/producto" class="vermas"> <input type="buttom" name="Vermas" id="VerMas"
-                                class="ver-inp">VER MÁS</a>
-                    </div>
-                </article>
-            </div>
+                    </article>
+                </div>
+            <% }) %>
         </section>
         <span>
             <img src="/images/OFERTA2.gif" alt="" srcset="">

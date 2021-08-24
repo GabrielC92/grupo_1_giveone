@@ -3,7 +3,7 @@
       "id": 1,
       "name": "Set de cuchillos completo",
       "price": 1500,
-      "category": "visited",
+      "category": "vendidos",
       "description": "Lorem ipsum dolor amet sit",
       "image": "cuchillos.jpg"
     },
@@ -11,7 +11,7 @@
       "id": 2,
       "name": "Copa para coctel",
       "price": 900,
-      "category": "in-sale",
+      "category": "Envío Gratis",
       "description": "Lorem ipsum dolor amet sit",
       "image": "wineglass_PNG2892.png"
     },
@@ -19,7 +19,7 @@
       "id": 3,
       "name": "Copas deluxe",
       "price": 2500,
-      "category": "in-sale",
+      "category": "vendidos",
       "description": "Lorem ipsum dolor amet sit",
       "image": "PRODUCTO4.jpg"
     },
@@ -29,7 +29,7 @@
       "description": "Lorem ipsum dolor amet sit",
       "price": 3000,
       "image": "cooking_pan_PNG8407.png",
-      "category": "in-sale"
+      "category": "Nuevo"
     },
     {
       "id": 5,
@@ -37,7 +37,7 @@
       "description": "Lorem ipsum dolor amet sit",
       "price": 600,
       "image": "vasos.jpg",
-      "category": "in-sale"
+      "category": "vendidos"
     },
     {
       "id": 6,
@@ -45,6 +45,6 @@
       "description": "Lorem ipsum dolor amet sit",
       "price": 500,
       "image": "taza avocado.jpg",
-      "category": "in-sale"
+      "category": "vendidos"
     }
 ]
