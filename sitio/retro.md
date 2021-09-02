@@ -55,8 +55,7 @@ En general tuvimos una buena comunicación, esta vez la organizacion no supero n
 # STARFISH SPRINT 3 #
 
 ### **Hacer más**
-
-Reparticion de tareas: Se realizo reparticion de tareas entre el resto del equipo,por abandono de un integrante del equipo,por cuestiones personales.
+* **Reparticion de tareas:** Se realizo reparticion de tareas entre el resto del equipo,por abandono de un integrante del equipo,por cuestiones personales.
 
 ### **Seguir haciendo**
 * **Medios de comunicación informal:** uso del whatsapp.
