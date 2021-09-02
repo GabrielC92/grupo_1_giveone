@@ -1,50 +1,68 @@
 [
-    {
-      "id": 1,
-      "name": "Set de cuchillos completo",
-      "price": 1500,
-      "category": "vendidos",
-      "description": "Lorem ipsum dolor amet sit",
-      "image": "cuchillos.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Copa para coctel",
-      "price": 900,
-      "category": "Envío Gratis",
-      "description": "Lorem ipsum dolor amet sit",
-      "image": "wineglass_PNG2892.png"
-    },
-    {
-      "id": 3,
-      "name": "Copas deluxe",
-      "price": 2500,
-      "category": "vendidos",
-      "description": "Lorem ipsum dolor amet sit",
-      "image": "PRODUCTO4.jpg"
-    },
-    {
-      "id": 4,
-      "name": "Ollas",
-      "description": "Lorem ipsum dolor amet sit",
-      "price": 3000,
-      "image": "cooking_pan_PNG8407.png",
-      "category": "Nuevo"
-    },
-    {
-      "id": 5,
-      "name": "Vasos cintura angosta",
-      "description": "Lorem ipsum dolor amet sit",
-      "price": 600,
-      "image": "vasos.jpg",
-      "category": "vendidos"
-    },
-    {
-      "id": 6,
-      "name": "Taza avocado",
-      "description": "Lorem ipsum dolor amet sit",
-      "price": 500,
-      "image": "taza avocado.jpg",
-      "category": "vendidos"
-    }
+  {
+    "id": 1,
+    "name": "Set de Vasos Dakota",
+    "price": 1600,
+    "category": "vendidos",
+    "description": "Lorem ipsum dolor amet sit",
+    "image": "PRODUCTO1.jpg"
+    
+  },
+  {
+    "id": 2,
+    "name": "Copa para coctel",
+    "price": 900,
+    "category": "Envío Gratis",
+    "description": "Lorem ipsum dolor amet sit",
+    "image": "PRODUCTO2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Copas deluxe",
+    "price": 2500,
+    "category": "vendidos",
+    "description": "Lorem ipsum dolor amet sit",
+    "image": "PRODUCTO3.jpg"
+    
+  },
+  {
+    "id": 4,
+    "name": "Ollas",
+    "description": "Lorem ipsum dolor amet sit",
+    "price": 3000,
+    "image": "PRODUCTO4.jpg",
+    "category": "Nuevo"
+  },
+  {
+    "id": 5,
+    "name": "Vasos cintura angosta",
+    "description": "Lorem ipsum dolor amet sit",
+    "price": 600,
+    "image": "PRODUCTO5.jpg",
+    "category": "vendidos"
+  },
+  {
+    "id": 6,
+    "name": "Vasos cintura angosta",
+    "description": "Lorem ipsum dolor amet sit",
+    "price": 600,
+    "image": "PRODUCTO6.jpg",
+    "category": "vendidos"
+  },
+  {
+    "id": 7,
+    "name": "Vasos cintura angosta",
+    "description": "Lorem ipsum dolor amet sit",
+    "price": 600,
+    "image": "PRODUCTO7.jpg",
+    "category": "vendidos"
+  },
+  {
+    "id": 8,
+    "name": "Vasos cintura angosta",
+    "description": "Lorem ipsum dolor amet sit",
+    "price": 600,
+    "image": "PRODUCTO8.jpg",
+    "category": "vendidos"
+  }
 ]

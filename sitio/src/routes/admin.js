@@ -4,6 +4,7 @@ const path = require('path');
 const multer = require('multer');
 let {data,create,store,edit,update,destroy} = require('../controllers/adminController');
 
+
 // Configuración Multer
 const storage = multer.diskStorage({
     destination: (req,file,cb) => {
@@ -17,13 +18,13 @@ const storage = multer.diskStorage({
 const uploadFile = multer({storage});
 
 // Rutas del administrador
-router.get('/productos', data);
-router.get('/create', create);
+router.get('/productos',data);
+router.get('/create',create);
 router.post('/create', uploadFile.single('image'), store);
 
-router.get('/edit/:id', edit);
-router.put('/edit/:id', update);
+router.get('/edit/:id',edit);
+router.put('/edit/:id',update);
 
-router.delete('/delete/:id', destroy);
+router.delete('/delete/:id',destroy);
 
 module.exports = router;
