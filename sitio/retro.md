@@ -49,4 +49,28 @@ En general tuvimos una buena comunicación, esta vez la organizacion no supero n
 
 
 
+********************************************************************
+********************************************************************
+
+# STARFISH SPRINT 3 #
+
+### **Hacer más**
+* **Reparticion de tareas:** Se realizo reparticion de tareas entre el resto del equipo,por abandono de un integrante del equipo,por cuestiones personales.
+
+### **Seguir haciendo**
+* **Medios de comunicación informal:** uso del whatsapp.
+* **Manejo de Trello:** Actualización de los estados de tarjetas y el implemento de nuevas para agregar información importante para el equipo y otras de interés.
+
+
+### **Hacer menos**
+* **Postegar reuniones:** realizarlas en el horario y dia acordado.
+
+
+
+--------------------------------------
+## RESUMEN SPRINT 3
+En general hubo inconvenientes inesperados por la salida de una integrante del equipo, asi mismo,otro integrante del equipo no le fue posible tener una participación completa,por problemas de salud.
+
+
+
 
