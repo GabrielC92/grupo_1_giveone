@@ -248,6 +248,7 @@ content: none;
     color: white;
     font-size: 12px;
     font-weight: bold;
+    font-family: 'Roboto';
 
 }
 
@@ -309,7 +310,7 @@ content: none;
 .carrito .cupon .titulo{
     font-weight: bold;
     color: #1F1D1D;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto';
 }
 
 .carrito .cupon i{
@@ -362,7 +363,7 @@ margin-right: 12px;
 .carrito .cupon .titulo{
     font-weight: bold;
     color: #1F1D1D;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto';
     margin-top: 60px;
 }
 }
@@ -375,7 +376,7 @@ margin-right: 12px;
     font-weight: bold;
     color: #1F1D1D;
     margin-top: 30px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto';
     }
 
 }
