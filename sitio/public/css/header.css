@@ -1,40 +1,40 @@
-.home header{
+header{
   background-color: white;
   padding: 5px;
 }
-.home .contenedor-padre{
+header .contenedor-padre{
   display: flex;
   flex-flow: column wrap;
   align-items: center;
 }
-.home .logo{
+header .logo{
   padding-top: 30px;
 }
-.home .logo a img{
+header .logo a img{
   border-radius: 10px;
   width: 100px;
 }
-.home .iconos-buscador{
+header .iconos-buscador{
   display: flex;
   padding-bottom: 10px;
   border-bottom: solid 1px #969FAA;
   padding-top: 15px;
   align-items: center;
 }
-.home .iconos-buscador a{
+header .iconos-buscador a{
   text-decoration: none;
 }
-.home .texto{
+header .texto{
   margin-right: 10px;
   font-size: 11px;
   color: #969FAA;
 }
-.home .texto i{
+header .texto i{
   color: #333;
   font-size: 18px;
   margin: 5px;
 }
-.home .iconos i{
+header .iconos i{
   margin-right: 15px;
   font-size:18px;
   padding-top: 10px;
@@ -50,7 +50,7 @@
   width: 0;
   transition: .3s;
 }
-.boton{
+.boton-header{
   background: none;
   border: transparent;
   width: 2em;
@@ -65,7 +65,7 @@
 }
 /* Fin Buscador */
 
-.home .navegador{
+header .navegador{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -103,7 +103,6 @@ label.hamburguesa {
 .cont-u .categoria {
   display: block;
   background-color: rgb(112, 112, 112);
-  margin: 0;
   padding: 10px;
   list-style: none;
   border-bottom: 1px solid grey;
@@ -113,14 +112,14 @@ label.hamburguesa {
   text-transform: uppercase;
   color: #333;
 }
-.home .categoria i{
+header .categoria i{
   /* color: #5A6978; */
   padding-left: 10px;
   font-size: 15px;
 }
 /* fin burguer */
 
-.home .envio{
+header .envio{
   margin-top: 20px;
   text-align: center;
   background-color: #f0f0f0;
@@ -131,19 +130,19 @@ label.hamburguesa {
 }
 
 @media (min-width: 426px) {
-  .home .contenedor-padre{
+  header .contenedor-padre{
     display: block;
   }
-  .home .logo{
+  header .logo{
     position: absolute;
     z-index: 10;
     background-color: white;
   }
-  .home .iconos-buscador{
+  header .iconos-buscador{
     margin-bottom: 30px;
     justify-content: flex-end;
   }
-  .boton{
+  .boton-header{
     width: 3em;
   }
   label.hamburguesa{
@@ -156,51 +155,44 @@ label.hamburguesa {
   .cont-u .categoria {
     display: flex;
     background-color: rgb(255, 255, 255);
-    margin: 0 2px;
+    margin-left: 0.6%;
     border-bottom: 1px solid white;
   }
-  .home .envio{
+  .cont-u li a {
+    color: #5A6978;
+  }
+  header .envio{
     margin-top: 15px;
   }
 }
 
 @media (min-width: 769px) {
-  .home .logo{
-    width: 30%;
-    z-index: 0;
+  header .logo{
+    padding-left: 42px;
   }
-  .home .logo a img{
+  header .logo a img{
     width: 150px;
   }
-  .home .iconos-navegador{
-    width: 70%;
-  }
-  .home .iconos-buscador{
+  header .iconos-buscador{
     margin-bottom: 5px;
   }
-  .home .texto{
+  header .texto{
     font-size: 1rem;
   }
-  .home .navegador{
+  header .navegador{
     font-size: 1rem;
   }
   .cont-u{
     justify-content: flex-end;
   }
   .cont-u .categoria {
-    margin-left: 5%;
+    margin-right: 5px;
   }
-  .home .categoria i{
+  header .categoria i{
     font-size: 17px;
   }
-  .home .envio{
+  header .envio{
     font-size: 14px;
     margin-top: 28px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .cont-u .categoria {
-    margin-left: 7%;
   }
 }
