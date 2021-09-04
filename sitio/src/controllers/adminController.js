@@ -34,7 +34,7 @@ module.exports = {
         });
     },
     update: (req, res) => {
-        const {name, price, category, description, discount} = req.body;
+        const {name, price, category, description} = req.body;
         products.forEach(product =>{
             if(product.id === +req.params.id){
                 product.id = +req.params.id;

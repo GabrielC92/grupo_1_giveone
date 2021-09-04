@@ -6,7 +6,6 @@
     "category": "vendidos",
     "description": "Lorem ipsum dolor amet sit",
     "image": "PRODUCTO1.jpg"
-    
   },
   {
     "id": 2,
@@ -23,7 +22,6 @@
     "category": "vendidos",
     "description": "Lorem ipsum dolor amet sit",
     "image": "PRODUCTO3.jpg"
-    
   },
   {
     "id": 4,
