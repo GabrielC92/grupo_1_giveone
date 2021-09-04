@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head',{title: "Productos | Give One"}) %>
+<%- include('../partials/head') %>
 <body class="detail">
     <%- include('../partials/header') %>
 
@@ -23,7 +23,7 @@
                             <p>$<%= product.price %></p>
                             <br>
                             <div class="buttons">
-                                <a href="/admin/edit/<%= product.id %>" class="registrar-btn">
+                                <a href="/admin/products/edit/<%= product.id %>" class="registrar-btn">
                                     <button class="btn-g" type="button">Editar</button>
                                 </a>
                                 <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST" class="registrar-btn">

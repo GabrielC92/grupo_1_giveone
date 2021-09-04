@@ -30,7 +30,7 @@ main{
 }
 
 
-/*finmain*/
+/*fin*/
 
 /*productos*/
 
@@ -52,7 +52,7 @@ section.product{
   align-items: center;
   box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
 }
-a.vermas{
+a.ver{
   color: black;
   text-decoration: none;
   background-color: white;
@@ -65,7 +65,7 @@ a.vermas{
   font-weight: bold;
 }
 
-a.vermas:hover{
+a.ver:hover{
   background-color: #1F1D1D;
   color: white;
   transition: 1s;
@@ -90,26 +90,10 @@ article.cajaimg{
   position: relative;
   bottom: -5px;
 }
-.cont-main .tres img {
-  width: 180px;
-}
-.cont-main .cuatro img{
-  width: 180px;
-}
-
-.cont-main .uno img{
-  width: 190px;
-  margin: 0;
-}
 
 .cont-main .seis img{
   width: 170px;
   margin: 0;
-}
-
-.cont-main .cinco img{
-  width: 180px;
-  margin-top: 15px;
 }
 
 /*favoritos*/
