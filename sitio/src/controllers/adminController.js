@@ -6,11 +6,14 @@ const products = JSON.parse(fs.readFileSync(productFilePath,'utf-8'));
 module.exports = {
     data: (req,res) => {
         return res.render('admin/products',{
+            title: 'Listado de productos',
             products
         })
     },
     create: (req,res) => {
-        return res.render('admin/productCreate')
+        return res.render('admin/productCreate',{
+            title: 'Crear nuevo producto'
+        })
     },
     store: (req,res) => {
         let {name,price,category,description} = req.body
@@ -30,6 +33,7 @@ module.exports = {
     edit: (req,res) => {
         let product = products.find(product => product.id == +req.params.id);
         return res.render('admin/productEdit',{
+            title: `Editar ${product.name}`,
             product
         });
     },

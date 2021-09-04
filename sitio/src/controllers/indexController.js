@@ -6,22 +6,30 @@ const products = JSON.parse(fs.readFileSync(productFilePath,'utf-8'));
 module.exports = {
     home: (req,res) => {
         return res.render('index',{
+            title: 'Home',
             products
         });
     },
     detalle: (req,res) => {
         let product = products.find(product => product.id == +req.params.id);
         return res.render('productDetail',{
+            title: product.name,
             product
         });
     },
     carrito: (req,res) => {
-        return res.render('productCart');
+        return res.render('productCart',{
+            title: 'Tu carrito'
+        });
     },
     pago: (req,res) => {
-        return res.render('formaDePago');
+        return res.render('formaDePago',{
+            title: 'Compras'
+        });
     },
     compra: (req,res) => {
-        return res.render('compra');
+        return res.render('compra',{
+            title: 'Finaliza tu compra'
+        });
     },
 }

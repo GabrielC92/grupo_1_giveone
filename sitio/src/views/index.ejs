@@ -1,204 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head',{title: "Give One"}) %>
+<%- include('partials/head') %>
 
-<body class="header1">
+<body class="home">
 
-    <header class="cont-header">
-
-        <div class="logueo">
-            <a href="/users/login"><i class="fas fa-user"></i></a>
-            <a href=""><i class="far fa-heart"></i></a>
-            <a href="/cart"><i class="fas fa-shopping-bag"></i></a>
-        </div>
-
-        <a href="/"><img src="/images/giveOneTNC2.png" alt="" srcset="" class="logotipo"></a>
-        <nav class="hamburguesa">
-            <input type="checkbox" id="menu" class="cont-inp">
-            <label for="menu" class="hamburguesa"> ☰ </label>
-            <ul class="cont-u">
-                <li><a>Cubiertos</a></li>
-                <li><a>Vajilla</a></li>
-                <li><a>Cristaleria</a></li>
-                <li><a>Cafe y Te</a></li>
-                <li><a>Contacto</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
-
-    <header class="cont-header2" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-
-        <div class="contenedor-padre">
-            <div class="logo">
-                <a href="/"><img src="/images/giveOneTNC.png" width="150px" alt=""></a>
-            </div>
-            <div class="iconos-navegador">
-
-                <div class="iconos-buscador">
-                    <a href="/users/registro">
-                        <p class="texto"><i class="fas fa-sign-in-alt"></i>Registrarme</p>
-                    </a>
-                    <a href="/users/login">
-                        <p class="texto"><i class="fas fa-user-alt"></i>Mi cuenta</p>
-                    </a>
-                    <div class="iconos">
-                        <div class="buscador-ip">
-                            <input class="buscar" type="text" >
-                            <button class="botonn">
-                                <i class="fas fa-search"></i>
-                            </button>
-                            <i class="far fa-heart"></i>
-                        <a class="cora" href="/cart"><i class="fas fa-shopping-bag"></i></a>
-                    </div>
-                </div>
-                </div>
-                <div class="navegador">
-                    <p class="categoria">CUBIERTOS</p>
-                    <P class="categoria">VAJILLA</P>
-                    <p class="categoria">CRISTALERÍA</p>
-                    <p class="categoria">CAFÉ Y TÉ</p>
-                    <p class="categoria">CONTACTO<i class="far fa-question-circle"></i></p>
-
-                </div>
-
-            </div>
-        </div>
-        <div class="envio" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-            <p>ENVÍO GRATIS EN COMPRAS MAYORES A $5.000</p>
-        </div>
-
-    </header>  
-
-
+    <%- include('partials/header') %>
 
     <main class="cont-main" >
 
        <!-- BANNER CELU -->
        <div class="horizontal-slider" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-
-        <div class="slider-container">
-            <div class="item">
-                <img src="images/BANNERCEL1.jpg" alt="">
-            </div>
-            <div class="item">
-               <img src="images/BANNERCEL2.jpg" alt="">
-           </div>
-           <div class="item">
-               <img src="images/BANNERCEL3.jpg" alt="">
-           </div>
-
-        </div>               
+           
+           <div class="slider-container">
+               <div class="item">
+                   <img src="images/BANNERCEL1.jpg" alt="">
+               </div>
+               <div class="item">
+                  <img src="images/BANNERCEL2.jpg" alt="">
+              </div>
+              <div class="item">
+                  <img src="images/BANNERCEL3.jpg" alt="">
+              </div>
+   
+           </div>               
     
-   </div>
+        </div>
 
+        <!-- BANNER TABLET Y DESKTOP -->
+        <div class="cont-padre" >
+            <div class="tex-1" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <h1 class="h2"  >Renová <br> Tu Cocina</h1>
+                <p> Explora y descubrí todas nuestras ofertas <br>  12% de descuento en efectivo <br>  3 ,6 y 12 cuótas sin interés!
+                </p>
+                <a href="#art" id="road">Más vendidos</a>
+       
+                <ul>
+                    <li class="next active"></li>
+                    <li class="next"></li>
+                    <li class="next"></li>
+                </ul>
+            </div>
+            <div class="tex-2">
+                <img src="/images/BANNER1.jpg" id="banner" alt="">
+            </div>
+        </div>
+        
+        <h2 class="home-1" data-aos="fade-right">HOME </h2>
+       
+        <div class="imagenes-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
+            <img src="/images/SETT2.jpg" alt="">
+            <img src="/images/SETT1.jpg" alt="">
+            <img src="/images/BOWL.jpg" alt="">
+            <img src="/images/SETT.jpg" alt="">
+        </div>
 
-   <!-- BANNER TABLET Y DESKTOP -->
- <div class="cont-padre" >
-     <div class="tex-1" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-         <h1 class="h2"  >Renová <br> Tu Cocina</h1>
-         <p> Explora y descubrí todas nuestras ofertas <br>  12% de descuento en efectivo <br>  3 ,6 y 12 cuótas sin interés!
-         </p>
-         <a href="#art" id="road">Más vendidos</a>
+        <div class="titulo-sect">
+            <h3 id="art" data-aos="fade-right">PRODUCTOS MAS VENDIDOS</h3>
+        </div>
 
-         <ul>
-             <li class="next active"></li>
-             <li class="next"></li>
-             <li class="next"></li>
-         </ul>
-     </div>
-     <div class="tex-2">
-         <img src="/images/BANNER1.jpg" id="banner" alt="">
-     </div>
- </div>
-
- <h2 class="home-1" data-aos="fade-right">HOME </h2>
-
- <div class="imagenes-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
-     <img src="/images/SETT2.jpg" alt="">
-     <img src="/images/SETT1.jpg" alt="">
-     <img src="/images/BOWL.jpg" alt="">
-     <img src="/images/SETT.jpg" alt="">
- </div>
-
-
-
-<div class="titulo-sect">
-    <h3 id="art" data-aos="fade-right">PRODUCTOS MAS VENDIDOS</h3>
-</div>
-
+        <section class="caja-prac"  data-aos="fade-up"
+            data-aos-duration="3000">
             <% products.forEach(product => { %>
-                <div>
-                    <% if (product.id == 2) { %>
-                        <article class="dos">
+
+                <article class="seis">
+                    <i class="far fa-heart"></i>
+                    <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
+                    <h4><%= product.name %></h4>
+                    <p>$<%= product.price %></p>
+                    <% if (product.category == "Envío Gratis") { %>
+                        <span class="of2">Envío Gratis</span>
+                    <% } else if (product.category == "Nuevo") { %>
+                        <span class="of4">-20%</span>
                     <% } else { %>
-                        <article class="cuatro">
+                     <br>
                     <% } %>
-                        <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
-                        <% if (product.category == "Nuevo") { %>
-                            <p class="of4">Nuevo</p>
-                        <% } else if (product.category == "Envío Gratis") { %>
-                            <p class="of2">Envío Gratis</p>
-                        <% } else { %>
-                         <br>
-                        <% } %>
-                        <div class="fav4">
-                            <i class="far fa-heart"></i>
-                            </div>
-                        <div class="data-product">
-                            <h4><%= product.name %></h4>
-                            <p>$<%= product.price %></p>
-                            <br>
-                            <a href="/producto/<%= product.id %>" class="vermas"> <input type="buttom" name="Vermas" id="VerMas"
-                                    class="ver-inp">VER MÁS</a>
-                        </div>
-                    </article>
-                </div>
+                    <div class="overlay">
+                        <a href="/products/<%= product.id %>" class="ver">VER MÁS</a>
+                    </div>
+                </article>
+
             <% }) %>
         </section>
         <img src="/images/OFERTA2.gif" class="banner2" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" alt="">
-        </span>
-
+    
         <h2 class="client" data-aos="fade-up" data-aos-duration="3000">Atención Tienda Online</h2>
-
-    <div class="contacto">
-        
-        <div class="mail" data-aos="fade-up" data-aos-duration="3000">
-            <p class="name"><i class="far fa-envelope"></i>Mail</p>
-            <p>Lunes a Viernes 8 a 18hs.
-                <br>
-                Sabados, Domingos y
-                <br> Feriados de 10 a 18hs.
-                <br>
-                Demora en respuesta
-                <br>
-                hasta 48hs. Hábiles.</p>
+    
+        <div class="contacto">
+            
+            <div class="mail" data-aos="fade-up" data-aos-duration="3000">
+                <p class="name"><i class="far fa-envelope"></i>Mail</p>
+                <p>Lunes a Viernes 8 a 18hs.
+                    <br>
+                    Sabados, Domingos y
+                    <br> Feriados de 10 a 18hs.
+                    <br>
+                    Demora en respuesta
+                    <br>
+                    hasta 48hs. Hábiles.</p>
+            </div>
+            <div class="chat" data-aos="fade-up"
+            data-aos-duration="3000">
+                <p class="name"><i class="far fa-comments"></i>Chat</p>
+                <p>Lunes a Viernes 8 a 18hs.
+                    <br>
+                    Sabados de 9 a 19hs.
+                    <br>
+                    Domingos 10 a 18hs.
+                    <br>
+                    Feriados 10 a 18hs</p>
+            </div>
+            <div class="telefono" data-aos="fade-up"
+            data-aos-duration="3000">
+                <p class="name"><i class="fas fa-headphones-alt"></i>Teléfono</p>
+                <p>Lunes a Viernes 8 a 18hs.
+                    <br>
+                    Sabados y Feriados de 10 a 18hs.
+                    <br>
+                    Domingos sin atención</p>
+            </div>
         </div>
-        <div class="chat" data-aos="fade-up"
-        data-aos-duration="3000">
-            <p class="name"><i class="far fa-comments"></i>Chat</p>
-            <p>Lunes a Viernes 8 a 18hs.
-                <br>
-                Sabados de 9 a 19hs.
-                <br>
-                Domingos 10 a 18hs.
-                <br>
-                Feriados 10 a 18hs</p>
-        </div>
-        <div class="telefono" data-aos="fade-up"
-        data-aos-duration="3000">
-            <p class="name"><i class="fas fa-headphones-alt"></i>Teléfono</p>
-            <p>Lunes a Viernes 8 a 18hs.
-                <br>
-                Sabados y Feriados de 10 a 18hs.
-                <br>
-                Domingos sin atención</p>
-        </div>
-    </div>
-   
-
     </main>
 
     <%- include('partials/footer') %>

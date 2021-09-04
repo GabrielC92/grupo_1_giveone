@@ -1,35 +1,13 @@
-<header class="cont-header">
+<header>
 
-    <div class="logueo">
-        <a href="/users/login"><i class="fas fa-user"></i></a>
-        <a href=""><i class="far fa-heart"></i></a>
-        <a href="/cart"><i class="fas fa-shopping-bag"></i></a>
-    </div>
-
-    <a href="/"><img src="/images/giveOneTNC2.png" alt="" srcset="" class="logotipo"></a>
-    <nav class="hamburguesa">
-        <input type="checkbox" id="menu" class="cont-inp">
-        <label for="menu" class="hamburguesa"> ☰ </label>
-        <ul class="cont-u">
-            <li><a>Cubiertos</a></li>
-            <li><a>Vajilla</a></li>
-            <li><a>Cristaleria</a></li>
-            <li><a>Cafe y Te</a></li>
-            <li><a>Contacto</a></li>
-        </ul>
-    </nav>
-
-</header>
-
-
-<header class="cont-header2">
-
-    <div class="contenedor-padre">
+    <div class="contenedor-padre" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
         <div class="logo">
-            <a href="/"><img src="/images/giveOneTNC.png" width="150px" alt=""></a>
+            <a href="/"><img src="/images/giveOneTNC.png" alt=""></a>
         </div>
-        <div class="iconos-navegador">
 
+        <div class="iconos-navegador">
             <div class="iconos-buscador">
                 <a href="/users/registro">
                     <p class="texto"><i class="fas fa-sign-in-alt"></i>Registrarme</p>
@@ -40,27 +18,32 @@
                 <div class="iconos">
                     <div class="buscador-ip">
                         <input class="buscar" type="text" >
-                        <button class="botonn">
+                        <button class="boton-header">
                             <i class="fas fa-search"></i>
                         </button>
                         <i class="far fa-heart"></i>
-                    <a class="cora" href="/cart"><i class="fas fa-shopping-bag"></i></a>
+                        <a class="cora" href="/cart"><i class="fas fa-shopping-bag"></i></a>
+                    </div>
                 </div>
             </div>
-            </div>
-            <div class="navegador">
-                <p class="categoria">CUBIERTOS</p>
-                <P class="categoria">VAJILLA</P>
-                <p class="categoria">CRISTALERÍA</p>
-                <p class="categoria">CAFÉ Y TÉ</p>
-                <p class="categoria">CONTACTO<i class="far fa-question-circle"></i></p>
-
-            </div>
-
-        </div>
+            
+            <nav class="navegador">
+                <input type="checkbox" id="menu" class="cont-inp">
+                <label for="menu" class="hamburguesa"> ☰ </label>
+                <ul class="cont-u">
+                    <li class="categoria"><a href="#">Cubiertos</a></li>
+                    <li class="categoria"><a href="#">Vajilla</a></li>
+                    <li class="categoria"><a href="#">Cristalería</a></li>
+                    <li class="categoria"><a href="#">Café y Té</a></li>
+                    <li class="categoria"><a href="#">Contacto</a><i class="far fa-question-circle"></i></li>
+                </ul>
+            </nav>
+        </div><!-- END: .iconos-navegador -->
     </div>
-    <div class="envio">
+    <div class="envio" data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500">
         <p>ENVÍO GRATIS EN COMPRAS MAYORES A $5.000</p>
     </div>
-
+        
 </header>
