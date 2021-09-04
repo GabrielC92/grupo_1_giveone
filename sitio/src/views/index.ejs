@@ -29,7 +29,7 @@
     </header>
 
 
-    <header class="cont-header2">
+    <header class="cont-header2" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
 
         <div class="contenedor-padre">
             <div class="logo">
@@ -66,7 +66,7 @@
 
             </div>
         </div>
-        <div class="envio">
+        <div class="envio" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
             <p>ENVÍO GRATIS EN COMPRAS MAYORES A $5.000</p>
         </div>
 
@@ -119,13 +119,52 @@
             <% }) %>
         </section>
         <span>
-            <img src="/images/OFERTA2.gif" alt="" srcset="">
-
+            <img src="/images/OFERTA2.gif" alt="" srcset=""  data-aos="fade-up" data-aos-duration="3000">
         </span>
+
+        <h2 class="client" data-aos="fade-up" data-aos-duration="3000">Atención Tienda Online</h2>
+
+    <div class="contacto">
+        
+        <div class="mail" data-aos="fade-up" data-aos-duration="3000">
+            <p class="name"><i class="far fa-envelope"></i>Mail</p>
+            <p>Lunes a Viernes 8 a 18hs.
+                <br>
+                Sabados, Domingos y
+                <br> Feriados de 10 a 18hs.
+                <br>
+                Demora en respuesta
+                <br>
+                hasta 48hs. Hábiles.</p>
+        </div>
+        <div class="chat" data-aos="fade-up"
+        data-aos-duration="3000">
+            <p class="name"><i class="far fa-comments"></i>Chat</p>
+            <p>Lunes a Viernes 8 a 18hs.
+                <br>
+                Sabados de 9 a 19hs.
+                <br>
+                Domingos 10 a 18hs.
+                <br>
+                Feriados 10 a 18hs</p>
+        </div>
+        <div class="telefono" data-aos="fade-up"
+        data-aos-duration="3000">
+            <p class="name"><i class="fas fa-headphones-alt"></i>Teléfono</p>
+            <p>Lunes a Viernes 8 a 18hs.
+                <br>
+                Sabados y Feriados de 10 a 18hs.
+                <br>
+                Domingos sin atención</p>
+        </div>
+    </div>
+   
 
     </main>
 
     <%- include('partials/footer') %>
+
+    <%- include('partials/scripts') %>
     
 </body>
 
