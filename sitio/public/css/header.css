@@ -1,2 +1,195 @@
+header{
+  background-color: white;
+  padding: 5px;
+}
+header .contenedor-padre{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+header .logo{
+  padding-top: 30px;
+}
+header .logo a img{
+  border-radius: 10px;
+  width: 100px;
+}
+header .iconos-buscador{
+  display: flex;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #969FAA;
+  padding-top: 15px;
+  align-items: center;
+}
+header .iconos-buscador a{
+  text-decoration: none;
+}
+header .texto{
+  margin-right: 15px;
+  font-size: 11px;
+  color: #969FAA;
+}
+header .texto i{
+  color: #333;
+  font-size: 18px;
+  margin: 5px;
+}
+header .iconos i{
+  margin-right: 15px;
+  font-size:18px;
+  padding-top: 10px;
+  color: #333; 
+}
 
+/* Buscador */
+.buscar{
+  border: none;
+  background-color: white;
+  color: #1F1D1D;
+  outline: none;
+  width: 0;
+  transition: .3s;
+}
+.boton-header{
+  background: none;
+  border: transparent;
+  width: 2em;
+  outline: transparent;
+}
+.buscador-ip:hover > .buscar{
+  width: 130px;
+  height: 18px;
+  background-color: white;
+  border-radius: 5px;
+  border: solid 1px #D2D4D6;
+}
+/* Fin Buscador */
 
+header .navegador{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 13px;
+  padding-top: 15px;
+  color: #333;
+}
+
+/* burguer */
+.cont-inp:checked  ~  ul {
+  display:block;
+}
+.cont-inp {
+  display: none;
+}
+label.hamburguesa {
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1.5px solid black;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.cont-u{
+  display: none;
+}
+.cont-u .categoria {
+  display: block;
+  background-color: rgb(112, 112, 112);
+  padding: 10px;
+  list-style: none;
+  border-bottom: 1px solid grey;
+}
+.cont-u li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333;
+}
+header .categoria i{
+  /* color: #5A6978; */
+  padding-left: 10px;
+  font-size: 15px;
+}
+/* fin burguer */
+
+header .envio{
+  margin-top: 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding-top: 8px;
+  padding-bottom:  8px; ;
+  color: #333;
+  font-size: 10px;
+}
+
+@media (min-width: 426px) {
+  header .contenedor-padre{
+    display: block;
+  }
+  header .logo{
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+  }
+  header .iconos-buscador{
+    margin-bottom: 30px;
+    justify-content: flex-end;
+  }
+  .boton-header{
+    width: 3em;
+  }
+  label.hamburguesa{
+    display: none;
+  }
+  .cont-u{
+    display: flex;
+    justify-content: space-around;
+  }
+  .cont-u .categoria {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    margin-left: 0.6%;
+    border-bottom: 1px solid white;
+  }
+  .cont-u li a {
+    color: #333;
+  }
+  header .envio{
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 769px) {
+  header .logo{
+    padding-left: 42px;
+  }
+  header .logo a img{
+    width: 150px;
+  }
+  header .iconos-buscador{
+    margin-bottom: 5px;
+  }
+  header .texto{
+    font-size: 13px;
+  }
+  .cont-u{
+    justify-content: flex-end;
+  }
+  .cont-u .categoria {
+    margin-right: 15px;
+  }
+  header .categoria i{
+    font-size: 17px;
+  }
+  header .envio{
+    font-size: 14px;
+    margin-top: 28px;
+  }
+}

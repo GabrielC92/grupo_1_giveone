@@ -1,1 +1,378 @@
+.ofertax{
+  font-family: 'Roboto';
+  margin-top: 180px;
+  text-align: center;
+  font-weight: bold;
+}
 
+/* .cont-main .main-header2 {
+  width: 100%;
+} */
+
+.cont-main h3{
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+main{
+  background-color: #f0f0f0;
+}
+
+.cont-main .imagenes-4 img{
+  width: 20%;
+  margin: 10px;
+}
+
+.cont-main .imagenes-4{
+  display: flex;
+  justify-content: center;
+}
+
+/*finmain*/
+
+/* texto home */
+
+.home-1{
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-family: 'Poppins';
+  color: #333;
+  letter-spacing: 2px
+}
+/*fin texto home*/
+
+/* articulos*/
+
+.caja-prac{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.seis{
+  height: 300px;
+  width: 200px;
+  background-color: white;
+  position: relative;
+  box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px ;
+  border-radius: 10px;
+}
+.seis i{
+  position: absolute;
+  top: 6%;
+  right: 9%;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.seis i:hover{
+  color: #85CFA6;
+}
+
+.seis img{
+  width: 80%;
+  height: 50%;
+  object-fit: contain;
+  position: absolute;
+  left: 10%;
+  top:5%;
+}
+
+.seis h4{
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+}
+
+.seis p{
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+}
+
+.titulo-sect{
+  width: 100%;
+  margin-top: 100px;
+  color: #333;
+  font-family: 'Poppins';
+}
+/* fin articulos*/
+
+/* Envios y nuevos*/
+.of2{
+  position: absolute;
+  top: 5%;
+  background-color: #85CFA6;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.of4{
+  position: absolute;
+  background-color: #E6898B;
+  color: white;
+  font-weight: bold;
+  width: 45px;
+  text-align: center;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 12px;
+  padding: 5px;
+  top : 5%;
+}
+/*ver más*/
+
+.overlay{
+  width: 150px;
+  background: rgba(255, 255, 255,0.6);
+  height: 200px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.ver{
+  width: 130px;
+  height: 40px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1F1D1D;
+  color: white;
+  font-weight: 700;
+  font-family: 'Roboto';
+  border-radius: 20px;
+  box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  position: absolute;
+  bottom: 40%;
+  left: 15%;
+}
+   
+.ver:hover{
+  color: #1F1D1D;
+  background-color: white;
+  transition: all ease 0.3s;
+}
+
+.ver-inp{
+  display: none;
+}
+
+article:hover .overlay{
+  visibility: visible;
+  width: 200px;
+}
+ /*fin ver más*/
+
+/*contacto*/
+.contacto .name .far , .fas{
+  margin-right: 10px
+}
+
+.client{
+  text-align: center;
+  font-family: 'Roboto';
+  padding-top: 70px;
+}
+/*fin contacto*/
+
+/*banner2*/
+.banner2{
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px; 
+}
+
+/*******BANNER* 320*******/
+.horizontal-slider{
+  display: block;
+  width: 100%;
+  overflow-x: scroll;
+}
+.slider-container{
+  display: block;
+  white-space: nowrap;
+}
+
+.item{
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 50px; 
+}
+
+.item img{
+  width: 100%;
+  border-radius: 10px; 
+}
+
+/*******CONTACTO* 320*******/
+
+.contacto{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  margin-left: 45px;
+  margin-top: 10px;
+  font-family: 'Roboto';
+}
+
+.contacto .name{
+  font-weight: bold;
+  padding-bottom: 5px;
+  margin-top: 12px;
+}
+/*******BANNER* 320*******/
+.cont-padre{
+  display: none;
+}
+
+/* media */
+@media (min-width: 426px){
+  
+  .horizontal-slider{
+    display: none;
+  }
+
+  .contacto{
+    justify-content: space-evenly;
+    font-size: 14px;
+    margin-left: 16px;
+  }
+  
+  .cont-padre{
+    position: relative;
+    top: 50px;
+    display: flex;
+    width: 95%;
+    height: 450px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: auto;
+    box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.2);
+  }
+   
+  .tex-1 , .tex-2{
+    flex-basis: 50%;
+    overflow: hidden;
+  }
+
+  main .tex-2 img {
+    width: 100%;
+    height: 450px;
+  }
+  .tex-1{
+    padding: 10% 5%;
+    position: relative;
+  }
+
+  .tex-1 h1{
+    font-size: 30px;
+    line-height: 80px;
+    letter-spacing: 1px;
+    color: #333;
+    font-family: 'Poppins';
+  }
+   
+  .tex-1 p{
+    color: #777;
+    line-height: 22px;
+    margin: 15px 0 30px;
+    font-size: 13px;
+  }
+   
+  .tex-1 a{
+    padding: 10px 30px;
+    border-radius: 25px;
+    border: none;
+    background-color: #333;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    z-index: 2;
+  }
+  
+  .header1 .banner-cv {
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+  }
+   
+  .header1 .banner-cv .next{
+    list-style: none;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: #bfbfbf;
+    border-radius: 50%;
+    margin: 15px;
+    cursor: pointer;    
+  }
+   
+  .header1 .banner-cv .active{
+    background: #333;
+  }  
+}
+
+@media (min-width: 526px) {
+  .contacto{
+    flex-direction: row;
+  }
+  .contacto .name{
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 769px){
+
+  /*BANNER*/
+
+  .cont-padre{
+    height: 550px;
+  }
+
+  main .tex-2 img {
+    height: 550px;
+  }
+
+  .tex-1 h1{
+    font-size: 45px;
+    letter-spacing: 2px;
+    z-index: 1;
+    font-family: 'Poppins'
+  }
+
+  .header1 .banner-cv {
+    bottom: 30px;
+  }
+
+  .contacto{
+    padding-bottom: 90px;
+    font-size: 16px;
+  }
+
+  .client{
+    padding-top: 90px;
+  }
+}
