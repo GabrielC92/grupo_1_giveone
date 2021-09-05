@@ -1,18 +1,18 @@
 .ofertax{
-
   font-family: 'Roboto';
   margin-top: 180px;
   text-align: center;
-  font-weight: bold; 
-
+  font-weight: bold;
 }
+
+/* .cont-main .main-header2 {
+  width: 100%;
+} */
 
 .cont-main h3{
   text-align: center;
-  padding-top: 40px;
   margin-bottom: 40px;
   font-weight: bold;
-
 }
 
 main{
@@ -29,11 +29,9 @@ main{
   justify-content: center;
 }
 
+/*finmain*/
 
-/*fin*/
-
-
-/*texto home*/
+/* texto home */
 
 .home-1{
   text-align: center;
@@ -43,13 +41,6 @@ main{
   color: #333;
   letter-spacing: 2px
 }
-section.product div article{
-  display: flex;
-  flex-direction: column;
-  width: 240px;
-  height: 400px;
-  justify-content: space-around;
-}
 /*fin texto home*/
 
 /* articulos*/
@@ -58,9 +49,8 @@ section.product div article{
   width: 90%;
   margin: auto;
   display: flex;
-  justify-content: space-around; 
-  flex-wrap: wrap;  
-
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .seis{
@@ -71,7 +61,6 @@ section.product div article{
   box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
   margin-bottom: 50px ;
   border-radius: 10px;
-
 }
 .seis i{
   position: absolute;
@@ -81,40 +70,9 @@ section.product div article{
   cursor: pointer;
 }
 
-
 .seis i:hover{
   color: #85CFA6;
-  
 }
-
-.product div article{
-  background-color: white;
-  margin: 30px;
-  align-items: center;
-  box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
-}
-a.ver{
-  color: black;
-  text-decoration: none;
-  background-color: white;
-  border: solid 1px #E0E2E4;
-  font-size: 12px;
-  padding: 12px;
-  display: flex;
-  justify-content: center;
-  font-family: 'Roboto';
-  font-weight: bold;
-}
-
-a.ver:hover{
-  background-color: #1F1D1D;
-  color: white;
-  transition: 1s;
-}
-
-
-
-
 
 .seis img{
   width: 80%;
@@ -124,7 +82,6 @@ a.ver:hover{
   left: 10%;
   top:5%;
 }
-
 
 .seis h4{
   position: absolute;
@@ -137,570 +94,30 @@ a.ver:hover{
   bottom: 10%;
   left: 5%;
 }
-article.cajaimg{
-  height: 100%;
-}
 
 .titulo-sect{
   width: 100%;
-  height: 50px;
   margin-top: 100px;
   color: #333;
   font-family: 'Poppins';
-  
 }
+/* fin articulos*/
 
- /* fin articulos*/
-
-
-/*ver más*/
-
-.overlay{
-  width: 150px;
-  background: rgba(255, 255, 255,0.6);
-  height: 200px;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
- }
-
- .ver{
-      width: 130px;
-      height: 40px;
-      text-decoration: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #1F1D1D;
-      color: white;
-      font-weight: 700;
-      font-family: 'Roboto';
-      border-radius: 20px;
-      box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
-      font-size: 12px;
-      position: absolute;
-      bottom: 40%;
-      left: 15%;       
-      
-
-  }
-   
-  .ver:hover{
-      color: #1F1D1D;
-      background-color: white;
-      transition: all ease 0.3s;
-  }
-
-     
-
- 
-  
- .ver:hover{
-     color: #1F1D1D;
-     background-color: white;
-     transition: all ease 0.3s;
- }
-
- .overlay{
-     visibility: hidden;
- }
-
-
-article:hover .overlay{
-     visibility: visible;
-     width: 200px;
-     
-
- }
- /*fin ver más*/
-
-
-
-
-/*contacto*/
-
-.contacto{
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 30px;
-padding-bottom: 70px;
-font-family: 'Roboto';
-}
-
-.contacto .name{
-font-weight: bold;
-padding-bottom: 10px;
-
-
-}
-.contacto .name .far , .fas{
-  margin-right: 10px
-}
-
-.client{
-  text-align: center;
-  font-family: 'Roboto';
-  padding-top: 70px;
-}
-
-
-
-/*fin contacto*/
-
-/*banner2*/
-.banner2{
-  width: 95%;
-  padding-left: 30px;
-  padding-right: 30px;
-
-  
-}
-
-
-/*Search*/
-
-.header1 .buscar{
-        
-  border: none;
-  background: white;
-  color: #1F1D1D;
-  outline: none;
-  width: 0;
-  transition: .3s;
-
-
-}
-
-.header1 .botonn{
-  
-background: none;
-border: transparent;
-width: 3em;
-outline: transparent;
-text-decoration: none;
-
-}
-
-.header1 .buscador-ip:hover > .buscar{
-  width: 130px;
-  height: 18px;
-  background: white;
-  border-radius: 2px;
-  border: solid 1px #D2D4D6;
-}
-
-
-
-/*media*/
-
-
-
-@media (min-width: 10px) and (max-width: 427px){
-
-  .seis i{
-      position: absolute;
-      top: 6%;
-      right: 9%;
-      z-index: 1000;
-  }
-
-
-  /*******BANNER* 320*******/
-
-
-  
- 
-  .horizontal-slider{
-      display: block;
-      width: 100%;
-      overflow-x: scroll;
-  }
-  .slider-container{
-      display: block;
-      white-space: nowrap;
-
-  }
-
-  .item{
-      display: inline-block;
-      margin-right: 10px;
-      margin-left: 10px;
-      margin-top: 50px;
-  }
-
-  .item img{
-      width: 100%;
-      border-radius: 10px
-  }
-
-      
-  
-
-/*******CONTACTO* 320*******/
-
-.contacto{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 70px;
-  margin-left: 45px;
-  margin-top: 10px;
-  font-family: 'Roboto';
-}
-
-.contacto .name{
+/* Envios y nuevos*/
+.of2{
+  position: relative;
+  background-color: #85CFA6;
+  color: white;
   font-weight: bold;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  
+  text-align: center;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 12px;
+  padding: 5px;
 }
 
-
-
-
-/*******BANNER* 320*******/
-
-.cont-padre{
- display: none;
-  
-}
-
-
-}
-
-
-
-@media (min-width: 428px) and (max-width: 767px){
-  
-  .horizontal-slider{
-      display: none;
-  }
-
-  .seis i{
-      position: absolute;
-      top: 6%;
-      right: 9%;
-      z-index: 1000;
-  }
-  
-  
-  .contacto{
-      display: flex;
-  justify-content: space-evenly;
-  padding-top: 30px;
-  padding-bottom: 70px;
-  font-family: 'Roboto';
-  font-size: 14px;
-  margin-left: 16px;
-  }
-  
-  
-  .cont-padre{
-      position: relative;
-       top: 50px;
-       display: flex;
-       width: 95%;
-       height: 450px;
-       background-color: white;
-       border-radius: 15px;
-       overflow: hidden;
-       margin: auto;
-       box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.2);
-       
-   }
-   
-   .tex-1 , .tex-2{
-   flex-basis: 50%;
-   overflow: hidden;
-   
-   }
-   
-   
-   main .tex-2 img {
-       width: 100%;
-       height: 450px;
-       
-   }
-    .tex-1{
-        padding: 10% 5%;
-        position: relative;
-       
-   }
-   
-   
-   .tex-1 h1{
-      font-size: 30px;
-  line-height: 80px;
-  letter-spacing: 1px;
-  color: #333;
-  font-family: 'Poppins';
-      
-   }
-   
-   .tex-1 p{
-       color: #777;
-       line-height: 22px;
-       margin: 15px 0 30px;
-       font-size: 13px;
-       
-   }
-   
-   
-   .tex-1 a{
-       padding: 10px 30px;
-       border-radius: 25px;
-       border: none;
-       background-color: #333;
-       color: white;
-       outline: none;
-       cursor: pointer;
-       box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.5);
-       font-size: 15px;
-       font-family: 'Roboto';
-       font-weight: bold;
-       z-index: 2;
-   }
-   
-   .header1 ul {
-      position: absolute;
-      bottom: 0px;
-      left: 30px;
-   }
-   
-   .header1 ul li{
-       list-style: none;
-       width: 15px;
-       height: 15px;
-       display: inline-block;
-       background: #bfbfbf;
-       border-radius: 50%;
-       margin: 15px;
-       cursor: pointer;
-   }
-   
-  .header1 ul .active{
-       background: #333;
-   }
-  
-  
-}
-
-@media (min-width: 769px){
- 
-  .cont-header{
-    display: none;
-  }
-
-  .cont-header2{
-    background-color: white;
-    height: 130px;
-    
-  }
-  
-  .cont-header2 .iconos i{
-    margin-right: 20px;
-    font-size:18px;
-    padding-top: 10px;
-    color: black;
-  }
-  
-  .cont-header2 .texto{
-    margin-right: 32px;
-    font-size: 11px;
-    color: #969FAA;
-  }
-
-  .cont-header2 a  {
-    text-decoration: none;
-  }
-
-
-  
-  .cont-header2 .texto i{
-    color: black;
-    font-size: 18px;
-    margin-right: 10px;
-  }
-  
-  .cont-header2 .iconos-navegador{
-    width: 70%;
-  }
-  
-  .cont-header2 .iconos-buscador{
-    display: flex;
-    justify-content: flex-end;
-    padding-bottom: 15px;
-    border-bottom: solid 1px #969FAA;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .cont-header2 .logo{
-    width:30%;
-    padding-top: 30px;
-    padding-left: 42px;
-  }
-  
-  .cont-header2 .categorias{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    align-items: center;
-  }
-  
-  
-  .cont-header2 .categoria i{
-    color: #5A6978;
-    padding-left: 10px;
-    font-size: 15px;
-  }
-  
-  .cont-header2 .envio{
-    margin-top: 28px;
-    text-align: center;
-    background-color: #F5F5F5;
-    padding-top: 8px;
-    padding-bottom:  8px; 
-    position: relative;
-    top: -40px;
-    color: #5A6978;
-    font-size: 10px;
-  }
-  
-  .cont-header2 .contenedor-padre{
-    display: flex;
-    
-  }
-  
-  .cont-header2 .navegador{
-    display: flex;
-  justify-content: space-between;
-  font-family: 'Roboto';
-  font-weight: bolder;
-  font-size: 13px;
-  margin-right: 80px;
-  padding-top: 25px;
-  }
-
-  
-
-.header1 .horizontal-slider{
-  display: none;
-}
-
-.header1 .seis i{
-  position: absolute;
-  top: 6%;
-  right: 9%;
-  z-index: 1000;
-}
-
-/*BANNER*/
-
-.header1 .cont-padre{
-position: relative;
-top: 50px;
-display: flex;
-width: 95%;
-height: 550px;
-background-color: white;
-border-radius: 15px;
-overflow: hidden;
-margin: auto;
-box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.2);
-
-}
-
-.header1 .tex-1 , .tex-2{
-flex-basis: 50%;
-overflow: hidden;
-
-}
-
-
-main .tex-2 img {
-width: 100%;
-height: 550px;
-
-}
-.tex-1{
-padding: 10% 5%;
-position: relative;
-
-}
-
-
-.tex-1 h1{
-font-size: 45px;
-line-height: 80px;
-letter-spacing: 2px;
-color: #333;
-font-family: 'Poppins';
-z-index: 1;
-}
-
-.tex-1 p{
-color: #777;
-line-height: 22px;
-margin: 15px 0 30px;
-
-}
-
-
-.tex-1 a{
-padding: 10px 30px;
-border-radius: 25px;
-border: none;
-background-color: #333;
-color: white;
-outline: none;
-cursor: pointer;
-box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.5);
-font-size: 15px;
-font-family: 'Roboto';
-font-weight: bold;
-z-index: 2;
-}
-
-.header1 ul {
-position: absolute;
-bottom: 30px;
-}
-
-.header1 ul li{
-list-style: none;
-width: 15px;
-height: 15px;
-display: inline-block;
-background: #bfbfbf;
-border-radius: 50%;
-margin: 15px;
-cursor: pointer;
-}
-
-.header1 ul .active{
-background: #333;
-}
-
-
-.contacto{
-
-padding-bottom: 90px;
-
-}
-
-.client{
-padding-top: 90px;
-}
-
-/* por fuera */
 .of4{
   position: relative;
-  top: -195px;
-  left: -85px;
   background-color: #E6898B;
   color: white;
   font-weight: bold;
@@ -711,7 +128,237 @@ padding-top: 90px;
   font-size: 12px;
   padding: 5px;
 }
-.banner2{
-  width: 100%;
+/*ver más*/
+
+.overlay{
+  width: 150px;
+  background: rgba(255, 255, 255,0.6);
+  height: 200px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
 }
+
+.ver{
+  width: 130px;
+  height: 40px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1F1D1D;
+  color: white;
+  font-weight: 700;
+  font-family: 'Roboto';
+  border-radius: 20px;
+  box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  position: absolute;
+  bottom: 40%;
+  left: 15%;
+}
+   
+.ver:hover{
+  color: #1F1D1D;
+  background-color: white;
+  transition: all ease 0.3s;
+}
+
+article:hover .overlay{
+  visibility: visible;
+  width: 200px;
+}
+ /*fin ver más*/
+
+/*contacto*/
+.contacto .name .far , .fas{
+  margin-right: 10px
+}
+
+.client{
+  text-align: center;
+  font-family: 'Roboto';
+  padding-top: 70px;
+}
+/*fin contacto*/
+
+/*banner2*/
+.banner2{
+  width: 95%;
+  padding-left: 30px;
+  padding-right: 30px; 
+}
+
+/*media*/
+@media (min-width: 10px) and (max-width: 427px){
+
+  /*******BANNER* 320*******/
+  .horizontal-slider{
+    display: block;
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .slider-container{
+    display: block;
+    white-space: nowrap;
+  }
+
+  .item{
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 50px; 
+  }
+
+  .item img{
+    width: 100%;
+    border-radius: 10px; 
+  }
+
+  /*******CONTACTO* 320*******/
+
+  .contacto{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    margin-left: 45px;
+    margin-top: 10px;
+    font-family: 'Roboto';
+  }
+
+  .contacto .name{
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  /*******BANNER* 320*******/
+  .cont-padre{
+    display: none;
+  }
+}
+
+@media (min-width: 428px) and (max-width: 768px){
+  
+  .horizontal-slider{
+    display: none;
+  }
+
+  .contacto{
+    justify-content: space-evenly;
+    font-size: 14px;
+    margin-left: 16px;
+  }
+  
+  .cont-padre{
+    position: relative;
+    top: 50px;
+    display: flex;
+    width: 95%;
+    height: 450px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: auto;
+    box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.2);
+  }
+   
+  .tex-1 , .tex-2{
+    flex-basis: 50%;
+    overflow: hidden;
+  }
+
+  main .tex-2 img {
+    width: 100%;
+    height: 450px;
+  }
+  .tex-1{
+    padding: 10% 5%;
+    position: relative;
+  }
+
+  .tex-1 h1{
+    font-size: 30px;
+    line-height: 80px;
+    letter-spacing: 1px;
+    color: #333;
+    font-family: 'Poppins';
+  }
+   
+  .tex-1 p{
+    color: #777;
+    line-height: 22px;
+    margin: 15px 0 30px;
+    font-size: 13px;
+  }
+   
+  .tex-1 a{
+    padding: 10px 30px;
+    border-radius: 25px;
+    border: none;
+    background-color: #333;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    z-index: 2;
+  }
+  
+  .header1 .banner-cv {
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+  }
+   
+  .header1 .banner-cv .next{
+    list-style: none;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: #bfbfbf;
+    border-radius: 50%;
+    margin: 15px;
+    cursor: pointer;    
+  }
+   
+  .header1 .banner-cv .active{
+    background: #333;
+  }  
+}
+
+@media (min-width: 769px){
+
+  /*BANNER*/
+
+  .cont-padre{
+    height: 550px;
+  }
+
+  main .tex-2 img {
+    height: 550px;
+  }
+
+  .tex-1 h1{
+    font-size: 45px;
+    letter-spacing: 2px;
+    z-index: 1;
+  }
+
+  .header1 .banner-cv {
+    bottom: 30px;
+  }
+
+  .contacto{
+    padding-bottom: 90px;
+  }
+
+  .client{
+    padding-top: 90px;
+  }
 }
