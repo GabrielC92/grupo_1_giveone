@@ -166,6 +166,10 @@ main{
   transition: all ease 0.3s;
 }
 
+.ver-inp{
+  display: none;
+}
+
 article:hover .overlay{
   visibility: visible;
   width: 200px;
@@ -191,57 +195,54 @@ article:hover .overlay{
   padding-right: 30px; 
 }
 
-/*media*/
-@media (min-width: 10px) and (max-width: 427px){
-
-  /*******BANNER* 320*******/
-  .horizontal-slider{
-    display: block;
-    width: 100%;
-    overflow-x: scroll;
-  }
-  .slider-container{
-    display: block;
-    white-space: nowrap;
-  }
-
-  .item{
-    display: inline-block;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 50px; 
-  }
-
-  .item img{
-    width: 100%;
-    border-radius: 10px; 
-  }
-
-  /*******CONTACTO* 320*******/
-
-  .contacto{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 30px;
-    padding-bottom: 70px;
-    margin-left: 45px;
-    margin-top: 10px;
-    font-family: 'Roboto';
-  }
-
-  .contacto .name{
-    font-weight: bold;
-    padding-bottom: 10px;
-    padding-top: 10px;
-  }
-  /*******BANNER* 320*******/
-  .cont-padre{
-    display: none;
-  }
+/*******BANNER* 320*******/
+.horizontal-slider{
+  display: block;
+  width: 100%;
+  overflow-x: scroll;
+}
+.slider-container{
+  display: block;
+  white-space: nowrap;
 }
 
-@media (min-width: 428px) and (max-width: 768px){
+.item{
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 50px; 
+}
+
+.item img{
+  width: 100%;
+  border-radius: 10px; 
+}
+
+/*******CONTACTO* 320*******/
+
+.contacto{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  margin-left: 45px;
+  margin-top: 10px;
+  font-family: 'Roboto';
+}
+
+.contacto .name{
+  font-weight: bold;
+  padding-bottom: 5px;
+  margin-top: 12px;
+}
+/*******BANNER* 320*******/
+.cont-padre{
+  display: none;
+}
+
+/* media */
+@media (min-width: 426px){
   
   .horizontal-slider{
     display: none;
@@ -330,6 +331,15 @@ article:hover .overlay{
   .header1 .banner-cv .active{
     background: #333;
   }  
+}
+
+@media (min-width: 526px) {
+  .contacto{
+    flex-direction: row;
+  }
+  .contacto .name{
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 769px){
