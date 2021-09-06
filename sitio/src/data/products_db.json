@@ -3,13 +3,13 @@
     "id": 1,
     "name": "Set de Vasos Dakota",
     "price": 1600,
-    "category": "vendidos",
+    "category": "En stock",
     "description": "Lorem ipsum dolor amet sit",
     "image": "PRODUCTO1.jpg"
   },
   {
     "id": 2,
-    "name": "Copa para coctel",
+    "name": "Set de cuchillos de cocina",
     "price": 900,
     "category": "Envío Gratis",
     "description": "Lorem ipsum dolor amet sit",
@@ -17,15 +17,15 @@
   },
   {
     "id": 3,
-    "name": "Copas deluxe",
+    "name": "Juego de platos",
     "price": 2500,
-    "category": "vendidos",
+    "category": "En stock",
     "description": "Lorem ipsum dolor amet sit",
     "image": "PRODUCTO3.jpg"
   },
   {
     "id": 4,
-    "name": "Ollas",
+    "name": "Copas deluxe",
     "description": "Lorem ipsum dolor amet sit",
     "price": 3000,
     "image": "PRODUCTO4.jpg",
@@ -33,34 +33,34 @@
   },
   {
     "id": 5,
-    "name": "Vasos cintura angosta",
+    "name": "Set de cubiertos Golden",
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
     "image": "PRODUCTO5.jpg",
-    "category": "vendidos"
+    "category": "En stock"
   },
   {
     "id": 6,
-    "name": "Vasos cintura angosta",
+    "name": "Jarra",
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
     "image": "PRODUCTO6.jpg",
-    "category": "vendidos"
+    "category": "En stock"
   },
   {
     "id": 7,
-    "name": "Vasos cintura angosta",
+    "name": "Sartén con tapa",
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
     "image": "PRODUCTO7.jpg",
-    "category": "vendidos"
+    "category": "En stock"
   },
   {
     "id": 8,
-    "name": "Vasos cintura angosta",
+    "name": "Azucarera de cristal",
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
     "image": "PRODUCTO8.jpg",
-    "category": "vendidos"
+    "category": "En stock"
   }
 ]

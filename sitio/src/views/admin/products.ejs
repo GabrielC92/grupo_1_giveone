@@ -6,36 +6,49 @@
 
     <main class="cont-main">
 
-        <p class="ofertax">Lista de productos</p>
-        <section class="product">
-
-            <% products.forEach(product => { %>
-                <div>
-                    <% if (product.id == 2) { %>
-                        <article class="dos">
-                    <% } else { %>
-                        <article class="cuatro">
-                    <% } %>
-                        <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
-                        
-                        <div class="data-product">
-                            <h4><%= product.name %></h4>
-                            <p>$<%= product.price %></p>
-                            <br>
-                            <div class="buttons">
-                                <a href="/admin/products/edit/<%= product.id %>" class="registrar-btn">
-                                    <button class="btn-g" type="button">Editar</button>
+        <p class="titulo-tab">Lista de productos</p>
+        <span class="crea-prod">Agregar nuevo producto</span>
+        <a class="icon-c" href="/admin/products/create">
+            <i class="far fa-plus-square"></i>
+        </a>
+        
+        <table>
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Nombre</th>
+                <th scope="col" class="des">Descripción</th>
+                <th scope="col">Precio</th>
+                <th scope="col" class="cat">Categoría</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% products.forEach((product, index) => { %>
+                    <tr>
+                        <th scope="row"><%= index + 1 %></th>
+                        <td><%= product.name %></td>
+                        <td class="des"><%= product.description %></td>
+                        <td>$<%= product.price %></td>
+                        <td class="cat"><%= product.category %></td>
+                        <td>
+                            <div class="box-icon-g">
+                                <a class="icon-c" href="/admin/products/edit/<%= product.id %>">
+                                    <i class="fas fa-edit"></i>
                                 </a>
-                                <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST" class="registrar-btn">
-                                    <button class="btn-g" type="submit">Eliminar</button>
+                                <form
+                                    action="/admin/products/delete/<%= product.id %>?_method=DELETE"
+                                    method="POST">
+                                    <button class="icon-c cubo" type='submit'>
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
                                 </form>
                             </div>
-                        </div>
-                    </article>
-                </div>
-            <% }) %>
-
-        </section>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
 
     </main>
 
