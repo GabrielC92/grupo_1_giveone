@@ -10,7 +10,7 @@
             <p class="parrafo">Ingresa tus datos y accede a beneficios exclusivos. Nuestras promociones y descuentos te están esperando.</p>
             <div class="box-img"><img class="coffee" src="/images/mug_coffee_PNG97438.png" alt="coffee"></div>
         </section>
-        <form class="log" action="/" method="GET">
+        <form class="log" action="/users/login" method="POST">
             <input class="input-g" type="text" name="name" placeholder="Nombre" required>
             <span class="red-msg">Este campo es obligatorio</span>
             <input class="input-g" type="text" name="lastName" placeholder="Apellido" required>
@@ -20,6 +20,8 @@
             <input class="input-g" type="password" name="password" placeholder="Elige una contraseña" required>
             <span class="red-msg">Este campo es obligatorio</span>
             <input class="input-g" type="password" name="password" placeholder="Confirmar contraseña" required>
+            <span class="red-msg">Este campo es obligatorio</span>
+            <input class="input-g" type="file" name="user" accept="image/*">
             <span class="red-msg">Este campo es obligatorio</span>
             <div class="r-btn">
                 <input class="radio" type="radio" name="aceptar" id="aceptar">
