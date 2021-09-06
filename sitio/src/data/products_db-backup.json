@@ -1,50 +1,58 @@
 [
   {
     "id": 1,
-    "name": "Set de cuchillos completo",
-    "price": 1500,
-    "category": "vendidos",
+    "name": "Set de Vasos Dakota",
+    "price": 1600,
+    "category": "En stock",
     "description": "Lorem ipsum dolor amet sit",
-    "image": "cuchillos.jpg"
-  },
-  {
-    "id": 2,
-    "name": "Copa para coctel",
-    "price": 900,
-    "category": "Envío Gratis",
-    "description": "Lorem ipsum dolor amet sit",
-    "image": "wineglass_PNG2892.png"
+    "image": "PRODUCTO1.jpg"
   },
   {
     "id": 3,
-    "name": "Copas deluxe",
+    "name": "Juego de platos",
     "price": 2500,
-    "category": "vendidos",
+    "category": "En stock",
     "description": "Lorem ipsum dolor amet sit",
-    "image": "PRODUCTO4.jpg"
+    "image": "PRODUCTO3.jpg"
   },
   {
     "id": 4,
-    "name": "Ollas",
+    "name": "Copas deluxe",
     "description": "Lorem ipsum dolor amet sit",
-    "price": 3000,
-    "image": "cooking_pan_PNG8407.png",
+    "price": 3000000,
+    "image": "PRODUCTO4.jpg",
     "category": "Nuevo"
   },
   {
     "id": 5,
-    "name": "Vasos cintura angosta",
+    "name": "Set de cubiertos Golden",
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
-    "image": "vasos.jpg",
-    "category": "vendidos"
+    "image": "PRODUCTO5.jpg",
+    "category": "En stock"
   },
   {
     "id": 6,
-    "name": "Taza avocado",
+    "name": "Jarra",
     "description": "Lorem ipsum dolor amet sit",
-    "price": 500,
-    "image": "taza avocado.jpg",
-    "category": "vendidos"
+    "price": 600,
+    "image": "PRODUCTO6.jpg",
+    "category": "En stock"
+  },
+  {
+    "id": 7,
+    "name": "Sartén con tapa",
+    "description": "Lorem ipsum dolor amet sit",
+    "price": 600,
+    "image": "PRODUCTO7.jpg",
+    "category": "En stock"
+  },
+  {
+    "id": 8,
+    "name": "Azucarera de cristal",
+    "description": "Lorem ipsum dolor amet sit",
+    "price": 600,
+    "image": "PRODUCTO8.jpg",
+    "category": "En stock"
   }
 ]
