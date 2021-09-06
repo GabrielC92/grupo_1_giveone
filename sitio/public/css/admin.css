@@ -1,0 +1,77 @@
+.titulo-tab{
+    font-family: 'Roboto';
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.crea-prod{
+    font-family: 'Roboto';
+    margin: 0 10px;
+}
+.icon-c .fa-plus-square{
+    background-color: rgb(0, 128, 0);
+}
+.icon-c .fa-edit{
+    background-color: #ffff00;
+}
+.icon-c .fa-trash-alt{
+    background-color: #ff0000;
+}
+.icon-c .far, .icon-c .fas{
+    color: white;
+    font-size: 20px;
+    padding: 4px;
+    border-radius: 6px;
+    border: 1px solid white;
+}
+table{
+    margin: 40px auto;
+    font-family: 'Roboto';
+    width: 95%;
+}
+tbody{
+    background-color: #d1d1d1;
+}
+tbody tr{
+    transition: .3s;
+}
+tbody tr:hover{
+    background-color: #c9b391;
+}
+th, td{
+    padding: 12px;
+}
+.des, .cat{
+    display: none;
+}
+.box-icon-g{
+    display: flex;
+}
+.box-icon-g .cubo{
+    width: 30px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+}
+
+@media (min-width: 426px) {
+    .crea-prod{
+        margin-left: 25px;
+    }
+    .cat{
+        display: inline-block;
+    }
+    .box-icon-g{
+        justify-content: center;
+    }
+}
+
+@media (min-width: 769px) {
+    table{
+        max-width: 1000px;
+        text-align: center;
+    }
+    .des{
+        display: inline-block;
+    }
+}
