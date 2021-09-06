@@ -8,6 +8,7 @@
     width: 25px;
 }
 .registro .log a.password{
+    text-decoration: underline;
     color: #000;
     text-align: center;
 }
