@@ -10,11 +10,13 @@ module.exports = {
             title: 'Inicia sesión'
         });
     },
+    processLogin: (req,res) => {},
     registro: (req,res) => {
         return res.render('register',{
             title: 'Crea tu cuenta'
         });
     },
+    processRegistro: (req,res) => {},
     pass: (req,res) => {
         return res.render('forgot',{
             title: 'Restablecer contraseña'
