@@ -18,7 +18,7 @@ module.exports = {
     store: (req,res) => {
         let {name,price,category,description} = req.body
         let product ={
-            id : (products[products.length -1].id + 1),
+            id : products.length > 0 ? products[products.length -1].id + 1 : 1,
             name, 
             price : +price,
             category,

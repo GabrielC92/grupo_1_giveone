@@ -11,12 +11,14 @@ module.exports = [
     .isEmail().withMessage('Debe ingresar un email válido'),
 
     check('pass')
+    .notEmpty().withMessage('Elija una contraseña').bail()
     .isLength({
         max : 12,
         min : 6
-    }).withMessage('La contraseña debe tener un mínimo de 6 y un máximo de 12 caracteres'),
+    }).withMessage('La contraseña debe tener de 6 a 12 caracteres'),
 
     body('pass2')
+    .notEmpty().withMessage('Confirme la contraseña').bail()
     .custom((value,{req}) => {
         if(value !== req.body.pass){
             return false
@@ -24,6 +26,6 @@ module.exports = [
         return true
     }).withMessage('La verificación de la contraseña no coincide'),
 
-    check('terms')
+    check('aceptar')
     .isString('on').withMessage('Debes aceptar los términos y condiciones')
 ]
