@@ -9,14 +9,6 @@
   },
   {
     "id": 2,
-    "name": "Set de cuchillos de cocina",
-    "price": 900,
-    "category": "Envío Gratis",
-    "description": "Lorem ipsum dolor amet sit",
-    "image": "PRODUCTO2.jpg"
-  },
-  {
-    "id": 3,
     "name": "Juego de platos",
     "price": 2500,
     "category": "En stock",
@@ -24,7 +16,7 @@
     "image": "PRODUCTO3.jpg"
   },
   {
-    "id": 4,
+    "id": 3,
     "name": "Copas deluxe",
     "description": "Lorem ipsum dolor amet sit",
     "price": 3000,
@@ -32,7 +24,7 @@
     "category": "Nuevo"
   },
   {
-    "id": 5,
+    "id": 4,
     "name": "Set de cubiertos Golden",
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
@@ -40,7 +32,7 @@
     "category": "En stock"
   },
   {
-    "id": 6,
+    "id": 5,
     "name": "Jarra",
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
@@ -48,7 +40,7 @@
     "category": "En stock"
   },
   {
-    "id": 7,
+    "id": 6,
     "name": "Sartén con tapa",
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
@@ -56,11 +48,19 @@
     "category": "En stock"
   },
   {
-    "id": 8,
+    "id": 7,
     "name": "Azucarera de cristal",
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
     "image": "PRODUCTO8.jpg",
     "category": "En stock"
+  },
+  {
+    "id": 8,
+    "name": "Cuchillos Gold",
+    "price": 5000,
+    "category": "En stock",
+    "description": "Lorem ipsu ",
+    "image": "img-1630963271698.jpg"
   }
 ]

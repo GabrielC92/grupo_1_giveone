@@ -50,12 +50,12 @@ module.exports = {
             }
         })
         fs.writeFileSync(productFilePath, JSON.stringify(products,null,2),'utf-8');
-        return res.redirect('/producto/' + req.params.id)
+        return res.redirect('/admin/products')
     },
     destroy : (req, res) => {
         let productsDelete = products.filter(product => product.id !== +req.params.id);
         fs.writeFileSync(productFilePath, JSON.stringify(productsDelete,null,2),'utf-8');
-        return res.redirect('/')	
+        return res.redirect('/admin/products')	
         
         }
 }

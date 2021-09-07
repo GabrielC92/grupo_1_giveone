@@ -60,7 +60,6 @@ footer .contenedor-subs label{
 }
 
 footer .contenedor-subs p{
-    padding-top: 10px;
     font-family: 'Roboto';
 }
 
@@ -110,12 +109,12 @@ footer .contenedor-subs .underline{
 }
 
 footer .underline{
-    width: 100px;
+    width: 80px;
     height: 5px;
     background: #767676;
     border-radius: 3px;
     position: absolute;
-    margin-top: 25px;
+    margin-top: 20px;
     margin-right: 10px;
     overflow: hidden;    
 }
@@ -143,7 +142,7 @@ footer .underline span{
 footer  .contenedor-venta{
     display: flex;
     flex-direction: column;
-    align-items: center;
+   
     margin-bottom: 30px
 }
 
@@ -156,8 +155,29 @@ footer .contenedor-venta a{
     font-size: 18px;
 }
 
+@media (min-width: 10px) and (max-width: 425px){
+
+    footer .contenedor-venta {
+        
+        align-items: center; 
+        
+    }
+
+}
+
+
 /* Tablet*/
 @media (min-width: 426px){
+
+    footer .contenedor-subs .underline{
+        display: inline-block;
+        position: absolute;
+        left: 1px;
+        top: 4px;
+    }
+    .contenedor-subs p {
+        display: inline-block;
+    }
 
     footer .listas{   
         display: flex;
@@ -170,7 +190,7 @@ footer .contenedor-venta a{
         align-items: center;
         justify-content: space-between;
         border-bottom: solid 1px white;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         padding-bottom: 15px;
     }
 
@@ -213,12 +233,16 @@ footer .contenedor-venta a{
 /* desktop*/
 @media (min-width: 768px){
 
+    .contenedor-subs p {
+        display: inline-block;
+    }
+
     footer .contenedor-navegacion{
         display: flex;
         flex-direction: column;
     }
 
     footer .contenedor-subs form{
-        margin-bottom: 0px;
+        margin-bottom: 20px;
     }
 }
