@@ -30,14 +30,15 @@ module.exports = {
             fs.writeFileSync(usuariosPath,JSON.stringify(usuarios,null,2),'utf-8');
 
             req.session.userLogin = {
-                id: user.id,
-                name: user.name,
-                avatar: user.avatar,
-                rol: user.rol
+                id: usuario.id,
+                name: usuario.name,
+                avatar: usuario.avatar,
+                rol: usuario.rol
             }
             return res.redirect('/');
         } else {
             return res.render('register',{
+                title: 'Crea tu cuenta',
                 errors: errors.mapped(),
                 old: req.body
             })
@@ -49,7 +50,7 @@ module.exports = {
         });
     },
     processLogin: (req,res) => {
-        let errors = validationResult(req);
+        /* let errors = validationResult(req); */
     },
     pass: (req,res) => {
         return res.render('forgot',{
