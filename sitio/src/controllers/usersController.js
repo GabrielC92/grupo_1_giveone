@@ -5,6 +5,7 @@ const usuarios = JSON.parse(fs.readFileSync(usuariosPath, 'utf-8'));
 
 const {validationResult} = require('express-validator');
 const bcrypt = require('bcryptjs');
+const { title } = require('process');
 
 module.exports = {
     registro: (req,res) => {
@@ -51,6 +52,14 @@ module.exports = {
     },
     processLogin: (req,res) => {
         /* let errors = validationResult(req); */
+    },
+    profile : (re,res) =>{
+        return res.render('profile',{
+            title : "Perfil de Usuario",
+            productos
+        })
+        
+
     },
     pass: (req,res) => {
         return res.render('forgot',{
