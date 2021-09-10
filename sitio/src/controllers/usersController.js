@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const usuariosPath = path.join(__dirname, '..', 'data', 'users.json');
-const usuarios = JSON.parse(fs.readFileSync(usuariosPath, 'utf-8'));
+const usuarios = JSON.parse(fs.readFileSync(usuariosPath,'utf-8'));
 
 const {validationResult} = require('express-validator');
 const bcrypt = require('bcryptjs');
@@ -47,16 +47,36 @@ module.exports = {
     },
     login: (req,res) => {
         return res.render('login',{
-            title: 'Inicia sesión'
+            title: 'Inicia sesión',
+            usuarios
+            
         });
     },
     processLogin: (req,res) => {
-        /* let errors = validationResult(req); */
+        let errors = validationResult (req);
+        if (errors.isEmpty()) {
+        let {email} = req.body
+        let usuario = usuarios.find(usuario => usuario.email === email )
+        require.session.userLogin = {
+            id : usuario.id,
+            name : usuario.name,
+            rol :usuario.rol
+        }
+        return res.redirect('/')
+        }else{
+            return res.render('login',{
+                title: 'Inicia sesión',
+                usuarios,
+                errores : errors.mapped()
+            });
+        }
+        
     },
-    profile : (re,res) =>{
+    profile : (req,res) =>{
         return res.render('profile',{
             title : "Perfil de Usuario",
-            productos
+            usuarios
+            
         })
         
 

@@ -10,16 +10,17 @@
             <p class="parrafo">y disfruta de las promociones. Si aun no tienes una cuenta, en pocos pasos podrás registrarte</p>
             <div class="box-img"><img class="coffee" src="/images/mug_coffee_PNG97438.png" alt="coffee"></div>
         </section>
-        <form class="log" action="/" method="GET">
+        <form class="log" action="" method="POST">
             <input class="input-g" type="email" name="email" placeholder="E-mail">
             <input class="input-g" type="password" name="password" placeholder="Contraseña">
-            <span class="red-msg">El usuario y/o la contraseña no son correctos</span>
+            <span class="red-msg"><%= locals.errores && errores.email ? errores.email.msg : null %> </span>
             <label class="check" for="rec">
                 <input class="sesion" type="checkbox" name="sesion" id="rec">
                 Recordar el inicio de mi cuenta
             </label>
             <a class="password" href="/users/forgot">¿Olvidaste tu contraseña?</a>
             <div class="buttons">
+                
                 <a class="registrar-btn" href="/users/registro"><button class="btn-g" type="button">Registrate</button></a>
                 <button class="btn-g" type="submit">Entrar a mi cuenta</button>
             </div>
