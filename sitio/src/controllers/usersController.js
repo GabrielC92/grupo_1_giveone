@@ -57,7 +57,7 @@ module.exports = {
         if (errors.isEmpty()) {
         let {email} = req.body
         let usuario = usuarios.find(usuario => usuario.email === email )
-        require.session.userLogin = {
+        req.session.userLogin = {
             id : usuario.id,
             name : usuario.name,
             rol :usuario.rol
