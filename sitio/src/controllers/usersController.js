@@ -49,37 +49,49 @@ module.exports = {
         return res.render('login',{
             title: 'Inicia sesión',
             usuarios
+           
             
         });
     },
     processLogin: (req,res) => {
-        let errors = validationResult (req);
+        
+         let errors = validationResult(req);
+
         if (errors.isEmpty()) {
-        let {email} = req.body
-        let usuario = usuarios.find(usuario => usuario.email === email )
-        req.session.userLogin = {
-            id : usuario.id,
-            name : usuario.name,
-            rol :usuario.rol
-        }
-        return res.redirect('/')
+
+            const {email,sesion} =req.body
+            let usuario = usuarios.find(usuario => usuario.email === req.body.email.trim())
+
+
+            req.session.userLogin = {
+                id : usuario.id,
+                name : usuario.name,
+                avatar : usuario.avatar,
+                rol : usuario.rol
+            }
+
+            if (req.body.sesion) {
+                res.cookie('giveoneLogin',req.session.userLogin,{maxAge : 1000 * 60})
+                
+            }
+            res.redirect('/')
         }else{
             return res.render('login',{
-                title: 'Inicia sesión',
-                usuarios,
-                errores : errors.mapped()
-            });
-        }
-        
+                errors : errors.mapped(),
+                title: 'logueate',
+            })
+        } 
     },
     profile : (req,res) =>{
         return res.render('profile',{
             title : "Perfil de Usuario",
-            usuarios
-            
+              
         })
         
 
+    },
+    logout : (req,res) =>{
+        
     },
     pass: (req,res) => {
         return res.render('forgot',{

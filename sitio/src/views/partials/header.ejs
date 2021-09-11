@@ -9,12 +9,25 @@
 
         <div class="iconos-navegador">
             <div class="iconos-buscador">
+
+
+                 <% if (locals.userLogin) { %>
+                    <a href="/users/registro">
+                        <p class="texto" href="/users/logout"><i class="fas fa-sign-in-alt"></i>Cerrar Sesión</p>
+                    </a>
+                    <a href="/users/login">
+                        <p class="texto"><i class="fas fa-user-alt"></i><%= locals.userLogin.name %> </p>
+                    </a>
+                  
+                 <% }else { %>
+
                 <a href="/users/registro">
-                    <p class="texto"><i class="fas fa-sign-in-alt"></i>Registrarme</p>
+                    <p class="texto" ><i class="fas fa-sign-in-alt"></i>Registrarme</p>
                 </a>
                 <a href="/users/login">
                     <p class="texto"><i class="fas fa-user-alt"></i>Mi cuenta</p>
                 </a>
+                <% } %>
                 <div class="iconos">
                     <div class="buscador-ip">
                         <input class="buscar" type="text" >

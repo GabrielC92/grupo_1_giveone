@@ -64,7 +64,29 @@
 
                 <article class="seis">
                     
-                    <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
+                    <div id="zoom">
+                        <figure>
+                            <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
+                           <ul class="action">
+                            <li>
+                                <i class="fas fa-heart"></i>
+                                <span>Añadir a Favoritos</span>
+                            </li>
+                                <li>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>Añadir al Carrito</span>
+                                </li>
+                                <li>
+                                    <i class="far fa-eye"></i>
+                                   <a href="/products/<%= product.id %>"><span>Ver Detalle</span></a> 
+                                </li>
+                               
+                           </ul>
+                                 
+                        </figure>
+                        
+                    </div>
+                    
                     <h4><%= product.name %></h4>
                     <p>$<%= product.price %></p>
                     <% if (product.category == "Envío Gratis") { %>
@@ -74,13 +96,12 @@
                     <% } else { %>
                      <br>
                     <% } %>
-                    <div class="fav4">
-                        <i class="far fa-heart"></i>
-                    </div>
-                    <div class="data-product overlay">
-                        <a href="/products/<%= product.id %>" class="vermas ver"><input type="button" name="Vermas" id="VerMas"
-                            class="ver-inp">VER MÁS</a>
-                    </div>
+                    <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                     </div>
+                  
                 </article>
 
             <% }) %>

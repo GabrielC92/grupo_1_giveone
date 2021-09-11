@@ -49,8 +49,9 @@ main{
   width: 90%;
   margin: auto;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: space-around; 
+  flex-wrap: wrap;  
+
 }
 
 .seis{
@@ -61,18 +62,12 @@ main{
   box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
   margin-bottom: 50px ;
   border-radius: 10px;
-}
-.seis i{
-  position: absolute;
-  top: 6%;
-  right: 9%;
-  z-index: 1000;
-  cursor: pointer;
+  overflow: hidden;
+
 }
 
-.seis i:hover{
-  color: #85CFA6;
-}
+
+
 
 .seis img{
   width: 80%;
@@ -81,26 +76,136 @@ main{
   position: absolute;
   left: 10%;
   top:5%;
+  overflow: hidden;
 }
+
 
 .seis h4{
   position: absolute;
   bottom: 20%;
   left: 5%;
+  border-bottom: solid 1px #ccccca;
+  width: 180px;
+  padding-bottom: 5px;
+  font-family: 'Poppins';
+  color: #333;
+  font-size: 13px;
 }
+
 
 .seis p{
   position: absolute;
   bottom: 10%;
   left: 5%;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
 }
+
 
 .titulo-sect{
   width: 100%;
+  height: 50px;
   margin-top: 100px;
   color: #333;
   font-family: 'Poppins';
+  
 }
+
+figure{
+  overflow: hidden;
+}
+
+.seis #zoom img {
+  transform: scale(1);
+  transition: 0.8s all ease-in-out;
+  transform-origin: right;
+}
+
+.seis #zoom:hover img{
+  transform: scale(1.9);
+  
+}
+
+.action{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  list-style: none;
+}
+
+.action li{
+  position: relative;
+  width: 35px;
+  height: 40px;
+  background-color: white;
+  box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  cursor: pointer;
+  color: #333;
+  transition:  transform 0.5s;
+  transform: translateX(60px);
+  
+}
+
+.action li:nth-child(2){
+  transition-delay: 0.15s;
+}
+.action li:nth-child(3){
+  transition-delay: 0.3s;
+}
+
+.action li:hover{
+  background-color: #333;
+  color: white;
+}
+
+.action li span{
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  width: 120px;
+  background-color: white;
+  box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.3);
+  color: #333;
+  font-size: 13px;
+  text-align: center;
+  padding: 4px 10px;
+  font-family: 'Roboto';
+  font-weight: bold;
+  border-radius: 4px;
+  opacity: 0;
+  transition: 0.5s;
+  
+}
+
+.action li:hover span{
+  opacity: 1;
+  
+}
+
+.seis figure:hover .action li {
+  transform: translateX(0px);
+  z-index: 1000;
+}
+
+
+.star{
+  position: absolute;
+  top: 84%;
+  left: 70%;
+}
+
+.star i{
+  font-size: 12px;
+  color: #ffd513;
+}
+
 /* fin articulos*/
 
 /* Envios y nuevos*/
@@ -130,56 +235,10 @@ main{
   padding: 5px;
   top : 5%;
 }
-/*ver más*/
 
-.overlay{
-  width: 150px;
-  background: rgba(255, 255, 255,0.6);
-  height: 200px;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-}
-
-.ver{
-  width: 130px;
-  height: 40px;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #1F1D1D;
-  color: white;
-  font-weight: 700;
-  font-family: 'Roboto';
-  border-radius: 20px;
-  box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
-  font-size: 12px;
-  position: absolute;
-  bottom: 40%;
-  left: 15%;
-}
-   
-.ver:hover{
-  color: #1F1D1D;
-  background-color: white;
-  transition: all ease 0.3s;
-}
-
-.ver-inp{
-  display: none;
-}
-
-article:hover .overlay{
-  visibility: visible;
-  width: 200px;
-}
- /*fin ver más*/
 
 /*contacto*/
-.contacto .name .far , .fas{
+.contacto .name i{
   margin-right: 10px
 }
 
