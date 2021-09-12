@@ -12,8 +12,8 @@
 
 
                  <% if (locals.userLogin) { %>
-                    <a href="/users/registro">
-                        <p class="texto" href="/users/logout"><i class="fas fa-sign-in-alt"></i>Cerrar Sesión</p>
+                    <a href="/users/logout">
+                        <p class="texto" ><i class="fas fa-sign-in-alt"></i>Cerrar Sesión</p>
                     </a>
                     <a href="/users/login">
                         <p class="texto"><i class="fas fa-user-alt"></i><%= locals.userLogin.name %> </p>
@@ -49,7 +49,11 @@
                     <li class="categoria"><a href="#">Cristalería</a></li>
                     <li class="categoria"><a href="#">Café y Té</a></li>
                     <li class="categoria"><a href="#">Contacto</a><i class="far fa-question-circle"></i></li>
-                    <li class="admin"><a href="/admin/products"><i class="fas fa-users-cog"></i></a></i></li>
+                    
+                    <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
+                        <li class="admin"><a href="/admin/products"><i class="fas fa-users-cog"></i></a></i></li>
+                    <% } %>
+                   
                 </ul>
             </nav>
         </div><!-- END: .iconos-navegador -->

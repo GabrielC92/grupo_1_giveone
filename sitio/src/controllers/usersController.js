@@ -5,7 +5,7 @@ const usuarios = JSON.parse(fs.readFileSync(usuariosPath,'utf-8'));
 
 const {validationResult} = require('express-validator');
 const bcrypt = require('bcryptjs');
-const { title } = require('process');
+
 
 module.exports = {
     registro: (req,res) => {
@@ -48,25 +48,23 @@ module.exports = {
     login: (req,res) => {
         return res.render('login',{
             title: 'Inicia sesión',
-            usuarios
-           
             
         });
     },
+
     processLogin: (req,res) => {
         
          let errors = validationResult(req);
 
         if (errors.isEmpty()) {
 
-            const {email,sesion} =req.body
             let usuario = usuarios.find(usuario => usuario.email === req.body.email.trim())
 
 
             req.session.userLogin = {
                 id : usuario.id,
                 name : usuario.name,
-                avatar : usuario.avatar,
+                avatar: usuario.avatar,
                 rol : usuario.rol
             }
 
@@ -74,12 +72,13 @@ module.exports = {
                 res.cookie('giveoneLogin',req.session.userLogin,{maxAge : 1000 * 60})
                 
             }
-            res.redirect('/')
-        }else{
+            return res.redirect('/')
+            }else{
             return res.render('login',{
-                errors : errors.mapped(),
-                title: 'logueate',
-            })
+                errors: errors.mapped(),
+                title: 'Inicia sesión'
+                
+            });
         } 
     },
     profile : (req,res) =>{
@@ -91,6 +90,9 @@ module.exports = {
 
     },
     logout : (req,res) =>{
+        req.session.destroy();
+        res.cookie('giveoneLogin',null,{maxAge: -1})
+        res.redirect('/')
         
     },
     pass: (req,res) => {

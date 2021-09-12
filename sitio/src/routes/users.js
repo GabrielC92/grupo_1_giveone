@@ -10,7 +10,7 @@ router.get('/registro', registro);
 router.post('/registro', avatar.single('user'), registerValidator, processRegistro);
 
 router.get('/login', login);
-router.post('/login', loginValidator,processLogin);
+router.post('/login',processLogin);
 
 router.get('/forgot', pass);
 router.get('/forgot2', word);

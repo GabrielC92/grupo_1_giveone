@@ -5,7 +5,7 @@
     "lastName": "Calla",
     "email": "gabriel@gmail.com",
     "pass": "$2a$10$tN2lblcKJ/15tVBp4dcfp.BsuHMJRqFh8ARr5w2so.0o/Ng422WfO",
-    "rol": "user",
+    "rol": "admin",
     "avatar": "avatar_default.png"
   },
   {
@@ -14,7 +14,7 @@
     "lastName": "Vega",
     "email": "carolina@gmail.com",
     "pass": "$2a$10$ZGiAVNiEP7M8xQWqkCL2m.3wYO5yMQ4BFi7EinLQnED4KGRb.Qb7q",
-    "rol": "user",
+    "rol": "admin",
     "avatar": "avatar_default.png"
   },
   {
@@ -23,7 +23,7 @@
     "lastName": "Avalos",
     "email": "lucas@gmail.com",
     "pass": "$2a$10$n5MJsHSbV.lkGx0p/GQ2geSfmoMlpyP9XKB5pFIIzRDOe.snTa7je",
-    "rol": "user",
+    "rol": "admin",
     "avatar": "avatar_default.png"
   },
   {
@@ -44,5 +44,4 @@
     "rol": "user",
     "avatar": "avatar_default.png"
   }
-  
 ]
