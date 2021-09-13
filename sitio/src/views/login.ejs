@@ -11,7 +11,7 @@
             <div class="box-img"><img class="coffee" src="/images/mug_coffee_PNG97438.png" alt="coffee"></div>
         </section>
         <form class="log" action="" method="POST">
-            <input class="input-g" type="email" name="email" placeholder="E-mail">
+            <input class="input-g" type="email" name="email" autocomplete="off" placeholder="E-mail">
             <input class="input-g" type="password" name="pass" placeholder="Contraseña">
             <span class="red-msg"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
             <label class="check" for="rec">

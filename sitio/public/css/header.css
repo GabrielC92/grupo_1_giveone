@@ -8,31 +8,36 @@ header .contenedor-padre{
   align-items: center;
 }
 header .logo{
-  padding-top: 30px;
+  padding-top: 20px;
 }
 header .logo a img{
   border-radius: 10px;
-  width: 100px;
+  width: 110px;
+ 
 }
-header .iconos-buscador{
-  display: flex;
-  padding-bottom: 10px;
-  border-bottom: solid 1px #969FAA;
-  padding-top: 15px;
-  align-items: center;
-}
+
 header .iconos-buscador a{
   text-decoration: none;
 }
 header .texto{
   margin-right: 15px;
-  font-size: 11px;
-  color: #969FAA;
+  font-size: 14px;
+  color: #333;
 }
-header .texto i{
+header .texto ion-icon{
+  color: #333;
+    font-size: 18px;
+    --ionicon-stroke-width: 50px;
+    padding-right: 4px;
+    position: relative;
+    bottom: -2px;
+  
+}
+
+.cora ion-icon{
   color: #333;
   font-size: 18px;
-  margin: 5px;
+  --ionicon-stroke-width: 45px;
 }
 header .iconos i{
   margin-right: 15px;
@@ -56,28 +61,45 @@ header .iconos i{
   width: 2em;
   outline: transparent;
 }
-.buscador-ip:hover > .buscar{
-  width: 130px;
-  height: 18px;
-  background-color: white;
-  border-radius: 5px;
-  border: solid 1px #D2D4D6;
-}
+
 /* Fin Buscador */
 
 header .navegador{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   font-family: 'Roboto';
   font-weight: bold;
-  font-size: 13px;
+  font-size: 15px;
   padding-top: 15px;
   color: #333;
+  margin-right: 10px;
 }
 
+
+header .envio{
+  margin-top: 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding-top: 8px;
+  padding-bottom:  8px; ;
+  color: #333;
+  font-size: 10px;
+}
+
+
+header .admin{
+  list-style: none;
+    font-size: 16px;
+}
+
+
+.categoria-cont {
+  list-style: none;
+  margin-right: 10px;
+}
+
+
+
 /* burguer */
-.cont-inp:checked  ~  ul {
+/* .cont-inp:checked  ~  ul {
   display:block;
 }
 .cont-inp {
@@ -113,31 +135,192 @@ label.hamburguesa {
   color: #333;
 }
 header .categoria i{
-  /* color: #5A6978; */
+   color: #5A6978; 
   padding-left: 10px;
   font-size: 15px;
-}
+} 
 /* fin burguer */
 
-header .envio{
-  margin-top: 20px;
-  text-align: center;
-  background-color: #f0f0f0;
-  padding-top: 8px;
-  padding-bottom:  8px; ;
-  color: #333;
-  font-size: 10px;
-}
 
 
-header .admin{
-  list-style: none;
-    padding-top: 8px;
-    font-size: 16px;
+
+@media (min-width: 10px) and  (max-width: 426px){
+  header .logo img{
+    display: none;
+  }
+  
+  header .texto{
+    display: none;
+  }
+  
+  .navegador{
+    display: none;
+  }
+  
+  /* burguer */
+  
+  .capa label.hamburguesa {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 20px;
+    position: absolute;
+    top: 2%;
+  left: 1%;
+  cursor: pointer;
+  }
+  
+  .capa .container-menu{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    
+  }
+  
+  .capa .cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background-color: rgba(255, 255, 255,0.9);
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+    z-index: 10000;
+  }
+  
+  .capa .cont-menu nav{
+    transform: translateY(15%);
+  }
+  
+  .capa .cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #333;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+    font-family: 'Roboto';
+    
+  }
+  
+  .capa .cont-menu nav a:hover{
+    border-left: 5px solid #d4d2d2;
+    background: white;
+    color: #333;
+    transition: 1s;
+  }
+  
+  .capa .cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .capa #menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+  }
+  
+  .capa #menu:checked ~ .container-menu {
+    opacity: 1;
+    visibility: visible;
+    
+  }
+  
+  .capa #menu{
+    position: relative;
+  top: -24px;
+  left: 11px;
+  display: none;
+  }
+  
+  header .navegador{
+    display: none;
+  }
+
+  .capa ion-icon {
+    padding-right: 10px;
+    --ionicon-stroke-width: 40px;
+    font-size: 20px;
+    position: relative;
+  bottom: -3px;
+  }
+  
+  /* fin burguer */
+  
+
+.buscar{
+  width: 190px;
+  height: 25px;
+  background-color: white;
+  border-radius: 5px;
+  border: solid 1px #D2D4D6;
 }
+
+header .far{
+  display: none;
+}
+
+.iconos-buscador{
+  position: relative;
+  top: -9px;
+  left: 20px;
+}
+
+header .cora{
+  position: absolute;
+left: 100%;
+top: 9px;
+}
+
+.boton-header .fas{
+  position: relative;
+right: 28px;
+font-size: 15px;
+
+}
+
+  }
 
 
 @media (min-width: 426px) {
+
+/*buscador*/
+header .iconos-buscador{
+  display: flex;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #969FAA;
+  padding-top: 15px;
+  align-items: center;
+}
+
+.buscador-ip:hover > .buscar{
+  width: 130px;
+  height: 18px;
+  background-color: white;
+  border-radius: 5px;
+  border: solid 1px #D2D4D6;
+}
+
+  .capa {
+    display: none;
+  }
+
   header .contenedor-padre{
     display: block;
   }
@@ -147,23 +330,22 @@ header .admin{
     background-color: white;
   }
   header .iconos-buscador{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-right: 10px;
     justify-content: flex-end;
   }
-  .boton-header{
-    width: 3em;
-  }
+  
   label.hamburguesa{
     display: none;
   }
   .cont-u{
     display: flex;
-    justify-content: space-around;
-  }
+    justify-content: flex-end;
+    }
   .cont-u .categoria {
     display: flex;
     background-color: rgb(255, 255, 255);
-    margin-left: 0.6%;
+    margin-right: 15px;
     border-bottom: 1px solid white;
   }
   .cont-u li a {
@@ -172,9 +354,33 @@ header .admin{
   header .envio{
     margin-top: 15px;
   }
+  .categoria-cont{
+    list-style :none
+  }
+
+  
 }
 
 @media (min-width: 769px) {
+
+  /*buscador*/
+  header .iconos-buscador{
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #969FAA;
+    padding-top: 15px;
+    align-items: center;
+  }
+
+.buscador-ip:hover > .buscar{
+  width: 130px;
+  height: 18px;
+  background-color: white;
+  border-radius: 5px;
+  border: solid 1px #D2D4D6;
+}
+  
+  
   header .logo{
     padding-left: 42px;
   }
@@ -182,7 +388,8 @@ header .admin{
     width: 150px;
   }
   header .iconos-buscador{
-    margin-bottom: 5px;
+    margin-bottom:16px;
+    margin-right: 10px;
   }
   header .texto{
     font-size: 13px;
@@ -191,7 +398,7 @@ header .admin{
     justify-content: flex-end;
   }
   .cont-u .categoria {
-    margin-right: 15px;
+    margin-right: 45px;
   }
   header .categoria i{
     font-size: 17px;
@@ -200,4 +407,14 @@ header .admin{
     font-size: 14px;
     margin-top: 28px;
   }
+
+  .cont-u {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 30px;
+}
+.categoria-cont{
+  list-style :none
+}
+
 }
