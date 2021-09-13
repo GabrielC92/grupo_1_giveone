@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "name": "Set de Vasos Dakota",
+    "name": "Vasos  Dakota",
     "price": 1600,
-    "category": "En stock",
+    "category": "Nuevo",
     "description": "Lorem ipsum dolor amet sit",
     "image": "PRODUCTO1.jpg"
   },
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "name": "Copas deluxe",
+    "name": "Copas  deluxe",
     "description": "Lorem ipsum dolor amet sit",
     "price": 3000,
     "image": "PRODUCTO4.jpg",
@@ -25,7 +25,7 @@
   },
   {
     "id": 4,
-    "name": "Set de cubiertos Golden",
+    "name": "Cubiertos Golden",
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
     "image": "PRODUCTO5.jpg",
@@ -33,15 +33,15 @@
   },
   {
     "id": 5,
-    "name": "Jarra",
+    "name": "Jarra Black",
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
     "image": "PRODUCTO6.jpg",
-    "category": "En stock"
+    "category": "Nuevo"
   },
   {
     "id": 6,
-    "name": "Sartén con tapa",
+    "name": "Sartén  Black",
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
     "image": "PRODUCTO7.jpg",
@@ -53,7 +53,7 @@
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
     "image": "PRODUCTO8.jpg",
-    "category": "En stock"
+    "category": "Nuevo"
   },
   {
     "id": 8,

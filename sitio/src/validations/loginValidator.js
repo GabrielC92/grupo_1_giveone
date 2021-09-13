@@ -9,7 +9,7 @@ module.exports = [
 body('email')
 .custom((value,{req}) => {
     let usuario = usuarios.find(usuario => usuario.email === value.trim() && bcrypt.compareSync(req.body.password.trim(), usuario.password));
-
+    console.log(usuario)
         if (usuario) {
             return true
         }else {

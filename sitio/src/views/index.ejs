@@ -86,21 +86,23 @@
                         </figure>
                         
                     </div>
-                    
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                         </div>
                     <h4><%= product.name %></h4>
                     <p>$<%= product.price %></p>
                     <% if (product.category == "Envío Gratis") { %>
                         <span class="of2">Envío Gratis</span>
                     <% } else if (product.category == "Nuevo") { %>
-                        <span class="of4">-20%</span>
+                        <span class="of4">SALE</span>
                     <% } else { %>
                      <br>
                     <% } %>
-                    <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                     </div>
+                    
                   
                 </article>
 
