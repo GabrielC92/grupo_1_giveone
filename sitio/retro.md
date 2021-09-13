@@ -72,5 +72,19 @@ En general tuvimos una buena comunicación, esta vez la organizacion no supero n
 En general hubo inconvenientes inesperados por la salida de una integrante del equipo, asi mismo,otro integrante del equipo no le fue posible tener una participación completa,por problemas de salud.
 
 
+---------------------------------------
+
+# STARFISH SPRINT 4 #
+
+### **Hacer más**
+* **Reparticion de tareas:** Se realizo reparticion de tareas entre el resto del equipo (2)
+
+### **Seguir haciendo**
+* **Medios de comunicación informal:** uso del whatsapp.
+* **Manejo de Trello:** Actualización de los estados de tarjetas y el implemento de nuevas para agregar información importante para el equipo y otras de interés.
 
 
+
+--------------------------------------
+## RESUMEN SPRINT 4
+En general hubo inconvenientes tecnicos que pudieron solucionarse,postergando la fecha de entrega por la falta de los requerimientos solicitados.
