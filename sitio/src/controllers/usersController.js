@@ -9,7 +9,7 @@ const bcrypt = require('bcryptjs');
 
 module.exports = {
     registro: (req,res) => {
-        return res.render('register',{
+        return res.render('users/register',{
             title: 'Crea tu cuenta'
         });
     },
@@ -38,7 +38,7 @@ module.exports = {
             }
             return res.redirect('/');
         } else {
-            return res.render('register',{
+            return res.render('users/register',{
                 title: 'Crea tu cuenta',
                 errors: errors.mapped(),
                 old: req.body
@@ -46,7 +46,7 @@ module.exports = {
         }
     },
     login: (req,res) => {
-        return res.render('login',{
+        return res.render('users/login',{
             title: 'Inicia sesión',
             
         });
@@ -58,8 +58,7 @@ module.exports = {
 
         if (errors.isEmpty()) {
 
-            let usuario = usuarios.find(usuario => usuario.email === req.body.email.trim())
-
+            let usuario = usuarios.find(usuario => usuario.email === req.body.email.trim());
 
             req.session.userLogin = {
                 id : usuario.id,
@@ -69,39 +68,34 @@ module.exports = {
             }
 
             if (req.body.sesion) {
-                res.cookie('giveoneLogin',req.session.userLogin,{maxAge : 1000 * 60})
-                
+                res.cookie('giveoneLogin',req.session.userLogin,{maxAge : 1000 * 60});
             }
-            return res.redirect('/')
+            return res.redirect('/');
             }else{
-            return res.render('login',{
+            return res.render('users/login',{
                 errors: errors.mapped(),
                 title: 'Inicia sesión'
-                
             });
         } 
     },
     profile : (req,res) =>{
-        return res.render('profile',{
+        return res.render('users/profile',{
             title : "Perfil de Usuario",
-              
-        })
-        
-
+            user: usuarios.find(usuario => usuario.id == +req.session.userLogin.id)
+        });
     },
     logout : (req,res) =>{
         req.session.destroy();
-        res.cookie('giveoneLogin',null,{maxAge: -1})
-        res.redirect('/')
-        
+        res.cookie('giveoneLogin',null,{maxAge: -1});
+        res.redirect('/');
     },
     pass: (req,res) => {
-        return res.render('forgot',{
+        return res.render('users/forgot',{
             title: 'Restablecer contraseña'
         });
     },
     word: (req,res) => {
-        return res.render('forgot2',{
+        return res.render('users/forgot2',{
             title: 'Nueva contraseña'
         });
     },

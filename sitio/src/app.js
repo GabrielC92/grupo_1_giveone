@@ -6,7 +6,7 @@ var logger = require('morgan');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const localsUser = require('./middlewares/localsUser');
-const cookie = require('./middlewares/cookie')
+const cookie = require('./middlewares/cookie');
 
 
 var indexRouter = require('./routes/index');
@@ -34,7 +34,7 @@ app.use(methodOverride('_method'));
 
 app.use(localsUser);
 
-app.use(cookie)
+app.use(cookie);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

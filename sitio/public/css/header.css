@@ -13,7 +13,6 @@ header .logo{
 header .logo a img{
   border-radius: 10px;
   width: 110px;
- 
 }
 
 header .iconos-buscador a{
@@ -23,6 +22,8 @@ header .texto{
   margin-right: 15px;
   font-size: 14px;
   color: #333;
+  position: relative;
+  z-index: 10;
 }
 header .texto ion-icon{
   color: #333;
@@ -141,10 +142,7 @@ header .categoria i{
 } 
 /* fin burguer */
 
-
-
-
-@media (min-width: 10px) and  (max-width: 426px){
+@media (max-width: 425px) {
   header .logo img{
     display: none;
   }
@@ -290,13 +288,10 @@ top: 9px;
 
 .boton-header .fas{
   position: relative;
-right: 28px;
-font-size: 15px;
-
+  right: 28px;
+  font-size: 15px;
 }
-
-  }
-
+}
 
 @media (min-width: 426px) {
 
@@ -307,15 +302,22 @@ header .iconos-buscador{
   border-bottom: solid 1px #969FAA;
   padding-top: 15px;
   align-items: center;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  justify-content: flex-end;
 }
 
-.buscador-ip:hover > .buscar{
+.buscador-ip .form-search:hover > .buscar{
   width: 130px;
   height: 18px;
   background-color: white;
   border-radius: 5px;
   border: solid 1px #D2D4D6;
 }
+
+  .form-search{
+    display: inline;
+  }
 
   .capa {
     display: none;
@@ -329,12 +331,6 @@ header .iconos-buscador{
     z-index: 10;
     background-color: white;
   }
-  header .iconos-buscador{
-    margin-bottom: 20px;
-    margin-right: 10px;
-    justify-content: flex-end;
-  }
-  
   label.hamburguesa{
     display: none;
   }
@@ -372,7 +368,7 @@ header .iconos-buscador{
     align-items: center;
   }
 
-.buscador-ip:hover > .buscar{
+.buscador-ip .form-search:hover > .buscar{
   width: 130px;
   height: 18px;
   background-color: white;

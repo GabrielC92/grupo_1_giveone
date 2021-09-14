@@ -15,8 +15,8 @@
                     <a href="/users/logout">
                         <p class="texto" ><ion-icon name="arrow-redo-outline"></ion-icon>Cerrar Sesión</p>
                     </a>
-                    <a href="/users/login">
-                        <p class="texto"><ion-icon name="person-outline"></ion-icon><%= locals.userLogin.name %> </p>
+                    <a href="/users/profile">
+                        <p class="texto"><ion-icon name="person-outline"></ion-icon><%= locals.userLogin.name %></p>
                     </a>
                   
                  <% }else { %>
@@ -26,10 +26,12 @@
                 <% } %>
                 <div class="iconos">
                     <div class="buscador-ip">
-                        <input class="buscar" type="text" >
-                        <button class="boton-header">
-                            <i class="fas fa-search"></i>
-                        </button>
+                        <form class="form-search" action="/search">
+                            <input class="buscar" type="search" name="search">
+                            <button class="boton-header" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
                         <i class="far fa-heart"></i>
                         <a class="cora" href="/cart"><ion-icon name="bag-outline"></ion-icon></i></a>
                     </div>
@@ -45,7 +47,7 @@
                     <li class="categoria-cont"><a href="#">Contacto</a><i class="far fa-question-circle"></i></li>
                     
                     <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
-                        <li class="admin"><a href="/admin/products"><i class="fas fa-users-cog"></i></a></i></li>
+                        <li class="admin"><a href="/admin/products"><i class="fas fa-users-cog"></i></a></li>
                     <% } %>
                    
                 </ul>
@@ -61,15 +63,22 @@
         <div class="container-menu">
             <div class="cont-menu">
                 <nav>
-                      <a href="/"><ion-icon name="home-outline"></ion-icon>Home</a></li>
-                    <a href="/users/login"><ion-icon name="person-outline"></ion-icon>Iniciar sesión </i></a></li>
-                    <a href="/users/registro"><ion-icon name="share-outline"></ion-icon>Registrarme </i></a></li>
-                    <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Cubiertos</a></li>
-                    <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Vajilla</a></li>
-                    <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Cristalería</a></li>
-                    <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Café y Té</a></li>
-                   <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Contacto</a></i></li>
-                    <a href="/admin/products"><i class="fas fa-users-cog"></i></a></i></li>
+                    <a href="/"><ion-icon name="home-outline"></ion-icon>Home</a>
+                    <% if (locals.userLogin) { %>
+                        <a href="/users/logout"><ion-icon name="arrow-redo-outline"></ion-icon>Cerrar sesión</a>
+                        <a href="/users/profile"><ion-icon name="person-outline"></ion-icon><%= locals.userLogin.name %></a>
+                    <% } else { %>
+                        <a href="/users/login"><ion-icon name="person-outline"></ion-icon>Iniciar sesión</a>
+                        <a href="/users/registro"><ion-icon name="share-outline"></ion-icon>Registrarme</a>
+                    <% } %>
+                    <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Cubiertos</a>
+                    <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Vajilla</a>
+                    <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Cristalería</a>
+                    <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Café y Té</a>
+                    <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Contacto</a>
+                    <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
+                        <a href="/admin/products"><i class="fas fa-users-cog"></i></a>
+                    <% } %>
                 </nav>
                 
                 <label for="menu" ><i class="fas fa-times"></i></label>

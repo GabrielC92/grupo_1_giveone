@@ -10,6 +10,18 @@ module.exports = {
             products
         });
     },
+    search: (req,res) => {
+        if (req.query.search) {
+            let resultado = products.filter(product => product.name.toLowerCase().includes(req.query.search.toLowerCase().trim()));
+
+            return res.render('index',{
+                title: 'Resultado de la búsqueda',
+                products: resultado,
+                search: req.query.search
+            });  
+        }
+        return res.redirect('/');
+    },
     detalle: (req,res) => {
         let product = products.find(product => product.id == +req.params.id);
         return res.render('productDetail',{
