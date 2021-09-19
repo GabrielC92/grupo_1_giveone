@@ -36,7 +36,7 @@ module.exports = {
                 avatar: usuario.avatar,
                 rol: usuario.rol
             }
-            return res.redirect('/');
+            return res.redirect('users/login');
         } else {
             return res.render('users/register',{
                 title: 'Crea tu cuenta',
@@ -69,12 +69,12 @@ module.exports = {
                 res.cookie('giveoneLogin',req.session.userLogin,{maxAge : 1000 * 60 * 10});
             }
             return res.redirect('/');
-            }else{
+        }else{
             return res.render('users/login',{
                 errors: errors.mapped(),
                 title: 'Inicia sesión'
             });
-        } 
+        }
     },
     profile : (req,res) =>{
         return res.render('users/profile',{
@@ -84,6 +84,7 @@ module.exports = {
     },
     profileUpdate: (req,res) => {
         let errors = validationResult(req);
+        /* return res.send(errors) */
         let usuario = usuarios.find(usuario => usuario.id == req.session.userLogin.id);
         if(req.fileValidationError){
             let image = {
@@ -93,20 +94,23 @@ module.exports = {
             errors.push(image);
         }
         if (errors.isEmpty()) {
-            const {name,lastName,email,pass} = req.body;
+            const {name,lastName,email,pass,oldPass} = req.body;
             usuarios.forEach(usuario => {
             if (usuario.id === req.session.userLogin.id) {
                 usuario.id = req.session.userLogin.id;
                 usuario.name = name;
                 usuario.lastName = lastName;
                 usuario.email = email;
-                usuario.pass = pass;
+                usuario.pass = pass ? bcrypt.hashSync(pass.trim(), 10) : bcrypt.hashSync(oldPass.trim(), 10);
             }
         });
         fs.writeFileSync(usuariosPath, JSON.stringify(usuarios,null,2),'utf-8');
-        return res.redirect('users/profile',{
-            title : "Perfil de Usuario"
-        })
+        return res.redirect('/');
+        } else {
+            return res.redirect('users/profile',{
+                title : "Perfil de Usuario",
+                errors : errors.mapped()
+            });
         }
     },
     logout : (req,res) =>{
