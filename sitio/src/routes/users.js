@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-let {login,processLogin,registro,processRegistro,pass,word,profile,logout} = require('../controllers/usersController');
+let {login,processLogin,registro,processRegistro,pass,word,profile,profileUpdate,logout} = require('../controllers/usersController');
 const registerValidator = require('../validations/registerValidator');
 const loginValidator = require('../validations/loginValidator')
 const avatar = require('../middlewares/userStorage');
@@ -16,6 +16,8 @@ router.get('/forgot', pass);
 router.get('/forgot2', word);
 
 router.get('/profile', profile);
+router.put('/profile', profileUpdate);
+
 router.get('/logout',logout)
 
 module.exports = router;

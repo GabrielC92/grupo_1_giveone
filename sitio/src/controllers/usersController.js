@@ -48,10 +48,8 @@ module.exports = {
     login: (req,res) => {
         return res.render('users/login',{
             title: 'Inicia sesión',
-            
         });
     },
-
     processLogin: (req,res) => {
         
          let errors = validationResult(req);
@@ -68,7 +66,7 @@ module.exports = {
             }
 
             if (req.body.sesion) {
-                res.cookie('giveoneLogin',req.session.userLogin,{maxAge : 1000 * 60});
+                res.cookie('giveoneLogin',req.session.userLogin,{maxAge : 1000 * 60 * 10});
             }
             return res.redirect('/');
             }else{
@@ -81,8 +79,35 @@ module.exports = {
     profile : (req,res) =>{
         return res.render('users/profile',{
             title : "Perfil de Usuario",
-            user: usuarios.find(usuario => usuario.id == +req.session.userLogin.id)
+            user: usuarios.find(usuario => usuario.id == req.session.userLogin.id)
         });
+    },
+    profileUpdate: (req,res) => {
+        let errors = validationResult(req);
+        let usuario = usuarios.find(usuario => usuario.id == req.session.userLogin.id);
+        if(req.fileValidationError){
+            let image = {
+                param: 'image',
+                msg: req.fileValidationError
+            }
+            errors.push(image);
+        }
+        if (errors.isEmpty()) {
+            const {name,lastName,email,pass} = req.body;
+            usuarios.forEach(usuario => {
+            if (usuario.id === req.session.userLogin.id) {
+                usuario.id = req.session.userLogin.id;
+                usuario.name = name;
+                usuario.lastName = lastName;
+                usuario.email = email;
+                usuario.pass = pass;
+            }
+        });
+        fs.writeFileSync(usuariosPath, JSON.stringify(usuarios,null,2),'utf-8');
+        return res.redirect('users/profile',{
+            title : "Perfil de Usuario"
+        })
+        }
     },
     logout : (req,res) =>{
         req.session.destroy();

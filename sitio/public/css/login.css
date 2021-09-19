@@ -28,3 +28,11 @@
 textarea{
     resize: none;
 }
+
+/* profile */
+.box-img-user{
+    text-align: center;
+}
+.img-user{
+    width: 40%;
+}
