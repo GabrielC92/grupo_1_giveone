@@ -6,6 +6,4 @@ const usuarios = JSON.parse(fs.readFileSync(usuariosPath,'utf-8'));
 const bcrypt = require('bcryptjs');
 
 module.exports = [
-    check('oldPass')
-    .notEmpty().withMessage('Ingrese su contraseña').bail()
 ]
