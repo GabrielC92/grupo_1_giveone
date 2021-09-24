@@ -69,7 +69,7 @@ module.exports = {
             }
 
             if (req.body.sesion) {
-                res.cookie('giveoneLogin',req.session.userLogin,{maxAge : 1000 * 60})
+                res.cookie('giveoneLogin',req.session.userLogin,{maxAge : 1000 * 1200})
                 
             }
             return res.redirect('/')

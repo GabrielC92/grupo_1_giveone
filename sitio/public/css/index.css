@@ -16,32 +16,28 @@
 }
 
 main{
-  background-color: #f0f0f0;
+  background-color: white;
 }
 
-.cont-main .imagenes-4 img{
-  width: 20%;
-  margin: 10px;
-}
 
-.cont-main .imagenes-4{
-  display: flex;
-  justify-content: center;
-}
+
+
+  /* texto home */
+
+  .home-1{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-family: 'Poppins';
+    color: #333;
+    letter-spacing: 2px
+  
+  }
+  /*fin texto home*/
 
 /*finmain*/
 
-/* texto home */
 
-.home-1{
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: 50px;
-  font-family: 'Poppins';
-  color: #333;
-  letter-spacing: 2px
-}
-/*fin texto home*/
 
 /* articulos*/
 
@@ -61,7 +57,6 @@ main{
   position: relative;
   box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
   margin-bottom: 50px ;
-  border-radius: 10px;
   overflow: hidden;
 
 }
@@ -82,8 +77,8 @@ main{
 
 .seis h4{
   position: absolute;
-  bottom: 15%;
-  text-align: center;
+  bottom: 10%;
+  left: 5%;
   width: 180px;
   padding-bottom: 5px;
   font-family: 'Roboto';
@@ -94,8 +89,8 @@ main{
 
 .seis p{
   position: absolute;
-  bottom: 10%;
-  left: 35%;
+  bottom: 5%;
+  left: 5%;
   font-weight: bold;
   color: #333;
   font-size: 14px;
@@ -113,6 +108,11 @@ main{
 
 figure{
   overflow: hidden;
+}
+
+.seis .zomm{
+  background-color: #f0f0f0;
+  height: 220px;
 }
 
 .seis #zoom img {
@@ -196,9 +196,8 @@ figure{
 
 .star{
   position: absolute;
-  
-    top: 70%;
-    left: 30%;
+    top: 75%;
+    left: 5%;
     
 }
 
@@ -276,6 +275,7 @@ figure{
 .item img{
   width: 100%;
   border-radius: 10px; 
+  margin-top: 50px;
 }
 .horizontal-slider::-webkit-scrollbar {
   display: none;
@@ -300,12 +300,42 @@ figure{
   margin-top: 12px;
 }
 /*******BANNER* 320*******/
-.cont-padre{
-  display: none;
+
+
+
+@media (min-width: 10px) and (max-width: 425px){
+  .cont-padre{
+    display: none;
+  }
+  
+  .home-1{
+    display: none;
+  }
+  
+  .imagenes-4{
+    display: none;
+  }
+
 }
 
 /* media */
 @media (min-width: 426px){
+
+  
+
+  .cont-main .imagenes-4 img{
+    width: 43%;
+    margin: 10px;
+    margin-top: 100px;
+    box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
+  }
+
+
+
+  .cont-main .imagenes-4{
+    display: flex;
+    justify-content: center;
+  }
   
   .horizontal-slider{
     display: none;
@@ -327,7 +357,7 @@ figure{
     border-radius: 15px;
     overflow: hidden;
     margin: auto;
-    box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.2);
+    box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
   }
    
   .tex-1 , .tex-2{
@@ -377,7 +407,7 @@ figure{
   .header1 .banner-cv {
     position: absolute;
     bottom: 0px;
-    left: 30px;
+    
   }
    
   .header1 .banner-cv .next{
@@ -406,6 +436,31 @@ figure{
 }
 
 @media (min-width: 769px){
+  .cont-main .imagenes-4 img{
+    width: 43%;
+    margin: 10px;
+    margin-top: 100px;
+    box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  
+  /* texto home */
+
+.home-1{
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-family: 'Poppins';
+  color: #333;
+  letter-spacing: 2px
+}
+
+
+/*fin texto home*/
+  .cont-main .imagenes-4{
+    display: flex;
+    justify-content: center;
+  }
 
   /*BANNER*/
 

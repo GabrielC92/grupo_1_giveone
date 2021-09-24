@@ -1,6 +1,6 @@
 header{
   background-color: white;
-  padding: 5px;
+  
 }
 header .contenedor-padre{
   display: flex;
@@ -10,6 +10,9 @@ header .contenedor-padre{
 header .logo{
   padding-top: 20px;
 }
+
+
+
 
 
 header .iconos-buscador a{
@@ -76,13 +79,13 @@ header .navegador{
 
 header .envio p{
   margin-top: 20px;
-  text-align: center;
-  background-color: #f0f0f0;
-  padding-top: 8px;
-  padding-bottom:  8px; ;
-  color: #333;
-  font-size: 12px;
-  font-family: 'Roboto'
+text-align: center;
+background-color: #333;
+padding-top: 8px;
+padding-bottom: 8px;
+color: white;
+font-size: 12px;
+font-family: 'Roboto';
   
 }
 
@@ -98,58 +101,63 @@ header .admin{
   margin-right: 10px;
 }
 
-
-
-/* burguer */
-/* .cont-inp:checked  ~  ul {
-  display:block;
-}
-.cont-inp {
-  display: none;
-}
-label.hamburguesa {
-  box-sizing: border-box;
-  display: inline-block;
-  border: 1.5px solid black;
-  border-radius: 5px;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  font-weight: bold;
-  text-align: center;
-  user-select: none;
-  margin-top: 10px;
-  margin-left: 5px;
-}
-.cont-u{
-  display: none;
-}
-.cont-u .categoria {
-  display: block;
-  background-color: rgb(112, 112, 112);
-  padding: 10px;
-  list-style: none;
-  border-bottom: 1px solid grey;
-}
-.cont-u li a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #333;
-}
-header .categoria i{
-   color: #5A6978; 
-  padding-left: 10px;
-  font-size: 15px;
-} 
-/* fin burguer */
-
-
-
-
 @media (min-width: 10px) and  (max-width: 426px){
+  header .envio{
+  display: none;
+}
+
+  header {
+    background-color: white;
+    position: fixed;
+    width: 320px;
+    height: 90px;
+    z-index: 1000;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+    border-bottom: solid 1px #f0f0f0;
+}
+
+  .contenedor-padre{
+    height: 70px;
+  }
+
+  .cont-main h3{
+    font-size: 14px;
+  }
+
+
+  .client{
+    font-size: 18px;
+  }
+  
+/*Buscador*/
+  .buscar {
+    width: 150px;
+    height: 25px;
+    background-color: white;
+    border-bottom: solid 1px #D2D4D6;
+}
+
+
+  .boton-header {
+    
+    position: relative;
+    bottom: -7px;
+    cursor: pointer;
+    
+}
+  /* Fin Buscador*/
+
+    
+  .buscador-ip{
+    position: relative;
+    left: 13px;
+    bottom: -15px;
+  }
+  
   header .logo img{
-    width:70px
-    ;
+    width: 70px;
+    position: absolute;
+    left: 5px;
   }
   
   header .texto{
@@ -159,27 +167,20 @@ header .categoria i{
   .navegador{
     display: none;
   }
-  
+
+
   /* burguer */
   
-  .capa label.hamburguesa {
-    box-sizing: border-box;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    font-weight: bold;
-    text-align: center;
-    user-select: none;
-    margin-top: 10px;
-    margin-left: 5px;
-    font-size: 20px;
-    position: absolute;
-    top: 2%;
-  left: 1%;
-  cursor: pointer;
+  .hamburguesa{
+    position: relative;
+    bottom: -3px;
+    cursor: pointer;
   }
-  
+
+  .hamburguesa ion-icon{
+    font-size: 40px;
+  }
+
   .capa .container-menu{
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
@@ -267,15 +268,12 @@ header .categoria i{
   /* fin burguer */
   
 
-.buscar{
-  width: 150px;
-  height: 25px;
-  background-color: white;
-  border-radius: 5px;
-  border: solid 1px #D2D4D6;
-}
 
 header .far{
+  display: none;
+}
+
+header .cora{
   display: none;
 }
 
@@ -308,6 +306,15 @@ font-size: 15px;
    
   }
 
+
+  .capa{
+    display: none;
+  }
+
+  .hamburguesa{
+    display: none;
+  }
+
 /*buscador*/
 header .iconos-buscador{
   display: flex;
@@ -325,9 +332,7 @@ header .iconos-buscador{
   border: solid 1px #D2D4D6;
 }
 
-  .capa {
-    display: none;
-  }
+  
 
   header .contenedor-padre{
     display: block;
@@ -343,9 +348,7 @@ header .iconos-buscador{
     justify-content: flex-end;
   }
   
-  label.hamburguesa{
-    display: none;
-  }
+  
   .cont-u{
     display: flex;
     justify-content: flex-end;
@@ -366,10 +369,31 @@ header .iconos-buscador{
     list-style :none
   }
 
+  header .texto {
+    font-size: 13px;
+    font-family: 'Roboto';
+    font-weight: 900;
+    color: #666666;
+    cursor: pointer;
+    border: 1px solid #f5f5f5;
+    border-radius: 25px;
+    padding-top: 9px;
+    min-height: 40px;
+    outline: none;
+    width: 110px;
+    text-align: center;
+}
+header .texto {
+margin: 0px;
+}
   
 }
 
 @media (min-width: 769px) {
+
+  .capa{
+    display: none;
+  }
 
   /*buscador*/
 
@@ -398,7 +422,7 @@ header .iconos-buscador{
   
   
   header .logo{
-    padding-left: 42px;
+    padding-left: 20px;
   }
   header .logo a img{
     width: 150px;

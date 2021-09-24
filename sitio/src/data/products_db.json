@@ -5,62 +5,62 @@
     "price": 1600,
     "category": "Nuevo",
     "description": "Lorem ipsum dolor amet sit",
-    "image": "PRODUCTO1.jpg"
+    "image": "PRODUCTO1.png"
   },
   {
     "id": 2,
-    "name": "Juego de platos",
+    "name": "Cuchillos Gold",
     "price": 2500,
     "category": "En stock",
     "description": "Lorem ipsum dolor amet sit",
-    "image": "PRODUCTO3.jpg"
+    "image": "PRODUCTO2.png"
   },
   {
     "id": 3,
-    "name": "Copas  deluxe",
+    "name": "Platos Black",
     "description": "Lorem ipsum dolor amet sit",
     "price": 3000,
-    "image": "PRODUCTO4.jpg",
+    "image": "PRODUCTO3.png",
     "category": "Nuevo"
   },
   {
     "id": 4,
-    "name": "Cubiertos Golden",
+    "name": "Copas GRose",
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
-    "image": "PRODUCTO5.jpg",
+    "image": "PRODUCTO4.png",
     "category": "En stock"
   },
   {
     "id": 5,
-    "name": "Jarra Black",
+    "name": "Cubiertos Gold",
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
-    "image": "PRODUCTO6.jpg",
+    "image": "PRODUCTO5.png",
     "category": "Nuevo"
   },
   {
     "id": 6,
-    "name": "Sartén  Black",
+    "name": "Jarra Black",
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
-    "image": "PRODUCTO7.jpg",
+    "image": "PRODUCTO6.png",
     "category": "En stock"
   },
   {
     "id": 7,
-    "name": "Azucarera de cristal",
+    "name": "Sarten Black",
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
-    "image": "PRODUCTO8.jpg",
+    "image": "PRODUCTO7.png",
     "category": "Nuevo"
   },
   {
     "id": 8,
-    "name": "Cuchillos Gold",
+    "name": "Azucarera de cristal",
     "price": 5000,
     "category": "En stock",
     "description": "Lorem ipsu ",
-    "image": "img-1630963271698.jpg"
+    "image": "PRODUCTO8.png"
   }
 ]
