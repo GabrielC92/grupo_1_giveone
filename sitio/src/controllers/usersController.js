@@ -9,7 +9,7 @@ const bcrypt = require('bcryptjs');
 
 module.exports = {
     registro: (req,res) => {
-        return res.render('register',{
+        return res.render('users/register',{
             title: 'Crea tu cuenta'
         });
     },
@@ -36,9 +36,9 @@ module.exports = {
                 avatar: usuario.avatar,
                 rol: usuario.rol
             }
-            return res.redirect('/');
+            return res.redirect('users/login');
         } else {
-            return res.render('register',{
+            return res.render('users/register',{
                 title: 'Crea tu cuenta',
                 errors: errors.mapped(),
                 old: req.body
@@ -46,20 +46,17 @@ module.exports = {
         }
     },
     login: (req,res) => {
-        return res.render('login',{
+        return res.render('users/login',{
             title: 'Inicia sesión',
-            
         });
     },
-
     processLogin: (req,res) => {
         
          let errors = validationResult(req);
 
         if (errors.isEmpty()) {
 
-            let usuario = usuarios.find(usuario => usuario.email === req.body.email.trim())
-
+            let usuario = usuarios.find(usuario => usuario.email === req.body.email.trim());
 
             req.session.userLogin = {
                 id : usuario.id,
@@ -69,39 +66,70 @@ module.exports = {
             }
 
             if (req.body.sesion) {
+<<<<<<< HEAD
                 res.cookie('giveoneLogin',req.session.userLogin,{maxAge : 1000 * 1200})
                 
+=======
+                res.cookie('giveoneLogin',req.session.userLogin,{maxAge : 1000 * 60 * 10});
+>>>>>>> d13bdb200a12a85092adc324d0155f844e361009
             }
-            return res.redirect('/')
-            }else{
-            return res.render('login',{
+            return res.redirect('/');
+        }else{
+            return res.render('users/login',{
                 errors: errors.mapped(),
                 title: 'Inicia sesión'
-                
             });
-        } 
+        }
     },
     profile : (req,res) =>{
-        return res.render('profile',{
+        return res.render('users/profile',{
             title : "Perfil de Usuario",
-              
-        })
-        
-
+            user: usuarios.find(usuario => usuario.id == req.session.userLogin.id)
+        });
+    },
+    profileUpdate: (req,res) => {
+        let errors = validationResult(req);
+        /* return res.send(errors) */
+        let usuario = usuarios.find(usuario => usuario.id == req.session.userLogin.id);
+        if(req.fileValidationError){
+            let image = {
+                param: 'image',
+                msg: req.fileValidationError
+            }
+            errors.push(image);
+        }
+        if (errors.isEmpty()) {
+            const {name,lastName,email,pass,oldPass} = req.body;
+            usuarios.forEach(usuario => {
+            if (usuario.id === req.session.userLogin.id) {
+                usuario.id = req.session.userLogin.id;
+                usuario.name = name;
+                usuario.lastName = lastName;
+                usuario.email = email;
+                usuario.pass = pass ? bcrypt.hashSync(pass.trim(), 10) : bcrypt.hashSync(oldPass.trim(), 10);
+            }
+        });
+        fs.writeFileSync(usuariosPath, JSON.stringify(usuarios,null,2),'utf-8');
+        return res.redirect('/');
+        } else {
+            return res.redirect('users/profile',{
+                title : "Perfil de Usuario",
+                errors : errors.mapped()
+            });
+        }
     },
     logout : (req,res) =>{
         req.session.destroy();
-        res.cookie('giveoneLogin',null,{maxAge: -1})
-        res.redirect('/')
-        
+        res.cookie('giveoneLogin',null,{maxAge: -1});
+        res.redirect('/');
     },
     pass: (req,res) => {
-        return res.render('forgot',{
+        return res.render('users/forgot',{
             title: 'Restablecer contraseña'
         });
     },
     word: (req,res) => {
-        return res.render('forgot2',{
+        return res.render('users/forgot2',{
             title: 'Nueva contraseña'
         });
     },

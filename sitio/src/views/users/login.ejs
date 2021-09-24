@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include('partials/head') %>
+    <%- include('../partials/head') %>
 <body>
-    <%- include('partials/header') %>
+    <%- include('../partials/header') %>
 
     <main class="registro">
         <section class="titular">
@@ -12,7 +12,7 @@
         </section>
         <form class="log" action="" method="POST">
             <input class="input-g" type="email" name="email" autocomplete="off" placeholder="E-mail">
-            <input class="input-g" type="password" name="password" placeholder="Contraseña">
+            <input class="input-g" type="password" name="pass" placeholder="Contraseña">
             <span class="red-msg"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
             <label class="check" for="rec">
                 <input class="sesion" type="checkbox" name="sesion" id="rec">
@@ -26,7 +26,7 @@
             </div>
         </form>
     </main>
-    <%- include('partials/footer') %>
-    <%- include('partials/scripts') %>
+    <%- include('../partials/footer') %>
+    <%- include('../partials/scripts') %>
 </body>
 </html>

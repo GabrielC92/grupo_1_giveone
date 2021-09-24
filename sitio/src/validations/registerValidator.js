@@ -7,7 +7,7 @@ module.exports = [
     check('lastName')
     .notEmpty().withMessage('El nombre es obligatorio'),
 
-    check('email')
+    check('email').notEmpty().withMessage('Debe ingresar un email').bail()
     .isEmail().withMessage('Debe ingresar un email válido'),
 
     check('pass')

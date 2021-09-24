@@ -22,6 +22,8 @@ header .texto{
   margin-right: 15px;
   font-size: 14px;
   color: #333;
+  position: relative;
+  z-index: 10;
 }
 header .texto ion-icon{
   color: #333;
@@ -291,13 +293,10 @@ top: 9px;
 
 .boton-header .fas{
   position: relative;
-right: 28px;
-font-size: 15px;
-
+  right: 28px;
+  font-size: 15px;
 }
-
-  }
-
+}
 
 @media (min-width: 426px) {
   header .logo a img{
@@ -322,9 +321,12 @@ header .iconos-buscador{
   border-bottom: solid 1px #e0e2e4;
   padding-top: 15px;
   align-items: center;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  justify-content: flex-end;
 }
 
-.buscador-ip:hover > .buscar{
+.buscador-ip .form-search:hover > .buscar{
   width: 130px;
   height: 18px;
   background-color: white;
@@ -412,7 +414,7 @@ margin: 0px;
     align-items: center;
   }
 
-.buscador-ip:hover > .buscar{
+.buscador-ip .form-search:hover > .buscar{
   width: 130px;
   height: 18px;
   background-color: white;
