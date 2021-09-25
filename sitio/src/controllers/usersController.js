@@ -66,12 +66,8 @@ module.exports = {
             }
 
             if (req.body.sesion) {
-<<<<<<< HEAD
                 res.cookie('giveoneLogin',req.session.userLogin,{maxAge : 1000 * 1200})
                 
-=======
-                res.cookie('giveoneLogin',req.session.userLogin,{maxAge : 1000 * 60 * 10});
->>>>>>> d13bdb200a12a85092adc324d0155f844e361009
             }
             return res.redirect('/');
         }else{
