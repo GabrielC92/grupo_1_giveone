@@ -8,6 +8,7 @@
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: contain;
+    margin-top: 70px;
 }
 .registro .titular{
     display: flex;

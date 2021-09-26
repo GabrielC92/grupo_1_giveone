@@ -1,52 +1,34 @@
-header{
-  background-color: white;
-
-}
-header .contenedor-padre{
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-}
-header .logo{
-  padding-top: 20px;
-}
-header .logo a img{
-  border-radius: 10px;
-  width: 110px;
- 
+ul{
+  list-style: none;
 }
 
-header .iconos-buscador a{
-  text-decoration: none;
+.container{
+  width: 100%;
 }
-header .texto{
-  margin-right: 15px;
-  font-size: 14px;
-  color: #333;
-}
-header .texto ion-icon{
-  color: #333;
-    font-size: 18px;
-    --ionicon-stroke-width: 50px;
-    padding-right: 4px;
-    position: relative;
-    bottom: -2px;
+
+
+/*=============== HEADER ===============*/
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--container-color);
+  z-index: var(--z-fixed);
+  transition: .4s;
+  box-shadow: -10px -10px 20px 0px #fff9,
+  -4px -4px 5px 0px #fff9,
+  7px 7px 20px 0px #0002,
+  4px 4px 5px 0px #0001,
+  inset 0px 0px 0px 0px #0001,
+  inset 0px 0px 0px 0px #fff9,
+  inset 0px 0px 0px 0px #0001;
+  transition: box-shadow 0.6 cubic-bezier(0.79,0.21,0.06,0.81);
   
 }
 
-.cora ion-icon{
-  color: #333;
-  font-size: 18px;
-  --ionicon-stroke-width: 45px;
-}
-header .iconos i{
-  margin-right: 15px;
-  font-size:18px;
-  padding-top: 10px;
-  color: #333; 
-}
-
-/* Buscador */
+/*=============== BUSCADOR ===============*/
 .buscar{
   border: none;
   background-color: white;
@@ -55,373 +37,305 @@ header .iconos i{
   width: 0;
   transition: .3s;
 }
-.boton-header{
-  background: none;
-  border: transparent;
-  width: 2em;
-  outline: transparent;
-}
 
-/* Fin Buscador */
-
-header .navegador{
-  font-family: 'Roboto';
-  font-weight: bold;
-  font-size: 15px;
-  padding-top: 15px;
-  color: #333;
-  margin-right: 10px;
-}
-
-
-header .envio{
-  margin-top: 20px;
-  text-align: center;
-  background-color: #f0f0f0;
-  padding-top: 8px;
-  padding-bottom:  8px; ;
-  color: #333;
-  font-size: 10px;
-}
-
-
-header .admin{
-  list-style: none;
-    font-size: 16px;
-}
-
-
-.categoria-cont {
-  list-style: none;
-  margin-right: 10px;
-}
-
-
-
-/* burguer */
-/* .cont-inp:checked  ~  ul {
-  display:block;
-}
-.cont-inp {
-  display: none;
-}
-label.hamburguesa {
-  box-sizing: border-box;
-  display: inline-block;
-  border: 1.5px solid black;
-  border-radius: 5px;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  font-weight: bold;
-  text-align: center;
-  user-select: none;
-  margin-top: 10px;
-  margin-left: 5px;
-}
-.cont-u{
-  display: none;
-}
-.cont-u .categoria {
-  display: block;
-  background-color: rgb(112, 112, 112);
-  padding: 10px;
-  list-style: none;
-  border-bottom: 1px solid grey;
-}
-.cont-u li a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #333;
-}
-header .categoria i{
-   color: #5A6978; 
-  padding-left: 10px;
-  font-size: 15px;
-} 
-/* fin burguer */
-
-
-
-
-@media (min-width: 10px) and  (max-width: 426px){
-  header{
-    position: fixed;
-    width: 100%;
-    z-index: 10000;
-    border-bottom: solid 1px #c9c7c7;
-  }
-
-  header .logo img{
-    display: none;
-  }
-  
-  header .texto{
-    display: none;
-  }
-  
-  .navegador{
-    display: none;
-  }
-  
-  /* burguer */
-  
-  .hamburguesa {
-    box-sizing: border-box;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    font-weight: bold;
-    text-align: center;
-    user-select: none;
-    margin-top: 10px;
-    margin-left: 5px;
-    font-size: 20px;
-    position: absolute;
-    top: -5px;
-    left: -45%;
-  cursor: pointer;
-  }
-  
-  .capa .container-menu{
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    transition: all 500ms ease;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1000;
-    
-  }
-  
-  .capa .cont-menu{
-    width: 100%;
-    max-width: 250px;
-    background-color: rgba(255, 255, 255,0.9);
-    height: 100vh;
-    position: relative;
-    transition: all 500ms ease;
-    transform: translateX(-100%);
-    z-index: 10000;
-  }
-  
-  .capa .cont-menu nav{
-    transform: translateY(15%);
-  }
-  
-  .capa .cont-menu nav a{
-    display: block;
-    text-decoration: none;
-    padding: 20px;
-    color: #333;
-    border-left: 5px solid transparent;
-    transition: all 400ms ease;
-    font-family: 'Roboto';
-    
-  }
-  
-  .capa .cont-menu nav a:hover{
-    border-left: 5px solid #d4d2d2;
-    background: white;
-    color: #333;
-    transition: 1s;
-  }
-  
-  .capa .cont-menu label{
-    position: absolute;
-    right: 5px;
-    top: 10px;
-    color: black;
-    cursor: pointer;
-    font-size: 18px;
-  }
-  .capa #menu:checked ~ .container-menu .cont-menu{
-    transform: translateX(0%);
-  }
-  
-  .capa #menu:checked ~ .container-menu {
-    opacity: 1;
-    visibility: visible;
-    
-  }
-  
-  .capa #menu{
-    position: relative;
-  top: -24px;
-  left: 11px;
-  display: none;
-  }
-  
-  header .navegador{
-    display: none;
-  }
-
-  .capa ion-icon {
-    padding-right: 10px;
-    --ionicon-stroke-width: 40px;
-    font-size: 20px;
-    position: relative;
-  bottom: -3px;
-  }
-  
-  /* fin burguer */
-  
-
-.buscar{
-  width: 190px;
+.buscador-ip .form-search:hover > .buscar{
+  width: 130px;
   height: 25px;
   background-color: white;
-  border-radius: 5px;
-  border: solid 1px #D2D4D6;
+  border-radius: 50px;
+  font-size: 20px;
+  box-shadow: -10px -10px 20px 0px #fff9,
+  -4px -4px 5px 0px #fff9,
+  7px 7px 20px 0px #0002,
+  4px 4px 5px 0px #0001,
+  inset 0px 0px 0px 0px #0001,
+  inset 0px 0px 0px 0px #fff9,
+  inset 0px 0px 0px 0px #0001;
+  transition: box-shadow 0.6 cubic-bezier(0.79,0.21,0.06,0.81);
+  font-size: 12px;
+  padding-left: 16px;
+  font-weight: 600;
 }
 
-header .far{
+.boton-header{
+  background-color: transparent;
+  outline: none;
+  padding: 5px;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  box-shadow: -7px -7px 20px 0px #fff9,
+  -4px -4px 5px 0px #fff9,
+  7px 7px 20px 0px #0002,
+  4px 4px 5px 0px #0001,
+  inset 0px 0px 0px 0px #0001,
+  inset 0px 0px 0px 0px #fff9,
+  inset 0px 0px 0px 0px #0001;
+  transition: box-shadow 0.6 cubic-bezier(0.79,0.21,0.06,0.81);
+  
+}
+/*=============== FIN BUSCADOR ===============*/
+
+/* =========BURGUER ============*/
+.hamburguesa{
+  font-size: 20px;
+  position: relative;
+  top: -2px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 8px;
+  border-radius: 50px;
+  font-size: 20px;
+  padding: 5px;
+  box-shadow: -7px -7px 20px 0px #fff9,
+  -4px -4px 5px 0px #fff9,
+  7px 7px 20px 0px #0002,
+  4px 4px 5px 0px #0001,
+  inset 0px 0px 0px 0px #0001,
+  inset 0px 0px 0px 0px #fff9,
+  inset 0px 0px 0px 0px #0001;
+  transition: box-shadow 0.6 cubic-bezier(0.79,0.21,0.06,0.81);
+}
+
+.capa .container-menu{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.capa .cont-menu{
+  width: 100%;
+  max-width: 250px;
+  background-color: white;
+  height: 100vh;
+  position: relative;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+  z-index: 10000;
+}
+
+.capa .cont-menu nav{
+  transform: translateY(15%);
+}
+
+.capa .cont-menu nav a{
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: #333;
+  border-left: 5px solid transparent;
+  transition: all 400ms ease;
+  font-family: 'Roboto'; 
+  font-weight: bold;
+  
+}
+
+.capa .cont-menu nav a:hover{
+  border-left: 5px solid #333;
+  box-shadow: 0 -1px 12px hsl(var(--hue),var(--sat),15%,0.15);
+  color: #333;
+  transition: 1s;
+}
+
+.capa .cont-menu label{
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: black;
+  cursor: pointer;
+  font-size: 18px;
+}
+.capa #menu:checked ~ .container-menu .cont-menu{
+  transform: translateX(0%);
+}
+
+.capa #menu:checked ~ .container-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.capa #menu{
+  position: relative;
+top: -24px;
+left: 11px;
+display: none;
+}
+
+header .navegador{
   display: none;
 }
 
-.iconos-buscador{
+.capa .nav__icon {
+  padding-right: 10px;
+  --ionicon-stroke-width: 40px;
+  font-size: 20px;
   position: relative;
-  top: -9px;
-  left: 20px;
+bottom: -3px;
 }
 
-header .cora{
-  position: absolute;
-left: 100%;
-top: 9px;
-}
+/* =========FIN BURGUER ============*/
 
-.boton-header .fas{
-  position: relative;
-right: 28px;
-font-size: 15px;
-
-}
-
-  }
-
-
-@media (min-width: 426px) {
-
-/*buscador*/
-header .iconos-buscador{
+/*=============== NAV ===============*/
+.nav{
+  
   display: flex;
-  padding-bottom: 20px;
-  border-bottom: solid 1px #969FAA;
-  padding-top: 15px;
+  justify-content: space-between;
   align-items: center;
+  font-family: 'Roboto';
+  position: relative;
 }
 
-.buscador-ip:hover > .buscar{
-  width: 130px;
-  height: 18px;
-  background-color: white;
-  border-radius: 5px;
-  border: solid 1px #D2D4D6;
+
+@media screen and (max-width: 767px) {
+  .nav__menu{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--container-color);
+    box-shadow: 0 -1px 12px hsl(var(--hue),var(--sat),15%,0.15);
+    width: 100%;
+    height: 5rem;
+    padding: 0 1rem;
+    display: grid;
+    align-content: center;
+    border-radius: 1.25rem 1.25rem 0 0;
+    transition: .4s;
+  }
 }
 
-  .capa {
+.nav__logo img{
+  width: 90px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.nav__list,
+.nav__link{
+  display: flex;
+}
+
+.nav__link {
+  flex-direction: column;
+  align-items: center;
+  row-gap: .10rem;
+  color: var(--title-color);
+  font-weight: 600;
+  font-size: 24px;
+}
+
+
+
+
+.nav__list{
+  justify-content: space-around;
+}
+
+.nav__name{
+  font-size: var(--tiny-font-size);
+}
+
+.nav__icon{
+  font-size: 1.5rem;
+  padding: 5px;
+  border-radius: 50px;
+  box-shadow: -7px -7px 20px 0px #fff9,
+  -4px -4px 5px 0px #fff9,
+  7px 7px 20px 0px #0002,
+  4px 4px 5px 0px #0001,
+  inset 0px 0px 0px 0px #0001,
+  inset 0px 0px 0px 0px #fff9,
+  inset 0px 0px 0px 0px #0001;
+  transition: box-shadow 0.6 cubic-bezier(0.79,0.21,0.06,0.81);
+}
+
+.nav__icon:active{
+  box-shadow: 4px 4px 6px 0 rgba(255,255,255,0.5),
+  -4px -4px 6px 0 rgba(116,125,136,0.2),
+  inset -4px -4px 6px 0 rgba(255,255,255,0.3),
+  inset 4px 4px 6px 0 rgba(116,125,136,0.3);
+}
+
+.nav__icon:focus{
+  border:none;
+  outline:none;
+  box-shadow: none;
+  box-shadow: -4px 6px 0 rgba(116,125,136,0.2),
+  4px 4px 6px 0 rgba(255,255,255,0.5),
+  4px 4px 6px 0 rgba(116,125,136,0.3),
+  -4px -4px 6px 0 rgba(255,255,255,0.3),
+}
+
+/*=============== FIN NAV ===============*/
+
+
+/*=============== MEDIA QUERYS===============*/
+
+@media screen and (min-width: 576px) {
+
+.nav__list{
+  justify-content:space-evenly;
+}
+}
+
+
+@media screen and (min-width: 767px){
+  .nav__logo img{
+    width: 100px;
+    margin-top: 25px;
+    margin-left: 10px;
+  }
+
+  .nav {
+     height: var(--header-height);
+  }
+  .buscador-ip .form-search:hover > .buscar{
+    width: 180px;
+  }
+  
+  .nav__item{
+    padding-right: 18px;
+  }
+
+  .nav__item i{
     display: none;
   }
 
-  header .contenedor-padre{
-    display: block;
-  }
-  header .logo{
+.nav__name{
+  font-size: 14px;
+  
+    padding-left: 10px;
+
+}
+
+.nav__logo img{
+  width: 100px;
+  margin-top: 20px
+}
+
+.header{
+  height: var(--header-height1);
+}
+
+.nav__link:hover:before{
+  content: '';
     position: absolute;
-    z-index: 10;
-    background-color: white;
-  }
-  header .iconos-buscador{
-    margin-bottom: 20px;
-    margin-right: 10px;
-    justify-content: flex-end;
-  }
-  
-  label.hamburguesa{
-    display: none;
-  }
-  .cont-u{
-    display: flex;
-    justify-content: flex-end;
-    }
-  .cont-u .categoria {
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    margin-right: 15px;
-    border-bottom: 1px solid white;
-  }
-  .cont-u li a {
-    color: #333;
-  }
-  header .envio{
-    margin-top: 15px;
-  }
-  .categoria-cont{
-    list-style :none
-  }
-
-  
+    bottom: 10px;
+    width: 4px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 50%;
+    text-align: center;
 }
 
-@media (min-width: 769px) {
-
-  /*buscador*/
-  header .iconos-buscador{
-    display: flex;
-    padding-bottom: 10px;
-    border-bottom: solid 1px #969FAA;
-    padding-top: 15px;
-    align-items: center;
-  }
-
-.buscador-ip:hover > .buscar{
-  width: 130px;
-  height: 18px;
-  background-color: white;
-  border-radius: 5px;
-  border: solid 1px #D2D4D6;
+.nav__home{
+  border: none;
 }
-  
-  
-  header .logo{
-    padding-left: 42px;
-  }
-  header .logo a img{
-    width: 150px;
-  }
-  header .iconos-buscador{
-    margin-bottom:16px;
-    margin-right: 10px;
-  }
-  header .texto{
-    font-size: 13px;
-  }
-  .cont-u{
-    justify-content: flex-end;
-  }
-  .cont-u .categoria {
-    margin-right: 45px;
-  }
-  header .categoria i{
-    font-size: 17px;
-  }
-  header .envio{
-    font-size: 14px;
-    margin-top: 28px;
-  }
-
-  .cont-u {
-    display: flex;
-    justify-content: flex-end;
-    margin-left: 30px;
-}
-.categoria-cont{
-  list-style :none
 }
 
-}

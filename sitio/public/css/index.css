@@ -5,9 +5,6 @@
   font-weight: bold;
 }
 
-/* .cont-main .main-header2 {
-  width: 100%;
-} */
 
 .cont-main h3{
   text-align: center;
@@ -17,9 +14,8 @@
 
 main{
   background-color: white;
+ 
 }
-
-
 
 
   /* texto home */
@@ -36,8 +32,6 @@ main{
   /*fin texto home*/
 
 /*finmain*/
-
-
 
 /* articulos*/
 
@@ -138,7 +132,12 @@ figure{
   width: 35px;
   height: 40px;
   background-color: white;
-  box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.2);
+  box-shadow:  7px 7px 20px 0px #0002,
+  4px 4px 5px 0px #0001,
+  inset 0px 0px 0px 0px #0001,
+  inset 0px 0px 0px 0px #fff9,
+  inset 0px 0px 0px 0px #0001;
+  transition: box-shadow 0.6 cubic-bezier(0.79,0.21,0.06,0.81);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -180,27 +179,21 @@ figure{
   border-radius: 4px;
   opacity: 0;
   transition: 0.5s;
-  
 }
 
 .action li:hover span{
   opacity: 1;
   
 }
-
 .seis figure:hover .action li {
   transform: translateX(0px);
   z-index: 1000;
 }
-
-
 .star{
   position: absolute;
     top: 75%;
-    left: 5%;
-    
+    left: 5%;  
 }
-
 .star i{
   font-size: 10px;
   color: #f0cd30;
@@ -248,11 +241,66 @@ figure{
 /*fin contacto*/
 
 /*banner2*/
-.banner2{
-  width: 100%;
-  padding-left: 30px;
-  padding-right: 30px; 
+
+.contenido{
+  width: 90%;
+  height: 40vh;
+  position: relative;
+  background-image: url(/images/Frame\ 1SUSCRIPCION6.jpg);
+  background-position: center;
+  background-size: cover;
+ left: 20px;
+  
 }
+.content{
+  padding: 4% 8%;
+}
+
+.content h2{
+  color: white;
+  font-family: 'Poppins';
+  font-weight: bold;
+  font-size: 25px;
+  
+}
+
+.content p{
+  color: white;
+  font-size: 16px;
+  font-family: 'Roboto';
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+.launch-time{
+  display: flex;
+  padding: 0% 8%;
+  margin-bottom: 30px;
+}
+
+.launch-time div{
+  flex-basis: 100px;
+}
+
+.launch-time div p {
+  font-size: 20px;
+  color: white;
+}
+
+.launch-time div span {
+  color: white;
+  font-size: 13px;
+}
+
+.ver{
+  
+  border: solid 2px white;
+  margin: 10% 8%;
+  text-decoration: none;
+  color: white;
+  padding: 6px 20px;
+}
+/* fin banner2*/
 
 /*******BANNER* 320*******/
 .horizontal-slider{
@@ -275,7 +323,8 @@ figure{
 .item img{
   width: 100%;
   border-radius: 10px; 
-  margin-top: 70px;
+  margin-top: 30px;
+  box-shadow: 0 -1px 12px hsl(var(--hue),var(--sat),15%,0.20);;
 }
 .horizontal-slider::-webkit-scrollbar {
   display: none;
@@ -301,7 +350,9 @@ figure{
 }
 /*******BANNER* 320*******/
 
-
+.titulo-sect h3{
+  font-size: 14px;
+}
 
 @media (min-width: 10px) and (max-width: 425px){
   .cont-padre{
@@ -322,16 +373,15 @@ figure{
 @media (min-width: 426px){
 
   
-
+  .titulo-sect h3{
+    font-size: 16px;
+  }
   .cont-main .imagenes-4 img{
     width: 43%;
     margin: 10px;
     margin-top: 100px;
     box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
   }
-
-
-
   .cont-main .imagenes-4{
     display: flex;
     justify-content: center;
@@ -409,7 +459,6 @@ figure{
     bottom: 0px;
     
   }
-   
   .header1 .banner-cv .next{
     list-style: none;
     width: 15px;
@@ -427,6 +476,31 @@ figure{
 }
 
 @media (min-width: 526px) {
+
+  /*BANNER2*/
+  .contenido{
+    width: 95%;
+    height: 49vh;
+  }
+  .content p {
+    padding-top: 18px;
+    font-size: 10px;
+  }
+  .launch-time {
+    
+    margin-bottom: 20px;
+}
+
+.launch-time div p {
+  font-size: 30px;
+  color: white;
+}
+
+.launch-time div {
+  flex-basis: 60px;
+}
+/*FIN BANNER2*/
+
   .contacto{
     flex-direction: row;
   }
@@ -436,16 +510,43 @@ figure{
 }
 
 @media (min-width: 769px){
+
+/*BANNER2*/
+
+.launch-time div p {
+  font-size: 30px;
+  color: white;
+}
+.launch-time div {
+  flex-basis: 90px;
+}
+.contenido{
+  width: 95%;
+  height: 60vh;
+  margin-top: 20px;
+}
+.content{
+     padding: 0% 8%;
+    padding-top: 8%;
+    padding-bottom: 2%;
+}
+.content h2{
+  font-size: 40px;
+}
+
+.launch-time div span{
+  font-size: 20px;
+}
+
+/*FIN BANNER2*/
   .cont-main .imagenes-4 img{
     width: 43%;
     margin: 10px;
     margin-top: 100px;
     box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
   }
-
-  
+ 
   /* texto home */
-
 .home-1{
   text-align: center;
   margin-top: 100px;
@@ -454,8 +555,6 @@ figure{
   color: #333;
   letter-spacing: 2px
 }
-
-
 /*fin texto home*/
   .cont-main .imagenes-4{
     display: flex;
@@ -463,11 +562,9 @@ figure{
   }
 
   /*BANNER*/
-
   .cont-padre{
     height: 550px;
   }
-
   main .tex-2 img {
     height: 550px;
   }
@@ -491,4 +588,5 @@ figure{
   .client{
     padding-top: 90px;
   }
+ 
 }

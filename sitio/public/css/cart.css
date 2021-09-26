@@ -37,7 +37,7 @@ font-size: 9px;
 width: 33.33%;
 float: left;
 position: relative;
-margin-top: 50px;
+margin-top: 90px;
 }
 
 .carrito #progressbar li:before {
@@ -78,11 +78,9 @@ content: none;
 }
 
 .carrito .img-detail img{
-    box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
      width: 100px;
     height: 100px;
     margin-top: 12px; 
-  
 }
 
 .carrito .img-cantidad{
@@ -90,8 +88,7 @@ content: none;
     margin-left: 15px;
     margin-right: 15px;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2); 
-    border-radius: 5px;
-    
+    border-radius: 5px;  
 }
 
 .carrito .img-detail{
@@ -105,17 +102,13 @@ content: none;
 .carrito .cantidad{
     display: flex;
     justify-content: space-around;
+    position: relative;
     
 }
 
-.carrito .precio{
-    padding-left: 200px;
-}
 
 .carrito .cantidad form{
     display: flex;
-    position: absolute;
-    left: 150px;
     border-radius: 5px;
 }
 
@@ -159,7 +152,7 @@ content: none;
 .carrito  .articulo1{
   margin-bottom: 10px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 
     
 }
@@ -216,11 +209,11 @@ content: none;
 
 .carrito .envio1{
     margin-top: 30px;
-   padding-bottom: 10px;
-    justify-content: space-around;
+    padding-bottom: 10px;
+    justify-content: space-evenly;
     display: flex;
     border-bottom: solid 1px #cac8c8;
-    margin-left: 15px;
+    
     
 }
 
@@ -229,10 +222,7 @@ content: none;
     padding-bottom: 10px;
     justify-content: space-around;
     display: flex;
-    margin-left: 15px;
-    margin-right: 15px;
-    position: relative;
-    left: 20px;
+    margin-left: 30px;
 
 }
 
@@ -254,21 +244,18 @@ content: none;
 
 .carrito .boton1 button{
     color: #ffffff;
-    background-color: #c9b391;
+    background-color: #333;
     padding: 12px 25px;
     font-size: 15px;
     letter-spacing: 1px;
-   font-family: 'Open sans';
+   font-family: 'Roboto';
     border: 0;
+    outline: none;
     border-radius: 2px;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
     transition: all .2s; }
 
- .carrito .boton1 button:hover, button:active, button:focus {
-    -ms-transform: scale(1.1);
-        transform: scale(1.1); 
-      
-}
+ 
 
 .carrito .precio3{
     position: relative;
@@ -280,53 +267,12 @@ content: none;
     color: #c9b391;
 }
 
-.carrito .cupon{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    height: 90px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2)
-}
+  .carrito .img-cantidad {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 60%;
 
-.carrito .cupon p{
-    padding-bottom: 6px;
-    font-size: 12px;
-    text-align: center;
 }
-
-.carrito .cupon input{
-        width: 90%;
-        border:solid white;
-        
-}
-.carrito .cupon{
-    background-image: url(https://i.pinimg.com/564x/1f/25/7e/1f257e922ea2e51337e9ccff5dcafa4b.jpg);
-    
-}
-
-.carrito .cupon .titulo{
-    font-weight: bold;
-    color: #1F1D1D;
-    font-family: 'Roboto';
-}
-
-.carrito .cupon i{
-    color: #c9b391;
-}
-
-.carrito .cupon input{
-    border: solid 1px #1F1D1D;
-    color: #c9b391;
-    
-}
-
-.carrito .cupon input:focus {
-	outline: none;
-	border-color: #c9b391; 
-  }
 
 
 /* Media quierys*/
@@ -335,7 +281,8 @@ content: none;
     .carrito .img-cantidad {
         margin-left: 15px;
         margin-right: 15px;
-        width: 58%;
+        width: 60%;
+    
 }
 
 .carrito .cupon h5{

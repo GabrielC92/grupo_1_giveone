@@ -11,8 +11,9 @@
  display: flex;
 flex-direction: column;
 }
-
-
+.pago main{
+margin-top: 80px;    
+}
 
 .pago .contenedor{
     margin: auto;
@@ -150,12 +151,13 @@ font-weight: bold;
 
 .pago .boton button{
     color: #ffffff;
-    background-color: #c9b391;
+    background-color: #333;
     padding: 12px 25px;
     font-size: 15px;
     letter-spacing: 1px;
-   font-family: 'Open sans';
+   font-family: 'Roboto';
     border: 0;
+    outline: none;
     border-radius: 2px;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
     transition: all .2s; }

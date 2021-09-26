@@ -22,12 +22,12 @@
             <ul class="form-list">
               <li class="opciones">
                 <label>Nombre y Apellido</label>
-                <input type="text" name="" />
+                <input type="text" name="" autocomplete="off"/>
               </li>
               <li class="opciones">
                 <label>Número de Tarjeta</label>
                 <div class="input-card">
-                  <input type="text" name="cc_number" />
+                  <input type="text" name="cc_number" autocomplete="off"/>
                   <i class="fas fa-credit-card"></i>
                 </div>
               </li>
@@ -35,20 +35,17 @@
                 <div>
                   <label>FECHA DE EXPIRACIÓN</label>
                   <div class="input-datos">
-                    <input type="text" name="cc_month" placeholder="MM" />
-                    <input type="text" name="cc_year" placeholder="AA" />
+                    <input type="text" name="cc_month" placeholder="MM"autocomplete="off" />
+                    <input class="aaa" type="text" name="cc_year" placeholder="AA" autocomplete="off"/>
                   </div>
                 </div>
-                <div>
-                  <label>
-                    CVC
-                  </label>
-                  <input type="text" name="cvc" placeholder="123" />
+                <div class="input-datos">
+                  <input type="text" name="cvc" placeholder=" CVC 123" autocomplete="off"/>
                 </div>
               </li>
               <li class="guardar-card">
                 <label>
-                  <input type="checkbox" name="save_cc" checked="checked">
+                  <input type="checkbox" name="save_cc" checked="checked" autocomplete="off">
                   Guardar mi tarjeta para futuras compras
                 </label>
               </li>

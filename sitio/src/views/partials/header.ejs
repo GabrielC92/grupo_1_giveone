@@ -1,110 +1,97 @@
-<header>
+<header class="header" id="header">
 
-    <div class="contenedor-padre" data-aos="fade-down"
-        data-aos-easing="linear"
-        data-aos-duration="1500">
-        <div class="logo">
-            <a href="/"><img src="/images/giveOneTNC.png" alt=""></a>
-        </div>
+    <!-- NAVEGADOR -->
+    <nav class="nav container">
+        <a href="/" class="nav__logo"><img src="/images/giveOneTNC2.png" alt=""></a>
+    <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list"> 
+            <li class="nav__item">
+                <a href="/" class="nav__link active__link">
+                 <i class='bx bx-home nav__icon' ></i>
+                <span class="nav__name nav__home">Home</span>
+            </a>
+            </li>
 
-        <div class="iconos-navegador">
-            <div class="iconos-buscador">
-
-
-                 <% if (locals.userLogin) { %>
-                    <a href="/users/logout">
-                        <p class="texto" ><ion-icon name="arrow-redo-outline"></ion-icon>Cerrar Sesión</p>
-                    </a>
-                    <a href="/users/profile">
-                        <p class="texto"><ion-icon name="person-outline"></ion-icon><%= locals.userLogin.name %></p>
-                    </a>
-                  
-                 <% }else { %>
-                    <a href="/users/registro" class="texto"><ion-icon name="share-outline"></ion-icon>Registrarme</a></li>
-                    <a href="/users/login" class="texto"><ion-icon name="person-outline"></ion-icon>Mi Cuenta</a></li>
-                
-                <% } %>
-                <div class="iconos">
-                    <div class="buscador-ip">
-                        <form class="form-search" action="/search">
-                            <input class="buscar" type="search" name="search">
-                            <button class="boton-header" type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </form>
-                        <i class="far fa-heart"></i>
-                        <a class="cora" href="/cart"><ion-icon name="bag-outline"></ion-icon></i></a>
-                        <label for="menu" class="hamburguesa"> ☰ </label>
-                        
-                    </div>
-                </div>
-            </div>
+            <% if (locals.userLogin) { %>
+                <li class="nav__item">
+                    <a href="/users/profile" class="nav__link active__link">
+                    <i class='bx bx-face nav__icon' ></i>
+                    <span class="nav__name"><%= locals.userLogin.name %></span>
+                </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/users/logout" class="nav__link active__link">
+                    <i class='bx bx-user-x nav__icon' ></i>
+                    <span class="nav__name">Cerrar Sesión</span>
+                </a>
+                </li>
+               
+            <% } else { %>
+                <li class="nav__item">
+                    <a href="/users/login" class="nav__link active__link">
+                    <i class='bx bx-user nav__icon' ></i>
+                    <span class="nav__name">Iniciar Sesión</span>
+                </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/users/registro" class="nav__link active__link">
+                     <i class='bx bx-spreadsheet nav__icon' ></i>
+                    <span class="nav__name">Registrarme</span>
+                </a>
+    
+                </li>
+            <% } %>
             
-            <nav class="navegador">
-                <ul class="cont-u">
-                    <li class="categoria"><a href="#">Cubiertos</a></li>
-                    <li class="categoria"><a href="#">Vajilla</a></li>
-                    <li class="categoria"><a href="#">Cristalería</a></li>
-                    <li class="categoria"><a href="#">Café y Té</a></li>
-                    <li class="categoria-cont"><a href="#">Contacto</a><i class="far fa-question-circle"></i></li>
-                    
-                    <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
-                        <li class="admin"><a href="/admin/products"><i class="fas fa-users-cog"></i></a></li>
-                    <% } %>
-                   
-                </ul>
+            <li class="nav__item">
+                <a href="/cart" class="nav__link active__link">
+                 <i class='bx bx-cart nav__icon' ></i>
+                <span class="nav__name">Mi Carrito</span>
+            </a>
+
+            </li>
+            <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
+                <li class="nav__item">
+                    <a href="/admin/products" class="nav__link active__link">
+                    <i class='bx bx-customize nav__icon' ></i>
+                    <span class="nav__name">Admin</span>
+                </a>
+    
+                </li>
+            <% } %>
+            
+        </ul>
+    </div>
+
+    <div class="buscador-ip">
+        <form class="form-search" action="/search">
+            <input class="buscar" type="search" name="search" autocomplete="off" placeholder="Search...">
+            <button class="boton-header" type="submit">
+                <i class='bx bx-search-alt-2' ></i>
+            </button>
+            <label for="menu" class="hamburguesa"> ☰ </label>
+        </form>  
+    </div>
+</div>
+</nav>
+<!-- FIN NAVEGADOR -->
+
+<!-- BURGUER -->
+<div class="capa">
+    <input type="checkbox" id="menu" class="cont-inp">
+    <div class="container-menu">
+        <div class="cont-menu">
+            <nav>
+                <a href="/">Cubiertos<i class='bx bx-chevron-right '></i></a></li>
+                <a href="/">Vajilla<i class='bx bx-chevron-right '></i></a></li>
+                <a href="/">Cristalería<i class='bx bx-chevron-right '></i></a></li>
+                <a href="/">Café y Té<i class='bx bx-chevron-right '></i></a></li>
+               <a href="/">Contacto<i class='bx bx-chevron-right '></i></a></i></li> 
             </nav>
-        </div><!-- END: .iconos-navegador -->
-    </div>
-
-
-
-    <div class="capa">
-        <input type="checkbox" id="menu" class="cont-inp">
-        
-        <div class="container-menu">
-            <div class="cont-menu">
-                <nav>
-                      <a href="/"><ion-icon name="home-outline"></ion-icon>Home</a></li>
-                    <a href="/users/login"><ion-icon name="person-outline"></ion-icon>Iniciar sesión </i></a></li>
-                    <a href="/users/registro"><ion-icon name="share-outline"></ion-icon>Registrarme </i></a></li>
-                    <a href="/cart"><ion-icon name="bag-outline"></ion-icon>Mi carrito</i></a>
-                    <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Cubiertos</a></li>
-                    <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Vajilla</a></li>
-                    <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Cristalería</a></li>
-                    <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Café y Té</a></li>
-                   <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Contacto</a></i></li>
-                    <a href="/admin/products"><i class="fas fa-users-cog"></i></a></i></li>
-                    <a href="/"><ion-icon name="home-outline"></ion-icon>Home</a>
-                    <% if (locals.userLogin) { %>
-                        <a href="/users/logout"><ion-icon name="arrow-redo-outline"></ion-icon>Cerrar sesión</a>
-                        <a href="/users/profile"><ion-icon name="person-outline"></ion-icon><%= locals.userLogin.name %></a>
-                    <% } else { %>
-                        <a href="/users/login"><ion-icon name="person-outline"></ion-icon>Iniciar sesión</a>
-                        <a href="/users/registro"><ion-icon name="share-outline"></ion-icon>Registrarme</a>
-                    <% } %>
-                    <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Cubiertos</a>
-                    <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Vajilla</a>
-                    <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Cristalería</a>
-                    <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Café y Té</a>
-                    <a href="/"><ion-icon name="arrow-forward-circle-outline"></ion-icon>Contacto</a>
-                    <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
-                        <a href="/admin/products"><i class="fas fa-users-cog"></i></a>
-                    <% } %>
-                </nav>
-                
-                <label for="menu" ><i class="fas fa-times"></i></label>
-            </div>
             
+            <label for="menu" ><i class="fas fa-times"></i></label>
         </div>
     </div>
+</div>
+<!-- FIN BURGUER -->
 
-
-
-    <div class="envio" data-aos="fade-down"
-    data-aos-easing="linear"
-    data-aos-duration="1500">
-        <p>ENVÍO GRATIS EN COMPRAS MAYORES A $5.000</p>
-    </div>
-        
 </header>
