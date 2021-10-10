@@ -43,5 +43,14 @@
     "pass": "$2a$10$4.ilR9uO7Fo10T9dSCZ4SuUsby2KoCbz28FIbExe7C8VxhX/gwWtu",
     "rol": "user",
     "avatar": "avatar_default.png"
+  },
+  {
+    "id": 6,
+    "name": "Carolina",
+    "lastName": "Vega",
+    "email": "carolinavega@hotmail.com",
+    "pass": "$2a$10$0gY.QpoTyN2j6qHXZB6PtO7wQ0Pj2QUBPxURZd8WYxg/WtH48GzFe",
+    "rol": "user",
+    "avatar": "avatar_default.png"
   }
 ]
