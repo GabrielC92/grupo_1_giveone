@@ -36,7 +36,7 @@ module.exports = {
                 avatar: usuario.avatar,
                 rol: usuario.rol
             }
-            return res.redirect('users/login');
+            return res.redirect('/');
         } else {
             return res.render('users/register',{
                 title: 'Crea tu cuenta',

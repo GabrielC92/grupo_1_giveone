@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Vasos  Dakota",
     "price": 1600,
-    "category": "Nuevo",
+    "categoryId": 1,
     "description": "Lorem ipsum dolor amet sit",
     "image": "PRODUCTO1.png"
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "name": "Cuchillos Gold",
     "price": 2500,
-    "category": "En stock",
+    "categoryId": 2,
     "description": "Lorem ipsum dolor amet sit",
     "image": "PRODUCTO2.png"
   },
@@ -21,7 +21,7 @@
     "description": "Lorem ipsum dolor amet sit",
     "price": 3000,
     "image": "PRODUCTO3.png",
-    "category": "Nuevo"
+    "categoryId":1
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
     "image": "PRODUCTO4.png",
-    "category": "En stock"
+    "categoryId": 3
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
     "image": "PRODUCTO5.png",
-    "category": "Nuevo"
+    "categoryId": 2
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
     "image": "PRODUCTO6.png",
-    "category": "En stock"
+    "categoryId": 3
   },
   {
     "id": 7,
@@ -53,13 +53,13 @@
     "description": "Lorem ipsum dolor amet sit",
     "price": 600,
     "image": "PRODUCTO7.png",
-    "category": "Nuevo"
+    "categoryId": 1
   },
   {
     "id": 8,
     "name": "Azucarera de cristal",
     "price": 5000,
-    "category": "En stock",
+    "categoryId": 3,
     "description": "Lorem ipsum",
     "image": "PRODUCTO8.png"
   }

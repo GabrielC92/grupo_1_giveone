@@ -52,5 +52,41 @@
     "pass": "$2a$10$0gY.QpoTyN2j6qHXZB6PtO7wQ0Pj2QUBPxURZd8WYxg/WtH48GzFe",
     "rol": "user",
     "avatar": "avatar_default.png"
+  },
+  {
+    "id": 7,
+    "name": "Carolina",
+    "lastName": "Vega",
+    "email": "carolinaangelesvega@gmail.com",
+    "pass": "$2a$10$nTuXyOEX.NFwscbm4UhtVuArErH7qZmgIEfsAuUzly0VFHqMJPSOu",
+    "rol": "user",
+    "avatar": "user-1633907920882.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Carolina",
+    "lastName": "Vega",
+    "email": "carolinaangelesvega@gmail.com",
+    "pass": "$2a$10$z33UO3vprzEvMh7wM38E2.Fevh7nGkTYwHosRBuiQspOfIqLRj2TS",
+    "rol": "user",
+    "avatar": "user-1633908000550.jpg"
+  },
+  {
+    "id": 9,
+    "name": "hola",
+    "lastName": "lala",
+    "email": "hola@gmail.com",
+    "pass": "$2a$10$877us/FpxgDEmGUMrCJuJ.UpzLr6ofEiydtUsUmZfkqJrz83yXYiK",
+    "rol": "user",
+    "avatar": "user-1633908448892.jpg"
+  },
+  {
+    "id": 10,
+    "name": "caro",
+    "lastName": "vega",
+    "email": "csslove@gmail.com",
+    "pass": "$2a$10$aiFjC5.NhCpTYWR3j9JACOaQ.rNfXFNnjkX8ufpBW5UOQsnXph5Hq",
+    "rol": "user",
+    "avatar": "user-1633908531591.jpg"
   }
 ]
