@@ -1,6 +1,6 @@
 /sitio/node_modules
 /sitio/package-lock.json
+/sitio/.env
 /sprint2
 /sprint2/node_modules
 .env
-
