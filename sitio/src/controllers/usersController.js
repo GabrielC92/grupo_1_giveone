@@ -73,7 +73,8 @@ module.exports = {
         }else{
             return res.render('users/login',{
                 errors: errors.mapped(),
-                title: 'Inicia sesión'
+                title: 'Inicia sesión',
+                old: req.body
             });
         }
     },
@@ -86,7 +87,7 @@ module.exports = {
     profileUpdate: (req,res) => {
         let errors = validationResult(req);
         /* return res.send(errors) */
-        let usuario = usuarios.find(usuario => usuario.id == req.session.userLogin.id);
+
         if(req.fileValidationError){
             let image = {
                 param: 'image',
@@ -108,9 +109,10 @@ module.exports = {
         fs.writeFileSync(usuariosPath, JSON.stringify(usuarios,null,2),'utf-8');
         return res.redirect('/');
         } else {
-            return res.redirect('users/profile',{
+            return res.render('users/profile',{
                 title : "Perfil de Usuario",
-                errors : errors.mapped()
+                errors : errors.mapped(),
+                user: usuarios.find(usuario => usuario.id == req.session.userLogin.id)
             });
         }
     },
