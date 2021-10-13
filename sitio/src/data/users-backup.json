@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Gabriel",
+    "lastName": "Calla",
+    "email": "gabriel@gmail.com",
+    "pass": "$2a$10$tN2lblcKJ/15tVBp4dcfp.BsuHMJRqFh8ARr5w2so.0o/Ng422WfO",
+    "rol": "admin",
+    "avatar": "avatar_default.png"
+  },
+  {
+    "id": 2,
+    "name": "Carolina",
+    "lastName": "Vega",
+    "email": "carolina@gmail.com",
+    "pass": "$2a$10$ZGiAVNiEP7M8xQWqkCL2m.3wYO5yMQ4BFi7EinLQnED4KGRb.Qb7q",
+    "rol": "admin",
+    "avatar": "avatar_default.png"
+  },
+  {
+    "id": 3,
+    "name": "admin",
+    "lastName": "1",
+    "email": "give@one.com.ar",
+    "pass": "$2a$10$uq.qwIWNl6j60BccVT3Ld.9edvlAmnf8t.yp.scGuNcv4vciACQOW",
+    "rol": "admin",
+    "avatar": "avatar_default.png"
+  },
+  {
+    "id": 4,
+    "name": "Eric",
+    "lastName": "Mena",
+    "email": "eric@gmail.com",
+    "pass": "$2a$10$MyJ9otXkRbpV7cRkoldKkOyIJ6kmkqt1Ex954zuMe1nd5v9lJ0cs6",
+    "rol": "user",
+    "avatar": "avatar_default.png"
+  },
+  {
+    "id": 5,
+    "name": "Cristian",
+    "lastName": "Elias",
+    "email": "cristian@gmail.com",
+    "pass": "$2a$10$4.ilR9uO7Fo10T9dSCZ4SuUsby2KoCbz28FIbExe7C8VxhX/gwWtu",
+    "rol": "user",
+    "avatar": "avatar_default.png"
+  }
+]

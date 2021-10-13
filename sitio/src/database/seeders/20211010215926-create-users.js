@@ -3,7 +3,7 @@ const users = require('../../data/users.json')
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     
-     await queryInterface.bulkInsert('Users',users , {});
+     await queryInterface.bulkInsert('Users', users, {});
     
   },
 

@@ -9,22 +9,34 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING(100)
+        type: Sequelize.STRING(100),
+        allowNull: false
       },
       lastName: {
-        type: Sequelize.STRING(100)
+        type: Sequelize.STRING(100),
+        allowNull: false
       },
       email: {
-        type: Sequelize.STRING(100)
+        type: Sequelize.STRING(100),
+        allowNull: false,
+        unique: true
       },
       password: {
-        type: Sequelize.STRING(300)
+        type: Sequelize.STRING(300),
+        allowNull: false
       },
       avatar: {
         type: Sequelize.STRING(50)
       },
       rolId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: {
+            tablename: 'Rols'
+          },
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,

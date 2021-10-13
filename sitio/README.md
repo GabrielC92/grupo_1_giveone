@@ -18,9 +18,7 @@ Buscamos que nuestros clientes reconozcan siempre nuestros objetivos de trabajo:
 
 Calidad de atención, originalidad y calidad de producto, entrega inmediata y stock permanente.
 
- 
-
-Ante cualquier dudas, nos podes escribir a give@One.com.ar
+Ante cualquier dudas, nos podes escribir a give@one.com.ar
 
 
 ### **Integrantes:**

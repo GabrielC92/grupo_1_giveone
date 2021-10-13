@@ -24,7 +24,7 @@ module.exports = {
                 lastName: lastName.trim(),
                 email: email.trim(),
                 pass: bcrypt.hashSync(pass.trim(), 10),
-                rol: 'user',
+                rolId: 'user',
                 avatar: req.file ? req.file.filename : 'avatar_default.png'
             }
             usuarios.push(usuario);
@@ -34,7 +34,7 @@ module.exports = {
                 id: usuario.id,
                 name: usuario.name,
                 avatar: usuario.avatar,
-                rol: usuario.rol
+                rolId: usuario.rol
             }
             return res.redirect('/');
         } else {

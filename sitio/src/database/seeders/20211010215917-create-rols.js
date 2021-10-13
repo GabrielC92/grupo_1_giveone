@@ -15,7 +15,7 @@ const rols = [
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     
-      await queryInterface.bulkInsert('Rols',rols ,{});
+      await queryInterface.bulkInsert('Rols', rols, {});
 
   },
 
