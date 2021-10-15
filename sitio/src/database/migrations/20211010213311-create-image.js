@@ -1,3 +1,4 @@
+
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -12,7 +13,14 @@ module.exports = {
         type: Sequelize.STRING(100)
       },
       productId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : 'Products',
+          },
+          key : 'id'
+        },
+        onDelete : 'cascade'
       },
       createdAt: {
         allowNull: false,
