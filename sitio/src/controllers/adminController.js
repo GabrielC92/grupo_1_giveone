@@ -1,14 +1,21 @@
 const fs = require('fs');
 const path = require('path');
-const productFilePath = path.join(__dirname,'..','data','products_db.json');
-const products = JSON.parse(fs.readFileSync(productFilePath,'utf-8'));
+const db = require('../database/models');
+const queryInterface = db.sequelize.getQueryInterface();
 
 module.exports = {
     data: (req,res) => {
-        return res.render('admin/products',{
-            title: 'Listado de productos',
-            products
-        })
+        db.Category.findAll(
+            {
+                order: [
+                    ['name','ASC']
+                ]
+            }
+        )
+        .then(categorias => res.render('admin/products',{
+           categorias
+        }))
+        .catch(error => console.log(error))
     },
     create: (req,res) => {
         return res.render('admin/productCreate',{
@@ -16,19 +23,36 @@ module.exports = {
         })
     },
     store: (req,res) => {
-        let {name,price,category,description} = req.body
-        let product ={
-            id : products.length > 0 ? products[products.length -1].id + 1 : 1,
-            name, 
-            price : +price,
-            category,
-            description,
-            image: req.file ? req.file.filename : 'default-image.png'
+        let {name,price,categoryId,description} = req.body
 
-       }
-       products.push(product)
-       fs.writeFileSync(productFilePath,JSON.stringify(products,null,2),'utf-8');
-       return res.redirect('/')
+        db.Product.create({
+
+            name: name.trim(), 
+            price,
+            categoryId,
+            description : description.trim(),
+
+        }
+    )
+        .then(product => {
+            if (req.files.length != 0) {
+                let images = req.files.map(image =>{
+                   let item = {
+                        file : image.filename,
+                        productId : product.id
+                    }
+                    return item
+                }) // Termina el map
+
+                db.Image.create(images,{validate : true})
+                .then(() => console.log('Imagenes guardadas'))
+            }
+            return res.redirect('/')
+        })
+        .catch(error => console.log(error))
+       
+     
+       
     },
     edit: (req,res) => {
         let product = products.find(product => product.id == +req.params.id);
