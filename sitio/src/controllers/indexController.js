@@ -1,26 +1,56 @@
 const fs = require('fs');
 const path = require('path');
-const productFilePath = path.join(__dirname,'..','data','products_db.json');
-const products = JSON.parse(fs.readFileSync(productFilePath,'utf-8'));
+const db = require('../database/models');
+const {Op} = require('sequelize');
 
 module.exports = {
     home: (req,res) => {
-        return res.render('index',{
-            title: 'Home',
-            products
-        });
+        db.Product.findAll({
+            include:[
+                {
+                    association: 'category'
+                },
+                {
+                    association: 'images'
+                }
+            ]
+        })
+            .then(products => {
+                return res.render('index',{
+                    title: 'Home',
+                    products
+                });
+            })
+            .catch(error => console.log(error));
     },
     search: (req,res) => {
-        if (req.query.search) {
-            let resultado = products.filter(product => product.name.toLowerCase().includes(req.query.search.toLowerCase().trim()));
-
-            return res.render('index',{
-                title: 'Resultado de la búsqueda',
-                products: resultado,
-                search: req.query.search
-            });  
-        }
-        return res.redirect('/');
+        db.Product.findAll({
+            include:[
+                {
+                    association: 'category'
+                },
+                {
+                    association: 'images'
+                }
+            ],
+            where: {
+                [Op.or]: [
+                    {
+                        name: {
+                            [Op.substring]: req.query.search
+                        }
+                    }
+                ]
+            }
+        })
+            .then(products => {
+                return res.render('result',{
+                    title: 'Resultado de la búsqueda',
+                    products,
+                    search: req.query.search
+                });
+            })
+            .catch(error => console.log(error));
     },
     detalle: (req,res) => {
         let product = products.find(product => product.id == +req.params.id);

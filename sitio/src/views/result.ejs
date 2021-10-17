@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head') %>
+
+<body class="header1">
+
+    <%- include('partials/header') %>
+
+    <main class="cont-main">
+
+        <div class="titulo-sect">
+            <h3 id="art" data-aos="fade-right"><%= title %>: <%= search %></h3>
+        </div>
+
+        <section class="caja-prac"  data-aos="fade-up"
+            data-aos-duration="3000">
+            <% if (products.length > 0) { %>
+                <% products.forEach(product => { %>
+    
+                    <article class="seis">
+                        
+                        <div class="zomm" id="zoom">
+                            <figure>
+                                <img src="/images/products/<%= product.images[0].file %>" alt="<%= product.name %>">
+                               <ul class="action">
+                                <li>
+                                    <i class="fas fa-heart"></i>
+                                    <span>Añadir a Favoritos</span>
+                                </li>
+                                    <li>
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Añadir al Carrito</span>
+                                    </li>
+                                    <li>
+                                        <i class="far fa-eye"></i>
+                                       <a href="/products/<%= product.id %>"><span>Ver Detalle</span></a> 
+                                    </li>
+                                   
+                               </ul>
+                                     
+                            </figure>
+                            
+                        </div>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                             </div>
+                        <h4><%= product.name %></h4>
+                        <p>$<%= product.price %></p>
+                        <% if (product.category == "Envío Gratis") { %>
+                            <span class="of2">Envío Gratis</span>
+                        <% } else if (product.category == "Nuevo") { %>
+                            <span class="of4">SALE</span>
+                        <% } else { %>
+                         <br>
+                        <% } %>
+                        
+                      
+                    </article>
+    
+                <% }) %>
+            <% } else { %>
+             <p>No hay resultados para tu búsqueda</p>
+            <% } %>
+        </section>
+
+        <h2 class="client" data-aos="fade-up" data-aos-duration="3000">Atención Tienda Online</h2>
+    
+        <div class="contacto">
+            
+            <div class="mail" data-aos="fade-up" data-aos-duration="3000">
+                <p class="name"><i class="far fa-envelope"></i>Mail</p>
+                <p>Lunes a Viernes 8 a 18hs.
+                    <br>
+                    Sabados, Domingos y
+                    <br> Feriados de 10 a 18hs.
+                    <br>
+                    Demora en respuesta
+                    <br>
+                    hasta 48hs. Hábiles.</p>
+            </div>
+            <div class="chat" data-aos="fade-up"
+            data-aos-duration="3000">
+                <p class="name"><i class="far fa-comments"></i>Chat</p>
+                <p>Lunes a Viernes 8 a 18hs.
+                    <br>
+                    Sabados de 9 a 19hs.
+                    <br>
+                    Domingos 10 a 18hs.
+                    <br>
+                    Feriados 10 a 18hs</p>
+            </div>
+            <div class="telefono" data-aos="fade-up"
+            data-aos-duration="3000">
+                <p class="name"><i class="fas fa-headphones-alt"></i>Teléfono</p>
+                <p>Lunes a Viernes 8 a 18hs.
+                    <br>
+                    Sabados y Feriados de 10 a 18hs.
+                    <br>
+                    Domingos sin atención</p>
+            </div>
+        </div>
+    </main>
+
+    <%- include('partials/footer') %>
+
+    <%- include('partials/scripts') %>
+    
+</body>
+
+</html>

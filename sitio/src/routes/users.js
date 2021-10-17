@@ -8,16 +8,16 @@ const avatar = require('../middlewares/userStorage');
 
 /* GET users listing. */
 router.get('/registro', registro);
-router.post('/registro', avatar.single('user'), registerValidator, processRegistro);
+router.post('/registro', avatar.single('user'), /* registerValidator, */ processRegistro);
 
 router.get('/login', login);
-router.post('/login', loginValidator, processLogin);
+router.post('/login', /* loginValidator, */ processLogin);
 
 router.get('/forgot', pass);
 router.get('/forgot2', word);
 
 router.get('/profile', profile);
-router.put('/profile', avatar.single('user'), profileValidator, profileUpdate);
+router.put('/profile', avatar.single('user'), /* profileValidator, */ profileUpdate);
 
 router.get('/logout',logout);
 
