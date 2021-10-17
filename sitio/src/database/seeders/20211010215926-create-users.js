@@ -1,5 +1,5 @@
 'use strict';
-const users = require('../../data/users.json')
+const users = require('../../data/users')
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     

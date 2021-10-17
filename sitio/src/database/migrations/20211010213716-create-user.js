@@ -33,7 +33,7 @@ module.exports = {
         allowNull: false,
         references: {
           model: {
-            tablename: 'Rols'
+            tableName: 'Rols'
           },
           key: 'id'
         }

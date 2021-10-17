@@ -13,7 +13,7 @@ module.exports = {
         allowNull: false,
         references: {
           model: {
-            tablename: 'Products'
+            tableName: 'Products'
           },
           key: 'id'
         }
@@ -23,7 +23,7 @@ module.exports = {
         allowNull: false,
         references: {
           model: {
-            tablename: 'Users'
+            tableName: 'Users'
           },
           key: 'id'
         }

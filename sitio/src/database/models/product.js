@@ -11,7 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Product.belongsTo(models.Category,{
-        as :'category'
+        as :'category',
+        foreignKey: 'categoryId'
       })
       Product.hasMany(models.Image, {
         as : 'images'
@@ -20,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         as : 'compras',
         through: 'product_users',
         foreignKey: 'productId',
+
         otherKey: 'userId'
       })
       
