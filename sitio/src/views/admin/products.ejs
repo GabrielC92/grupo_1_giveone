@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head' ) %>
+<%- include('../partials/head') %>
 <body class="detail">
     <%- include('../partials/header') %>
 
@@ -30,7 +30,7 @@
                         <td><%= product.name %></td>
                         <td class="des"><%= product.description %></td>
                         <td>$<%= product.price %></td>
-                        <td class="cat"><%= product.category %></td>
+                        <td class="cat"><%= product.category.name %></td>
                         <td>
                             <div class="box-icon-g">
                                 <a class="icon-c" href="/admin/products/edit/<%= product.id %>">

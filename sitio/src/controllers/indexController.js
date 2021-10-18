@@ -52,7 +52,7 @@ module.exports = {
             })
             .catch(error => console.log(error));
     },
-    detalle: (req,res) => {
+   detalle: (req,res) => {
         db.Product.findByPk(req.params.id,{
             include : ['category', 'images']
         })
@@ -64,7 +64,7 @@ module.exports = {
         
         })
         .catch(error => console.log(error));
-    },
+    }, 
     carrito: (req,res) => {
         return res.render('productCart',{
             title: 'Tu carrito'

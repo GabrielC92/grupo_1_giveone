@@ -1,25 +1,30 @@
 const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
+const {validationResult} = require('express-validator');
+
 const queryInterface = db.sequelize.getQueryInterface();
 
 module.exports = {
     data: (req,res) => {
-        db.Category.findAll(
-            {
-                order: [
-                    ['name','ASC']
-                ]
-            }
-        )
-        .then(categorias => res.render('admin/products',{
-           categorias
-        }))
+        db.Product.findAll({
+            include : ['category','images']
+        })
+        
+        .then(products => {
+           
+            return res.render('admin/products',{
+                title: 'Listado de productos',
+                products
+        }) 
+        
+        })
         .catch(error => console.log(error))
     },
     create: (req,res) => {
         return res.render('admin/productCreate',{
-            title: 'Crear nuevo producto'
+            title: 'Crear Producto',
+            
         })
     },
     store: (req,res) => {
@@ -55,21 +60,7 @@ module.exports = {
         })
         .catch(error => console.log(error))
 
-        } else{
-            db.Category.findAll(
-                {
-                    order: [
-                        ['name','ASC']
-                    ]
-                }
-            )
-            .then(categorias => res.render('admin/products',{
-               categorias,
-               errores : errors.mapped(),
-                old : req.body
-            }))
-            .catch(error => console.log(error))
-        }
+        } 
      
        
     },
