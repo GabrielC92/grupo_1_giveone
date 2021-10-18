@@ -99,19 +99,15 @@ module.exports = {
         let errors = validationResult(req);
         if(errors.isEmpty()){
 
+        let {name,price,categoryId,description} = req.body
+        db.Product.update(
+            {
 
-        const {name, price, category, description} = req.body;
-        products.forEach(product =>{
-            if(product.id === +req.params.id){
-                product.id = +req.params.id;
-                product.name = name;
-                product.price = +price;
-                product.category = category;
-                product.description = description;
+            },
+            {
                 
             }
-        })
-        fs.writeFileSync(productFilePath, JSON.stringify(products,null,2),'utf-8');
+            )
         return res.redirect('/admin/products')
     }
     },
