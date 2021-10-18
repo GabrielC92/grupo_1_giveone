@@ -43,6 +43,7 @@ module.exports = {
         }
     },
     login: (req,res) => {
+        //db.User.findAll().then(users => res.send(users))
         return res.render('users/login',{
             title: 'Inicia sesión',
         });
