@@ -49,7 +49,7 @@
             </a>
 
             </li>
-            <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
+            <% if (locals.userLogin && locals.userLogin.rolId === 1) { %>
                 <li class="nav__item">
                     <a href="/admin/products" class="nav__link active__link">
                     <i class='bx bx-customize nav__icon' ></i>
