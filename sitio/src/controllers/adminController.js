@@ -23,6 +23,10 @@ module.exports = {
         })
     },
     store: (req,res) => {
+
+        let errors = validationResult(req);
+
+        if(errors.isEmpty()){
         let {name,price,categoryId,description} = req.body
 
         db.Product.create({
@@ -50,18 +54,52 @@ module.exports = {
             return res.redirect('/')
         })
         .catch(error => console.log(error))
-       
+
+        } else{
+            db.Category.findAll(
+                {
+                    order: [
+                        ['name','ASC']
+                    ]
+                }
+            )
+            .then(categorias => res.render('admin/products',{
+               categorias,
+               errores : errors.mapped(),
+                old : req.body
+            }))
+            .catch(error => console.log(error))
+        }
      
        
     },
     edit: (req,res) => {
-        let product = products.find(product => product.id == +req.params.id);
-        return res.render('admin/productEdit',{
-            title: `Editar ${product.name}`,
-            product
-        });
+        let categories = db.Category.findAll(
+            {
+                order: [
+                    ['name']
+                ]
+            }
+        )
+        let product = db.Product.findByPk(req.params.id, {
+            include : ['category','images']
+        })
+        Promise.all(([categories, product]))
+        .then(([categories, product]) => {
+            return res.render('admin/productEdit',{
+               categories,
+                product
+        })
+        
+        })
+        .catch(error => console.log(error))
     },
     update: (req, res) => {
+
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+
+
         const {name, price, category, description} = req.body;
         products.forEach(product =>{
             if(product.id === +req.params.id){
@@ -75,6 +113,7 @@ module.exports = {
         })
         fs.writeFileSync(productFilePath, JSON.stringify(products,null,2),'utf-8');
         return res.redirect('/admin/products')
+    }
     },
     destroy : (req, res) => {
         let productsDelete = products.filter(product => product.id !== +req.params.id);

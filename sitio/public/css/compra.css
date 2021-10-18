@@ -1,158 +1,310 @@
-body {
-	font-family: 'Open Sans', sans-serif;
-	color: #1a1a1a;
-	background-color: #f0f0f0; 
-}
-  
-.compra h2{
-	margin: 0;
-	font-weight: 600; 
-	margin-bottom: 30px;
+*{
+	font-family: 'Roboto';
 }
 
-.compra main{
-margin-top: 80px;    
-		
-}
-.compra .contenedor input {
-    width: 100%;
-    min-height: 30px;
-    padding-left: 5px;
-    padding-right: 5px;
-    letter-spacing: .5px;
-    margin-top: 5px;
-    border: 0;
-    border-bottom: 2px solid #f0f0f0;
-    box-shadow: -3px -3px 7px #ffff, 3px 3px 5px #ceced1;
+.compra #progressbar {		
+    overflow: hidden;
+    counter-reset: step;
+    padding: 0;
+    text-align: center;
+    margin-top: 10px;
+    
 }
 
-.aaa{
-	margin-left: 10px;
+.compra #progressbar .finalizar a{
+color:#c9b391;
+
+}
+.carrito a{
+    text-decoration: none;
+}
+
+.compra #progressbar .finalizar a, .pagos a {
+    color: black;
 }
 
 
-.compra input:focus {
+
+.compra #progressbar li {
+list-style-type: none;
+text-transform: uppercase;
+font-size: 9px;
+width: 33.33%;
+float: left;
+position: relative;
+margin-top: 90px;
+}
+
+.compra #progressbar li:before {
+content: counter(step);
+counter-increment: step;
+width: 20px;
+line-height: 20px;
+display: block;
+font-size: 10px;
+color: white;
+background: #1F1D1D;;
+border-radius: 3px;
+margin: 0 auto 5px auto;
+}
+/*progressbar conectores*/
+.compra #progressbar li:after {
+content: '';
+width: 100%;
+height: 2px;
+background: white;
+position: absolute;
+left: -50%;
+top: 9px;
+z-index: -1; 
+}
+.compra #progressbar li:first-child:after {
+content: none; 
+}
+
+
+
+
+.compra{
+	font-family: 'Roboto';
 	outline: none;
-	border-color: #c7c7c7; 
-  }
- 
-	
-
-  
-  .compra .form-list {
-	padding-left: 0;
-	list-style: none; 
 }
 
-.compra .opciones {
-	margin-bottom: 25px; 
-}
-.compra .opciones label {
-	position: relative;
-	display: block;
-	text-transform: uppercase;
-	font-weight: 600;
-	font-size: 11px;
-	letter-spacing: .5px;
-	color: #939393; 
-}
-	
-.compra .datos-card {
-		
+.compra .contenedor{
+	min-height: 100vh;
+	background: white;
 	display: flex;
-	-ms-flex-pack: justify;
-	justify-content: space-between; 
-	color: #676767;
-	font-size: 11px;
-}
-	
-.compra .datos-card > :first-child {
-	-ms-flex: 2;
-		flex: 2;
-	padding-right: 20px; 
-  }
-.compra .datos-card > :nth-child(2n) {	  
-	flex: 1; 
-	font-size: 11px;
-			  
-}
-
-	.compra .input-datos {
-	  display: flex;
-		  justify-content: space-between; 
-		}
-
-	  .compra .input-datos > * {
-		width: calc(50% - 10px - 10px);
-	 }
-
-
-	.compra .guardar-card {
-	  margin-top: 30px;
-	  margin-bottom: 30px;
-	  font-size: 12px; 
-	}
-	 .compra .guardar-card label {
-		font-weight: 400;
-		text-transform: none;
-		color: #676767; 
-	}
-
-
-	 .compra .guardar-card input {
-		width: auto;
-		margin-right: 5px; 
-		box-shadow: none;
-	}
-  
-  .compra	.input-card {
-	position: relative;
-	padding-top: 6px; 
-}
-	
-
-	
-
-	.compra .input-card i{
-			position: relative;
-    top: -26px;
-    font-size: 20px;
-    color: gray;
-		}
-  
-  
-  .compra .contenedor {
-
-	display: flex;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-ms-flex-align: center;
 	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+	padding-bottom: 60px;
+	
+}
+
+
+
+.compra .contenedor form{
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+	padding: 20px;
+	width: 60%;
+	padding-top: 160px;
+	font-family: 'Roboto';
+}
+
+.compra .contenedor form .inputBox{
+	margin-top: 20px;
+}
+
+.compra .contenedor form .inputBox span{
+	display: block;
+	color: #999;
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+
+.compra .contenedor form .inputBox input,
+.compra .contenedor form .inputBox select{
 	width: 100%;
-	padding-top: 20px;
+	padding: 10px;
+
+	box-shadow: -10px -10px 20px 0px #fff9,
+  -4px -4px 5px 0px #fff9,
+  7px 7px 20px 0px #0002,
+  4px 4px 5px 0px #0001,
+  inset 0px 0px 0px 0px #0001,
+  inset 0px 0px 0px 0px #fff9,
+  inset 0px 0px 0px 0px #0001;
+  transition: box-shadow 0.6 cubic-bezier(0.79,0.21,0.06,0.81);
+	color: #444;
+	outline: none;
+	border: none;
+}
+
+.compra .contenedor form .flexbox{
+	display: flex;
+	gap: 15px;
+
+}
+
+.compra .contenedor form .flexbox .inputBox{
+	flex: 1 1 150px;
+	margin-left: 5px;
+}
+
+.compra .contenedor form .submit-btn{
+	width: 100%;
+	background: linear-gradient(45deg, #333, rgb(7, 6, 6));
+	margin-top: 20px;
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 10px;
+	cursor: pointer;
+	color: white;
+	transition: .2s linear ;
+	font-weight: bold;
+	outline: none;
 	
-  }
-	.compra .contenido-padding {
-	  display: flex;
-	  max-width: 675px;
-	  min-height: 400px;
-	  margin-bottom: 125px;
-	  background-color: #ffffff;
-	  border-radius: 5px;
-	  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1); 
-	}
+}
+  
+.compra .contenedor form .submit-btn:hover{
+	letter-spacing: 2px;
+	opacity: .8;
+}
 
-	  
+.compra .contenedor .card-container{
+	margin-bottom: -150px;
+	margin-top: 60px;
+	position: relative;
+	height: 230px;
+	width: 35%;
+	transform-style: preserve-3d;
+	backdrop-filter: blur(10px);
 	
-	.compra .contenido-general {
-	  padding: 50px 50px; 
-	}
+}
+
+.compra .contenedor .card-container .front{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0; left: 0;
+	background: linear-gradient(45deg, #333, rgb(7, 6, 6));
+	border-radius: 5px;
+	backface-visibility: hidden;
+	box-shadow: 0 15px 25px rgb(0,0,0,0.2);
+	color: #fff;
+	padding: 20px;
+	transition: transform .5s ease-out;
+	transform:perspective(1000px) rotateY(0deg);
+	transform-style: preserve-3d;
+	backdrop-filter: blur(10px);
+}
 
 
-/*Boton!!!!!!!*/
+
+
+.compra .contenedor .card-container .front .image{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 10px;
+
+}
+
+.compra .contenedor .card-container .front::before{
+	content: '';
+	position: absolute;
+	bottom: 40px;
+	right: 15px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.5;
+}
+
+.compra .contenedor .card-container .front::after{
+	content: '';
+	position: absolute;
+	bottom: 40px;
+	right: 45px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.7;
+}
+
+.compra .card-holder-name,
+.compra .expiracion{
+	padding-top: 5px;
+}
+
+.compra .contenedor .card-container .front .card-number-box{
+	padding: 20px 0 15px;
+	font-size: 15px;
+}
+
+
+
+.compra .contenedor .card-container .front .flexbox .box:nth-child(1){
+	margin-right: auto;
+
+}
+.compra .contenedor .card-container .front .flexbox {
+	font-size: 15px;
+
+}
+
+.compra .contenedor .card-container .front .image img{
+	height: 50px;
+}
+
+.compra .card-container .back{
+	position: absolute;
+	top: 0; left: 0;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(45deg, #333, rgb(7, 6, 6));
+	border-radius: 5px;
+	color: #fff;
+	padding: 20px 0;
+	text-align: right;
+	backface-visibility: hidden;
+	box-shadow: 0 15px 25px rgb(0,0,0,.2);
+	transform:perspective(1000px) rotateY(180deg);
+	transition: transform .5s ease-out;
+}
+
+.compra .card-container .back .stripe{
+	background: #fff;
+    width: 100%;
+    margin: 10px 0;
+    height: 35px;
+}
+
+.compra .card-container .back .box {
+	padding: 0 20px;
+	position: relative;
+}
+
+.compra .card-container .back .box span{
+	color: #fff;
+	font-size: 15px;
+	position: relative;
+    bottom: -60px;
+
+}
+.compra .card-container .back .box .cvv-box{
+	height: 30px;
+	padding: 10px;
+	margin-top: 5px;
+	color: #333;
+	background: #fff;
+	border-radius: 5px;
+	width: 100%;
+	margin-top: 70px;
+}
+
+
+
+.compra .card-container .back .box p{
+	color: white;
+    font-size: 11px;
+    text-align: justify;
+    position: absolute;
+    bottom: -60%;
+    right: 1%;
+    margin: 15px 15px;
+}
+
+
+
+/* /*Boton!!!!!!!*/
 
 	
-
+/*
 	.compra .boton button{
 		background: transparent;
 		border: none;
@@ -257,7 +409,7 @@ margin-top: 80px;
 
 
 /*progressbar*/
-		
+/*		
 .compra #progressbar {
 			
 			overflow: hidden;
@@ -302,6 +454,7 @@ margin-top: 80px;
 	margin: 0 auto 5px auto;
 }
 /*progressbar conectores*/
+/*
 .compra #progressbar li:after {
 	content: '';
 	width: 180%;
@@ -314,6 +467,6 @@ margin-top: 80px;
 }
 .pago #progressbar li:first-child:after {
 	content: none; 
-}
+} */
 		
 		

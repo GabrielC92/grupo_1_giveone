@@ -53,11 +53,17 @@ module.exports = {
             .catch(error => console.log(error));
     },
     detalle: (req,res) => {
-        let product = products.find(product => product.id == +req.params.id);
-        return res.render('productDetail',{
-            title: product.name,
-            product
-        });
+        db.Product.findByPk(req.params.id,{
+            include : ['category', 'images']
+        })
+        .then(product => {
+            return res.render('productDetail',{
+                title: product.name,
+                product
+        })
+        
+        })
+        .catch(error => console.log(error));
     },
     carrito: (req,res) => {
         return res.render('productCart',{
