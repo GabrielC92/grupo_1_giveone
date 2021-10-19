@@ -150,7 +150,7 @@ module.exports = {
             include : ['images']
         })
         .then(products =>{
-            products.iamges.forEach(imagen => {
+            products.images.forEach(imagen => {
                 if(fs.existsSync(path.join(__dirname,'../public/images',imagen.file))){
                     fs.unlinkSync(path.join(__dirname,'../public/images',imagen.file))
                 }
