@@ -64,7 +64,7 @@
                     
                     <div class="zomm" id="zoom">
                         <figure>
-                            <img src="/images/products/<%= product.images[0].file %>" alt="<%= product.name %>">
+                            <img src="/images/products/<%=product.images[0] ? product.images[0].file : 'default-image.png'%>" alt="<%= product.name %>">
                            <ul class="action">
                             <li>
                                 <i class="fas fa-heart"></i>

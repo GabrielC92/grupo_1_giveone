@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('../partials/head') %>
+<%- include('../partials/head',{title: "Agregar producto"}) %>
 <body class="register">
     
     <%- include('../partials/header') %>
@@ -17,9 +17,17 @@
             <textarea class="input-g" name="description" placeholder="Descripción" cols="20" rows="5" required></textarea>
             
             <input class="input-g" type="number" name="price" placeholder="Precio" required>
+
             
            <!--  <input class="input-g" type="text" name="categoryId" placeholder="categoría" required> -->
-           <select name="categoryId" id=""></select>
+           
+           <select  class="input-g" name="categoryId" id="categoria" class="form-select">
+               <option value="" selected hidden>Seleccione la categoría</option>
+               <% categorias.forEach(categoria => { %>
+                <option value="<%= categoria.id %>" <%= locals.old && old.categoria.name === categoria.name ? 'selected' : null %> ><%= categoria.name %> </option>
+               <% }) %>
+           </select>
+           <span class="text-danger small"><%= locals.errores && errores.categoria ? errores.categoria.msg : null %> </span>
             
             <input class="input-g" type="file" name="image" accept="image/*">
             
