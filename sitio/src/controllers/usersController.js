@@ -115,7 +115,7 @@ module.exports = {
                     email: email.trim(),
                     password: pass ? bcrypt.hashSync(pass.trim(), 10) : bcrypt.hashSync(oldPass.trim(), 10),
                     //rolId: 2,
-                    avatar: req.file ? req.file.filename : 'avatar_default.png'
+                    avatar: oldPass && req.file ? req.file.filename : req.session.userLogin.avatar.filename
                 },
                 {
                     where: {
@@ -124,19 +124,15 @@ module.exports = {
                 }
             )
                 .then(() => {
-                    db.User.findOne({
+                    /* db.User.findOne({
                         where: {
                             id: req.session.userLogin.id
                         }
                     })
                         .then(user => {
-                            if (req.file) {
-                                if (fs.existsSync(path.join(__dirname,'../../public/images/users',user.avatar))) {
-                                    fs.unlinkSync(path.join(__dirname,'../../public/images/users',user.avatar))
-                                }
-                            }
+                            req.body.oldPass && req.file ? req.file.filename : user.avatar */
                             return res.redirect('/');
-                        })
+                        //})
                 })
                 .catch(error => console.log(error));
         } else {
