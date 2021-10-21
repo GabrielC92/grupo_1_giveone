@@ -9,10 +9,10 @@ let {data,create,store,edit,update,destroy} = require('../controllers/adminContr
 // Rutas del administrador
 router.get('/products', adminCheck, data);
 router.get('/products/create', adminCheck, create);
-router.post('/products/create', uploadFile.single('image'),store);
+router.post('/products/create', uploadFile.array('image'),store);
 
 router.get('/products/edit/:id', adminCheck, edit);
-router.put('/products/edit/:id', uploadFile.single('image'), update);
+router.put('/products/edit/:id', uploadFile.array('image'), update);
 
 router.delete('/products/delete/:id', destroy);
 

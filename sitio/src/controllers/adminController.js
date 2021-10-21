@@ -46,7 +46,8 @@ module.exports = {
             categoryId,
             description : description.trim(),
 
-        }
+        },
+        {include : ['category','images']}
     )
         .then(product => {
             if (req.files.length != 0) {
@@ -58,7 +59,7 @@ module.exports = {
                     return item
                 }) // Termina el map
 
-                db.Image.Create(images,{validate : true})
+                db.Image.bulkCreate(images,{validate : true})
                 .then(() => console.log('Imagenes guardadas'))
             }
             return res.redirect('/')
