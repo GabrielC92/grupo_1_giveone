@@ -139,7 +139,7 @@ module.exports = {
             return res.render('admin/productEdit',{
                categories,
                 product,
-                errores : errors.mapped()
+                errors : errors.mapped()
         })
         
         })
@@ -150,10 +150,10 @@ module.exports = {
         db.Product.findByPk(req.params.id,{
             include : ['images']
         })
-        .then(products =>{
-            products.images.forEach(imagen => {
-                if(fs.existsSync(path.join(__dirname,'../public/images',imagen.file))){
-                    fs.unlinkSync(path.join(__dirname,'../public/images',imagen.file))
+        .then(product =>{
+            product.images.forEach(imagen => {
+                if(fs.existsSync(path.join(__dirname,'../public/images/products',imagen.file))){
+                    fs.unlinkSync(path.join(__dirname,'../public/images/products',imagen.file))
                 }
             });
         })

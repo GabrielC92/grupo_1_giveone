@@ -12,16 +12,17 @@
         </section>
         <form class="log" action="/admin/products/edit/<%= product.id %>?_method=PUT" method="POST">
             <input class="input-g" type="text" name="name" placeholder="Nombre" value="<%= product.name %>">
-            <span class="text-danger small"><%= locals.errores && errores.name ? errores.categoria.msg : null %> </span>
+            <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
             
             <textarea class="input-g" name="description" placeholder="Descripción" cols="20" rows="5"><%= product.description %></textarea>
+            <span class="text-danger small"><%= locals.errors && errors.description ? errors.description.msg : null %> </span>
  
             
             <input class="input-g" type="number" name="price" placeholder="Precio" value="<%= product.price %>">
-            <span class="text-danger small"><%= locals.errores && errores. ? errores.categoria.msg : null %> </span>
+            <span class="text-danger small"><%= locals.errors && errors.price ? errors.price.msg : null %> </span>
             
-            <input class="input-g" type="text" name="category" placeholder="categoría" value="<%= product.category.id %>">
-            <span class="text-danger small"><%= locals.errores && errores. ? errores.category.msg : null %> </span>
+            <input class="input-g" type="text" name="categoryId" placeholder="categoría" value="<%= product.category.id %>">
+            <span class="text-danger small"><%= locals.errors && errors.categoryId ? errors.categoryId.msg : null %> </span>
             
             <input class="input-g" type="file" name="image" accept="image/*" value="">
             
