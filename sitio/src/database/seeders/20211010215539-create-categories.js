@@ -22,6 +22,7 @@ const categories = [
     createdAt : new Date,
     updatedAt : new Date
   }
+  
 ]
 
 
