@@ -11,7 +11,7 @@ router.get('/products', adminCheck, data);
 router.get('/products/create', adminCheck, create);
 router.post('/products/create', uploadFile.array('image'),store);
 
-router.get('/products/edit/:id', adminCheck, edit);
+router.get('/products/edit/:id', adminCheck,productValidation, edit);
 router.put('/products/edit/:id', uploadFile.array('image'), update);
 
 router.delete('/products/delete/:id', destroy);

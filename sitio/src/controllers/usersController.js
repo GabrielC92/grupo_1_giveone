@@ -82,10 +82,18 @@ module.exports = {
         }
     },
     profile : (req,res) =>{
-        return res.render('users/profile',{
-            title : "Perfil de Usuario",
-            user: usuarios.find(usuario => usuario.id == req.session.userLogin.id)
-        });
+        db.User.findOne({
+            where: {
+                id: req.session.userLogin.id
+            }
+        })
+            .then(user => {
+                return res.render('users/profile',{
+                    title : "Perfil de Usuario",
+                    user
+                });
+            })
+            .catch(error => console.log(error));
     },
     profileUpdate: (req,res) => {
         let errors = validationResult(req);
@@ -100,23 +108,47 @@ module.exports = {
         }
         if (errors.isEmpty()) {
             const {name,lastName,email,pass,oldPass} = req.body;
-            usuarios.forEach(usuario => {
-            if (usuario.id === req.session.userLogin.id) {
-                usuario.id = req.session.userLogin.id;
-                usuario.name = name;
-                usuario.lastName = lastName;
-                usuario.email = email;
-                usuario.pass = pass ? bcrypt.hashSync(pass.trim(), 10) : bcrypt.hashSync(oldPass.trim(), 10);
-            }
-        });
-        fs.writeFileSync(usuariosPath, JSON.stringify(usuarios,null,2),'utf-8');
-        return res.redirect('/');
+            db.User.update(
+                {
+                    name: name.trim(),
+                    lastName: lastName.trim(),
+                    email: email.trim(),
+                    password: pass ? bcrypt.hashSync(pass.trim(), 10) : bcrypt.hashSync(oldPass.trim(), 10),
+                    //rolId: 2,
+                    avatar: oldPass && req.file ? req.file.filename : req.session.userLogin.avatar.filename
+                },
+                {
+                    where: {
+                        id: req.session.userLogin.id
+                    }
+                }
+            )
+                .then(() => {
+                    /* db.User.findOne({
+                        where: {
+                            id: req.session.userLogin.id
+                        }
+                    })
+                        .then(user => {
+                            req.body.oldPass && req.file ? req.file.filename : user.avatar */
+                            return res.redirect('/');
+                        //})
+                })
+                .catch(error => console.log(error));
         } else {
-            return res.render('users/profile',{
-                title : "Perfil de Usuario",
-                errors : errors.mapped(),
-                user: usuarios.find(usuario => usuario.id == req.session.userLogin.id)
-            });
+            db.User.findOne({
+                where: {
+                    id: req.session.userLogin.id
+                }
+            })
+                .then(user => {
+                    return res.render('users/profile',{
+                        title : "Perfil de Usuario",
+                        errors : errors.mapped(),
+                        user
+                    });
+                })
+                .catch(error => console.log(error));
         }
     },
     logout : (req,res) =>{

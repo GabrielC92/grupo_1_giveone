@@ -139,7 +139,7 @@ module.exports = {
             return res.render('admin/productEdit',{
                categories,
                 product,
-                errores : errors.mapped()
+                errors : errors.mapped()
         })
         
         })
