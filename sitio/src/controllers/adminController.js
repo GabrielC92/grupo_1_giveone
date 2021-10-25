@@ -152,22 +152,21 @@ module.exports = {
         })
         .then(products =>{
             products.images.forEach(imagen => {
-                if(fs.existsSync(path.join(__dirname,'../public/images/products',imagen.file))){
-                    fs.unlinkSync(path.join(__dirname,'../public/images/products',imagen.file))
+                if(fs.existsSync(path.join(__dirname,'../../public/images/products',imagen.file))){
+                    fs.unlinkSync(path.join(__dirname,'../../public/images/products',imagen.file))
                 }
             });
-        })
+        
 
-       db.Product.destroy(
-            {
+       db.Product.destroy({
                 where : {
                     id: req.params.id
                 }
-            }
-       )
-       .then(() =>{
+            })
+       .then( () =>{
         return res.redirect('/admin/products')	
        })
+    })
        .catch(error => console.log(error))
     }
         
