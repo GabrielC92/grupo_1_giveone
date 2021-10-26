@@ -55,10 +55,10 @@
         <div class="titulo-sect">
             <h3 id="art" data-aos="fade-right">PRODUCTOS MAS VENDIDOS</h3>
         </div>
-
+        <h2>Vajilla</h2>
         <section class="caja-prac"  data-aos="fade-up"
             data-aos-duration="1000">
-            <% products.forEach(product => { %>
+            <% vajilla.forEach(product => { %>
 
                 <article class="seis">
                     
@@ -105,7 +105,174 @@
                 </article>
 
             <% }) %>
+            
         </section>
+
+        <!-------CUBIERTOS------->
+        <h2>Cubiertos</h2>
+
+        <section class="caja-prac"  data-aos="fade-up"
+        data-aos-duration="1000">
+        <% cubiertos.forEach(product => { %>
+
+            <article class="seis">
+                
+                <div class="zomm" id="zoom">
+                    <figure>
+                        <img src="/images/products/<%=product.images[0] ? product.images[0].file : 'default-image.png'%>" alt="<%= product.name %>">
+                       <ul class="action">
+                        <li>
+                            <i class="fas fa-heart"></i>
+                            <span>Añadir a Favoritos</span>
+                        </li>
+                            <li>
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Añadir al Carrito</span>
+                            </li>
+                            <li>
+                                <a href="/products/<%= product.id %>"><i class="far fa-eye"></i></a>
+                               <a ><span>Ver Detalle</span></a> 
+                            </li>
+                           
+                       </ul>
+                             
+                    </figure>
+                    
+                </div>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                     </div>
+                <h4><%= product.name %></h4>
+                <p>$<%= product.price %></p>
+                <% if (product.category == "Envío Gratis") { %>
+                    <span class="of2">Envío Gratis</span>
+                <% } else if (product.category == "Nuevo") { %>
+                    <span class="of4">SALE</span>
+                <% } else { %>
+                 <br>
+                <% } %>
+                
+              
+            </article>
+
+        <% }) %>
+        
+    </section>
+
+
+    <!-------CRISTALERIA------->
+    <h2>Cristaleria</h2>
+
+    <section class="caja-prac"  data-aos="fade-up"
+    data-aos-duration="1000">
+    <% cristaleria.forEach(product => { %>
+
+        <article class="seis">
+            
+            <div class="zomm" id="zoom">
+                <figure>
+                    <img src="/images/products/<%=product.images[0] ? product.images[0].file : 'default-image.png'%>" alt="<%= product.name %>">
+                   <ul class="action">
+                    <li>
+                        <i class="fas fa-heart"></i>
+                        <span>Añadir a Favoritos</span>
+                    </li>
+                        <li>
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Añadir al Carrito</span>
+                        </li>
+                        <li>
+                            <a href="/products/<%= product.id %>"><i class="far fa-eye"></i></a>
+                           <a ><span>Ver Detalle</span></a> 
+                        </li>
+                       
+                   </ul>
+                         
+                </figure>
+                
+            </div>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                 </div>
+            <h4><%= product.name %></h4>
+            <p>$<%= product.price %></p>
+            <% if (product.category == "Envío Gratis") { %>
+                <span class="of2">Envío Gratis</span>
+            <% } else if (product.category == "Nuevo") { %>
+                <span class="of4">SALE</span>
+            <% } else { %>
+             <br>
+            <% } %>
+            
+          
+        </article>
+
+    <% }) %>
+    
+</section>
+
+ <!-------CAFE Y TE------->
+ <h2>Café y Té</h2>
+ <section class="caja-prac"  data-aos="fade-up"
+ data-aos-duration="1000">
+ 
+ <% tazas.forEach(product => { %>
+
+     <article class="seis">
+         
+         <div class="zomm" id="zoom">
+             <figure>
+                 <img src="/images/products/<%=product.images[0] ? product.images[0].file : 'default-image.png'%>" alt="<%= product.name %>">
+                <ul class="action">
+                 <li>
+                     <i class="fas fa-heart"></i>
+                     <span>Añadir a Favoritos</span>
+                 </li>
+                     <li>
+                         <i class="fas fa-shopping-cart"></i>
+                         <span>Añadir al Carrito</span>
+                     </li>
+                     <li>
+                         <a href="/products/<%= product.id %>"><i class="far fa-eye"></i></a>
+                        <a ><span>Ver Detalle</span></a> 
+                     </li>
+                    
+                </ul>
+                      
+             </figure>
+             
+         </div>
+         <div class="star">
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+              </div>
+         <h4><%= product.name %></h4>
+         <p>$<%= product.price %></p>
+         <% if (product.category == "Envío Gratis") { %>
+             <span class="of2">Envío Gratis</span>
+         <% } else if (product.category == "Nuevo") { %>
+             <span class="of4">SALE</span>
+         <% } else { %>
+          <br>
+         <% } %>
+         
+       
+     </article>
+
+ <% }) %>
+ 
+</section>
         
         <div class="contenido" data-aos="fade-up" data-aos-duration="3000">
 

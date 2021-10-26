@@ -162,8 +162,9 @@ module.exports = {
                 where : {
                     id: req.params.id
                 }
-            })
-       .then( () =>{
+            }
+       )
+       .then(() =>{
         return res.redirect('/admin/products')	
        })
     })
