@@ -73,6 +73,8 @@ module.exports = {
         })
             .then(categorias => res.render('admin/productCreate',{
                 categorias,
+                errors: errors.mapped(),
+                old: req.body
             }))
             .catch(error => console.log(error))
      
@@ -139,7 +141,7 @@ module.exports = {
             return res.render('admin/productEdit',{
                categories,
                 product,
-                errores : errors.mapped()
+                errors : errors.mapped()
         })
         
         })
@@ -152,14 +154,13 @@ module.exports = {
         })
         .then(products =>{
             products.images.forEach(imagen => {
-                if(fs.existsSync(path.join(__dirname,'../public/images',imagen.file))){
-                    fs.unlinkSync(path.join(__dirname,'../public/images',imagen.file))
+                if(fs.existsSync(path.join(__dirname,'../../public/images/products',imagen.file))){
+                    fs.unlinkSync(path.join(__dirname,'../../public/images/products',imagen.file))
                 }
             });
-        })
+        
 
-       db.Product.destroy(
-            {
+       db.Product.destroy({
                 where : {
                     id: req.params.id
                 }
@@ -168,6 +169,7 @@ module.exports = {
        .then(() =>{
         return res.redirect('/admin/products')	
        })
+    })
        .catch(error => console.log(error))
     }
         

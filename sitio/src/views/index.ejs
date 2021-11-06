@@ -3,182 +3,378 @@
 
 <%- include('partials/head') %>
 
-<body class="header1">
+    <body class="header1">
 
-    <%- include('partials/header') %>
+        <%- include('partials/header') %>
 
-    <main class="cont-main">
+            <main class="cont-main">
 
-       <!-- BANNER CELU -->
-       <div class="horizontal-slider" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-           
-           <div class="slider-container">
-                <div class="item">
-                   <img src="images/BANNERCEL1.jpg" alt="">
-                </div>
-                <div class="item">
-                  <img src="images/BANNERCEL2.jpg" alt="">
-                </div>
-                <div class="item">
-                    <img src="images/BANNERCEL3.jpg" alt="">
-                </div>
-           </div>               
-    
-        </div>
+                <!-- BANNER CELU -->
+                <div class="horizontal-slider" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
 
-        <!-- BANNER TABLET Y DESKTOP -->
-        <div class="cont-padre" >
-            <div class="tex-1" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                <h1 class="h2">Renová <br> Tu Cocina</h1>
-                <p> Explora y descubrí todas nuestras ofertas <br>  Válidas hasta 1/1/2022
-                </p>
-                <a href="#art" id="road">Más vendidos</a>
-       
-                <ul class="banner-cv">
-                    <li class="next active"></li>
-                    <li class="next"></li>
-                    <li class="next"></li>
-                </ul>
-            </div>
-            <div class="tex-2">
-                <img src="/images/BANNER1.jpg" id="banner" alt="">
-            </div>
-        </div>
-        
-       
-        <div class="imagenes-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
-            <img src="/images/Frame 1Bnnaeroff.jpg" alt="">
-            <img src="/images/Frame 1Bnnaeroff2.jpg" alt="">
-           
-        </div>
-
-        <div class="titulo-sect">
-            <h3 id="art" data-aos="fade-right">PRODUCTOS MAS VENDIDOS</h3>
-        </div>
-
-        <section class="caja-prac"  data-aos="fade-up"
-            data-aos-duration="3000">
-            <% products.forEach(product => { %>
-
-                <article class="seis">
-                    
-                    <div class="zomm" id="zoom">
-                        <figure>
-                            <img src="/images/products/<%=product.images[0] ? product.images[0].file : 'default-image.png'%>" alt="<%= product.name %>">
-                           <ul class="action">
-                            <li>
-                                <i class="fas fa-heart"></i>
-                                <span>Añadir a Favoritos</span>
-                            </li>
-                                <li>
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <span>Añadir al Carrito</span>
-                                </li>
-                                <li>
-                                    <i class="far fa-eye"></i>
-                                   <a href="/products/<%= product.id %>"><span>Ver Detalle</span></a> 
-                                </li>
-                               
-                           </ul>
-                                 
-                        </figure>
-                        
+                    <div class="slider-container">
+                        <div class="item">
+                            <img src="images/BANNERCEL1.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="images/BANNERCEL2.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="images/BANNERCEL3.jpg" alt="">
+                        </div>
                     </div>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                         </div>
-                    <h4><%= product.name %></h4>
-                    <p>$<%= product.price %></p>
-                    <% if (product.category == "Envío Gratis") { %>
-                        <span class="of2">Envío Gratis</span>
-                    <% } else if (product.category == "Nuevo") { %>
-                        <span class="of4">SALE</span>
-                    <% } else { %>
-                     <br>
-                    <% } %>
-                    
-                  
-                </article>
-
-            <% }) %>
-        </section>
-        <div class="contenido" data-aos="fade-up" data-aos-duration="3000">
-
-            <div class="content">
-                 <p>Válido Hasta el 1/1/2022</p>
-                <h2>SUPER SALE! </h2>
-               
-            </div>
-
-            <div class="launch-time">
-                <div>
-                    <p id="days">00</p>
-                    <span>Dias</span>
                 </div>
-                <div>
-                    <p id="hours">00</p>
-                    <span>Horas</span>
-                </div>
-                <div>
-                    <p id="minutes">00</p>
-                    <span>Minutos</span>
-                </div>
-                <div>
-                    <p id="seconds">00</p>
-                    <span>Segundos</span>
-                </div>
-                
-            </div>
-           
-        </div>
-       
-    
-        <h2 class="client" data-aos="fade-up" data-aos-duration="3000">Atención Tienda Online</h2>
-    
-        <div class="contacto">
-            
-            <div class="mail" data-aos="fade-up" data-aos-duration="3000">
-                <p class="name"><i class="far fa-envelope"></i>Mail</p>
-                <p>Lunes a Viernes 8 a 18hs.
-                    <br>
-                    Sabados, Domingos y
-                    <br> Feriados de 10 a 18hs.
-                    <br>
-                    Demora en respuesta
-                    <br>
-                    hasta 48hs. Hábiles.</p>
-            </div>
-            <div class="chat" data-aos="fade-up"
-            data-aos-duration="3000">
-                <p class="name"><i class="far fa-comments"></i>Chat</p>
-                <p>Lunes a Viernes 8 a 18hs.
-                    <br>
-                    Sabados de 9 a 19hs.
-                    <br>
-                    Domingos 10 a 18hs.
-                    <br>
-                    Feriados 10 a 18hs</p>
-            </div>
-            <div class="telefono" data-aos="fade-up"
-            data-aos-duration="3000">
-                <p class="name"><i class="fas fa-headphones-alt"></i>Teléfono</p>
-                <p>Lunes a Viernes 8 a 18hs.
-                    <br>
-                    Sabados y Feriados de 10 a 18hs.
-                    <br>
-                    Domingos sin atención</p>
-            </div>
-        </div>
-    </main>
 
-    <%- include('partials/footer') %>
+                <!-- BANNER TABLET Y DESKTOP -->
+                <div class="cont-padre">
+                    <div class="tex-1" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                        <h1 class="h2">Renová <br> Tu Cocina</h1>
+                        <p> Explora y descubrí todas nuestras ofertas <br> Válidas hasta 1/1/2022
+                        </p>
+                        <a href="#art" id="road">Más vendidos</a>
 
-    <%- include('partials/scripts') %>
-    
-</body>
+                        <ul class="banner-cv">
+                            <li class="next active"></li>
+                            <li class="next"></li>
+                            <li class="next"></li>
+                        </ul>
+                    </div>
+                    <div class="tex-2">
+                        <img src="/images/BANNER1.jpg" id="banner" alt="">
+                    </div>
+                </div>
+
+
+                <div class="imagenes-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
+                    data-aos-duration="2000">
+                    <img src="/images/Frame 1Bnnaeroff.jpg" alt="">
+                    <img src="/images/Frame 1Bnnaeroff2.jpg" alt="">
+                </div>
+
+                <div class="titulo-sect">
+                    <p class="art" data-aos="fade-right">. PRODUCTOS MAS VENDIDOS .</p>
+                </div>
+
+                <!-------SECCION PRODUCTOS------->
+                <section data-aos="fade-up" data-aos-duration="1000">
+                <!-------VAJILLA------->
+                <div class="carousel-cont">
+                    <button type="button" class="slick-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h4>Nombre de la categoria en proceso <i class="fab fa-angellist"></i></h4>
+                    <div class="caja-prac vajilla">
+                        <% vajilla.forEach(product=> { %>
+                            <article class="seis">
+                                <div class="zomm" id="zoom">
+                                    <figure>
+                                        <img src="/images/products/<%=product.images[0] ? product.images[0].file : 'default-image.png'%>"
+                                            alt="<%= product.name %>">
+                                        <ul class="action">
+                                            <li>
+                                                <i class="fas fa-heart"></i>
+                                                <span>Añadir a Favoritos</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <span>Añadir al Carrito</span>
+                                            </li>
+                                            <li>
+                                                <a href="/products/<%= product.id %>"><i class="far fa-eye"></i></a>
+                                                <a><span>Ver Detalle</span></a>
+                                            </li>
+                                        </ul>
+                                    </figure>
+                                </div>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4>
+                                    <%= product.name %>
+                                </h4>
+                                <p>$<%= product.price %>
+                                </p>
+                                <% if (product.category=="Envío Gratis" ) { %>
+                                    <span class="of2">Envío Gratis</span>
+                                    <% } else if (product.category=="Nuevo" ) { %>
+                                        <span class="of4">SALE</span>
+                                        <% } else { %>
+                                            <br>
+                                            <% } %>
+                            </article>
+                            <% }) %>
+                        </div>
+                    <button type="button" class="slick-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+
+                <!-------CUBIERTOS------->
+                <div class="carousel-cont">
+                    <button type="button" class="slick-prev1">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h4>Nombre de la categoria en proceso <i class="fab fa-angellist"></i></h4>
+                    <div class="caja-prac cubiertos ">
+                        <% cubiertos.forEach(product=> { %>
+                            <article class="seis">
+                                <div class="zomm" id="zoom">
+                                    <figure>
+                                        <img src="/images/products/<%=product.images[0] ? product.images[0].file : 'default-image.png'%>"
+                                            alt="<%= product.name %>">
+                                        <ul class="action">
+                                            <li>
+                                                <i class="fas fa-heart"></i>
+                                                <span>Añadir a Favoritos</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <span>Añadir al Carrito</span>
+                                            </li>
+                                            <li>
+                                                <a href="/products/<%= product.id %>"><i class="far fa-eye"></i></a>
+                                                <a><span>Ver Detalle</span></a>
+                                            </li>
+
+                                        </ul>
+
+                                    </figure>
+
+                                </div>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></ <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4>
+                                    <%= product.name %>
+                                </h4>
+                                <p>$<%= product.price %>
+                                </p>
+                                <% if (product.category=="Envío Gratis" ) { %>
+                                    <span class="of2">Envío Gratis</span>
+                                    <% } else if (product.category=="Nuevo" ) { %>
+                                        <span class="of4">SALE</span>
+                                        <% } else { %>
+                                            <br>
+                                            <% } %>
+
+                            </article>
+
+                            <% }) %>
+                        </div>
+                    <button type="button" class="slick-next1">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+
+                <!-------CAFE Y TE------->
+                <div class="carousel-cont">
+                    <button type="button" class="slick-prev2">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h4>Nombre de la categoria en proceso <i class="fab fa-angellist"></i></h4>
+                    <div class="caja-prac tazas">
+                        <% tazas.forEach(product=> { %>
+
+                            <article class="seis">
+
+                                <div class="zomm" id="zoom">
+                                    <figure>
+                                        <img src="/images/products/<%=product.images[0] ? product.images[0].file : 'default-image.png'%>"
+                                            alt="<%= product.name %>">
+                                        <ul class="action">
+                                            <li>
+                                                <i class="fas fa-heart"></i>
+                                                <span>Añadir a Favoritos</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <span>Añadir al Carrito</span>
+                                            </li>
+                                            <li>
+                                                <a href="/products/<%= product.id %>"><i class="far fa-eye"></i></a>
+                                                <a><span>Ver Detalle</span></a>
+                                            </li>
+                                        </ul>
+
+                                    </figure>
+
+                                </div>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4>
+                                    <%= product.name %>
+                                </h4>
+                                <p>$<%= product.price %>
+                                </p>
+                                <% if (product.category=="Envío Gratis" ) { %>
+                                    <span class="of2">Envío Gratis</span>
+                                    <% } else if (product.category=="Nuevo" ) { %>
+                                        <span class="of4">SALE</span>
+                                        <% } else { %>
+                                            <br>
+                                            <% } %>
+
+                            </article>
+
+                            <% }) %>
+
+                        </div>
+                    <button type="button" class="slick-next2">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-------CRISTALERIA------->
+                <div class="carousel-cont">
+                    <button type="button" class="slick-prev3">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h4>Nombre de la categoria en proceso <i class="fab fa-angellist"></i></h4>
+                    <div class="caja-prac cristaleria">
+                        <% cristaleria.forEach(product=> { %>
+
+                            <article class="seis">
+
+                                <div class="zomm" id="zoom">
+                                    <figure>
+                                        <img src="/images/products/<%=product.images[0] ? product.images[0].file : 'default-image.png'%>"
+                                            alt="<%= product.name %>">
+                                        <ul class="action">
+                                            <li>
+                                                <i class="fas fa-heart"></i>
+                                                <span>Añadir a Favoritos</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <span>Añadir al Carrito</span>
+                                            </li>
+                                            <li>
+                                                <a href="/products/<%= product.id %>"><i class="far fa-eye"></i></a>
+                                                <a><span>Ver Detalle</span></a>
+                                            </li>
+
+                                        </ul>
+
+                                    </figure>
+
+                                </div>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4>
+                                    <%= product.name %>
+                                </h4>
+                                <p>$<%= product.price %>
+                                </p>
+                                <% if (product.category=="Envío Gratis" ) { %>
+                                    <span class="of2">Envío Gratis</span>
+                                    <% } else if (product.category=="Nuevo" ) { %>
+                                        <span class="of4">SALE</span>
+                                        <% } else { %>
+                                            <br>
+                                            <% } %>
+
+                            </article>
+
+                            <% }) %>
+
+                        </div>
+                    <button type="button" class="slick-next3">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                </div>
+            </section> <!----FIN SECCION PRODUCTOS----->
+                <!-------CONTADOR------->
+                <div class="contenido" >
+                    <div class="content">
+                        <p>Válido Hasta el 1/1/2022</p>
+                        <h2>SUPER SALE! </h2>
+                    </div>
+
+                    <div class="launch-time">
+                        <div>
+                            <p id="days" >00</p>
+                            <span>Dias</span>
+                        </div>
+                        <div>
+                            <p id="hours">00</p>
+                            <span>Horas</span>
+                        </div>
+                        <div>
+                            <p id="minutes">00</p>
+                            <span>Min</span>
+                        </div>
+                        <div>
+                            <p id="seconds">00</p>
+                            <span>Seg</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-------ATENCIÓN AL CLIENTE------->
+                <h2 class="client" " >Atención Tienda Online</h2>
+                <div class="contacto">
+                    <div class="mail" >
+                        <p class="name"><i class="far fa-envelope"></i>Mail</p>
+                        <p>Lunes a Viernes 8 a 18hs.
+                            <br>
+                            Sabados, Domingos y
+                            <br> Feriados de 10 a 18hs.
+                            <br>
+                            Demora en respuesta
+                            <br>
+                            hasta 48hs. Hábiles.
+                        </p>
+                    </div>
+                    <div class="chat" >
+                        <p class="name"><i class="far fa-comments"></i>Chat</p>
+                        <p>Lunes a Viernes 8 a 18hs.
+                            <br>
+                            Sabados de 9 a 19hs.
+                            <br>
+                            Domingos 10 a 18hs.
+                            <br>
+                            Feriados 10 a 18hs
+                        </p>
+                    </div>
+                    <div class="telefono" >
+                        <p class="name"><i class="fas fa-headphones-alt"></i>Teléfono</p>
+                        <p>Lunes a Viernes 8 a 18hs.
+                            <br>
+                            Sabados y Feriados de 10 a 18hs.
+                            <br>
+
+                            Domingos sin atención
+                        </p>
+                    </div>
+                </div>
+            </main>
+
+            <%- include('partials/footer') %>
+
+                <%- include('partials/scripts') %>
+
+    </body>
 
 </html>

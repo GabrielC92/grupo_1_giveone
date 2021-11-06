@@ -39,6 +39,7 @@
     width: 100%;
     border-radius: 7px;
     border: solid 2px sandybrown;
+    outline: none;
 }
 .registro .log .red-msg{
     margin: 0 0 10px;
@@ -67,6 +68,67 @@
 .registro .log .btn-g:active, .btn-g:active{
     transform: scale(1.15);
 }
+
+/*VALIDACION*/
+
+.registro .formulario__grupo-input{
+    display: flex;
+    position: relative;
+    align-items: center;
+   
+}
+
+.registro .formulario__input-error{
+    font-size: 12px;
+    margin-top: 10px;
+    color: #bb2929;
+    display: none;
+}
+
+.registro .formulario__input-error-activo{
+    display: block;
+}
+
+.registro .formulario__validacion-estado{
+    position: absolute;
+    right: 10px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+   
+}
+
+.registro .formulario__mensaje{
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #F66868;
+    border-radius: 3px;
+    display: none;
+}
+
+.registro .formulario__mensaje-activo{
+    display: block;
+}
+
+/*ESTILOS DE VALIDACION*/
+.formulario__grupo-correcto .formulario__validacion-estado{
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input{
+    border: 3px solid #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado{
+    color: #bb2929;
+    opacity: 1; 
+}
+
+
+
+
+
 
 /* media queries */
 @media (min-width: 769px) {

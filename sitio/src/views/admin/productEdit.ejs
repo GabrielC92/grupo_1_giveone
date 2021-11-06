@@ -10,20 +10,40 @@
             <p class="parrafo"><%= product.name %></p>
             <div class="box-img"><img class="coffee" src="/images/mug_coffee_PNG97438.png" alt="coffee"></div>
         </section>
-        <form class="log" action="/admin/products/edit/<%= product.id %>?_method=PUT" method="POST">
-            <input class="input-g" type="text" name="name" placeholder="Nombre" value="<%= product.name %>">
-            <span class="text-danger small"><%= locals.errores && errores.name ? errores.categoria.msg : null %> </span>
+        <form class="log" id="formulario" action="/admin/products/edit/<%= product.id %>?_method=PUT" method="POST">
+            <!--Grupo:Nombre-->
+            <div class="formulario__grupo " id="grupo__nombre">
+                <div class="formulario__grupo-input">
+                    <input class="input-g formulario__input" id="nombre" type="text" name="name" placeholder="Nombre" value="<%= product.name %> ">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <span class="red-msg"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
+                <p class="formulario__input-error" >El nombre deberá tener al menos 5 caracteres</p>
+            </div>
             
-            <textarea class="input-g" name="description" placeholder="Descripción" cols="20" rows="5"><%= product.description %></textarea>
+            <!--Grupo:Descripcion-->
+            <div class="formulario__grupo" id="grupo__descripcion">
+                <div class="formulario__grupo-input">
+                <textarea class="input-g formulario__input" id="descripcion" name="description" placeholder="Descripción"  value=""> <%= product.description %> </textarea>
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                    <span class="red-msg" ><%= locals.errors && errors.description ? errors.description.msg : null %> </span>
+                    <p class="formulario__input-error" >La descripción debe contener al menos 20 caracteres</p>
+            </div>
  
             
-            <input class="input-g" type="number" name="price" placeholder="Precio" value="<%= product.price %>">
-            <span class="text-danger small"><%= locals.errores && errores. ? errores.categoria.msg : null %> </span>
+            <input class="input-g" type="number" name="price" id="price"  placeholder="Precio" value="<%= product.price %>">
+            <span class="red-msg"><%= locals.errors && errors.price ? errors.price.msg : null %> </span>
             
-            <input class="input-g" type="text" name="category" placeholder="categoría" value="<%= product.category.id %>">
-            <span class="text-danger small"><%= locals.errores && errores. ? errores.category.msg : null %> </span>
+            <input class="input-g" type="text" name="categoryId" id="categoryId"  placeholder="categoría" value="<%= product.category.id %>">
+            <span class="red-msg"><%= locals.errors && errors.categoryId ? errors.categoryId.msg : null %> </span>
             
             <input class="input-g" type="file" name="image" accept="image/*" value="">
+
+            <!--Mensaje de Error-->
+            <div class="formulario__mensaje" id="formulario__mensaje">
+                <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+            </div>
             
             <div class="r-btn">
                 <button class="btn-g" type="submit">Guardar cambios</button>

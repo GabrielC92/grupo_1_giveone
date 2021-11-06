@@ -109,7 +109,6 @@ content: none;
 .compra .contenedor form .inputBox select{
 	width: 100%;
 	padding: 10px;
-
 	box-shadow: -10px -10px 20px 0px #fff9,
   -4px -4px 5px 0px #fff9,
   7px 7px 20px 0px #0002,
@@ -117,11 +116,20 @@ content: none;
   inset 0px 0px 0px 0px #0001,
   inset 0px 0px 0px 0px #fff9,
   inset 0px 0px 0px 0px #0001;
-  transition: box-shadow 0.6 cubic-bezier(0.79,0.21,0.06,0.81);
+  	transition: box-shadow 0.6 cubic-bezier(0.79,0.21,0.06,0.81);
 	color: #444;
 	outline: none;
 	border: none;
+	
 }
+.compra .inputBox .card-holder-input::placeholder,
+.compra .inputBox .card-number-input::placeholder{
+	color: rgba(129, 125, 125, 0.6);
+	font-size: 13px;
+	font-style: italic;
+}
+
+
 
 .compra .contenedor form .flexbox{
 	display: flex;
@@ -135,24 +143,23 @@ content: none;
 }
 
 .compra .contenedor form .submit-btn{
-	width: 100%;
-	background: linear-gradient(45deg, #333, rgb(7, 6, 6));
-	margin-top: 20px;
-	padding: 10px;
-	font-size: 20px;
-	border-radius: 10px;
-	cursor: pointer;
-	color: white;
-	transition: .2s linear ;
-	font-weight: bold;
-	outline: none;
+	color: #ffffff;
+    background-color: #333;
+    padding: 12px 25px;
+    letter-spacing: 1px;
+    font-family: 'Roboto';
+    border: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+    transition: all .2s;
+	margin-top: 15px;
 	
 }
+
+
   
-.compra .contenedor form .submit-btn:hover{
-	letter-spacing: 2px;
-	opacity: .8;
-}
+
 
 .compra .contenedor .card-container{
 	margin-bottom: -150px;
@@ -170,7 +177,11 @@ content: none;
 	height: 100%;
 	width: 100%;
 	top: 0; left: 0;
-	background: linear-gradient(45deg, #333, rgb(7, 6, 6));
+	background-image: url(/images/worldmap.jpg);
+	
+	background-size: 400px;
+	background-repeat: no-repeat;
+	
 	border-radius: 5px;
 	backface-visibility: hidden;
 	box-shadow: 0 15px 25px rgb(0,0,0,0.2);
@@ -224,10 +235,9 @@ content: none;
 
 .compra .contenedor .card-container .front .card-number-box{
 	padding: 20px 0 15px;
-	font-size: 15px;
+	font-size: 25px;
+	
 }
-
-
 
 .compra .contenedor .card-container .front .flexbox .box:nth-child(1){
 	margin-right: auto;
@@ -240,6 +250,7 @@ content: none;
 
 .compra .contenedor .card-container .front .image img{
 	height: 50px;
+	
 }
 
 .compra .card-container .back{
@@ -255,7 +266,7 @@ content: none;
 	backface-visibility: hidden;
 	box-shadow: 0 15px 25px rgb(0,0,0,.2);
 	transform:perspective(1000px) rotateY(180deg);
-	transition: transform .5s ease-out;
+	transition: transform .3s ease-out;
 }
 
 .compra .card-container .back .stripe{
@@ -283,10 +294,22 @@ content: none;
 	margin-top: 5px;
 	color: #333;
 	background: #fff;
-	border-radius: 5px;
 	width: 100%;
 	margin-top: 70px;
 }
+
+.compra .card-container .back .box .cvv-box::before{
+	content: '';
+    position: absolute;
+    top: 83px;
+    left: 18px;
+    height: calc(100% - 80px);
+    width: calc(100% - 77px);
+    border-radius: 4px;
+    background: repeating-linear-gradient(45deg, #ededed, #ededed 5px, #f9f9f9 5px, #f9f9f9 10px);
+}
+
+
 
 
 
@@ -452,65 +475,3 @@ content: none;
 
 
 
-/*progressbar*/
-/*		
-.compra #progressbar {
-			
-			overflow: hidden;
-			counter-reset: step;
-			padding: 0;
-    		text-align: center;
-			
-}
-
-.compra #progressbar  .finalizar a{
-    color:#c9b391;
-	text-decoration: none;
-    
-}
-.compra #progressbar  .cart a , .pagos a{
-	color: black;
-	text-decoration: none;
-}
-
-		
-.compra #progressbar li {
-	list-style-type: none;
-	text-transform: uppercase;
-	font-size: 9px;
-	width: 33.33%;
-	float: left;
-	position: relative;
-	margin-top: 35px;
-	
-}
-
-.compra #progressbar li:before {
-	content: counter(step);
-	counter-increment: step;
-	width: 20px;
-	line-height: 20px;
-	display: block;
-	font-size: 10px;
-	color: white;
-	background: #1F1D1D;;
-	border-radius: 3px;
-	margin: 0 auto 5px auto;
-}
-/*progressbar conectores*/
-/*
-.compra #progressbar li:after {
-	content: '';
-	width: 180%;
-	height: 2px;
-	background: white;
-	position: absolute;
-	left: -50%;
-	top: 9px;
-	z-index: -1; 
-}
-.pago #progressbar li:first-child:after {
-	content: none; 
-} */
-		
-		
