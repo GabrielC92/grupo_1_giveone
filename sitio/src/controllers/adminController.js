@@ -73,6 +73,8 @@ module.exports = {
         })
             .then(categorias => res.render('admin/productCreate',{
                 categorias,
+                errors: errors.mapped(),
+                old: req.body
             }))
             .catch(error => console.log(error))
      

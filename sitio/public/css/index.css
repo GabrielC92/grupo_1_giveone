@@ -1,40 +1,29 @@
-
-
-.ofertax{
-  font-family: 'Roboto';
-  margin-top: 180px;
+.cont-main .titulo-sect  .art {
   text-align: center;
-  font-weight: bold;
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    width: 88%;
+    margin: auto;
+    padding: 5px;
+    background: #f0f0f0;
 }
 
+.cont-main .category{
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 500;
+}
 
-.cont-main h3{
-  text-align: center;
-  margin-bottom: 40px;
-  font-weight: bold;
+.header1 h4{
+  width: 90%;
+    margin: auto;
+    padding: 10px;
 }
 
 main{
-  background-color: white;
- 
+  background-color: white; 
 }
-
-
-  /* texto home */
-
-  .home-1{
-    text-align: center;
-    margin-top: 100px;
-    margin-bottom: 50px;
-    font-family: 'Poppins';
-    color: #333;
-    letter-spacing: 2px
-  
-  }
-  /*fin texto home*/
-
-/*finmain*/
-
 /* articulos*/
 
 .caja-prac{
@@ -42,8 +31,8 @@ main{
   margin: auto;
   display: flex;
   justify-content: space-around; 
-  flex-wrap: wrap;  
-
+  flex-wrap: wrap; 
+  margin-bottom: 50px;
 }
 
 .seis{
@@ -51,10 +40,9 @@ main{
   width: 200px;
   background-color: white;
   position: relative;
-  box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
   margin-bottom: 50px ;
+  margin-right: 30px;
   overflow: hidden;
-
 }
 
 .seis img{
@@ -88,14 +76,12 @@ main{
   font-size: 14px;
 }
 
-
 .titulo-sect{
   width: 100%;
   height: 50px;
   margin-top: 100px;
   color: #333;
-  font-family: 'Poppins';
-  
+  font-family: 'Poppins'; 
 }
 
 figure{
@@ -175,19 +161,17 @@ figure{
 }
 
 .action li a:hover{
-  background-color: #333;
-  
+  background-color: #333;  
 }
 
-.action li a i:hover{
-  
+.action li a i:hover{ 
   color: white;
 }
 
 .action li:hover span{
   opacity: 1;
-  
 }
+
 .seis figure:hover .action li {
   transform: translateX(0px);
   z-index: 1000;
@@ -201,10 +185,46 @@ figure{
   font-size: 10px;
   color: #f0cd30;
 }
+/*carrousel*/
+.carousel-cont{
+  position: relative; 
+}
+.slick-next3,
+.slick-prev3,
+.slick-next2,
+.slick-prev2,
+.slick-next1,
+.slick-prev1,
+.slick-next,
+.slick-prev{
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: none;
+  top: calc(50% - 20px);
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  background: none;
+  color: #333;
+  outline: none;
+  opacity: 20%;
+}
+.slick-prev3,
+.slick-prev2,
+.slick-prev1,
+.slick-prev{
+  left: -1px;
+}
+.slick-next3,
+.slick-next2,
+.slick-next1,
+.slick-next{
+  right: 1px;
 
-
+}
 /* fin articulos*/
-
 
 /*contacto*/
 .contacto .name i{
@@ -217,68 +237,6 @@ figure{
   padding-top: 70px;
 }
 /*fin contacto*/
-
-/*banner2*/
-
-.contenido{
-  width: 90%;
-  height: 40vh;
-  position: relative;
-  background-image: url(/images/Frame\ 1SUSCRIPCION6.jpg);
-  background-position: center;
-  background-size: cover;
- left: 20px;
-  
-}
-.content{
-  padding: 4% 8%;
-}
-
-.content h2{
-  color: white;
-  font-family: 'Poppins';
-  font-weight: bold;
-  font-size: 25px;
-  
-}
-
-.content p{
-  color: white;
-  font-size: 16px;
-  font-family: 'Roboto';
-  padding-bottom: 10px;
-  padding-top: 20px;
-}
-
-.launch-time{
-  display: flex;
-  padding: 0% 8%;
-  margin-bottom: 30px;
-}
-
-.launch-time div{
-  flex-basis: 100px;
-}
-
-.launch-time div p {
-  font-size: 20px;
-  color: white;
-}
-
-.launch-time div span {
-  color: white;
-  font-size: 13px;
-}
-
-.ver{
-  
-  border: solid 2px white;
-  margin: 10% 8%;
-  text-decoration: none;
-  color: white;
-  padding: 6px 20px;
-}
-/* fin banner2*/
 
 /*******BANNER* 320*******/
 .horizontal-slider{
@@ -309,7 +267,6 @@ figure{
 }
 
 /*******CONTACTO* 320*******/
-
 .contacto{
   display: flex;
   justify-content: center;
@@ -333,6 +290,9 @@ figure{
 }
 
 @media (min-width: 10px) and (max-width: 425px){
+  .caja-prac {
+    width: 70%;
+  }
   .cont-padre{
     display: none;
   }
@@ -350,7 +310,6 @@ figure{
 /* media */
 @media (min-width: 426px){
 
-  
   .titulo-sect h3{
     font-size: 16px;
   }
@@ -434,8 +393,7 @@ figure{
   
   .header1 .banner-cv {
     position: absolute;
-    bottom: 0px;
-    
+    bottom: 0px; 
   }
   .header1 .banner-cv .next{
     list-style: none;
@@ -451,6 +409,10 @@ figure{
   .header1 .banner-cv .active{
     background: #333;
   }  
+
+  .seis{
+    margin: 0 10px;
+  }
 }
 
 @media (min-width: 526px) {
@@ -487,6 +449,69 @@ figure{
   }
 }
 
+/*banner2*/
+.contenido{
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  background-image: url(/images/bannerContador.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+.content{
+  padding: 4% 8%;
+}
+
+.content h2{
+  color: white;
+  font-family: 'Poppins';
+  font-weight: bold;
+  font-size: 25px;  
+}
+
+.content p{
+  color: white;
+  font-size: 16px;
+  font-family: 'Roboto';
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+.launch-time{
+  display: flex;
+  padding: 0% 8%;
+  margin-bottom: 30px;
+}
+
+.launch-time div{
+  flex-basis: 100px;
+}
+
+.launch-time div p {
+  font-size: 20px;
+  color: white;
+}
+
+.launch-time div span {
+  color: white;
+  font-size: 13px;
+}
+
+.ver{  
+  border: solid 2px white;
+  margin: 10% 8%;
+  text-decoration: none;
+  color: white;
+  padding: 6px 20px;
+}
+
+.cont-box{
+  position: absolute;
+}
+/* fin banner2*/
+
 @media (min-width: 769px){
 
 /*BANNER2*/
@@ -499,7 +524,7 @@ figure{
   flex-basis: 90px;
 }
 .contenido{
-  width: 95%;
+  width: 100%;
   height: 60vh;
   margin-top: 20px;
 }
@@ -523,17 +548,7 @@ figure{
     margin-top: 100px;
     box-shadow:  3px 3px 20px rgba(0, 0, 0, 0.1);
   }
- 
-  /* texto home */
-.home-1{
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: 50px;
-  font-family: 'Poppins';
-  color: #333;
-  letter-spacing: 2px
-}
-/*fin texto home*/
+
   .cont-main .imagenes-4{
     display: flex;
     justify-content: center;
