@@ -3,10 +3,14 @@ const db = require('../database/models');
 
 module.exports = [
     check('name')
-    .notEmpty().withMessage('El nombre es obligatorio'),
+    .notEmpty().withMessage('El nombre es obligatorio').bail()
+    .isAlpha().withMessage('Solo se admiten caracteres alfabeticos').bail()
+    .isLength({min: 3}).withMessage('Debe tener como mínimo 3 letras'),
 
     check('lastName')
-    .notEmpty().withMessage('El nombre es obligatorio'),
+    .notEmpty().withMessage('El nombre es obligatorio').bail()
+    .isAlpha().withMessage('Solo se admiten caracteres alfabeticos').bail()
+    .isLength({min: 5}).withMessage('Debe tener como mínimo 5 letras'),
 
     check('email').notEmpty().withMessage('Debe ingresar un email').bail()
     .isEmail().withMessage('Debe ingresar un email válido'),

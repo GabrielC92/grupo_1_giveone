@@ -7,10 +7,14 @@ const bcrypt = require('bcryptjs');
 module.exports = [
 
     body('name')
-    .notEmpty().withMessage('El nombre es obligatorio'),
+    .notEmpty().withMessage('El nombre es obligatorio').bail()
+    .isAlpha().withMessage('Solo se admiten caracteres alfabeticos').bail()
+    .isLength({min: 3}).withMessage('Debe tener como mínimo 3 letras'),
 
     body('lastName')
-    .notEmpty().withMessage('El nombre es obligatorio'),
+    .notEmpty().withMessage('El nombre es obligatorio').bail()
+    .isAlpha().withMessage('Solo se admiten caracteres alfabeticos').bail()
+    .isLength({min: 5}).withMessage('Debe tener como mínimo 5 letras'),
 
     body('email').notEmpty().withMessage('Debe ingresar un email').bail()
     .isEmail().withMessage('Debe ingresar un email válido'),
