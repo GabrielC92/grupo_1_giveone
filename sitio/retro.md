@@ -112,3 +112,25 @@ En general hubo inconvenientes tecnicos que pudieron solucionarse,postergando la
 --------------------------------------
 ## RESUMEN SPRINT 5
 En general hubo inconvenientes tecnicos que pudieron solucionarse a través de zoom express,en esta ocasión pudimos entregar el sprint con tiempo de sobra. 
+
+---------------------------------------------------------------------
+
+# STARFISH SPRINT 6 #
+
+### **Hacer más**
+* **Reparticion de tareas:** Se realizaron más cantidad de reparticion de tareas por integrante(2)
+
+* **Desarrollo:** Tener más Iniciativa a la hora de implementar funcionalidades nuevas
+
+
+### **Seguir haciendo**
+* **Medios de comunicación informal:** uso del whatsapp.
+
+* **Manejo de Trello:** Actualización de los estados de tarjetas y el implemento de nuevas para agregar información importante para el equipo y otras de interés.
+
+* **Reuniones ** :** Se realizaron reuniones express
+
+
+--------------------------------------
+## RESUMEN SPRINT 5
+En general hubo inconvenientes tecnicos , a pesar de ser pocos en el equipo ,pudieron solucionarse a través de zoom express,en esta ocasión llegamos con el tiempo justo.
