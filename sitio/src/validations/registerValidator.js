@@ -8,7 +8,7 @@ module.exports = [
     .isLength({min: 3}).withMessage('Debe tener como mínimo 3 letras'),
 
     check('lastName')
-    .notEmpty().withMessage('El nombre es obligatorio').bail()
+    .notEmpty().withMessage('El apellido es obligatorio').bail()
     .isAlpha().withMessage('Solo se admiten caracteres alfabeticos').bail()
     .isLength({min: 5}).withMessage('Debe tener como mínimo 5 letras'),
 

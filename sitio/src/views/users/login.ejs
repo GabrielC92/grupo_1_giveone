@@ -14,6 +14,7 @@
             <input class="input-g" type="email" name="email" autocomplete="off" placeholder="E-mail" value="<%= locals.old && old.email ? old.email : null %>">
             <input class="input-g" type="password" name="pass" placeholder="Contraseña">
             <span class="red-msg"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
+            <span class="red-msg"><%= locals.errors && errors.pass ? errors.pass.msg : null %></span>
             <label class="check" for="rec">
                 <input class="sesion" type="checkbox" name="sesion" id="rec">
                 Recordar el inicio de mi cuenta

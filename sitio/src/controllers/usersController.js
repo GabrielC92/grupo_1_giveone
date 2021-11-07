@@ -129,15 +129,7 @@ module.exports = {
                 }
             )
                 .then(() => {
-                    db.User.findOne({
-                        where: {
-                            id: req.session.userLogin.id
-                        }
-                    })
-                        .then(() => {
-                            this.logout()
-                            return res.redirect('/');
-                        })
+                    return res.redirect('/');
                 })
                 .catch(error => console.log(error));
         } else {

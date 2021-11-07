@@ -19,5 +19,6 @@ module.exports = [
                     return Promise.reject();
                 }
             }).catch(() => Promise.reject('Credenciales inválidas'))
-    })
+    }),
+    check('pass').notEmpty().withMessage('Escriba la contraseña')
 ]

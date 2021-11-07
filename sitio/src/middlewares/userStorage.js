@@ -10,7 +10,18 @@ const storage = multer.diskStorage({
         cb(null,`user-${Date.now()}${path.extname(file.originalname)}`);
     }
 });
+// Tipos de archivos
+const fileFilter = function(req,file,cb) {
+    if (!file.originalname.match(/\.(jpg|jpeg|png|gif|webp)$/)) {
+        req.fileValidationError = "Solo se permite imágenes";
+        return cb(null,false,req.fileValidationError);
+    }
+    cb(null,true);
+}
 
-const avatar = multer({storage});
+const avatar = multer({
+    storage,
+    fileFilter
+});
 
 module.exports = avatar;
