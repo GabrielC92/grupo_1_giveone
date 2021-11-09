@@ -198,6 +198,7 @@ window.addEventListener('load', () => {
             }
         }
         if(!error){
+            errorEmpty.innerHTML = null;
             registro.submit();
         }
     });
