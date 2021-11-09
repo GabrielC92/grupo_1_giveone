@@ -5,12 +5,12 @@ module.exports = [
     check('name')
     .notEmpty().withMessage('El nombre es obligatorio').bail()
     .isAlpha().withMessage('Solo se admiten caracteres alfabeticos').bail()
-    .isLength({min: 3}).withMessage('Debe tener como mínimo 3 letras'),
+    .isLength({min: 2}).withMessage('Debe tener como mínimo 2 letras'),
 
     check('lastName')
     .notEmpty().withMessage('El apellido es obligatorio').bail()
     .isAlpha().withMessage('Solo se admiten caracteres alfabeticos').bail()
-    .isLength({min: 5}).withMessage('Debe tener como mínimo 5 letras'),
+    .isLength({min: 2}).withMessage('Debe tener como mínimo 2 letras'),
 
     check('email').notEmpty().withMessage('Debe ingresar un email').bail()
     .isEmail().withMessage('Debe ingresar un email válido'),
@@ -32,9 +32,9 @@ module.exports = [
     check('pass')
     .notEmpty().withMessage('Elija una contraseña').bail()
     .isLength({
-        max : 12,
+        max : 16,
         min : 6
-    }).withMessage('La contraseña debe tener de 6 a 12 caracteres'),
+    }).withMessage('La contraseña debe tener de 6 a 16 caracteres'),
 
     body('pass2')
     .notEmpty().withMessage('Confirme la contraseña').bail()

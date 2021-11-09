@@ -12,8 +12,8 @@ const storage = multer.diskStorage({
 });
 // Tipos de archivos
 const fileFilter = function(req,file,cb) {
-    if (!file.originalname.match(/\.(jpg|jpeg|png|gif|webp)$/)) {
-        req.fileValidationError = "Solo se permite imágenes";
+    if (!file.originalname.match(/\.(jpg|jpeg|png|gif)$/)) {
+        req.fileValidationError = "Solo se permite imágenes .jpg, .jpeg, .png y .gif";
         return cb(null,false,req.fileValidationError);
     }
     cb(null,true);

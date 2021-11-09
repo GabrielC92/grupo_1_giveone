@@ -28,11 +28,11 @@
             <span id="pass2-error" class="red-msg"><%= locals.errors && errors.pass2 ? errors.pass2.msg : null %></span>
 
             <input class="input-g" id="img-reg" type="file" name="avatar" accept="image/*">
-            <span class="red-msg"><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></span>
+            <span class="red-msg" id="img-error"><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></span>
 
             <div class="r-btn">
-                <input class="radio" id="accept-reg" type="radio" name="aceptar" id="aceptar">
-                <label for="aceptar">Acepto los términos y condiciones</label>
+                <input class="radio" id="accept-reg" type="radio" name="aceptar">
+                <label for="accept-reg">Acepto los términos y condiciones</label>
                 <p id="accept-error" class="red-msg"><%= locals.errors && errors.aceptar ? errors.aceptar.msg : null %></p>
             </div>
             <button class="btn-g" type="submit">Crear cuenta</button>
