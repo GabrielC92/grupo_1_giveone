@@ -4,12 +4,12 @@ const db = require('../database/models');
 module.exports = [
     check('name')
     .notEmpty().withMessage('El nombre es obligatorio').bail()
-    .isAlpha().withMessage('Solo se admiten caracteres alfabeticos').bail()
+    .isAlpha().withMessage('Solo se admiten caracteres alfabéticos').bail()
     .isLength({min: 2}).withMessage('Debe tener como mínimo 2 letras'),
 
     check('lastName')
     .notEmpty().withMessage('El apellido es obligatorio').bail()
-    .isAlpha().withMessage('Solo se admiten caracteres alfabeticos').bail()
+    .isAlpha().withMessage('Solo se admiten caracteres alfabéticos').bail()
     .isLength({min: 2}).withMessage('Debe tener como mínimo 2 letras'),
 
     check('email').notEmpty().withMessage('Debe ingresar un email').bail()
@@ -33,8 +33,8 @@ module.exports = [
     .notEmpty().withMessage('Elija una contraseña').bail()
     .isLength({
         max : 16,
-        min : 6
-    }).withMessage('La contraseña debe tener de 6 a 16 caracteres'),
+        min : 8
+    }).withMessage('La contraseña debe tener de 8 a 16 caracteres'),
 
     body('pass2')
     .notEmpty().withMessage('Confirme la contraseña').bail()

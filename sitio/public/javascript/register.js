@@ -1,7 +1,7 @@
 const registro = document.getElementById('form-register');
 const errorEmpty = document.getElementById('error-empty');
 
-const name = document.getElementById('name-reg');
+const nameReg = document.getElementById('name-reg');
 const nameError = document.getElementById('name-error');
 
 const surname = document.getElementById('l-name-reg');
@@ -24,7 +24,7 @@ const acceptError = document.getElementById('accept-error');
 
 let regExLetter = /^[A-Z]+$/i;
 let regExEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,})+$/;
-let regExPass = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,16}$/; //mayúscula, número, caracter especial, de 6 a 16 caracteres
+let regExPass = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,16}$/; //mayúscula, número, caracter especial, de 8 a 16 caracteres
 let regExImg = /\.(jpg|jpeg|png|gif)$/;
 
 const emailVerify = async (email) => {
@@ -38,50 +38,50 @@ const emailVerify = async (email) => {
 }
 
 window.addEventListener('load', () => {
-    console.log('registerFront.js success!');
+    console.log('register.js success!');
     
-    name.addEventListener('blur', () => {
+    nameReg.addEventListener('blur', () => {
         switch (true) {
-            case !name.value.trim():
-                nameError.innerText = "El nombre es obligatorio"
-                name.classList.add('invalid');
-                name.classList.remove('valid');
+            case !nameReg.value.trim():
+                nameError.innerText = "El nombre es obligatorio";
+                nameReg.classList.add('invalid');
+                nameReg.classList.remove('valid');
                 break;
             
-            case name.value.trim().length < 2 || name.value.trim().length > 50:
+            case nameReg.value.trim().length < 2 || nameReg.value.trim().length > 50:
                 nameError.innerText = "Escribe de 2 a 50 caracteres"
-                name.classList.add('invalid');
-                name.classList.remove('valid');
+                nameReg.classList.add('invalid');
+                nameReg.classList.remove('valid');
                 break;
 
-            case !regExLetter.test(name.value.trim()):
+            case !regExLetter.test(nameReg.value.trim()):
                 nameError.innerText = 'Solo caracteres alfabéticos';
-                name.classList.add('invalid');
-                name.classList.remove('valid');
+                nameReg.classList.add('invalid');
+                nameReg.classList.remove('valid');
                 break;
         
             default:
-                name.classList.remove('invalid');
-                name.classList.add('valid');
+                nameReg.classList.remove('invalid');
+                nameReg.classList.add('valid');
                 nameError.innerText = null;
                 break;
         }
     })
-    name.addEventListener('keydown', () => {
-        name.classList.remove('invalid');
+    nameReg.addEventListener('keydown', () => {
+        nameReg.classList.remove('invalid');
         nameError.innerText = null;
     })
 
     surname.addEventListener('blur', () => {
         switch (true) {
             case !surname.value.trim():
-                surnameError.innerHTML = "<i class='fas fa-exclamation-triangle'></i> El nombre es obligatorio"
+                surnameError.innerText = "El apellido es obligatorio";
                 surname.classList.add('invalid');
                 surname.classList.remove('valid');
                 break;
             
             case surname.value.trim().length < 2 || surname.value.trim().length > 50:
-                surnameError.innerHTML = "<i class='fas fa-info-circle'></i> Escribe de 2 a 50 caracteres"
+                surnameError.innerText = "Escribe de 2 a 50 caracteres"
                 surname.classList.add('invalid');
                 surname.classList.remove('valid');
                 break;
@@ -183,7 +183,7 @@ window.addEventListener('load', () => {
         for (let i = 0; i < elementsForm.length - 2; i++) {
             if(!elementsForm[i].value){
                 elementsForm[i].classList.add('invalid');
-                errorEmpty.innerHTML = "Los campos señalados son obligatorios";
+                errorEmpty.innerText = "Los campos señalados son obligatorios";
                 error = true;
             }
         }
@@ -198,7 +198,7 @@ window.addEventListener('load', () => {
             }
         }
         if(!error){
-            errorEmpty.innerHTML = null;
+            errorEmpty.innerText = null;
             registro.submit();
         }
     });
