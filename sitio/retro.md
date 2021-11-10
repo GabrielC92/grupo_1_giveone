@@ -132,5 +132,5 @@ En general hubo inconvenientes tecnicos que pudieron solucionarse a través de z
 
 
 --------------------------------------
-## RESUMEN SPRINT 5
+## RESUMEN SPRINT 6
 En general hubo inconvenientes tecnicos , a pesar de ser pocos en el equipo ,pudieron solucionarse a través de zoom express,en esta ocasión llegamos con el tiempo justo.
