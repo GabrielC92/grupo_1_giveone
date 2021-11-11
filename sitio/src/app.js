@@ -40,6 +40,8 @@ app.use(cookie);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
+app.use('/api', require('./routes/api/index'))
+app.use('/api/users', require('./routes/api/users'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

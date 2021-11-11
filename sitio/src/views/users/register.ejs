@@ -10,29 +10,30 @@
             <p class="parrafo">Ingresa tus datos y accede a beneficios exclusivos. Nuestras promociones y descuentos te están esperando.</p>
             <div class="box-img"><img class="coffee" src="/images/mug_coffee_PNG97438.png" alt="coffee"></div>
         </section>
-        <form class="log" action="" method="POST" enctype="multipart/form-data">
-            <input class="input-g" type="text" name="name" placeholder="Nombre" value="<%= locals.old && old.name ? old.name : null %>">
-            <span class="red-msg"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+        <form class="log" id="form-register" action="" method="POST" enctype="multipart/form-data">
+            <p class="invalid" id="error-empty"></p>
+            <input class="input-g" id="name-reg" type="text" name="name" placeholder="Nombre" value="<%= locals.old && old.name ? old.name : null %>">
+            <span id="name-error" class="red-msg"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
 
-            <input class="input-g" type="text" name="lastName" placeholder="Apellido" value="<%= locals.old && old.lastName ? old.lastName : null %>">
-            <span class="red-msg"><%= locals.errors && errors.lastName ? errors.lastName.msg : null %></span>
+            <input class="input-g" id="l-name-reg" type="text" name="lastName" placeholder="Apellido" value="<%= locals.old && old.lastName ? old.lastName : null %>">
+            <span id="lastName-error" class="red-msg"><%= locals.errors && errors.lastName ? errors.lastName.msg : null %></span>
 
-            <input class="input-g" type="email" name="email" placeholder="E-mail" value="<%= locals.old && old.email ? old.email : null %>">
-            <span class="red-msg"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
+            <input class="input-g" id="email-reg" type="email" name="email" placeholder="E-mail" value="<%= locals.old && old.email ? old.email : null %>">
+            <span id="email-error" class="red-msg"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
 
-            <input class="input-g" type="password" name="pass" placeholder="Elige una contraseña">
-            <span class="red-msg"><%= locals.errors && errors.pass ? errors.pass.msg : null %></span>
+            <input class="input-g" id="pass-reg" type="password" name="pass" placeholder="Elige una contraseña">
+            <span id="pass-error" class="red-msg"><%= locals.errors && errors.pass ? errors.pass.msg : null %></span>
 
-            <input class="input-g" type="password" name="pass2" placeholder="Confirmar contraseña">
-            <span class="red-msg"><%= locals.errors && errors.pass2 ? errors.pass2.msg : null %></span>
+            <input class="input-g" id="pass2-reg" type="password" name="pass2" placeholder="Confirmar contraseña">
+            <span id="pass2-error" class="red-msg"><%= locals.errors && errors.pass2 ? errors.pass2.msg : null %></span>
 
-            <input class="input-g" type="file" name="avatar" accept="image/*">
-            <span class="red-msg"><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></span>
+            <input class="input-g" id="img-reg" type="file" name="avatar" accept="image/*">
+            <span class="red-msg" id="img-error"><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></span>
 
             <div class="r-btn">
-                <input class="radio" type="radio" name="aceptar" id="aceptar">
-                <label for="aceptar">Acepto los términos y condiciones</label>
-                <p class="red-msg"><%= locals.errors && errors.aceptar ? errors.aceptar.msg : null %></p>
+                <input class="radio" id="accept-reg" type="radio" name="aceptar">
+                <label for="accept-reg">Acepto los términos y condiciones</label>
+                <p id="accept-error" class="red-msg"><%= locals.errors && errors.aceptar ? errors.aceptar.msg : null %></p>
             </div>
             <button class="btn-g" type="submit">Crear cuenta</button>
         </form>

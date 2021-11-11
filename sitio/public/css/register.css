@@ -125,10 +125,13 @@
     opacity: 1; 
 }
 
+.invalid{
+    background-color: #F66868;
+}
 
-
-
-
+.valid{
+    background-color: #1ed12d;
+}
 
 /* media queries */
 @media (min-width: 769px) {

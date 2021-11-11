@@ -108,6 +108,11 @@ module.exports = {
         }
         if (errors.isEmpty()) {
             const {name,lastName,email,pass,oldPass} = req.body;
+            if (oldPass && req.file) {
+                if (fs.existsSync(path.join(__dirname,'../../public/images/users',req.session.userLogin.avatar))) {
+                    fs.unlinkSync(path.join(__dirname,'../../public/images/users',req.session.userLogin.avatar))
+                }
+            }
             db.User.update(
                 {
                     name: name.trim(),
@@ -124,15 +129,7 @@ module.exports = {
                 }
             )
                 .then(() => {
-                    /* db.User.findOne({
-                        where: {
-                            id: req.session.userLogin.id
-                        }
-                    })
-                        .then(user => {
-                            req.body.oldPass && req.file ? req.file.filename : user.avatar */
-                            return res.redirect('/');
-                        //})
+                    return res.redirect('/');
                 })
                 .catch(error => console.log(error));
         } else {

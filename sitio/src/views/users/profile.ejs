@@ -14,27 +14,27 @@
         <div class="box-img-user">
             <img class="img-user" src="/images/users/<%= user.avatar %>" alt="usuario">
         </div>
-        <form class="log" action="/users/profile?_method=PUT" method="POST" enctype="multipart/form-data">
-            <input class="input-g" type="text" name="name" placeholder="Nombre" value="<%= user.name %>">
-            <span class="red-msg"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+        <form id="form-profile" class="log" action="/users/profile?_method=PUT" method="POST" enctype="multipart/form-data">
+            <input id="name-upd" class="input-g" type="text" name="name" placeholder="Nombre" value="<%= user.name %>">
+            <span id="name-upd-error" class="red-msg"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
 
-            <input class="input-g" type="text" name="lastName" placeholder="Apellido" value="<%= user.lastName %>">
-            <span class="red-msg"><%= locals.errors && errors.lastName ? errors.lastName.msg : null %></span>
+            <input id="surname-upd" class="input-g" type="text" name="lastName" placeholder="Apellido" value="<%= user.lastName %>">
+            <span id="surname-upd-error" class="red-msg"><%= locals.errors && errors.lastName ? errors.lastName.msg : null %></span>
 
-            <input class="input-g" type="email" name="email" placeholder="E-mail" value="<%= user.email %>">
-            <span class="red-msg"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
+            <input id="email-upd" class="input-g" type="email" name="email" placeholder="E-mail" value="<%= user.email %>">
+            <span id="email-upd-error" class="red-msg"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
 
-            <input class="input-g" type="password" name="oldPass" placeholder="Ingresa la contraseña">
-            <span class="red-msg"><%= locals.errors && errors.oldPass ? errors.oldPass.msg : null %></span>
+            <input id="oldPass" class="input-g" type="password" name="oldPass" placeholder="Ingresa la contraseña">
+            <span id="oldPass-error" class="red-msg"><%= locals.errors && errors.oldPass ? errors.oldPass.msg : null %></span>
 
-            <input class="input-g" type="password" name="pass" placeholder="Elige nueva contraseña">
-            <span class="red-msg"><%= locals.errors && errors.pass ? errors.pass.msg : null %></span>
+            <input id="pass-upd" class="input-g" type="password" name="pass" placeholder="Elige nueva contraseña">
+            <span id="pass-upd-error" class="red-msg"><%= locals.errors && errors.pass ? errors.pass.msg : null %></span>
 
-            <input class="input-g" type="password" name="pass2" placeholder="Confirmar contraseña">
-            <span class="red-msg"><%= locals.errors && errors.pass2 ? errors.pass2.msg : null %></span>
+            <input id="pass2-upd" class="input-g" type="password" name="pass2" placeholder="Confirmar contraseña">
+            <span id="pass2-upd-error" class="red-msg"><%= locals.errors && errors.pass2 ? errors.pass2.msg : null %></span>
 
-            <input class="input-g" type="file" name="avatar" accept="image/*" value="<%= user.avatar %>">
-            <span class="red-msg"><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></span>
+            <input id="img-upd" class="input-g" type="file" name="avatar" accept="image/*" value="<%= user.avatar %>">
+            <span id="img-upd-error" class="red-msg"><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></span>
 
             <button class="btn-g" type="submit">Guardar cambios</button>
         </form>
