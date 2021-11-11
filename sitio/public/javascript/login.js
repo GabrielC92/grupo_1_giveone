@@ -10,15 +10,10 @@ const passLogError = document.getElementById('pass-log-error');
 window.addEventListener('load', () => {
     console.log('login.js success!');
 
-    emailLog.addEventListener('blur', async () => {
+    emailLog.addEventListener('blur', async function () {
         switch (true) {
-            case !emailLog.value:
-                emailLogError.innerText = "El email registrado es requerido";
-                emailLog.classList.add('invalid');
-                emailLog.classList.remove('valid');
-                break;
             case !regExEmail.test(emailLog.value):
-                emailLogError.innerText = "Tiene que ser un email válido";
+                emailLogError.innerText = "Tiene que ingresar un email válido";
                 emailLog.classList.add('invalid');
                 emailLog.classList.remove('valid');
                 break;
@@ -28,8 +23,9 @@ window.addEventListener('load', () => {
                 emailLog.classList.add('valid');
                 break;
             default:
-                emailLogError.innerText = null;
-                emailLog.classList.remove('invalid');
+                emailLogError.innerText = 'No estás registrado, haz clic en "Registrate"';
+                emailLog.classList.add('invalid');
+                emailLog.classList.remove('valid');
                 break;
         }
     })
@@ -40,18 +36,27 @@ window.addEventListener('load', () => {
     })
 
     passLog.addEventListener('blur',() => {
-        if(!passLog.value){
-            passLogError.innerText = "La contraseña es requerida";
-            passLog.classList.add('invalid');
-            passLog.classList.remove('valid');
-        }else if(!regExPass.test(passLog.value)){
-            passLogError.innerText = "Formato de contraseña invalido";
-            passLog.classList.add('invalid');
-            passLog.classList.remove('valid');
-        } else{
-            passLogError.innerText = null;
-            passLog.classList.remove('invalid');
-            passLog.classList.add('valid');
+        switch (true) {
+            case !passLog.value:
+                passLogError.innerText = "La contraseña es requerida";
+                passLog.classList.add('invalid');
+                passLog.classList.remove('valid');
+                break;
+            case !regExPass.test(passLog.value):
+                passLogError.innerText = "Formato de contraseña invalido";
+                passLog.classList.add('invalid');
+                passLog.classList.remove('valid');
+                break;
+            case emailLog.classList.contains('valid'):
+                passLogError.innerText = null;
+                passLog.classList.remove('invalid');
+                passLog.classList.add('valid');
+                break;
+            default:
+                passLogError.innerText = null;
+                passLog.classList.remove('invalid');
+                passLog.classList.remove('valid');
+                break;
         }
     })
     passLog.addEventListener('focus',()=> {

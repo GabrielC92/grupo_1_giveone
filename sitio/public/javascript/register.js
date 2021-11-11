@@ -100,7 +100,7 @@ window.addEventListener('load', () => {
         }
     })
 
-    email.addEventListener('blur', async () => {
+    email.addEventListener('blur', async function () {
         switch (true) {
             case !regExEmail.test(email.value):
                 emailError.innerText = "Tiene que ser un email válido";
@@ -122,7 +122,7 @@ window.addEventListener('load', () => {
 
     pass.addEventListener('blur',() => {
         if(!regExPass.test(pass.value)){
-            passError.innerText = "La contraseña debe tener una mayúscula, un número entre 6 y 16 caracteres";
+            passError.innerText = "La contraseña debe tener una mayúscula, un número entre 8 y 16 caracteres";
             pass.classList.add('invalid');
             pass.classList.remove('valid');
         }else{
