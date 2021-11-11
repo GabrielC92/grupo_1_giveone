@@ -1,4 +1,4 @@
-
+/* 
     var countDownDate = new Date("Jan 1, 2022 00:00:00").getTime();
     var x = setInterval(function(){
     var now = new Date().getTime();
@@ -13,4 +13,4 @@
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
 
-},1000) 
+},1000)  */

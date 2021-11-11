@@ -62,11 +62,21 @@ module.exports = {
                 db.Image.bulkCreate(images,{validate : true})
                 .then(() => console.log('Imagenes guardadas'))
             }
-            return res.redirect('/')
+            return res.redirect('/admin/products')	
         })
         .catch(error => console.log(error))
 
-        } db.Category.findAll({
+        } else {
+            
+                 if (req.files[0]) {
+                    req.files.forEach(imagen => {
+                        if(fs.existsSync('../../public/images/products'+ imagen.file)){
+                            fs.unlinkSync('../../public/images/products' + imagen.file)
+                        }
+                    })
+         }
+        
+         db.Category.findAll({
             order : [
                 ['name','ASC']
             ]
@@ -78,7 +88,7 @@ module.exports = {
             }))
             .catch(error => console.log(error))
      
-       
+        }
     },
     edit: (req,res) => {
         let categories = db.Category.findAll(

@@ -177,11 +177,10 @@ content: none;
 	height: 100%;
 	width: 100%;
 	top: 0; left: 0;
+	object-fit: contain;
 	background-image: url(/images/worldmap.jpg);
-	
-	background-size: 400px;
+	background-size: 400px; 
 	background-repeat: no-repeat;
-	
 	border-radius: 5px;
 	backface-visibility: hidden;
 	box-shadow: 0 15px 25px rgb(0,0,0,0.2);

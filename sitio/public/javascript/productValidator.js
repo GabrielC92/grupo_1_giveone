@@ -4,12 +4,15 @@ const textarea = document.querySelectorAll('#formulario textarea')
 
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ0-9\s]{5,30}$/, // Letras, pueden llevar acentos, y numeros.
+	nombreEdit :/^[a-zA-ZÀ-ÿ0-9\s]{5,30}$/,
 	descripcion:/^[a-zA-ZÀ-ÿ0-9\s]{20,500}$/, // Letras, pueden llevar acentos.
 };
 
 const campos = [
 	nombre = false,
 	descripcion = false,
+	nombreEdit = false,
+	descripEdit = false,
 	imagen = false 
 ]
 
@@ -33,6 +36,24 @@ validarFormulario = (e) => {
 				campos['nombre'] = false
 			}
 		break;
+		case  "names":
+			if (expresiones.nombreEdit.test(e.target.value)) {
+				document.getElementById('grupo__nombre').classList.remove('formulario__grupo-incorrecto');
+				document.getElementById('grupo__nombre').classList.add('formulario__grupo-correcto');
+				document.querySelector('#grupo__nombre i').classList.add('fa-check-circle')
+				document.querySelector('#grupo__nombre i').classList.remove('fa-times-circle')
+				document.querySelector('#grupo__nombre .formulario__input-error').classList.remove('formulario__input-error-activo')
+				campos['nombreEdit'] = true;
+			} else{
+				document.getElementById('grupo__nombre').classList.add('formulario__grupo-incorrecto');
+				document.getElementById('grupo__nombre').classList.remove('formulario__grupo-correcto');
+				document.querySelector('#grupo__nombre i').classList.add('fa-times-circle')
+				document.querySelector('#grupo__nombre i').classList.remove('fa-check-circle')
+				document.querySelector('#grupo__nombre .formulario__input-error').classList.add('formulario__input-error-activo')
+
+				campos['nombreEdit'] = false
+			}
+			break;
 		case  "description":
 			if (expresiones.descripcion.test(e.target.value)) {
 				document.getElementById('grupo__descripcion').classList.remove('formulario__grupo-incorrecto');
@@ -50,9 +71,26 @@ validarFormulario = (e) => {
 
 				campos['descripcion'] = false
 			}
-				
-			
 		break;
+
+		case  "descrip":
+			if (expresiones.descripcion.test(e.target.value)) {
+				document.getElementById('grupo__descripcion').classList.remove('formulario__grupo-incorrecto');
+				document.getElementById('grupo__descripcion').classList.add('formulario__grupo-correcto');
+				document.querySelector('#grupo__descripcion i').classList.add('fa-check-circle')
+				document.querySelector('#grupo__descripcion i').classList.remove('fa-times-circle')
+				document.querySelector('#grupo__descripcion .formulario__input-error').classList.remove('formulario__input-error-activo')
+				campos['descripEdit'] = true;
+			} else{
+				document.getElementById('grupo__descripcion').classList.add('formulario__grupo-incorrecto');
+				document.getElementById('grupo__descripcion').classList.remove('formulario__grupo-correcto');
+				document.querySelector('#grupo__descripcion i').classList.add('fa-times-circle')
+				document.querySelector('#grupo__descripcion i').classList.remove('fa-check-circle')
+				document.querySelector('#grupo__descripcion .formulario__input-error').classList.add('formulario__input-error-activo')
+
+				campos['descripEdit'] = false
+			}
+			break;
 		case  "image":
 			if (e.target.files.length <= 1 && e.target.files.length > 0) {
 				document.getElementById('grupo__imagen').classList.remove('formulario__grupo-incorrecto');
@@ -82,11 +120,13 @@ validarFormulario = (e) => {
 inputs.forEach((input) => {
 	input.addEventListener('keyup', validarFormulario);
 	input.addEventListener('blur', validarFormulario);
+	input.addEventListener('mousemove', validarFormulario);
 });
 
 textarea.forEach((txtarea) => {
 	txtarea.addEventListener('keyup', validarFormulario);
 	txtarea.addEventListener('blur', validarFormulario);
+	txtarea.addEventListener('mousemove', validarFormulario);
 })
 
 formulario.addEventListener('submit', (e) => {
@@ -94,6 +134,9 @@ formulario.addEventListener('submit', (e) => {
 
 	if (campos.nombre && campos.descripcion && campos.imagen) {
 		formulario.submit()
+	}else if(campos.nombreEdit && campos.descripEdit){
+		formulario.submit();
+		console.log(campos);
 	}else{
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 	}
