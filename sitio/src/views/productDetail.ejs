@@ -6,52 +6,57 @@
 
     <main class="detalle">
             <div class="product">
-                <div class="name-favorit">
-                    <h3 class="name"><%= product.name %></h3>
-                    <a href=""><i class="far fa-heart"></i></a>
-                </div>
                 <div class="photo-description">
                     <section class="photo">
                         <img src="/images/products/<%= product.images[0].file %>" alt="<%= product.name %>">
                     </section>
                     <section class="descripcion">
-                        <div class="codigo-producto">
-                            <span>EJ1234</span>
-                        </div>
+ 
                         <div class="precio">
-                            <span class="price">$<%= product.price %></span>
-                            <!-- parte estática de 2° sprint id = 4 -->
-                            <span class="descuento">$1.500</span>
-                            <span class="img-desc">50% </span>
-                            <!-- END parte estática de 2° sprint -->
-                        </div>
-                        <div class="cuotas-tarjeta">
-                            <section class="cuotas">
-                                <span>6 cuotas sin interes abonando con</span>
-                            </section>
-                            <section class="tarjeta">
-                                <img src="https://statics.glamit.com.ar/skin/frontend/default/volf/images/iconos/tarjetas.svg" width="150px" alt="">
-                            </section>
-                        </div>
-                        <div class="cantidad-productos">
-                            <div class="addCantidad">
-                                <span id="minus" class="cant1" title="Menos">-</span>
-                                <input id="input-quantity" class="input-text qty" readonly="readonly" type="text" name="qty" value="1" data-max="20">
-                                <span id="add" class="cant" title="Más">+</span>
+                            <h2 class="name"><%= product.name %></h2>
+                            <p class="description-detail"><%= product.description %></p>
+
+                            <div class="color-precio">
+                                <p class="color-select">Color</p>
+                                <select name="" id="">
+                                    <option>Unico</option>
+                                </select>
+                                <span class="price">$<%= product.price %></span>
+                                
                             </div>
+                            
+                            <!-- parte estática de 2° sprint id = 4 -->
+                            <div class="favoritos-boton">
+                                <select name="" id="">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                </select>
+                                <button type="submit">Agregar al carrito</button>
+                                
+                            </div> 
+                        </div> 
+                        <div class="compartir-producto">
+                            <p class="texto-compartir">COMPARTIR</p>
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
                         </div>
-                        <div class="favoritos-boton">
-                            <button type="submit">Agregar al carrito</button>
-                        </div>
+
+                        
                     </div>
-                <div class="parrafo">
-                    <div class="detalles">
-                        <h3>descripcion</h3>
-                        <p><%= product.description %></p>
-                    </div>
-                </div>
+                
                 </section>
             </div>
+            
     </main>    
     <%- include('partials/footer') %>
     <%- include('partials/scripts') %>

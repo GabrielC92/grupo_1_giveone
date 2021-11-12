@@ -3,7 +3,7 @@ module.exports = [
     name: "Vasos Iridiscencia",
     price: 1600,
     categoryId: 3,
-    description: "Lorem ipsum dolor amet sit",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -11,13 +11,13 @@ module.exports = [
     name: "Espatula Mango Glitter",
     price: 2500,
     categoryId: 2,
-    description: "Lorem ipsum dolor amet sit",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   },
   {
     name: "Platos Black",
-    description: "Lorem ipsum dolor amet sit",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     price: 3000,
     categoryId:1,
     createdAt : new Date,
@@ -25,7 +25,7 @@ module.exports = [
   },
   {
     name: "Copas GRose",
-    description:"Lorem ipsum dolor amet sit",
+    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     price: 600,
     categoryId: 3,
     createdAt : new Date,
@@ -33,7 +33,7 @@ module.exports = [
   },
   {
     name: "Cubiertos Gold",
-    description: "Lorem ipsum dolor amet sit",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     price: 600,
     categoryId: 2,
     createdAt : new Date,
@@ -41,7 +41,7 @@ module.exports = [
   },
   {
     name: "Jarra Black",
-    description:"Lorem ipsum dolor amet sit",
+    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     price: 600,
     categoryId: 3,
     createdAt : new Date,
@@ -49,7 +49,7 @@ module.exports = [
   },
   {
     name:"Sarten Black",
-    description: "Lorem ipsum dolor amet sit",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     price: 600,
     categoryId: 1,
     createdAt : new Date,
@@ -59,7 +59,7 @@ module.exports = [
     name: "Vaso Terracota",
     price: 5000,
     categoryId: 3,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -67,7 +67,7 @@ module.exports = [
     name: "Plato Grecia",
     price: 5000,
     categoryId: 1,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -75,7 +75,7 @@ module.exports = [
     name: "Plato Botánica",
     price: 5000,
     categoryId: 1,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -83,7 +83,7 @@ module.exports = [
     name: "Plato Handmade",
     price: 5000,
     categoryId: 1,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -91,7 +91,7 @@ module.exports = [
     name: "Plato Strawberry",
     price: 5000,
     categoryId: 1,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -99,7 +99,7 @@ module.exports = [
     name: "Taza Grecia",
     price: 5000,
     categoryId: 4,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -107,7 +107,7 @@ module.exports = [
     name: "Taza Galaxia",
     price: 5000,
     categoryId: 4,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -115,7 +115,7 @@ module.exports = [
     name: "Jarra para Té Botánica",
     price: 5000,
     categoryId: 4,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -123,7 +123,7 @@ module.exports = [
     name: "Mugs de Ceramica Fauna",
     price: 5000,
     categoryId: 4,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -131,7 +131,7 @@ module.exports = [
     name: "Tetera Flower",
     price: 5000,
     categoryId: 4,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -139,7 +139,7 @@ module.exports = [
     name: "Utensilios Mango de Madera",
     price: 5000,
     categoryId: 2,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -147,7 +147,7 @@ module.exports = [
     name: "Cubiertos Black",
     price: 5000,
     categoryId: 2,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -155,7 +155,7 @@ module.exports = [
     name: "Sett de Cuchillos White Rose",
     price: 5000,
     categoryId: 2,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -163,7 +163,7 @@ module.exports = [
     name: "Utensilios de Madera",
     price: 5000,
     categoryId: 2,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -171,7 +171,7 @@ module.exports = [
     name: "Jarra de Cristal",
     price: 5000,
     categoryId: 3,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -179,7 +179,7 @@ module.exports = [
     name: "Vasos Strawberry",
     price: 5000,
     categoryId: 3,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -187,11 +187,9 @@ module.exports = [
     name: "Vasos Cat",
     price: 5000,
     categoryId: 3,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
     updatedAt : new Date
   }
   
-  
-
 ]
