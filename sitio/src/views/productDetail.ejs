@@ -57,6 +57,36 @@
                 </section>
             </div>
             
+
+            <% if (locals.userLogin) { %>
+                <input type="text"  value="<%= locals.userLogin.name %>">
+               
+            <% } else { %>
+                <input type="text"  placeholder="usuario">
+            <% } %>
+    
+<textarea name="" id="" placeholder='Comment'></textarea>
+<button>Share</button>
+<div></div>
+
+<header>
+<span class='hearts'><i class='fa fa-heart'></i></span>
+<span class='hearts'><i class='fa fa-heart'></i></span>
+<span class='hearts'><i class='fa fa-heart'></i></span>
+<span class='hearts'><i class='fa fa-heart'></i></span>
+<span class='hearts'><i class='fa fa-heart'></i></span>
+</header>  
+
+
+  
+ <img src="http://www.maplecityrubber.com/wp-content/uploads/2012/11/standard-05-orange.png"> 
+ <img src="http://www.maplecityrubber.com/wp-content/uploads/2012/11/18-sapphire-blue.png"> 
+ <img src="http://www.maplecityrubber.com/wp-content/uploads/2012/11/15-emerald-green.png"> 
+ <img src="http://www.spencerswishes.org/drupal/sites/default/files/pictures/purpleballoon3.png"> 
+  
+
+
+
     </main>    
     <%- include('partials/footer') %>
     <%- include('partials/scripts') %>
