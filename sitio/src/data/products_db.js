@@ -1,14 +1,14 @@
 module.exports = [
   {
-    name: "Vasos  Dakota",
+    name: "Vasos Iridiscencia",
     price: 1600,
-    categoryId: 1,
+    categoryId: 3,
     description: "Lorem ipsum dolor amet sit",
     createdAt : new Date,
     updatedAt : new Date
   },
   {
-    name: "Cuchillos Gold",
+    name: "Espatula Mango Glitter",
     price: 2500,
     categoryId: 2,
     description: "Lorem ipsum dolor amet sit",
@@ -56,11 +56,142 @@ module.exports = [
     updatedAt : new Date
   },
   {
-    name: "Azucarera de cristal",
+    name: "Vaso Terracota",
+    price: 5000,
+    categoryId: 3,
+    description: "Lorem ipsum",
+    createdAt : new Date,
+    updatedAt : new Date
+  },
+  {
+    name: "Plato Grecia",
+    price: 5000,
+    categoryId: 1,
+    description: "Lorem ipsum",
+    createdAt : new Date,
+    updatedAt : new Date
+  },
+  {
+    name: "Plato Botánica",
+    price: 5000,
+    categoryId: 1,
+    description: "Lorem ipsum",
+    createdAt : new Date,
+    updatedAt : new Date
+  },
+  {
+    name: "Plato Handmade",
+    price: 5000,
+    categoryId: 1,
+    description: "Lorem ipsum",
+    createdAt : new Date,
+    updatedAt : new Date
+  },
+  {
+    name: "Plato Strawberry",
+    price: 5000,
+    categoryId: 1,
+    description: "Lorem ipsum",
+    createdAt : new Date,
+    updatedAt : new Date
+  },
+  {
+    name: "Taza Grecia",
+    price: 5000,
+    categoryId: 4,
+    description: "Lorem ipsum",
+    createdAt : new Date,
+    updatedAt : new Date
+  },
+  {
+    name: "Taza Galaxia",
+    price: 5000,
+    categoryId: 4,
+    description: "Lorem ipsum",
+    createdAt : new Date,
+    updatedAt : new Date
+  },
+  {
+    name: "Jarra para Té Botánica",
+    price: 5000,
+    categoryId: 4,
+    description: "Lorem ipsum",
+    createdAt : new Date,
+    updatedAt : new Date
+  },
+  {
+    name: "Mugs de Ceramica Fauna",
+    price: 5000,
+    categoryId: 4,
+    description: "Lorem ipsum",
+    createdAt : new Date,
+    updatedAt : new Date
+  },
+  {
+    name: "Tetera Flower",
+    price: 5000,
+    categoryId: 4,
+    description: "Lorem ipsum",
+    createdAt : new Date,
+    updatedAt : new Date
+  },
+  {
+    name: "Utensilios Mango de Madera",
+    price: 5000,
+    categoryId: 2,
+    description: "Lorem ipsum",
+    createdAt : new Date,
+    updatedAt : new Date
+  },
+  {
+    name: "Cubiertos Black",
+    price: 5000,
+    categoryId: 2,
+    description: "Lorem ipsum",
+    createdAt : new Date,
+    updatedAt : new Date
+  },
+  {
+    name: "Sett de Cuchillos White Rose",
+    price: 5000,
+    categoryId: 2,
+    description: "Lorem ipsum",
+    createdAt : new Date,
+    updatedAt : new Date
+  },
+  {
+    name: "Utensilios de Madera",
+    price: 5000,
+    categoryId: 2,
+    description: "Lorem ipsum",
+    createdAt : new Date,
+    updatedAt : new Date
+  },
+  {
+    name: "Jarra de Cristal",
+    price: 5000,
+    categoryId: 3,
+    description: "Lorem ipsum",
+    createdAt : new Date,
+    updatedAt : new Date
+  },
+  {
+    name: "Vasos Strawberry",
+    price: 5000,
+    categoryId: 3,
+    description: "Lorem ipsum",
+    createdAt : new Date,
+    updatedAt : new Date
+  },
+  {
+    name: "Vasos Cat",
     price: 5000,
     categoryId: 3,
     description: "Lorem ipsum",
     createdAt : new Date,
     updatedAt : new Date
   }
+  
+  
+
 ]
