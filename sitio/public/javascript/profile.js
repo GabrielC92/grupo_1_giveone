@@ -1,4 +1,5 @@
 const profile = document.getElementById('form-profile');
+const profileError = document.getElementById('error-empty-upd');
 
 const nameUpd = document.getElementById('name-upd');
 const nameUpdError = document.getElementById('name-upd-error');
@@ -47,13 +48,13 @@ window.addEventListener('load', () => {
             default:
                 nameUpd.classList.remove('invalid');
                 nameUpd.classList.add('valid');
-                nameUpdError.innerText = null;
+                nameUpdError.innerText = "";
                 break;
         }
     })
     nameUpd.addEventListener('keydown', () => {
         nameUpd.classList.remove('invalid');
-        nameUpdError.innerText = null;
+        nameUpdError.innerText = "";
     })
 
     surnameUpd.addEventListener('blur', () => {
@@ -79,15 +80,15 @@ window.addEventListener('load', () => {
             default:
                 surnameUpd.classList.remove('invalid');
                 surnameUpd.classList.add('valid');
-                surnameUpdError.innerText = null;
+                surnameUpdError.innerText = "";
                 break;
         }
     })
 
-    emailUpd.addEventListener('blur', async function () {
+    emailUpd.addEventListener('blur', async function() {
         switch (true) {
             case !regExEmail.test(emailUpd.value):
-                emailUpdError.innerText = "Tiene que ser un email válido";
+                emailUpdError.innerText = "Ingresa un email válido";
                 emailUpd.classList.add('invalid');
                 emailUpd.classList.remove('valid');
                 break;
@@ -97,7 +98,7 @@ window.addEventListener('load', () => {
                 emailUpd.classList.remove('valid');
                 break;
             default:
-                emailUpdError.innerText = null;
+                emailUpdError.innerText = "";
                 emailUpd.classList.remove('invalid');
                 emailUpd.classList.add('valid');
                 break;
@@ -105,14 +106,22 @@ window.addEventListener('load', () => {
     })
 
     oldPass.addEventListener('blur',() => {
-        if(!regExPass.test(oldPass.value)){
-            oldPassError.innerText = "La contraseña debe tener una mayúscula, un número entre 8 y 16 caracteres";
-            oldPass.classList.add('invalid');
-            oldPass.classList.remove('valid');
-        }else{
-            oldPassError.innerText = null;
-            oldPass.classList.remove('invalid');
-            oldPass.classList.add('valid');
+        switch (true) {
+            case !oldPass.value:
+                oldPass.innerText = "Ingresa tu contraseña para guardar los cambios";
+                oldPass.classList.add('invalid');
+                oldPass.classList.remove('valid');
+                break;
+            case !regExPass.test(oldPass.value):
+                oldPassError.innerText = "La contraseña debe tener una mayúscula, un número entre 8 y 16 caracteres";
+                oldPass.classList.add('invalid');
+                oldPass.classList.remove('valid');
+                break;
+            default:
+                oldPassError.innerText = "";
+                oldPass.classList.remove('invalid');
+                oldPass.classList.add('valid');
+                break;
         }
     })
     oldPass.addEventListener('focus',()=> {
@@ -125,7 +134,7 @@ window.addEventListener('load', () => {
             passUpd.classList.add('invalid');
             passUpd.classList.remove('valid');
         }else{
-            passUpdError.innerText = null;
+            passUpdError.innerText = "";
             passUpd.classList.remove('invalid');
             passUpd.classList.add('valid');
         }
@@ -144,7 +153,7 @@ window.addEventListener('load', () => {
             pass2Upd.classList.add('invalid');
             pass2Upd.classList.remove('valid');
         }else{
-            pass2UpdError.innerText = null;
+            pass2UpdError.innerText = "";
             pass2Upd.classList.remove('invalid');
             pass2Upd.classList.add('valid');
         }
@@ -162,11 +171,70 @@ window.addEventListener('load', () => {
             }else{
                 imgUpd.classList.remove('invalid');
                 imgUpd.classList.add('valid');
-                imgUpdError.innerHTML = null;
+                imgUpdError.innerHTML = "";
             }
         }
     })
     profile.addEventListener('submit', (e) => {
         e.preventDefault();
+
+        let elementsUpdate = profile.elements;
+        let errorUpdate = false;
+
+        nameUpd.addEventListener('change', () => {
+            if(!oldPass.value){
+                nameUpd.classList.add('invalid');
+                errorUpdate = true;
+            }
+        })
+        surnameUpd.addEventListener('change', () => {
+            if(!oldPass.value){
+                surnameUpd.classList.add('invalid');
+                errorUpdate = true;
+            }
+        })
+        emailUpd.addEventListener('change', () => {
+            if(!oldPass.value){
+                emailUpd.classList.add('invalid');
+                errorUpdate = true;
+            }
+        })
+        oldPass.addEventListener('keydown', (event) => {
+            if (!event) {
+                e.preventDefault();
+            }
+            errorUpdate = true;
+        })
+        passUpd.addEventListener('change', () => {
+            if(!oldPass.value){
+                passUpd.classList.add('invalid');
+                errorUpdate = true;
+            }
+        })
+        imgUpd.addEventListener('change', () => {
+            if(!oldPass.value){
+                imgUpd.classList.add('invalid');
+                errorUpdate = true;
+            }
+        })
+
+        /* for (let i = 0; i < elementsUpdate.length - 2; i++) {
+            if(!elementsUpdate[i].value){
+                elementsUpdate[i].classList.add('invalid');
+                profileError.innerText = "Los campos señalados son obligatorios";
+                errorUpdate = true;
+            }
+        } */
+
+        for (let i = 0; i < elementsUpdate.length - 2; i++) {
+            if(elementsUpdate[i].classList.contains('invalid')){
+                profileError.innerText = 'Debes cambiar como mínimo un campo para actualizar tu perfil de usuario';
+                errorUpdate = true;
+            }
+        }
+        if(!errorUpdate){
+            profileError.innerHTML = null;
+            profile.submit();
+        }
     })
 })

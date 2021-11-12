@@ -1,7 +1,19 @@
-const {check} = require('express-validator');
+const formSearch = document.getElementById('form-search');
+const search = document.getElementById('search');
 
-module.exports = [
-    check('search')
-    .notEmpty().withMessage('Ingrese al menos un carácter para la búsqueda').bail()
-    .isAlpha().withMessage('Solo debes usar letras')
-]
+window.addEventListener('load', () => {
+    console.log("search.js success!");
+    formSearch.addEventListener('submit', e => {
+        e.preventDefault();
+        let errorSearch = false;
+        if (!search.value) {
+            errorSearch = true;
+        }
+        if (search.value.trim().length < 3) {
+            errorSearch = true;
+        }
+        if (!errorSearch) {
+            formSearch.submit()
+        }
+    })
+})
