@@ -24,7 +24,7 @@ const acceptError = document.getElementById('accept-error');
 
 let regExLetter = /^[A-Z]+$/i;
 let regExEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,})+$/;
-let regExPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$/; //mayúscula, número, caracter especial, de 8 a 16 caracteres
+let regExPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&<>+_-])[A-Za-z\d@$!%*#?&<>+_-]{8,16}$/; //mayúscula, número, caracter especial, de 8 a 16 caracteres
 let regExImg = /\.(jpg|jpeg|png|gif)$/;
 
 const emailVerify = async (email) => {
@@ -122,7 +122,7 @@ window.addEventListener('load', () => {
 
     pass.addEventListener('blur',() => {
         if(!regExPass.test(pass.value)){
-            passError.innerText = "La contraseña debe tener una mayúscula, un número entre 8 y 16 caracteres";
+            passError.innerText = "La contraseña debe tener al menos una mayúscula, un número y un caracter especial, y ser de 8 a 16 caracteres";
             pass.classList.add('invalid');
             pass.classList.remove('valid');
         }else{
@@ -165,6 +165,8 @@ window.addEventListener('load', () => {
                 img.classList.add('valid');
                 imgError.innerHTML = null;
             }
+        } else{
+            img.classList.remove('invalid');
         }
     })
 
@@ -176,7 +178,14 @@ window.addEventListener('load', () => {
 
     registro.addEventListener('submit', (e) => {
         e.preventDefault();
-        let elementsForm = registro.elements;
+        let elementsForm = [
+            nameReg,
+            surname,
+            email,
+            pass,
+            pass2,
+            accept
+        ]
 
         let error = false;
 

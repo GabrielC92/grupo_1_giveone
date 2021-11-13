@@ -66,11 +66,11 @@ window.addEventListener('load', () => {
     login.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        let error = false;
+        //let error = false;
 
         if (!emailLog.classList.contains('valid') && !passLog.classList.contains('valid')) {
             logErrorEmpty.innerText = "Complete los campos para iniciar sesión";
-            error = true;
+            //error = true;
         }else{
             logErrorEmpty.innerHTML = null;
             login.submit();
