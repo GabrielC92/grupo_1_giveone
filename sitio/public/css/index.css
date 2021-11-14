@@ -213,7 +213,7 @@ figure{
   background: none;
   color: #333;
   outline: none;
-  opacity: 20%;
+  opacity: 80%;
 }
 .slick-prev3,
 .slick-prev2,
@@ -291,6 +291,10 @@ figure{
 
 .titulo-sect h3{
   font-size: 14px;
+}
+
+.imagen-banner{
+  width: 100%;
 }
 
 @media (min-width: 10px) and (max-width: 425px){
@@ -421,30 +425,6 @@ figure{
 
 @media (min-width: 526px) {
 
-  /*BANNER2*/
-  .contenido{
-    width: 95%;
-    height: 49vh;
-  }
-  .content p {
-    padding-top: 18px;
-    font-size: 10px;
-  }
-  .launch-time {
-    
-    margin-bottom: 20px;
-}
-
-.launch-time div p {
-  font-size: 30px;
-  color: white;
-}
-
-.launch-time div {
-  flex-basis: 60px;
-}
-/*FIN BANNER2*/
-
   .contacto{
     flex-direction: row;
   }
@@ -453,55 +433,7 @@ figure{
   }
 }
 
-/*banner2*/
-.contenido{
-  width: 100%;
-  height: 60vh;
-  position: relative;
-  background-image: url(/images/bannerContador.jpg);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
 
-}
-.content{
-  padding: 4% 8%;
-}
-
-.content h2{
-  color: white;
-  font-family: 'Poppins';
-  font-weight: bold;
-  font-size: 25px;  
-}
-
-.content p{
-  color: white;
-  font-size: 16px;
-  font-family: 'Roboto';
-  padding-bottom: 10px;
-  padding-top: 20px;
-}
-
-.launch-time{
-  display: flex;
-  padding: 0% 8%;
-  margin-bottom: 30px;
-}
-
-.launch-time div{
-  flex-basis: 100px;
-}
-
-.launch-time div p {
-  font-size: 20px;
-  color: white;
-}
-
-.launch-time div span {
-  color: white;
-  font-size: 13px;
-}
 
 .ver{  
   border: solid 2px white;
@@ -518,34 +450,6 @@ figure{
 
 @media (min-width: 769px){
 
-/*BANNER2*/
-
-.launch-time div p {
-  font-size: 30px;
-  color: white;
-}
-.launch-time div {
-  flex-basis: 90px;
-}
-.contenido{
-  width: 100%;
-  height: 60vh;
-  margin-top: 20px;
-}
-.content{
-     padding: 0% 8%;
-    padding-top: 8%;
-    padding-bottom: 2%;
-}
-.content h2{
-  font-size: 40px;
-}
-
-.launch-time div span{
-  font-size: 20px;
-}
-
-/*FIN BANNER2*/
   .cont-main .imagenes-4 img{
     width: 43%;
     margin: 10px;
