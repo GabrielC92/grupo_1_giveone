@@ -92,7 +92,7 @@ validarFormulario = (e) => {
 			}
 			break;
 		case  "image":
-			if (e.target.files.length <= 1 && e.target.files.length > 0) {
+			if (e.target.files.length <= 5 && e.target.files.length > 0) {
 				document.getElementById('grupo__imagen').classList.remove('formulario__grupo-incorrecto');
 				document.getElementById('grupo__imagen').classList.add('formulario__grupo-correcto');
 				document.querySelector('#grupo__imagen i').classList.add('fa-check-circle')
