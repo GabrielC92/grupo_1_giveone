@@ -19,12 +19,7 @@
     width: 100%;
     margin-bottom: 15px;
 }
-.detail .detalle .product .descripcion .codigo-producto{
-    color: grey;
-    font-size: 1rem;
-    text-transform: uppercase;
 
-}
 .detail .detalle .product .descripcion .precio .price{
     font-size: 20px;
     font-weight: bold;
@@ -90,35 +85,6 @@
 }
 
 
-.detail .detalle .product .descripcion .cuotas-tarjeta{
-    text-transform: uppercase;
-}
-.detail .detalle .product .descripcion .cuotas-tarjeta i, .detail .detalle .product .descripcion .cuotas-tarjeta span{
-    font-size: 1.3rem;
-    padding: 10px 0;
-}
-.detail .detalle .product .descripcion .cantidad-productos{
-    margin: 15px 0;
-}
-.detail .detalle .product .descripcion .cantidad-productos span{
-    padding: 0 5px 0 5px;
-    text-transform: capitalize;
-    font-size: 0.9rem;
-}
-.detail .detalle .product .descripcion .cantidad-productos .cant{
-    background-color: white;
-    border: solid 1px #e7e5e5;
-    cursor: pointer;
-}
-.detail .detalle .product .descripcion .cantidad-productos .cant1{
-    background: white;
-    padding-left: 7px;
-    text-align: center;
-    border: solid 1px #e7e5e5;
-    padding-right: 7px;
-    cursor: pointer;
-}
-
 .detail .detalle .product .descripcion .cantidad-productos input{
     background-color: white;
     border: none;
@@ -169,6 +135,153 @@
     
     margin-top: 10px;
 }
+
+
+
+
+/*Caja de comentarios*/
+@-webkit-keyframes rotating {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @-moz-keyframes rotating {
+    from {
+      -moz-transform: rotate(0deg);
+    }
+    to {
+      -moz-transform: rotate(360deg);
+    }
+  }
+  @-o-keyframes rotating {
+    from {
+      -o-transform: rotate(0deg);
+    }
+    to {
+      -o-transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .detail .comments {
+   width: 100%;
+    position: relative;
+    margin: 15px auto;
+    padding: 20px;
+    font-family: 'Roboto'; 
+    font-size: 15px;
+    background: #f0f0f0;
+  }
+
+  .detail .comments::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: #333;
+    height: 75%;
+    left: -1px;
+    bottom: 1px;
+  }
+
+  .detail .comments .loader {
+    height: 45px;
+    width: 45px;
+    border: 4.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    border-left-color: #000;
+    position: absolute;
+    top: 70px;
+    left: 245.5px;
+    -webkit-animation: rotating 0.9s infinite linear;
+    -moz-animation: rotating 0.9s infinite linear;
+    -o-animation: rotating 0.9s infinite linear;
+    animation: rotating 0.9s infinite linear;
+  }
+  .detail .comments .inner {
+    display: none;
+  }
+  .detail .comments .inner .comment {
+    padding: 15px;
+    min-height: 48px;
+    margin-bottom: 10px;
+    color: #ccc;
+  }
+  .detail .comments .inner .comment .avatar {
+    width: 48px;
+    height: 48px;
+    float: left;
+    border-radius: 50%;
+  }
+  .detail .comments .inner .comment .body {
+    margin-left: 55px;
+  }
+  .detail .comments .inner .comment .body p {
+    color: black;
+  }
+  
+  .detail .add-new {
+    margin-bottom: 25px;
+  }
+  .detail .add-new .input {
+    display: block;
+    width: 40%;
+    background: #f0f0f0;
+    color: #888;
+    padding: 8px 10px;
+    outline: 0;
+    font-family: 'Roboto';
+    font-size: 15px;
+  }
+  .detail .add-new .input.your-name {
+    border :none
+  }
+  .detail .add-new .input.your-name.dived {
+    margin-top: 2px;
+    padding: 9px 10px 11px 10px;
+  }
+  .detail .add-new .input.your-msg {
+    margin-top: 15px;
+    max-height: 90px;
+    width: 100%;
+    border: solid 1px #e2e1e1;
+    background: #f0f0f0;
+  }
+  .detail .add-new .send-msg {
+    background: #333;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 8px 10px;
+    outline: 0;
+    border-radius: 1px 8px;
+    margin-top: 3px;
+    margin-right: -1px;
+    cursor: pointer;
+    width: 100px;
+    font-size: 14px;
+    border: none;
+    margin-top: 15px;
+  }
+  
+  .detail a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+   .detail .comentarios-box{
+      margin-top: 30px;
+  }
+
+
 
 @media (min-width: 426px) {
 
@@ -297,18 +410,8 @@
         font-size: 16px;
         padding-bottom: 20px;
     }
-    .detail .detalle .product .descripcion .cuotas-tarjeta i{
-        font-size: 1.5rem;
-    }
-    .detail .detalle .product .descripcion .cuotas-tarjeta span{
-        font-size: 12px;
-    }
-    .detail .detalle .product .descripcion .cantidad-productos span{
-        font-size: 1.1rem;
-    }
-    .detail .detalle .product .descripcion .favoritos-boton{
-        font-size: 1.2rem;
-    }
+    
+    
     .detail .detalle .product .parrafo{
         padding: 0 5%;
     }

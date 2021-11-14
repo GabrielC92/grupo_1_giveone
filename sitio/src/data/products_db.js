@@ -9,7 +9,7 @@ module.exports = [
   },
   {
     name: "Espatula Mango Glitter",
-    price: 2500,
+    price: 900,
     categoryId: 2,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
@@ -18,7 +18,7 @@ module.exports = [
   {
     name: "Platos Black",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
-    price: 3000,
+    price: 2100,
     categoryId:1,
     createdAt : new Date,
     updatedAt : new Date
@@ -26,7 +26,7 @@ module.exports = [
   {
     name: "Copas GRose",
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
-    price: 600,
+    price: 700,
     categoryId: 3,
     createdAt : new Date,
     updatedAt : new Date
@@ -40,9 +40,9 @@ module.exports = [
     updatedAt : new Date
   },
   {
-    name: "Jarra Black",
+    name: "Copas de Coctel",
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
-    price: 600,
+    price: 1000,
     categoryId: 3,
     createdAt : new Date,
     updatedAt : new Date
@@ -57,7 +57,7 @@ module.exports = [
   },
   {
     name: "Vaso Terracota",
-    price: 5000,
+    price: 350,
     categoryId: 3,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
@@ -65,7 +65,7 @@ module.exports = [
   },
   {
     name: "Plato Grecia",
-    price: 5000,
+    price: 400,
     categoryId: 1,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
@@ -73,7 +73,7 @@ module.exports = [
   },
   {
     name: "Plato Botánica",
-    price: 5000,
+    price: 550,
     categoryId: 1,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
@@ -81,7 +81,7 @@ module.exports = [
   },
   {
     name: "Plato Handmade",
-    price: 5000,
+    price: 700,
     categoryId: 1,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
@@ -89,7 +89,7 @@ module.exports = [
   },
   {
     name: "Plato Strawberry",
-    price: 5000,
+    price: 550,
     categoryId: 1,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
@@ -97,7 +97,7 @@ module.exports = [
   },
   {
     name: "Taza Grecia",
-    price: 5000,
+    price: 350,
     categoryId: 4,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
@@ -105,7 +105,7 @@ module.exports = [
   },
   {
     name: "Taza Galaxia",
-    price: 5000,
+    price: 410,
     categoryId: 4,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
@@ -113,7 +113,7 @@ module.exports = [
   },
   {
     name: "Jarra para Té Botánica",
-    price: 5000,
+    price: 1300,
     categoryId: 4,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
@@ -121,7 +121,7 @@ module.exports = [
   },
   {
     name: "Mugs de Ceramica Fauna",
-    price: 5000,
+    price: 500,
     categoryId: 4,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
@@ -129,7 +129,7 @@ module.exports = [
   },
   {
     name: "Tetera Flower",
-    price: 5000,
+    price: 2300,
     categoryId: 4,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
@@ -137,7 +137,7 @@ module.exports = [
   },
   {
     name: "Utensilios Mango de Madera",
-    price: 5000,
+    price: 2000,
     categoryId: 2,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
@@ -145,7 +145,7 @@ module.exports = [
   },
   {
     name: "Cubiertos Black",
-    price: 5000,
+    price: 700,
     categoryId: 2,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
@@ -153,7 +153,7 @@ module.exports = [
   },
   {
     name: "Sett de Cuchillos White Rose",
-    price: 5000,
+    price: 5100,
     categoryId: 2,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
@@ -161,7 +161,7 @@ module.exports = [
   },
   {
     name: "Utensilios de Madera",
-    price: 5000,
+    price: 950,
     categoryId: 2,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
@@ -169,7 +169,7 @@ module.exports = [
   },
   {
     name: "Jarra de Cristal",
-    price: 5000,
+    price: 1500,
     categoryId: 3,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
@@ -177,7 +177,7 @@ module.exports = [
   },
   {
     name: "Vasos Strawberry",
-    price: 5000,
+    price: 450,
     categoryId: 3,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,
@@ -185,7 +185,7 @@ module.exports = [
   },
   {
     name: "Vasos Cat",
-    price: 5000,
+    price: 300,
     categoryId: 3,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dictum enim sed commodo. Aenean vulputate, mi in malesuada imperdiet, magna nisi iaculis orci, eget rhoncus ex non massa",
     createdAt : new Date,

@@ -25,7 +25,6 @@
                                 
                             </div>
                             
-                            <!-- parte estática de 2° sprint id = 4 -->
                             <div class="favoritos-boton">
                                 <select name="" id="">
                                     <option>1</option>
@@ -44,7 +43,7 @@
                             </div> 
                         </div> 
                         <div class="compartir-producto">
-                            <p class="texto-compartir">COMPARTIR</p>
+                        <p class="texto-compartir">COMPARTIR</p>
                         <i class="fab fa-facebook-f"></i>
                         <i class="fab fa-twitter"></i>
                         <i class="fab fa-instagram"></i>
@@ -57,38 +56,126 @@
                 </section>
             </div>
             
-
-            <% if (locals.userLogin) { %>
-                <input type="text"  value="<%= locals.userLogin.name %>">
-               
-            <% } else { %>
-                <input type="text"  placeholder="usuario">
-            <% } %>
+            <!-- Caja de comentarios -->
+            <h3 class="comentarios-box" data-aos="fade-right">Comentarios</h3>
+            <div class='comments' data-aos="fade-up" data-aos-duration="2000">
+                <div class='loader'></div>
+                <div class='inner'>
+                  <div class='add-new'>
+                    <input class='input your-name' placeholder='Nombre' type='text'>
+                    <textarea rows="4" cols="50" class='input your-msg' placeholder='Escribí tu comentario'></textarea>
+                    <button class='send-msg'>Comentar</button>
+                  </div>
+                </div>
+              </div>
     
-<textarea name="" id="" placeholder='Comment'></textarea>
-<button>Share</button>
-<div></div>
-
-<header>
-<span class='hearts'><i class='fa fa-heart'></i></span>
-<span class='hearts'><i class='fa fa-heart'></i></span>
-<span class='hearts'><i class='fa fa-heart'></i></span>
-<span class='hearts'><i class='fa fa-heart'></i></span>
-<span class='hearts'><i class='fa fa-heart'></i></span>
-</header>  
 
 
-  
- <img src="http://www.maplecityrubber.com/wp-content/uploads/2012/11/standard-05-orange.png"> 
- <img src="http://www.maplecityrubber.com/wp-content/uploads/2012/11/18-sapphire-blue.png"> 
- <img src="http://www.maplecityrubber.com/wp-content/uploads/2012/11/15-emerald-green.png"> 
- <img src="http://www.spencerswishes.org/drupal/sites/default/files/pictures/purpleballoon3.png"> 
-  
+
 
 
 
     </main>    
     <%- include('partials/footer') %>
     <%- include('partials/scripts') %>
+    <script>
+        var defaultAvatar = "../images/users/avatar_default.png";
+var guestuserId = Math.floor(Math.random() * (150 - 10 + 1)) + 10;
+var guestusername = "";
+
+function stopLoader() {
+  $(".loader").fadeOut("slow", function() {
+    $(".comments .inner").fadeIn("slow");
+  });
+}
+
+function likecountinc(pos) {
+  var x = document.getElementById(`LikeSpan-${pos}`).innerHTML;
+  document.getElementById(`LikeSpan-${pos}`).innerHTML = x * 1 + 1;  
+}
+
+function dislikecountinc(pos) {
+  var x = document.getElementById(`DislikeSpan-${pos}`).innerHTML;
+  document.getElementById(`DislikeSpan-${pos}`).innerHTML = x * 1 + 1;
+}
+
+$(function() {
+  var allComments = [
+    {
+      userid: "1",
+      name: "Claudia",
+      avatar: "default",
+      before: "Hace 5 minutos",
+      message: "Hermoso articulo!"
+    }
+  ];
+
+  var loaded = 0;
+
+  $.each(allComments, function(i, val) {
+    var comment = $('<div class="comment"></div>');
+    var avatar = this.avatar == "default" ? defaultAvatar : this.avatar;
+    $('<img class="avatar" alt="avatar" src="' + avatar + '" />').appendTo(
+      comment
+    );
+    var contents = $('<div class="body"></div>');
+    $(
+      '<a href="./users/' +
+        this.userid +
+        '/" target="_blank">' +
+        this.name +
+        "</a>"
+    ).appendTo(contents);
+    $("<span> • " + this.before + "</span><br /><br />").appendTo(contents);
+    $("<p>" + this.message + "</p>").appendTo(contents);
+  
+  contents.appendTo(comment);
+    comment.appendTo(".comments .inner");
+    loaded++;
+  });
+
+  if (loaded == allComments.length) stopLoader();
+
+  $(".send-msg").click(function() {
+    var name = $(".your-name").val();
+    var msg = $(".your-msg").val();
+    var comment = $('<div class="comment" style="display: none;"></div>');
+    var contents = $('<div class="body"></div>');
+
+    if ((name === "" && guestusername === "") || msg === "") return false;
+    guestusername = guestusername === "" ? name : guestusername;
+    $(".your-msg").val("");
+
+    $(".your-name")
+      .fadeOut()
+      .remove();
+    $(".your-msg").before(
+      '<div class="input your-name dived">' + guestusername + "</div>"
+    );
+
+    $(
+      '<img class="avatar" alt="avatar" src="' + defaultAvatar + '" />'
+    ).appendTo(comment);
+    $(
+      '<a href="./users/' +
+        guestuserId +
+        '/" target="_blank">' +
+        guestusername +
+        "</a>"
+    ).appendTo(contents);
+    $("<span> • Right now</span><br /><br />").appendTo(contents);
+    $("<p>" + msg + "</p>").appendTo(contents);
+     
+    console.log('aabbcc');
+    contents.appendTo(comment);
+    $(".add-new").after(comment);
+    comment.fadeIn("slow");
+  });
+});
+    </script>
+
+    <script>
+        
+    </script>
 </body>
 </html>
