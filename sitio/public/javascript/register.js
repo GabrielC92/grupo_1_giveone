@@ -24,7 +24,7 @@ const acceptError = document.getElementById('accept-error');
 
 let regExLetter = /^[A-Z]+$/i;
 let regExEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,})+$/;
-let regExPass = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,16}$/; //mayúscula, número, caracter especial, de 8 a 16 caracteres
+let regExPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&<>+_-])[A-Za-z\d@$!%*#?&<>+_-]{8,16}$/; //mayúscula, número, caracter especial, de 8 a 16 caracteres
 let regExImg = /\.(jpg|jpeg|png|gif)$/;
 
 const emailVerify = async (email) => {
@@ -63,13 +63,13 @@ window.addEventListener('load', () => {
             default:
                 nameReg.classList.remove('invalid');
                 nameReg.classList.add('valid');
-                nameError.innerText = null;
+                nameError.innerHTML = null;
                 break;
         }
     })
     nameReg.addEventListener('keydown', () => {
         nameReg.classList.remove('invalid');
-        nameError.innerText = null;
+        nameError.innerHTML = null;
     })
 
     surname.addEventListener('blur', () => {
@@ -95,15 +95,15 @@ window.addEventListener('load', () => {
             default:
                 surname.classList.remove('invalid');
                 surname.classList.add('valid');
-                surnameError.innerText = null;
+                surnameError.innerHTML = null;
                 break;
         }
     })
 
-    email.addEventListener('blur', async function () {
+    email.addEventListener('blur', async function() {
         switch (true) {
             case !regExEmail.test(email.value):
-                emailError.innerText = "Tiene que ser un email válido";
+                emailError.innerText = "Debes ingresar un email válido";
                 email.classList.add('invalid');
                 email.classList.remove('valid');
                 break;
@@ -113,7 +113,7 @@ window.addEventListener('load', () => {
                 email.classList.remove('valid');
                 break;
             default:
-                emailError.innerText = null;
+                emailError.innerHTML = null;
                 email.classList.remove('invalid');
                 email.classList.add('valid');
                 break;
@@ -122,11 +122,11 @@ window.addEventListener('load', () => {
 
     pass.addEventListener('blur',() => {
         if(!regExPass.test(pass.value)){
-            passError.innerText = "La contraseña debe tener una mayúscula, un número entre 8 y 16 caracteres";
+            passError.innerText = "La contraseña debe tener al menos una mayúscula, un número y un caracter especial, y ser de 8 a 16 caracteres";
             pass.classList.add('invalid');
             pass.classList.remove('valid');
         }else{
-            passError.innerText = null;
+            passError.innerHTML = null;
             pass.classList.remove('invalid');
             pass.classList.add('valid');
         }
@@ -145,7 +145,7 @@ window.addEventListener('load', () => {
             pass2.classList.add('invalid');
             pass2.classList.remove('valid');
         }else{
-            pass2Error.innerText = null;
+            pass2Error.innerHTML = null;
             pass2.classList.remove('invalid');
             pass2.classList.add('valid');
         }
@@ -165,6 +165,8 @@ window.addEventListener('load', () => {
                 img.classList.add('valid');
                 imgError.innerHTML = null;
             }
+        } else{
+            img.classList.remove('invalid');
         }
     })
 
@@ -176,7 +178,14 @@ window.addEventListener('load', () => {
 
     registro.addEventListener('submit', (e) => {
         e.preventDefault();
-        let elementsForm = registro.elements;
+        let elementsForm = [
+            nameReg,
+            surname,
+            email,
+            pass,
+            pass2,
+            accept
+        ]
 
         let error = false;
 
@@ -198,7 +207,7 @@ window.addEventListener('load', () => {
             }
         }
         if(!error){
-            errorEmpty.innerText = null;
+            errorEmpty.innerHTML = null;
             registro.submit();
         }
     });

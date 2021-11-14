@@ -10,27 +10,27 @@ const passLogError = document.getElementById('pass-log-error');
 window.addEventListener('load', () => {
     console.log('login.js success!');
 
-    emailLog.addEventListener('blur', async function () {
-        switch (true) {
-            case !regExEmail.test(emailLog.value):
-                emailLogError.innerText = "Tiene que ingresar un email válido";
-                emailLog.classList.add('invalid');
-                emailLog.classList.remove('valid');
-                break;
-            case await emailVerify(emailLog.value):
-                emailLogError.innerText = null;
-                emailLog.classList.remove('invalid');
-                emailLog.classList.add('valid');
-                break;
-            default:
-                emailLogError.innerText = 'No estás registrado, haz clic en "Registrate"';
-                emailLog.classList.add('invalid');
-                emailLog.classList.remove('valid');
-                break;
-        }
-    })
+    emailLog.addEventListener('blur', async function() {
+            switch (true) {
+                case !regExEmail.test(emailLog.value):
+                    emailLogError.innerText = "Tiene que ingresar un email válido";
+                    emailLog.classList.add('invalid');
+                    emailLog.classList.remove('valid');
+                    break;
+                case await emailVerify(emailLog.value):
+                    emailLogError.innerHTML = null;
+                    emailLog.classList.remove('invalid');
+                    emailLog.classList.add('valid');
+                    break;
+                default:
+                    emailLogError.innerText = 'No estás registrado, haz clic en "Registrate"';
+                    emailLog.classList.add('invalid');
+                    emailLog.classList.remove('valid');
+                    break;
+            }
+        })
     emailLog.addEventListener('focus', () => {
-            emailLogError.innerText = null;
+            emailLogError.innerHTML = null;
             emailLog.classList.remove('invalid');
             emailLog.classList.remove('valid');
     })
@@ -48,12 +48,12 @@ window.addEventListener('load', () => {
                 passLog.classList.remove('valid');
                 break;
             case emailLog.classList.contains('valid'):
-                passLogError.innerText = null;
+                passLogError.innerHTML = null;
                 passLog.classList.remove('invalid');
                 passLog.classList.add('valid');
                 break;
             default:
-                passLogError.innerText = null;
+                passLogError.innerHTML = null;
                 passLog.classList.remove('invalid');
                 passLog.classList.remove('valid');
                 break;
@@ -66,13 +66,13 @@ window.addEventListener('load', () => {
     login.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        let error = false;
+        //let error = false;
 
         if (!emailLog.classList.contains('valid') && !passLog.classList.contains('valid')) {
             logErrorEmpty.innerText = "Complete los campos para iniciar sesión";
-            error = true;
+            //error = true;
         }else{
-            logErrorEmpty.innerText = null;
+            logErrorEmpty.innerHTML = null;
             login.submit();
         }
     })

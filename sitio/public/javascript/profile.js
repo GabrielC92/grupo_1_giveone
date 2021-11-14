@@ -1,4 +1,5 @@
 const profile = document.getElementById('form-profile');
+const profileError = document.getElementById('error-empty-upd');
 
 const nameUpd = document.getElementById('name-upd');
 const nameUpdError = document.getElementById('name-upd-error');
@@ -24,7 +25,7 @@ const imgUpdError = document.getElementById('img-upd-error');
 window.addEventListener('load', () => {
     console.log('profile.js success!');
     
-    nameUpd.addEventListener('blur', () => {
+    nameUpd.addEventListener('change', () => {
         switch (true) {
             case !nameUpd.value.trim():
                 nameUpdError.innerText = "El nombre es obligatorio";
@@ -47,16 +48,16 @@ window.addEventListener('load', () => {
             default:
                 nameUpd.classList.remove('invalid');
                 nameUpd.classList.add('valid');
-                nameUpdError.innerText = null;
+                nameUpdError.innerHTML = "";
                 break;
         }
     })
     nameUpd.addEventListener('keydown', () => {
         nameUpd.classList.remove('invalid');
-        nameUpdError.innerText = null;
+        nameUpdError.innerHTML = "";
     })
 
-    surnameUpd.addEventListener('blur', () => {
+    surnameUpd.addEventListener('change', () => {
         switch (true) {
             case !surnameUpd.value.trim():
                 surnameUpdError.innerText = "El apellido es obligatorio";
@@ -79,15 +80,15 @@ window.addEventListener('load', () => {
             default:
                 surnameUpd.classList.remove('invalid');
                 surnameUpd.classList.add('valid');
-                surnameUpdError.innerText = null;
+                surnameUpdError.innerHTML = "";
                 break;
         }
     })
 
-    emailUpd.addEventListener('blur', async function () {
+    emailUpd.addEventListener('change', async function() {
         switch (true) {
             case !regExEmail.test(emailUpd.value):
-                emailUpdError.innerText = "Tiene que ser un email válido";
+                emailUpdError.innerText = "Ingresa un email válido";
                 emailUpd.classList.add('invalid');
                 emailUpd.classList.remove('valid');
                 break;
@@ -97,22 +98,30 @@ window.addEventListener('load', () => {
                 emailUpd.classList.remove('valid');
                 break;
             default:
-                emailUpdError.innerText = null;
+                emailUpdError.innerHTML = "";
                 emailUpd.classList.remove('invalid');
                 emailUpd.classList.add('valid');
                 break;
         }
     })
 
-    oldPass.addEventListener('blur',() => {
-        if(!regExPass.test(oldPass.value)){
-            oldPassError.innerText = "La contraseña debe tener una mayúscula, un número entre 8 y 16 caracteres";
-            oldPass.classList.add('invalid');
-            oldPass.classList.remove('valid');
-        }else{
-            oldPassError.innerText = null;
-            oldPass.classList.remove('invalid');
-            oldPass.classList.add('valid');
+    oldPass.addEventListener('change',() => {
+        switch (true) {
+            case !oldPass.value:
+                oldPass.innerText = "Ingresa tu contraseña para guardar los cambios";
+                oldPass.classList.add('invalid');
+                oldPass.classList.remove('valid');
+                break;
+            case !regExPass.test(oldPass.value):
+                oldPassError.innerText = "La contraseña debe tener al menos una mayúscula, un número y un caracter especial, y ser de 8 a 16 caracteres";
+                oldPass.classList.add('invalid');
+                oldPass.classList.remove('valid');
+                break;
+            default:
+                oldPassError.innerHTML = "";
+                oldPass.classList.remove('invalid');
+                oldPass.classList.add('valid');
+                break;
         }
     })
     oldPass.addEventListener('focus',()=> {
@@ -121,11 +130,11 @@ window.addEventListener('load', () => {
 
     passUpd.addEventListener('blur',() => {
         if(!regExPass.test(passUpd.value)){
-            passUpdError.innerText = "La contraseña debe tener una mayúscula, un número entre 8 y 16 caracteres";
+            passUpdError.innerText = "La contraseña debe tener al menos una mayúscula, un número y un caracter especial, y ser de 8 a 16 caracteres";
             passUpd.classList.add('invalid');
             passUpd.classList.remove('valid');
         }else{
-            passUpdError.innerText = null;
+            passUpdError.innerHTML = "";
             passUpd.classList.remove('invalid');
             passUpd.classList.add('valid');
         }
@@ -144,7 +153,7 @@ window.addEventListener('load', () => {
             pass2Upd.classList.add('invalid');
             pass2Upd.classList.remove('valid');
         }else{
-            pass2UpdError.innerText = null;
+            pass2UpdError.innerHTML = "";
             pass2Upd.classList.remove('invalid');
             pass2Upd.classList.add('valid');
         }
@@ -162,11 +171,87 @@ window.addEventListener('load', () => {
             }else{
                 imgUpd.classList.remove('invalid');
                 imgUpd.classList.add('valid');
-                imgUpdError.innerHTML = null;
+                imgUpdError.innerHTML = "";
             }
+        }else{
+            imgUpd.classList.remove('invalid');
         }
     })
-    profile.addEventListener('submit', (e) => {
+    profile.addEventListener('submit', async (e) => {
         e.preventDefault();
+        try {
+            let response = await fetch('/api/users/verify-password', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: e.target.email.value,
+                    password: e.target.oldPass.value
+                })
+            })
+            let result = await response.json();
+
+            if (!result.response) {
+                alert('¡Contraseña incorrecta!');
+            } else {
+                profile.submit();
+            }
+        } catch (error) {
+            console.log(error);
+        }
+
+        /* let elementsUpdate = profile.elements;
+        let errorUpdate = false;
+
+        nameUpd.addEventListener('change', () => {
+            if(!oldPass.value){
+                nameUpd.classList.add('invalid');
+                errorUpdate = true;
+            }
+        })
+        surnameUpd.addEventListener('change', () => {
+            if(!oldPass.value){
+                surnameUpd.classList.add('invalid');
+                errorUpdate = true;
+            }
+        })
+        emailUpd.addEventListener('change', () => {
+            if(!oldPass.value){
+                emailUpd.classList.add('invalid');
+                errorUpdate = true;
+            }
+        })
+        oldPass.addEventListener('keydown', (event) => {
+            if (!event) {
+                e.preventDefault();
+            }
+            errorUpdate = true;
+        })
+        passUpd.addEventListener('change', () => {
+            if(!oldPass.value){
+                passUpd.classList.add('invalid');
+                errorUpdate = true;
+            }
+        }) */
+
+        /* for (let i = 0; i < elementsUpdate.length - 2; i++) {
+            if(!elementsUpdate[i].value){
+                elementsUpdate[i].classList.add('invalid');
+                profileError.innerText = "Los campos señalados son obligatorios";
+                errorUpdate = true;
+            }
+        } */
+
+        /* for (let i = 0; i < elementsUpdate.length - 2; i++) {
+            if(elementsUpdate[i].classList.contains('invalid')){
+                profileError.innerText = 'Debes cambiar como mínimo un campo para actualizar tu perfil de usuario';
+                errorUpdate = true;
+            }
+        }
+        if(!errorUpdate){
+            profileError.innerHTML = null;
+            profile.submit();
+        } */
     })
 })

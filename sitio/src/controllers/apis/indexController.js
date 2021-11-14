@@ -17,7 +17,7 @@ module.exports = {
                     /* order: [
                         [req.query.order || 'id']
                     ], */
-                    limit: +req.query.limit,
+                    //limit: +req.query.limit,
                     include: ['images', 'category'],
                 })
             } else {
