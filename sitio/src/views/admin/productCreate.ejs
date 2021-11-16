@@ -18,19 +18,19 @@
                         <input class="input-g formulario__input" id="nombre" type="text" name="name" placeholder="Nombre" value="<%= locals.old && old.name ? old.name : null %>">
                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
-                    <span class="red-msg"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
-                    <p class="formulario__input-error" >El nombre deberá tener al menos 5 caracteres</p>
+                         <span class="red-msg"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
+                         <p class="formulario__input-error" >El nombre deberá tener al menos 5 caracteres</p>
                 </div>
                 
             <!--Grupo:Descripcion-->
-                <div class="formulario__grupo" id="grupo__descripcion">
+            <div class="formulario__grupo" id="grupo__descripcion">
                     <div class="formulario__grupo-input">
                         <textarea class="input-g formulario__input" id="descripcion" name="description" placeholder="Descripción"  value="<%= locals.old && old.description ? old.description : null %>" ></textarea>
                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
-                    <span class="red-msg" ><%= locals.errors && errors.description ? errors.description.msg : null %> </span>
-                    <p class="formulario__input-error" >La descripción debe contener al menos 20 caracteres</p>
-                </div>
+                        <span class="red-msg" ><%= locals.errors && errors.description ? errors.description.msg : null %> </span>
+                        <p class="formulario__input-error" >La descripción debe contener al menos 20 caracteres</p>
+             </div>
 
                 <input class="input-g formulario__input" type="number" name="price" placeholder="Precio" value= <%= locals.old && old.price ? old.price : null%> >
                 <span class="red-msg"><%= locals.errors && errors.price ? errors.price.msg : null %> </span>
@@ -38,20 +38,20 @@
             <!--  <input class="input-g" type="text" name="categoryId" placeholder="categoría" required> -->
 
             <select  class="input-g" name="categoryId" id="categoria" class="form-select" <%= locals.errors && errors.categoryId? 'is-invalid' : null%>" name="categoryId">
-                <option value="" selected hidden>Seleccione la categoría</option>
-                <% categorias.forEach(categoria => { %>
+                     <option value="" selected hidden>Seleccione la categoría</option>
+                         <% categorias.forEach(categoria => { %>
                     <option value="<%= categoria.id %>" <%= locals.old ? old.categoryId : null  %> ><%= categoria.name %> </option>
                 <% }) %>
                 
             </select>
-            <span class="red-msg"><%= locals.errors && errors.categoryId ? errors.categoryId.msg : null %> </span>
+             <span class="red-msg"><%= locals.errors && errors.categoryId ? errors.categoryId.msg : null %> </span>
                 
             <!--Grupo:Imagen-->
-                <div class="formulario__grupo " id="grupo__imagen">
+            <div class="formulario__grupo " id="grupo__imagen">
                     <div class="formulario__grupo-input">
-                    <input class="input-g formulario__input" id="imagen" type="file" name="image" multiple accept="image/*">
-                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                </div>
+                            <input class="input-g formulario__input" id="imagen" type="file" name="image" multiple accept="image/*">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
                 <p class="formulario__input-error" >Deberá ser un archivo válido (JPG, JPEG, PNG, GIF)</p>
             </div>
 
