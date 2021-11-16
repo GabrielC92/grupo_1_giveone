@@ -35,10 +35,10 @@
             <input class="input-g" type="number" name="price" id="price"  placeholder="Precio" value="<%= product.price %>">
             <span class="red-msg"><%= locals.errors && errors.price ? errors.price.msg : null %> </span>
             
-            <input class="input-g" type="text" name="categoryId" id="categoryId"  placeholder="categoría" value="<%= product.category.name %>">
+            <input class="input-g" type="text" name="categoryId" id="categoryId"  placeholder="categoría" value="<%= product.category.id %>">
             <span class="red-msg"><%= locals.errors && errors.categoryId ? errors.categoryId.msg : null %> </span>
             
-            <input class="input-g" type="file" name="image" accept="image/*" value="">
+            <input class="input-g" id="images" type="file" name="image" accept="image/*" value="">
 
             <!--Mensaje de Error-->
             <div class="formulario__mensaje" id="formulario__mensaje">

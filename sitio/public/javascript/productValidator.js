@@ -5,14 +5,12 @@ const textarea = document.querySelectorAll('#formulario textarea')
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ0-9\s]{5,30}$/, // Letras, pueden llevar acentos, y numeros.
 	nombreEdit :/^[a-zA-ZÀ-ÿ0-9\s]{5,30}$/,
-	descripcion:/^[a-zA-ZÀ-ÿ0-9\s]{20,500}$/, // Letras, pueden llevar acentos.
+	descripcion:/^.{20,500}$/, // Letras, pueden llevar acentos.
 };
 
 const campos = [
 	nombre = false,
 	descripcion = false,
-	nombreEdit = false,
-	descripEdit = false,
 	imagen = false 
 ]
 
@@ -36,24 +34,6 @@ validarFormulario = (e) => {
 				campos['nombre'] = false
 			}
 		break;
-		case  "names":
-			if (expresiones.nombreEdit.test(e.target.value)) {
-				document.getElementById('grupo__nombre').classList.remove('formulario__grupo-incorrecto');
-				document.getElementById('grupo__nombre').classList.add('formulario__grupo-correcto');
-				document.querySelector('#grupo__nombre i').classList.add('fa-check-circle')
-				document.querySelector('#grupo__nombre i').classList.remove('fa-times-circle')
-				document.querySelector('#grupo__nombre .formulario__input-error').classList.remove('formulario__input-error-activo')
-				campos['nombreEdit'] = true;
-			} else{
-				document.getElementById('grupo__nombre').classList.add('formulario__grupo-incorrecto');
-				document.getElementById('grupo__nombre').classList.remove('formulario__grupo-correcto');
-				document.querySelector('#grupo__nombre i').classList.add('fa-times-circle')
-				document.querySelector('#grupo__nombre i').classList.remove('fa-check-circle')
-				document.querySelector('#grupo__nombre .formulario__input-error').classList.add('formulario__input-error-activo')
-
-				campos['nombreEdit'] = false
-			}
-			break;
 		case  "description":
 			if (expresiones.descripcion.test(e.target.value)) {
 				document.getElementById('grupo__descripcion').classList.remove('formulario__grupo-incorrecto');
@@ -71,28 +51,10 @@ validarFormulario = (e) => {
 
 				campos['descripcion'] = false
 			}
-		break;
-
-		case  "descrip":
-			if (expresiones.descripcion.test(e.target.value)) {
-				document.getElementById('grupo__descripcion').classList.remove('formulario__grupo-incorrecto');
-				document.getElementById('grupo__descripcion').classList.add('formulario__grupo-correcto');
-				document.querySelector('#grupo__descripcion i').classList.add('fa-check-circle')
-				document.querySelector('#grupo__descripcion i').classList.remove('fa-times-circle')
-				document.querySelector('#grupo__descripcion .formulario__input-error').classList.remove('formulario__input-error-activo')
-				campos['descripEdit'] = true;
-			} else{
-				document.getElementById('grupo__descripcion').classList.add('formulario__grupo-incorrecto');
-				document.getElementById('grupo__descripcion').classList.remove('formulario__grupo-correcto');
-				document.querySelector('#grupo__descripcion i').classList.add('fa-times-circle')
-				document.querySelector('#grupo__descripcion i').classList.remove('fa-check-circle')
-				document.querySelector('#grupo__descripcion .formulario__input-error').classList.add('formulario__input-error-activo')
-
-				campos['descripEdit'] = false
-			}
+		
 			break;
 		case  "image":
-			if (e.target.files.length <= 1 && e.target.files.length > 0) {
+			if (e.target.files.length <= 5 && e.target.files.length > 0) {
 				document.getElementById('grupo__imagen').classList.remove('formulario__grupo-incorrecto');
 				document.getElementById('grupo__imagen').classList.add('formulario__grupo-correcto');
 				document.querySelector('#grupo__imagen i').classList.add('fa-check-circle')
@@ -132,11 +94,8 @@ textarea.forEach((txtarea) => {
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-	if (campos.nombre && campos.descripcion && campos.imagen) {
+	if (campos.nombre && campos.descripcion) {
 		formulario.submit()
-	}else if(campos.nombreEdit && campos.descripEdit){
-		formulario.submit();
-		console.log(campos);
 	}else{
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 	}

@@ -449,6 +449,11 @@ figure{
 /* fin banner2*/
 
 @media (min-width: 769px){
+  .banner-back-product{
+    width: 90%;
+    margin: auto;
+    padding-top: 50px;
+  }
 
   .cont-main .imagenes-4 img{
     width: 43%;
