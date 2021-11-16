@@ -38,7 +38,7 @@
             <input class="input-g" type="text" name="categoryId" id="categoryId"  placeholder="categoría" value="<%= product.category.name %>">
             <span class="red-msg"><%= locals.errors && errors.categoryId ? errors.categoryId.msg : null %> </span>
             
-            <input class="input-g" type="file" name="image" accept="image/*" value="">
+            <input class="input-g" id="images" type="file" name="image" accept="image/*" value="">
 
             <!--Mensaje de Error-->
             <div class="formulario__mensaje" id="formulario__mensaje">

@@ -91,7 +91,7 @@ validarFormulario = (e) => {
 				campos['descripEdit'] = false
 			}
 			break;
-		case  "image":
+		case  "images":
 			if (e.target.files.length <= 5 && e.target.files.length > 0) {
 				document.getElementById('grupo__imagen').classList.remove('formulario__grupo-incorrecto');
 				document.getElementById('grupo__imagen').classList.add('formulario__grupo-correcto');
@@ -107,7 +107,7 @@ validarFormulario = (e) => {
 				document.querySelector('#grupo__imagen i').classList.remove('fa-check-circle')
 				document.querySelector('#grupo__imagen .formulario__input-error').classList.add('formulario__input-error-activo')
 
-				campos[''] = false
+				campos['imagen'] = false
 			}
 			console.log(e.target.files.length);
 		
