@@ -31,18 +31,18 @@ module.exports = {
         }
     },
     verifyPassword: async (req, res) => {
-        console.log(req.body)
+        //console.log(req.body)
         try {
             let user = await db.User.findOne({
                 where: { email: req.body.email }
             })
-            if (bcryptjs.compareSync(req.body.password, user.password)) {
+            if (bcryptjs.compareSync(req.body.oldPass, user.password)) {
                 return res.status(200).json({ response: true })
             } else {
                 return res.status(200).json({ response: false })
             }
         } catch (error) {
-            console.log()
+            //console.log()
             return res.status(500).json({ response: error })
         }
     }
