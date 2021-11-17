@@ -115,9 +115,9 @@ module.exports = {
             }
             db.User.update(
                 {
-                    name: name.trim(),
-                    lastName: lastName.trim(),
-                    email: email.trim(),
+                    name: name ? name.trim() : req.session.userLogin.name,
+                    lastName: lastName ? lastName.trim() : req.session.userLogin.lastName,
+                    email: email ? email.trim() : req.session.userLogin.email,
                     password: pass ? bcrypt.hashSync(pass.trim(), 10) : bcrypt.hashSync(oldPass.trim(), 10),
                     //rolId: 2,
                     avatar: oldPass && req.file ? req.file.filename : req.session.userLogin.avatar.filename
@@ -128,7 +128,10 @@ module.exports = {
                     }
                 }
             )
-                .then(() => {
+                .then((user) => {
+                    if (req.body.name) {
+                        user.name = res.locals.userLogin.name
+                    }
                     return res.redirect('/');
                 })
                 .catch(error => console.log(error));
