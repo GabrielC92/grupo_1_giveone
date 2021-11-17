@@ -1,0 +1,92 @@
+.contenedor-contacto{
+    width: 200px; height: 200px;
+    margin: 2em; display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative; cursor: pointer;
+    transition: all .5s;
+    font-family: 'Roboto';
+  }
+  
+  .contenedor-contacto:hover{color: white;}
+  
+  .contenedor-contacto::before, 
+  .contenedor-contacto::after{
+    content: ''; position: absolute;
+    top: 0; left: 0;
+    width: 200px; height: 210px;
+    background: #f0f0f0;
+   border-radius: 20px 1px;
+    transition: all .5s;
+  }
+  
+  .contenedor-contacto::after{
+    background: #333;
+    transform-origin: right bottom;
+    transform: translate(10%,10%) scale(0.3);
+    border-radius: 50%; transition: all .5s;
+  }
+  
+  .contenedor-contacto:hover::after{
+    transform: translate(0) scale(1);
+    border-radius: 0; border-radius: 20px 1px;
+  
+  }
+  
+  .contenedor-contacto:hover::before{
+    transform-origin: right bottom;
+    transform: translate(10%,10%) scale(0.3);
+    border-radius: 50%; z-index: 1;
+    visibility: 1;
+  }
+  
+  .fordCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+    
+  }
+  .contenedor-contacto h3 ,
+  .contenedor-contacto p{
+    z-index: 1;
+  }
+  .contenedor-contacto h3{
+    margin-bottom: 20px;
+  }
+  
+  .contenedor-contacto .fab{
+    color: #23b31e;
+    margin-right: 5px;
+  }
+  .contenedor-contacto .fa-headphones-alt{
+  
+    color: cadetblue;
+    margin-right: 5px;
+  }
+  .contenedor-contacto .fa-envelope{
+  
+    color: #ed3e3e;
+    margin-right: 5px;
+  }
+  
+  .contenedor-contacto p{
+    
+    font-size: 15px;
+   
+    margin-left: 20px;
+  
+  }
+
+  @media (min-width: 769px){
+    .fordCard{
+      display: flex;
+      justify-content: center;
+      flex-direction: initial;
+      align-items: center;
+      
+    }
+  }
+  

@@ -15,7 +15,7 @@
                <!--Grupo:Nombre-->
                 <div class="formulario__grupo " id="grupo__nombre">
                     <div class="formulario__grupo-input">
-                        <input class="input-g formulario__input" id="nombre" type="text" name="name" placeholder="Nombre" value="<%= locals.old && old.name ? old.name : null %>">
+                        <input class="input-g formulario__input" id="nombre" type="text" name="name"  autocomplete="off" placeholder="Nombre" value="<%= locals.old && old.name ? old.name : null %>">
                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
                          <span class="red-msg"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
@@ -25,7 +25,7 @@
             <!--Grupo:Descripcion-->
             <div class="formulario__grupo" id="grupo__descripcion">
                     <div class="formulario__grupo-input">
-                        <textarea class="input-g formulario__input" id="descripcion" name="description" placeholder="Descripción"  value="<%= locals.old && old.description ? old.description : null %>" ></textarea>
+                        <textarea class="input-g formulario__input" id="descripcion" name="description"  autocomplete="off" placeholder="Descripción"  value="<%= locals.old && old.description ? old.description : null %>" ></textarea>
                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
                         <span class="red-msg" ><%= locals.errors && errors.description ? errors.description.msg : null %> </span>

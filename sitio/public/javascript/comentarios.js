@@ -40,7 +40,7 @@ comment
 );
 var contents = $('<div class="body"></div>');
 $(
-'<a href="./users/' +
+'<a class="user-coment" href="./users/' +
 this.userid +
 '/" target="_blank">' +
 this.name +
