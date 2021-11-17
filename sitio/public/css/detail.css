@@ -273,7 +273,7 @@
   }
   
   .detail a {
-    color: #333;
+    
     text-decoration: none;
     font-weight: bold;
   }
@@ -281,6 +281,13 @@
       margin-top: 30px;
   }
 
+  .boton-detail{
+    color: white;
+  }
+
+  .user-coment{
+    color:black
+  }
 
 
 @media (min-width: 426px) {

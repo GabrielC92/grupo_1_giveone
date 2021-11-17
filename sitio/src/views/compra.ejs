@@ -52,16 +52,16 @@
           
               <div class="inputBox">
                 <span>Número de Tarjeta</span>
-                <input type="text" maxlength="19" placeholder="1234 1234 1234 1234" autocomplete="off" class="card-number-input"/>
+                <input id="numero" type="text" maxlength="19" placeholder="1234 1234 1234 1234" autocomplete="off" class="card-number-input"/>
               </div>
               <div class="inputBox">
                 <span>Titular de Tarjeta</span>
-                <input type="text" maxlength="30" placeholder="Jonh Dae"  autocomplete="off" class="card-holder-input"/>
+                <input id="titular" type="text" maxlength="30" placeholder="Jonh Dae"  autocomplete="off" class="card-holder-input"/>
               </div>
               <div class="flexbox">
                 <div class="inputBox">
                   <span>Válido mm</span>
-                  <select name="" id="" class="month-input">
+                  <select name="" id="month-input" class="month-input">
                     <option value="month" selected disabled>Mes</option>
                     <option value="01" >01</option>
                     <option value="02" >02</option>
@@ -80,7 +80,7 @@
                 </div>
                 <div class="inputBox">
                   <span>Válido yy</span>
-                  <select name="" id="" class="year-input">
+                  <select  name="" id="year-input" class="year-input">
                     <option value="year" selected disabled>Año</option>
                     <option value="2021" >2021</option>
                     <option value="2022" >2022</option>
@@ -97,11 +97,11 @@
                 </div>
                 <div class="inputBox">
                   <span>cvv</span>
-                  <input type="text" maxlength="4" class="cvv-input">
+                  <input id="cvv" type="text" maxlength="4" class="cvv-input">
                 </div>
               </div>  
              
-              <a  class="submit-btn" href="/"><button href="/" type="submit">FINALIZAR</button></a>
+             <button onclick="validation()"type="submit"><a class="submit-btn" href="/">Finalizar</a></button>
           </form>
 
     </div> <!-- END: .contenedor -->
@@ -109,6 +109,21 @@
 
   <%- include('partials/footer') %>
   <%- include('partials/scripts') %>
+  <script>
+
+    function validation(){
+      swal({
+  title: "Good job!",
+  text: "You clicked the button!",
+  icon: "success",
+});
+    }
+
+
+  </script>
+
+
+  
 </body>
 
 </html>

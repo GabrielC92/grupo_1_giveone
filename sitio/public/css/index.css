@@ -162,6 +162,7 @@ figure{
 .action li a i{
   text-decoration: none;
   color: #333;
+  outline: none;
 }
 
 .action li a:hover{
@@ -239,6 +240,7 @@ figure{
   text-align: center;
   font-family: 'Roboto';
   padding-top: 70px;
+  font-size: 20px;
 }
 /*fin contacto*/
 
@@ -271,22 +273,7 @@ figure{
 }
 
 /*******CONTACTO* 320*******/
-.contacto{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 70px;
-  margin-left: 45px;
-  margin-top: 10px;
-  font-family: 'Roboto';
-}
 
-.contacto .name{
-  font-weight: bold;
-  padding-bottom: 5px;
-  margin-top: 12px;
-}
 /*******BANNER* 320*******/
 
 .titulo-sect h3{
@@ -335,13 +322,7 @@ figure{
   .horizontal-slider{
     display: none;
   }
-
-  .contacto{
-    justify-content: space-evenly;
-    font-size: 14px;
-    margin-left: 16px;
-  }
-  
+ 
   .cont-padre{
     position: relative;
     top: 30px;
@@ -424,17 +405,6 @@ figure{
 }
 
 @media (min-width: 526px) {
-
-  .contacto{
-    flex-direction: row;
-  }
-  .contacto .name{
-    margin-top: 0;
-  }
-}
-
-
-
 .ver{  
   border: solid 2px white;
   margin: 10% 8%;
@@ -445,6 +415,7 @@ figure{
 
 .cont-box{
   position: absolute;
+}
 }
 /* fin banner2*/
 
@@ -484,11 +455,6 @@ figure{
 
   .header1 .banner-cv {
     bottom: 30px;
-  }
-
-  .contacto{
-    padding-bottom: 90px;
-    font-size: 16px;
   }
 
   .client{
