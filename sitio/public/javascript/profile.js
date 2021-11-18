@@ -26,7 +26,7 @@ const imgUpdError = document.getElementById('img-upd-error');
 window.addEventListener("load", () => {
     console.log('profile.js success!');
 
-    /* nameUpd.addEventListener('blur', () => {
+    nameUpd.addEventListener('blur', () => {
         switch (true) {
             case !nameUpd.value.trim():
                 nameUpdError.innerText = "El nombre es obligatorio";
@@ -80,27 +80,7 @@ window.addEventListener("load", () => {
                 surnameUpdError.innerHTML = null;
                 break;
         }
-    }) */
-
-    /* emailUpd.addEventListener("change", async () => {
-            switch (true) {
-                case !regExEmail.test(emailUpd.value):
-                    emailUpdError.innerText = "Debes ingresar un email válido";
-                    emailUpd.classList.add('invalid');
-                    emailUpd.classList.remove('valid');
-                    break;
-                case await emailVerify(emailUpd.value):
-                    emailUpdError.innerText = "El email está registrado";
-                    emailUpd.classList.add('invalid');
-                    emailUpd.classList.remove('valid');
-                    break;
-                default:
-                    emailUpdError.innerHTML = null;
-                    emailUpd.classList.remove('invalid');
-                    emailUpd.classList.add('valid');
-                    break;
-            }
-        }) */
+    })
 
     /* passUpd.addEventListener('blur',() => {
         switch (true) {
@@ -123,9 +103,9 @@ window.addEventListener("load", () => {
     })
     passUpd.addEventListener('focus',()=> {
         passUpd.classList.remove('invalid');
-    })
+    }) */
 
-    pass2Upd.addEventListener('blur',() => {
+    /* pass2Upd.addEventListener('blur',() => {
         if(passUpd.value !== pass2Upd.value){
             pass2UpdError.innerText = "Las contraseñas no coinciden";
             pass2Upd.classList.add('invalid');
@@ -142,7 +122,7 @@ window.addEventListener("load", () => {
     })
     pass2Upd.addEventListener('focus',()=> {
         pass2Upd.classList.remove('invalid');
-    })
+    }) */
 
     imgUpd.addEventListener('change', () => {
         if (imgUpd.value) {
@@ -158,7 +138,7 @@ window.addEventListener("load", () => {
         } else{
             imgUpd.classList.remove('invalid');
         }
-    }) */
+    })
 
     profile.addEventListener("submit",(e) => {
         e.preventDefault();
@@ -179,7 +159,7 @@ window.addEventListener("load", () => {
                 oldPassError.innerHTML = null;
                 oldPass.classList.remove('invalid');
                 oldPass.classList.add('valid');
-                profileError.innerHTML = null
+                profileError.innerHTML = null;
                 profile.submit();
                 break;
         }
