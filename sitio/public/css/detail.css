@@ -138,6 +138,21 @@
     margin-top: 10px;
 }
 
+.compartir-producto a{
+text-decoration: none;
+
+}
+
+.compartir-producto .fa-facebook-f{
+  color: #3B5998;
+}
+.compartir-producto .fa-whatsapp{
+  color: #25D366;
+}
+
+.compartir-producto .fa-twitter{
+color: #34B7F1;
+}
 
 
 
