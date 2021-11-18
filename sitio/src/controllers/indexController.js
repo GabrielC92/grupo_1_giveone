@@ -130,4 +130,9 @@ module.exports = {
             title: 'Finaliza tu compra'
         });
     },
+    about: (req,res) => {
+        return res.render('about',{
+            title: 'Quiénes somos'
+        });
+    }
 }

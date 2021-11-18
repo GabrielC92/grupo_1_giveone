@@ -89,7 +89,21 @@ module.exports = {
         })
             .then(user => {
                 return res.render('users/profile',{
-                    title : "Perfil de Usuario",
+                    title : `Perfil de ${user.name} ${user.lastName}`,
+                    user
+                });
+            })
+            .catch(error => console.log(error));
+    },
+    profileEdit : (req,res) =>{
+        db.User.findOne({
+            where: {
+                id: req.session.userLogin.id
+            }
+        })
+            .then(user => {
+                return res.render('users/profileEdit',{
+                    title : `Editar perfil de ${user.name} ${user.lastName}`,
                     user
                 });
             })
@@ -128,10 +142,7 @@ module.exports = {
                     }
                 }
             )
-                .then((user) => {
-                    if (req.body.name) {
-                        user.name = res.locals.userLogin.name
-                    }
+                .then(() => {
                     return res.redirect('/');
                 })
                 .catch(error => console.log(error));
