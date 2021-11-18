@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <%- include('../partials/head') %>
-<body class="register">
+<body>
     <%- include('../partials/header') %>
-
     <main class="registro">
         <section class="titular">
             <h2 class="titulo">Perfil de <%= user.name %></h2>
@@ -14,31 +13,17 @@
         <div class="box-img-user">
             <img class="img-user" src="/images/users/<%= user.avatar %>" alt="usuario">
         </div>
-        <form id="form-profile" class="log" action="/users/profile?_method=PUT" method="POST" enctype="multipart/form-data">
-            <p class="invalid" id="error-empty-upd"></p>
-            <input id="name-upd" class="input-g" type="text" name="name" placeholder="Nombre" value="<%= user.name %>">
-            <span id="name-upd-error" class="red-msg"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+        <section id="form-profile" class="log">
+            <p class="input-g">Nombre: <span><%= user.name %></span></p>
 
-            <input id="surname-upd" class="input-g" type="text" name="lastName" placeholder="Apellido" value="<%= user.lastName %>">
-            <span id="surname-upd-error" class="red-msg"><%= locals.errors && errors.lastName ? errors.lastName.msg : null %></span>
+            <p class="input-g">Apellido: <span><%= user.lastName %></span></p>
 
-            <input id="email-upd" class="input-g" type="email" name="email" placeholder="E-mail" value="<%= user.email %>">
-            <span id="email-upd-error" class="red-msg"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
+            <p class="input-g">E-mail: <span><%= user.email %></span></p>
 
-            <input id="oldPass" class="input-g" type="password" name="oldPass" placeholder="Ingresa la contraseña">
-            <span id="oldPass-error" class="red-msg"><%= locals.errors && errors.oldPass ? errors.oldPass.msg : null %></span>
+            <p class="input-g">Contraseña: <input disabled type="password" value="<%= user.password %>"></p>
 
-            <input id="pass-upd" class="input-g" type="password" name="pass" placeholder="Elige nueva contraseña">
-            <span id="pass-upd-error" class="red-msg"><%= locals.errors && errors.pass ? errors.pass.msg : null %></span>
-
-            <input id="pass2-upd" class="input-g" type="password" name="pass2" placeholder="Confirmar contraseña">
-            <span id="pass2-upd-error" class="red-msg"><%= locals.errors && errors.pass2 ? errors.pass2.msg : null %></span>
-
-            <input id="img-upd" class="input-g" type="file" name="avatar" accept="image/*" value="<%= user.avatar %>">
-            <span id="img-upd-error" class="red-msg"><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></span>
-
-            <button class="btn-g" type="submit">Guardar cambios</button>
-        </form>
+            <button class="btn-g" type="submit"><a href="/users/profileEdit">Editar perfil</a></button>
+        </section>
     </main>
     <%- include('../partials/footer') %>
     <%- include('../partials/scripts') %>
