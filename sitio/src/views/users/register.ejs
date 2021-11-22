@@ -35,7 +35,10 @@
                 <label for="accept-reg">Acepto los términos y condiciones</label>
                 <p id="accept-error" class="red-msg"><%= locals.errors && errors.aceptar ? errors.aceptar.msg : null %></p>
             </div>
-            <button class="btn-g" type="submit">Crear cuenta</button>
+            <div class="buttons">
+                <a class="registrar-btn" href="/users/login"><button class="btn-g" type="button">Log in</button></a>
+                <button class="btn-g" type="submit">Crear cuenta</button>
+            </div>
         </form>
     </main>
     <%- include('../partials/footer') %>

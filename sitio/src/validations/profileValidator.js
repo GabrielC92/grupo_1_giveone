@@ -3,20 +3,66 @@ const {check,body} = require('express-validator');
 const db = require('../database/models');
 const bcrypt = require('bcryptjs');
 
+let regExLetter = /^[A-Z]+$/i;
+let regExEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,})+$/;
+
 module.exports = [
 
     body('name')
-    .notEmpty().withMessage('El nombre es obligatorio').bail()
-    .isAlpha().withMessage('Solo se admiten caracteres alfabeticos').bail()
-    .isLength({min: 2}).withMessage('Debe tener como mínimo 2 letras'),
+    .custom((value,{req}) => {
+        if (value !=  "") {
+            if (regExLetter.test(value)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }).withMessage('Solo se admiten caracteres alfabeticos').bail()
+    .custom((value,{req}) => {
+        if (value !=  "") {
+            if (value.length >= 2) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }).withMessage('Debe tener como mínimo 2 letras'),
 
     body('lastName')
-    .notEmpty().withMessage('El nombre es obligatorio').bail()
-    .isAlpha().withMessage('Solo se admiten caracteres alfabeticos').bail()
-    .isLength({min: 2}).withMessage('Debe tener como mínimo 2 letras'),
+    .custom((value,{req}) => {
+        if (value !=  "") {
+            if (regExLetter.test(value)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }).withMessage('Solo se admiten caracteres alfabeticos').bail()
+    .custom((value,{req}) => {
+        if (value !=  "") {
+            if (value.length >= 2) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }).withMessage('Debe tener como mínimo 2 letras'),
 
-    body('email').notEmpty().withMessage('Debe ingresar un email').bail()
-    .isEmail().withMessage('Debe ingresar un email válido'),
+    body('email')
+    .custom((value,{req}) => {
+        if (value != "") {
+            if (regExEmail.test(value)) {
+                return true;
+            } else{
+                return false;
+            }
+        }
+        return true;
+    }).withMessage('Debe ingresar un email válido'),
 
     body('oldPass')
     .notEmpty().withMessage('Ingrese su contraseña').bail()

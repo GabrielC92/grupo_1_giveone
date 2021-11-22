@@ -36,3 +36,10 @@ textarea{
 .img-user{
     width: 40%;
 }
+
+@media (min-width: 769px) {
+    /* profile */
+    .box-img-user{
+        display: none;
+    }
+}

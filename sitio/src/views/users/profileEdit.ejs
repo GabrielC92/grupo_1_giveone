@@ -8,7 +8,11 @@
         <section class="titular">
             <h2 class="titulo">Perfil de <%= user.name %></h2>
             
-            <div class="box-img"><img class="coffee" src="/images/mug_coffee_PNG97438.png" alt="coffee"></div>
+            <% if (locals.userLogin) { %>
+                <div class="box-img"><img class="coffee" src="/images/users/<%= user.avatar %>" alt="coffee"></div>
+            <% } else { %>
+                <div class="box-img"><img class="coffee" src="/images/mug_coffee_PNG97438.png" alt="coffee"></div>
+            <% } %>
         </section>
 
         <div class="box-img-user">
@@ -16,13 +20,13 @@
         </div>
         <form id="form-profile" class="log" action="/users/profile?_method=PUT" method="POST" enctype="multipart/form-data">
             <p class="invalid" id="error-empty-upd"></p>
-            <input id="name-upd" class="input-g" type="text" name="name" placeholder="Nombre" value="<%= user.name %>">
+            <input id="name-upd" class="input-g" type="text" name="name" placeholder="Nombre" value="">
             <span id="name-upd-error" class="red-msg"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
 
-            <input id="surname-upd" class="input-g" type="text" name="lastName" placeholder="Apellido" value="<%= user.lastName %>">
+            <input id="surname-upd" class="input-g" type="text" name="lastName" placeholder="Apellido" value="">
             <span id="surname-upd-error" class="red-msg"><%= locals.errors && errors.lastName ? errors.lastName.msg : null %></span>
 
-            <input id="email-upd" class="input-g" type="email" name="email" placeholder="E-mail" value="<%= user.email %>">
+            <input id="email-upd" class="input-g" type="email" name="email" placeholder="E-mail" value="">
             <span id="email-upd-error" class="red-msg"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
 
             <input id="oldPass" class="input-g" type="password" name="oldPass" placeholder="Ingresa la contraseña">
