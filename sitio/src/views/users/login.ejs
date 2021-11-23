@@ -14,8 +14,13 @@
             <input id="email-log" class="input-g" type="email" name="email" autocomplete="off" placeholder="E-mail" value="<%= locals.old && old.email ? old.email : null %>">
             <span id="email-log-error" class="red-msg"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
 
-            <input id="pass-log" class="input-g" type="password" name="pass" placeholder="Contraseña">
-            <span id="pass-log-error" class="red-msg"><%= locals.errors && errors.pass ? errors.pass.msg : null %></span>
+            <div class="box-pass">
+                <input id="pass-log" class="input-g" type="password" name="pass" placeholder="Contraseña">
+                <button class="button-pass" type="button" id="watch">
+                    <i class="fas fa-eye"></i>
+                </button>
+                <span id="pass-log-error" class="red-msg"><%= locals.errors && errors.pass ? errors.pass.msg : null %></span>
+            </div>
 
             <label class="check" for="rec">
                 <input class="sesion" type="checkbox" name="sesion" id="rec">

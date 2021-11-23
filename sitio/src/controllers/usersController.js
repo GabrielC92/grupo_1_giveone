@@ -142,9 +142,7 @@ module.exports = {
                     }
                 }
             )
-                .then(user => {
-                    //req.session.userLogin = res.locals.userLogin
-                    user = res.locals.userLogin
+                .then(() => {
                     return res.redirect('/');
                 })
                 .catch(error => console.log(error));

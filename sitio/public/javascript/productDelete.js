@@ -1,11 +1,11 @@
-let Swal = require('sweetalert2/*/sweetalert2.all.js');
+let { fire } = require('sweetalert2');
 let productDelete = document.getElementById('product-delete');
 
 console.log('productDelete.js success!');
 
 productDelete.addEventListener("submit", e => {
   e.preventDefault();
-  Swal.fire({
+  fire({
       title: '¿Estás seguro de borrar este producto?',
       text: "¡No podrás revertir esta acción!",
       icon: 'warning',
@@ -15,7 +15,7 @@ productDelete.addEventListener("submit", e => {
       confirmButtonText: '¡Delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire(
+        fire(
           '¡Eliminado!',
           'El producto fue eliminado de la base de datos.',
           'success'
