@@ -1,4 +1,14 @@
 /* login y admin */
+.registro .log .box-pass{
+    position: relative;
+}
+.registro .log .box-pass .button-pass{
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    background-color: transparent;
+    border-color: transparent;
+}
 .registro .log .check{
     display: flex;
     align-items: baseline;
@@ -35,4 +45,11 @@ textarea{
 }
 .img-user{
     width: 40%;
+}
+
+@media (min-width: 769px) {
+    /* profile */
+    .box-img-user{
+        display: none;
+    }
 }

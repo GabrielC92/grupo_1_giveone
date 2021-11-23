@@ -129,10 +129,10 @@ module.exports = {
             }
             db.User.update(
                 {
-                    name: name ? name.trim() : req.session.userLogin.name,
-                    lastName: lastName ? lastName.trim() : req.session.userLogin.lastName,
-                    email: email ? email.trim() : req.session.userLogin.email,
-                    password: pass ? bcrypt.hashSync(pass.trim(), 10) : bcrypt.hashSync(oldPass.trim(), 10),
+                    name: name && oldPass ? name.trim() : req.session.userLogin.name,
+                    lastName: lastName && oldPass ? lastName.trim() : req.session.userLogin.lastName,
+                    email: email && oldPass ? email.trim() : req.session.userLogin.email,
+                    password: pass && oldPass ? bcrypt.hashSync(pass.trim(), 10) : bcrypt.hashSync(oldPass.trim(), 10),
                     //rolId: 2,
                     avatar: oldPass && req.file ? req.file.filename : req.session.userLogin.avatar.filename
                 },
@@ -153,7 +153,7 @@ module.exports = {
                 }
             })
                 .then(user => {
-                    return res.render('users/profile',{
+                    return res.render('users/profileEdit',{
                         title : "Perfil de Usuario",
                         errors : errors.mapped(),
                         user

@@ -7,7 +7,11 @@
         <section class="titular">
             <h2 class="titulo">Perfil de <%= user.name %></h2>
             
-            <div class="box-img"><img class="coffee" src="/images/mug_coffee_PNG97438.png" alt="coffee"></div>
+            <% if (locals.userLogin) { %>
+                <div class="box-img"><img class="coffee" src="/images/users/<%= user.avatar %>" alt="coffee"></div>
+            <% } else { %>
+                <div class="box-img"><img class="coffee" src="/images/mug_coffee_PNG97438.png" alt="coffee"></div>
+            <% } %>
         </section>
 
         <div class="box-img-user">
@@ -20,9 +24,9 @@
 
             <p class="input-g">E-mail: <span><%= user.email %></span></p>
 
-            <p class="input-g">Contraseña: <input disabled type="password" value="<%= user.password %>"></p>
+            <p class="input-g">Contraseña: <span disabled type="password" value="<%= user.password %>"></span></p>
 
-            <button class="btn-g" type="submit"><a href="/users/profileEdit">Editar perfil</a></button>
+            <a href="/users/profileEdit"><button class="btn-g" type="button">Editar perfil</button></a>
         </section>
     </main>
     <%- include('../partials/footer') %>

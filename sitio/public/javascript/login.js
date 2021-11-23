@@ -7,9 +7,18 @@ const emailLogError = document.getElementById('email-log-error');
 const passLog = document.getElementById('pass-log');
 const passLogError = document.getElementById('pass-log-error');
 
+let btnWatch = document.getElementById('watch');
+
 window.addEventListener('load', () => {
     console.log('login.js success!');
 
+    btnWatch.addEventListener("click", () => {
+        if (passLog.getAttribute('type') == 'text') {
+            passLog.setAttribute('type', 'password');
+        } else {
+            passLog.setAttribute('type', 'text');
+        }
+    })
     emailLog.addEventListener('blur', async function() {
             switch (true) {
                 case !regExEmail.test(emailLog.value):
