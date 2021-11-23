@@ -28,9 +28,12 @@ footer .contenedor-subs form{
     padding-top: 12px;
 }
 
-footer .listas a {
-    font-family: 'Roboto';
-    padding-bottom: 50px;
+footer .contenedor-navegacion .redirec-about{
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    padding-top: 10px;
 }
 
 footer .listas  p{

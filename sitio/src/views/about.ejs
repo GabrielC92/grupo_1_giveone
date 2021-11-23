@@ -1,22 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head') %>
-<body>
+<body class="about">
     <%- include('partials/header') %>
     <main>
-        <div><img src="/public/images/giveOneTNC2.png" alt="logo"></div>
-        <p>Somos "Give One" una empresa argentina dedicada a la venta de vajillas, cristalería y cubiertos para todo el país de manera rápida, segura y eficaz a través de la venta online.
-            Contamos con una amplia gama de productos para satisfacer la demanda de nuestros clientes.
-            Vendemos al por mayor y menor, para casas de hogar, hoteles, restaurantes y empresas. Brindamos asesoramiento personalizado a nuestros clientes mediante un Staff de venta y administración, proporcionando las mejores soluciones en el desarrollo de sus compras.
-            <br>
-            Buscamos que nuestros clientes reconozcan siempre nuestros objetivos de trabajo:
-            <br>
-            Calidad de atención, originalidad y calidad de producto, entrega inmediata y stock permanente.
-            <br>
-            Ante cualquier dudas, nos podes escribir a give@one.com.ar
-        </p>
-    </main>
+        <div class="box">
+          <div class="inner-box">
+            <div class="forms-wrap">
+              <div id="logo-texto" class="integrantes">
+                <div class="heading">
+                  <h2>Sobre Nosotros</h2>
+                </div>
+  
+                <div class="actual-form">
+                  <p><span>Give One </span>es un Ecommerce dedicado a la venta de Vajillas, Cristalería ,Cubiertos ,Cafe y Tè  a través de la venta online.</p>
+                  <p> <br>Quisimos hacer un sitio sitio web moderno, donde se puedan encontrar animaciones, ya sean transiciones sutiles o mucho mas elaboradas,
+                    con el fin de que la experiencia del usuario al navegar, sea mucho más interactiva y dinámica.</p>
+                </div>
+                <a href="#" class="toggle">Integrantes</a>
+              </div>
+  
+              <!--marcasss-->
+  
+              <div id="logo-texto" class="info">
+                <div class="heading">
+                  <h2>Integrantes</h2>
+                </div>
+  
+                <div class="actual-form">
+                  <p class="nombre">Gabriel Calla, 29 años.</p>
+                  <p class="github"><i class="fab fa-github"></i>GabrielC92</p>
+                  <p class="nombre">Carolina Vega, 24 años.</p>
+                  <p class="github-2"><i class="fab fa-github"></i>Carolina-Vega-fs</p>
+                  <p class="linkedin"><i class="fab fa-linkedin"></i></i>carolina-vega-fs</p>
+                    
+                </div>
+                <a href="#" class="toggle">Sobre Nosotros</a>
+              </div>
+  
+              
+            </div>
+  
+            <div class="carousel">
+              <div class="images-wrapper">
+                <img src="/images/ABOUT.jpg" alt="">
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </main>
     <%- include('partials/footer') %>
     <%- include('partials/scripts') %>
+   <script>
+      const toggle_btn = document.querySelectorAll(".toggle");
+      const main = document.querySelector("main");
+
+
+
+      toggle_btn.forEach((boton) => {
+    boton.addEventListener("click", () => {
+    main.classList.toggle("next-mode");
+  });
+});
+   </script>
 </body>
 </html>

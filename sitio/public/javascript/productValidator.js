@@ -1,6 +1,6 @@
-const formulario = document.getElementById('formulario');
-const inputs = document.querySelectorAll('#formulario input');
-const textarea = document.querySelectorAll('#formulario textarea')
+let formulario = document.getElementById('formulario');
+let inputs = document.querySelectorAll('#formulario input');
+let textarea = document.querySelectorAll('#formulario textarea')
 
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ0-9\s]{5,30}$/, // Letras, pueden llevar acentos, y numeros.

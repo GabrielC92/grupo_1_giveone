@@ -1,0 +1,232 @@
+
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.about main {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about .box {
+  position: relative;
+  width: 100%;
+  max-width: 1020px;
+  height: 550px;
+  margin-top: 60px;
+  background-color: #fff;
+  border-radius: 25px 4px;
+  box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+
+}
+
+.about .box::before{
+     content: '';
+    position: absolute;
+    width: 3px;
+    height: 400px;
+    background-color: #333;
+    bottom: 0;
+}
+
+
+
+.about .inner-box {
+  position: absolute;
+  width: calc(100% - 4.1rem);
+  height: calc(100% - 4.1rem);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about .forms-wrap {
+  position: absolute;
+  height: 100%;
+  width: 45%;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  transition: 0.8s ease-in-out;
+}
+
+.about #logo-texto {
+  max-width: 260px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  transition: opacity 0.02s 0.4s;
+}
+
+.about #logo-texto.info {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.about .heading h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #151111;
+  font-family: 'Poppins';
+}
+
+
+.about .toggle {
+    color: white;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 5px;
+    background: #151111;
+    border-radius: 5px 1px;
+    width: 110px;
+    text-align: center;
+}
+
+
+
+.about main.next-mode #logo-texto.integrantes {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.about main.next-mode #logo-texto.info{
+  opacity: 1;
+  pointer-events: all;
+}
+
+.about main.next-mode .forms-wrap {
+  left: 55%;
+}
+
+.about main.next-mode .carousel {
+  left: 0%;
+} 
+
+.about .actual-form p{
+  font-size: 14px;
+   margin-bottom: 10px; 
+   letter-spacing: 0.5px;
+}
+
+.about .carousel {
+  position: absolute;
+  height: 100%;
+  width: 55%;
+  left: 45%;
+  top: 0;
+  background-color: #f0f0f0;
+  border-radius: 4px 20px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+  transition: 0.8s ease-in-out;
+}
+
+
+
+.about .images-wrapper img{
+  width: 100%;
+}
+
+
+.about .nombre{
+  font-weight: bold;
+}
+
+.about .fa-github,
+.about .fa-linkedin{
+  margin-right: 5px;
+}
+
+.about .github{
+  border-bottom: solid 1px #333;
+  padding-bottom: 10px;
+}
+
+
+ @media (max-width: 650px){
+  .about #logo-texto {
+    max-width: 200px;
+  }
+
+
+  .about .box{
+      height: 500px;
+    }
+    .about .carousel{
+      display: none;
+    }
+
+    .about .inner-box{
+      
+        position: static;
+        transform: none;
+        width: revert;
+        height: revert;
+        padding: 2rem;
+      
+    }
+
+    .about #logo-texto{
+      transition: transform 0.8s ease-in-out, opacity 0s linear;
+      padding: 3rem 1rem 2rem;
+    }
+
+    .about .heading h2{
+      padding-bottom: 30px;
+    }
+
+    .about .info  {
+      transform: translateX(-100%);
+    }
+  
+    .about .next-mode .integrantes {
+      transform: translateX(100%);
+    }
+
+    .about .next-mode #logo-texto .info {
+      transform: translateX(0%);
+    }
+    
+    .about .forms-wrap {
+      position: revert;
+      width: 100%;
+      height: auto;
+      position: absolute;
+    
+      }
+
+
+    .about .next-mode #logo-texto.info {
+      opacity: 1;
+      pointer-events: all;
+      position: absolute;
+      left: 90px;
+      bottom: -200px;
+      }
+
+ }
+       
