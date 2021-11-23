@@ -23,6 +23,12 @@ footer .listas .contenedor-navegacion a , .contenedor-redes a , .contenedor-vent
     bottom: 10px;
 }
 
+footer .listas .contenedor-navegacion p .about{
+    bottom: 0;
+    text-decoration: none;
+    color: white;
+}
+
 footer .contenedor-subs form{
     margin-top: 3px;
     padding-top: 12px;
